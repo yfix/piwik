@@ -8,6 +8,8 @@
 
 /**
  * Tests the flattening of reports.
+ *
+ * @group FlattenReportsTest
  */
 class Test_Piwik_Integration_FlattenReports extends IntegrationTestCase
 {
