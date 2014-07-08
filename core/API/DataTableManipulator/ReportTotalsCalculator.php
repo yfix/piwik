@@ -195,11 +195,13 @@ class ReportTotalsCalculator extends DataTableManipulator
         $request['expanded']      = 0;
         $request['filter_limit']  = -1;
         $request['filter_offset'] = 0;
+        $request['flat'] = 0;
 
-        $parametersToRemove = array('flat');
+        $parametersToRemove = array();
 
         if (!array_key_exists('idSubtable', $this->request)) {
-            $parametersToRemove[] = 'idSubtable';
+            $request['idSubtable'] = false;
+            //$parametersToRemove[] = 'idSubtable';
         }
 
         foreach ($parametersToRemove as $param) {

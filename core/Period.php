@@ -262,4 +262,14 @@ abstract class Period
     {
         return $this->getDateStart()->toString("Y-m-d") . "," . $this->getDateEnd()->toString("Y-m-d");
     }
+
+    /**
+     * Returns the value that should be used in Piwik's `date` query parameter for this period.
+     *
+     * @return string eg, `'2012-01-01'`
+     */
+    public function getDateQueryParameterValue()
+    {
+        return $this->getDateStart()->toString();
+    }
 }

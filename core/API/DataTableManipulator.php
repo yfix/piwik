@@ -116,12 +116,7 @@ abstract class DataTableManipulator
 
         $request['idSubtable'] = $idSubTable;
         if ($dataTable) {
-            $period = $dataTable->getMetadata(DataTableFactory::TABLE_METADATA_PERIOD_INDEX);
-            if ($period instanceof Range) {
-                $request['date'] = $period->getDateStart() . ',' . $period->getDateEnd();
-            } else {
-                $request['date'] = $period->getDateStart()->toString();
-            }
+            $request['date'] = $dataTable->getMetadata(DataTableFactory::TABLE_METADATA_PERIOD_INDEX)->getDateQueryParameterValue();
         }
 
         $method = $this->getApiMethodForSubtable();
@@ -166,26 +161,19 @@ abstract class DataTableManipulator
 
     protected function callApiAndReturnDataTable($apiModule, $method, $request)
     {
-        $class = Request::getClassNameAPI($apiModule);
-
         $request = $this->manipulateSubtableRequest($request);
         $request['serialize'] = 0;
         $request['expanded'] = 0;
+        $request['format'] = 'original';
+        $request['method'] = "$apiModule.$method";
 
         // don't want to run recursive filters on the subtables as they are loaded,
         // otherwise the result will be empty in places (or everywhere). instead we
         // run it on the flattened table.
         unset($request['filter_pattern_recursive']);
 
-        $dataTable = Proxy::getInstance()->call($class, $method, $request);
-        $response = new ResponseBuilder($format = 'original', $request);
-        $dataTable = $response->getResponse($dataTable);
-
-        if (Common::getRequestVar('disable_queued_filters', 0, 'int', $request) == 0) {
-            if (method_exists($dataTable, 'applyQueuedFilters')) {
-                $dataTable->applyQueuedFilters();
-            }
-        }
+        $request = new Request($request);
+        $dataTable = $request->process();
 
         return $dataTable;
     }

@@ -140,6 +140,16 @@ class Range extends Period
     }
 
     /**
+     * Returns the value that should be used in Piwik's `date` query parameter for this period.
+     *
+     * @return string eg, `'2012-01-01,2012-01-23'`
+     */
+    public function getDateQueryParameterValue()
+    {
+        return $this->getRangeString();
+    }
+
+    /**
      * Generates the subperiods
      *
      * @throws Exception
