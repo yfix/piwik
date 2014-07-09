@@ -65,7 +65,7 @@ class Fixture extends PHPUnit_Framework_Assert
     public $removeExistingSuperUser = true;
     public $overwriteExisting = true;
     public $configureComponents = true;
-    public $persistFixtureData = false;
+    public $persistFixtureData = true;
     public $resetPersistedFixture = false;
     public $printToScreen = false;
 

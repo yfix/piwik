@@ -58,22 +58,22 @@ class DataTablePostProcessor extends BaseFilter
      */
     public function filter($datatable)
     {
-        // if requested, flatten nested tables
-        if (Common::getRequestVar('flat', '0', 'string', $this->request) == '1') {
-            $flattener = new Flattener($this->apiModule, $this->apiAction, $this->request);
-            if (Common::getRequestVar('include_aggregate_rows', '0', 'string', $this->request) == '1') {
-                $flattener->includeAggregateRows();
-            }
-            $datatable = $flattener->flatten($datatable);
-        }
-
-        if (1 == Common::getRequestVar('totals', '1', 'integer', $this->request)) {
-            $genericFilter = new ReportTotalsCalculator($this->apiModule, $this->apiAction, $this->request);
-            $datatable     = $genericFilter->calculate($datatable);
-        }
-
         // if the flag disable_generic_filters is defined we skip the generic filters
         if (0 == Common::getRequestVar('disable_generic_filters', '0', 'string', $this->request)) {
+            // if requested, flatten nested tables
+            if (Common::getRequestVar('flat', '0', 'string', $this->request) == '1') {
+                $flattener = new Flattener($this->apiModule, $this->apiAction, $this->request);
+                if (Common::getRequestVar('include_aggregate_rows', '0', 'string', $this->request) == '1') {
+                    $flattener->includeAggregateRows();
+                }
+                $flattener->flatten($datatable);
+            }
+
+            if (1 == Common::getRequestVar('totals', '1', 'integer', $this->request)) {
+                $genericFilter = new ReportTotalsCalculator($this->apiModule, $this->apiAction, $this->request);
+                $datatable     = $genericFilter->calculate($datatable);
+            }
+
             $genericFilter = new DataTableGenericFilter($this->request);
             $genericFilter->filter($datatable);
         }
