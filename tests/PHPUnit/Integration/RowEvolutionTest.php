@@ -8,6 +8,7 @@
 
 /**
  * Tests the method API.getRowEvolution
+ * @group RowEvolutionTest
  */
 class Test_Piwik_Integration_RowEvolution extends IntegrationTestCase
 {

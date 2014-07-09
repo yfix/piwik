@@ -289,12 +289,7 @@ class RowEvolution
 
         $request = new Request($url);
 
-        try {
-            $dataTable = $request->process();
-        } catch (Exception $e) {
-            throw new Exception("API returned an error: " . $e->getMessage() . "\n");
-        }
-
+        $dataTable = $request->process();
         return $dataTable;
     }
 
