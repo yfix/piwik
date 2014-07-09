@@ -86,21 +86,23 @@ class DataTablePostProcessor extends BaseFilter
             $datatable->applyQueuedFilters();
         }
 
-        // use the ColumnDelete filter if hideColumns/showColumns is provided (must be done
-        // after queued filters are run so processed metrics can be removed, too)
-        $hideColumns = Common::getRequestVar('hideColumns', '', 'string', $this->request);
-        $showColumns = Common::getRequestVar('showColumns', '', 'string', $this->request);
-        if ($hideColumns !== '' || $showColumns !== '') {
-            $datatable->filter('ColumnDelete', array($hideColumns, $showColumns));
-        }
+        if (0 == Common::getRequestVar('disable_generic_filters', '0', 'string', $this->request)) {
+            // use the ColumnDelete filter if hideColumns/showColumns is provided (must be done
+            // after queued filters are run so processed metrics can be removed, too)
+            $hideColumns = Common::getRequestVar('hideColumns', '', 'string', $this->request);
+            $showColumns = Common::getRequestVar('showColumns', '', 'string', $this->request);
+            if ($hideColumns !== '' || $showColumns !== '') {
+                $datatable->filter('ColumnDelete', array($hideColumns, $showColumns));
+            }
 
-        // apply label filter: only return rows matching the label parameter (more than one if more than one label)
-        $label = $this->getLabelFromRequest($this->request);
-        if (!empty($label)) {
-            $addLabelIndex = Common::getRequestVar('labelFilterAddLabelIndex', 0, 'int', $this->request) == 1;
+            // apply label filter: only return rows matching the label parameter (more than one if more than one label)
+            $label = $this->getLabelFromRequest($this->request);
+            if (!empty($label)) {
+                $addLabelIndex = Common::getRequestVar('labelFilterAddLabelIndex', 0, 'int', $this->request) == 1;
 
-            $filter = new LabelFilter($this->apiModule, $this->apiAction, $this->request);
-            $datatable = $filter->filter($label, $datatable, $addLabelIndex);
+                $filter = new LabelFilter($this->apiModule, $this->apiAction, $this->request);
+                $datatable = $filter->filter($label, $datatable, $addLabelIndex);
+            }
         }
 
         $this->resultDataTable = $datatable;

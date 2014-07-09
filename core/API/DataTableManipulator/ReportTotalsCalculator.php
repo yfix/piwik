@@ -191,23 +191,13 @@ class ReportTotalsCalculator extends DataTableManipulator
      */
     protected function manipulateSubtableRequest($request)
     {
-        $request['totals']        = 0;
         $request['expanded']      = 0;
         $request['filter_limit']  = -1;
         $request['filter_offset'] = 0;
-        $request['flat'] = 0;
-
-        $parametersToRemove = array();
+        $request['disable_generic_filters'] = 1;
 
         if (!array_key_exists('idSubtable', $this->request)) {
             $request['idSubtable'] = false;
-            //$parametersToRemove[] = 'idSubtable';
-        }
-
-        foreach ($parametersToRemove as $param) {
-            if (array_key_exists($param, $request)) {
-                unset($request[$param]);
-            }
         }
         return $request;
     }

@@ -101,8 +101,6 @@ class LabelFilter extends DataTableManipulator
      */
     protected function manipulateSubtableRequest($request)
     {
-        unset($request['label']);
-
         return $request;
     }
 
