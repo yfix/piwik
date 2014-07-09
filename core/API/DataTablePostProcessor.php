@@ -102,6 +102,15 @@ class DataTablePostProcessor extends BaseFilter
 
                 $filter = new LabelFilter($this->apiModule, $this->apiAction, $this->request);
                 $datatable = $filter->filter($label, $datatable, $addLabelIndex);
+
+                $genericFilter = new DataTableGenericFilter($this->request);
+                $genericFilter->filter($datatable);
+
+                $datatable->filter(function ($table) {
+                    foreach ($table->getRows() as $row) {
+                        $row->setColumns($row->getColumns()); // force processed metrics to be calculated
+                    }
+                });
             }
         }
 
