@@ -315,16 +315,16 @@ class Visualization extends ViewDataTable
             $this->requestConfig->setDefaultSort($this->config->columns_to_display, $hasNbUniqVisitors);
         }
 
+        // queue other filters so they can be applied later if queued filters are disabled
+        foreach ($otherFilters as $filter) {
+            $this->dataTable->queueFilter($filter[0], $filter[1]);
+        }
+
         if (!$this->requestConfig->areGenericFiltersDisabled()) {
             $this->applyGenericFilters();
         }
 
         $this->afterGenericFiltersAreAppliedToLoadedDataTable();
-
-        // queue other filters so they can be applied later if queued filters are disabled
-        foreach ($otherFilters as $filter) {
-            $this->dataTable->queueFilter($filter[0], $filter[1]);
-        }
 
         // Finally, apply datatable filters that were queued (should be 'presentation' filters that
         // do not affect the number of rows)
@@ -572,8 +572,8 @@ class Visualization extends ViewDataTable
             $request['filter_sort_order']  = '';
         }
 
-        $genericFilter = new \Piwik\API\DataTableGenericFilter($request);
-        $genericFilter->filter($this->dataTable);
+        $postProcessor = new \Piwik\API\DataTablePostProcessor($request);
+        $postProcessor->filter($this->dataTable);
     }
 
     private function logMessageIfRequestPropertiesHaveChanged(array $requestPropertiesBefore)
