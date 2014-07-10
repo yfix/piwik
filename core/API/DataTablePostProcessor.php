@@ -112,7 +112,7 @@ class DataTablePostProcessor extends BaseFilter
         }
 
         // we automatically safe decode all datatable labels (against xss)
-        $datatable->queueFilter('SafeDecodeLabel');
+        $datatable->filter('SafeDecodeLabel');
 
         $this->resultDataTable = $datatable; // TODO: remove after changing all 'manipulators' to modify tables in-place
     }
