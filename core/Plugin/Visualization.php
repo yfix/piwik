@@ -572,7 +572,7 @@ class Visualization extends ViewDataTable
             $request['filter_sort_order']  = '';
         }
 
-        $postProcessor = new \Piwik\API\DataTablePostProcessor($request);
+        $postProcessor = new \Piwik\API\DataTablePostProcessor(null, null, $request);
         $postProcessor->filter($this->dataTable);
     }
 
