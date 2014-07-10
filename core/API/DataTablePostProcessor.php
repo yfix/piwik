@@ -62,7 +62,6 @@ class DataTablePostProcessor extends BaseFilter
         if (0 == Common::getRequestVar('disable_generic_filters', '0', 'string', $this->request)) {
             // if requested, flatten nested tables
             if (Common::getRequestVar('flat', '0', 'string', $this->request) == '1') {
-                echo "<pre>FLATENNINGGGG!!!</pre>";
                 $flattener = new Flattener($this->apiModule, $this->apiAction, $this->request);
                 if (Common::getRequestVar('include_aggregate_rows', '0', 'string', $this->request) == '1') {
                     $flattener->includeAggregateRows();
