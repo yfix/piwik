@@ -576,7 +576,9 @@ class Visualization extends ViewDataTable
         list($module, $method) = explode('.', $moduleMethod);
         $module = \Piwik\API\Request::renameModule($module);
 
-        $postProcessor = new \Piwik\API\DataTablePostProcessor($module, $method, $request);
+        // commented out for now, need to resolve other issues first
+        // $postProcessor = new \Piwik\API\DataTablePostProcessor($module, $method, $request);
+        $postProcessor = new \Piwik\API\DataTableGenericFilter($request);
         $postProcessor->filter($this->dataTable);
     }
 
