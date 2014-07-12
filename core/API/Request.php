@@ -338,7 +338,7 @@ class Request
     {
         // unset all filter query params so the related report will show up in its default state,
         // unless the filter param was in $queryParams
-        $genericFiltersInfo = DataTableGenericFilter::getGenericFiltersInformation();
+        $genericFiltersInfo = DataTablePostProcessor::getGenericFiltersInformation();
         foreach ($genericFiltersInfo as $filter) {
             foreach ($filter[1] as $queryParamName => $queryParamInfo) {
                 if (!isset($params[$queryParamName])) {

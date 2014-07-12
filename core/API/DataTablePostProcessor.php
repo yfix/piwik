@@ -13,12 +13,71 @@ use Piwik\DataTable\BaseFilter;
 use Piwik\API\DataTableManipulator\Flattener;
 use Piwik\API\DataTableManipulator\LabelFilter;
 use Piwik\API\DataTableManipulator\ReportTotalsCalculator;
+use Piwik\DataTable;
+use Piwik\DataTable\Map;
 
 /**
  * TODO
  */
 class DataTablePostProcessor extends BaseFilter
 {
+    /**
+     * Returns an array containing the information of the generic Filter
+     * to be applied automatically to the data resulting from the API calls.
+     *
+     * Order to apply the filters:
+     * 1 - Filter that remove filtered rows
+     * 2 - Filter that sort the remaining rows
+     * 3 - Filter that keep only a subset of the results
+     * 4 - Presentation filters
+     *
+     * @return array  See the code for spec
+     */
+    public static function getGenericFiltersInformation()
+    {
+        return array(
+            array('Pattern',
+                  array(
+                      'filter_column'  => array('string', 'label'),
+                      'filter_pattern' => array('string')
+                  )),
+            array('PatternRecursive',
+                  array(
+                      'filter_column_recursive'  => array('string', 'label'),
+                      'filter_pattern_recursive' => array('string'),
+                  )),
+            array('ExcludeLowPopulation',
+                  array(
+                      'filter_excludelowpop'       => array('string'),
+                      'filter_excludelowpop_value' => array('float', '0'),
+                  )),
+            array('AddColumnsProcessedMetrics',
+                  array(
+                      'filter_add_columns_when_show_all_columns' => array('integer')
+                  )),
+            array('AddColumnsProcessedMetricsGoal',
+                  array(
+                      'filter_update_columns_when_show_all_goals' => array('integer'),
+                      'idGoal'                                    => array('string', AddColumnsProcessedMetricsGoal::GOALS_OVERVIEW),
+                  )),
+            array('Sort',
+                  array(
+                      'filter_sort_column' => array('string'),
+                      'filter_sort_order'  => array('string', 'desc'),
+                  )),
+            array('Truncate',
+                  array(
+                      'filter_truncate' => array('integer'),
+                  )),
+            array('Limit',
+                  array(
+                      'filter_offset'    => array('integer', '0'),
+                      'filter_limit'     => array('integer'),
+                      'keep_summary_row' => array('integer', '0'),
+                  )),
+        );
+    }
+
     /**
      * TODO
      */
@@ -74,8 +133,7 @@ class DataTablePostProcessor extends BaseFilter
                 $datatable     = $genericFilter->calculate($datatable);
             }
 
-            $genericFilter = new DataTableGenericFilter($this->request);
-            $genericFilter->filter($datatable);
+            $this->applyGenericFilters($datatable);
         }
 
         // if the flag disable_queued_fi
@@ -103,8 +161,7 @@ class DataTablePostProcessor extends BaseFilter
                 $filter = new LabelFilter($this->apiModule, $this->apiAction, $this->request);
                 $datatable = $filter->filter($label, $datatable, $addLabelIndex);
 
-                $genericFilter = new DataTableGenericFilter($this->request);
-                $genericFilter->filter($datatable);
+                $this->applyGenericFilters($datatable);
 
                 $datatable->filter(function ($table) {
                     foreach ($table->getRows() as $row) {
@@ -145,5 +202,69 @@ class DataTablePostProcessor extends BaseFilter
         // to become &gt; and we need to undo that here.
         $label = Common::unsanitizeInputValues($label);
         return $label;
+    }
+
+    /**
+     * Apply generic filters to the DataTable object resulting from the API Call.
+     * Disable this feature by setting the parameter disable_generic_filters to 1 in the API call request.
+     *
+     * @param DataTable $datatable
+     * @return bool
+     */
+    public function applyGenericFilters($datatable)
+    {
+        if ($datatable instanceof Map) {
+            $tables = $datatable->getDataTables();
+            foreach ($tables as $table) {
+                $this->applyGenericFilters($table);
+            }
+            return;
+        }
+
+        $genericFilters = self::getGenericFiltersInformation();
+
+        $filterApplied = false;
+        foreach ($genericFilters as $filterMeta) {
+            $filterName = $filterMeta[0];
+            $filterParams = $filterMeta[1];
+            $filterParameters = array();
+            $exceptionRaised = false;
+
+            if (in_array($filterName, $this->disabledFilters)) {
+                continue;
+            }
+
+            foreach ($filterParams as $name => $info) {
+                // parameter type to cast to
+                $type = $info[0];
+
+                // default value if specified, when the parameter doesn't have a value
+                $defaultValue = null;
+                if (isset($info[1])) {
+                    $defaultValue = $info[1];
+                }
+
+                // third element in the array, if it exists, overrides the name of the request variable
+                $varName = $name;
+                if (isset($info[2])) {
+                    $varName = $info[2];
+                }
+
+                try {
+                    $value = Common::getRequestVar($name, $defaultValue, $type, $this->request);
+                    settype($value, $type);
+                    $filterParameters[] = $value;
+                } catch (Exception $e) {
+                    $exceptionRaised = true;
+                    break;
+                }
+            }
+
+            if (!$exceptionRaised) {
+                $datatable->filter($filterName, $filterParameters);
+                $filterApplied = true;
+            }
+        }
+        return $filterApplied;
     }
 }

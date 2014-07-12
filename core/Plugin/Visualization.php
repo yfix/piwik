@@ -430,7 +430,7 @@ class Visualization extends ViewDataTable
      * - etc.
      *
      * The values are loaded:
-     * - from the generic filters that are applied by default @see Piwik\API\DataTableGenericFilter::getGenericFiltersInformation()
+     * - from the generic filters that are applied by default @see Piwik\API\DataTablePostProcessor::getGenericFiltersInformation()
      * - from the values already available in the GET array
      * - from the values set using methods from this class (eg. setSearchPattern(), setLimit(), etc.)
      *
@@ -576,10 +576,9 @@ class Visualization extends ViewDataTable
         list($module, $method) = explode('.', $moduleMethod);
         $module = \Piwik\API\Request::renameModule($module);
 
-        // commented out for now, need to resolve other issues first
-        // $postProcessor = new \Piwik\API\DataTablePostProcessor($module, $method, $request);
-        $postProcessor = new \Piwik\API\DataTableGenericFilter($request);
+        $postProcessor = new \Piwik\API\DataTablePostProcessor($module, $method, $request);
         $postProcessor->filter($this->dataTable);
+        $this->dataTable = $postProcessor->resultDataTable;
     }
 
     private function logMessageIfRequestPropertiesHaveChanged(array $requestPropertiesBefore)
