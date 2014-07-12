@@ -32,6 +32,8 @@ class DataTablePostProcessor extends BaseFilter
      * 4 - Presentation filters
      *
      * @return array  See the code for spec
+     *
+     * TODO: remove need for this method?
      */
     public static function getGenericFiltersInformation()
     {
@@ -229,10 +231,6 @@ class DataTablePostProcessor extends BaseFilter
             $filterParams = $filterMeta[1];
             $filterParameters = array();
             $exceptionRaised = false;
-
-            if (in_array($filterName, $this->disabledFilters)) {
-                continue;
-            }
 
             foreach ($filterParams as $name => $info) {
                 // parameter type to cast to
