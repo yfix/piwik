@@ -119,63 +119,24 @@ class DataTablePostProcessor extends BaseFilter
     /**
      * TODO
      */
-    public function filter($datatable)
+    public function filter($dataTable)
     {
         // if the flag disable_generic_filters is defined we skip the generic filters
         if (0 == Common::getRequestVar('disable_generic_filters', '0', 'string', $this->request)) {
-            // if requested, flatten nested tables
-            if (Common::getRequestVar('flat', '0', 'string', $this->request) == '1') {
-                $flattener = new Flattener($this->apiModule, $this->apiAction, $this->request);
-                if (Common::getRequestVar('include_aggregate_rows', '0', 'string', $this->request) == '1') {
-                    $flattener->includeAggregateRows();
-                }
-                $flattener->flatten($datatable);
-            }
-
-            if (1 == Common::getRequestVar('totals', '1', 'integer', $this->request)) {
-                $genericFilter = new ReportTotalsCalculator($this->apiModule, $this->apiAction, $this->request);
-                $datatable     = $genericFilter->calculate($datatable);
-            }
-
-            $this->applyGenericFilters($datatable);
+            $this->applyFlattener($dataTable);
+            $this->applyReportTotalsCalculator($dataTable);
+            $this->applyGenericFilters($dataTable);
         }
 
-        // if the flag disable_queued_fi
-        // we automatically safe decode all datatable labels (against xss)
-        $datatable->filter('SafeDecodeLabel');
-
-        if (Common::getRequestVar('disable_queued_filters', 0, 'int', $this->request) == 0) {
-            $datatable->applyQueuedFilters();
-        }
+        $this->decodeLabelsSafely($dataTable);
+        $this->applyQueuedFilters($dataTable);
 
         if (0 == Common::getRequestVar('disable_generic_filters', '0', 'string', $this->request)) {
-            // use the ColumnDelete filter if hideColumns/showColumns is provided (must be done
-            // after queued filters are run so processed metrics can be removed, too)
-            $hideColumns = Common::getRequestVar('hideColumns', '', 'string', $this->request);
-            $showColumns = Common::getRequestVar('showColumns', '', 'string', $this->request);
-            if ($hideColumns !== '' || $showColumns !== '') {
-                $datatable->filter('ColumnDelete', array($hideColumns, $showColumns));
-            }
-
-            // apply label filter: only return rows matching the label parameter (more than one if more than one label)
-            $label = $this->getLabelFromRequest($this->request);
-            if (!empty($label)) {
-                $addLabelIndex = Common::getRequestVar('labelFilterAddLabelIndex', 0, 'int', $this->request) == 1;
-
-                $filter = new LabelFilter($this->apiModule, $this->apiAction, $this->request);
-                $datatable = $filter->filter($label, $datatable, $addLabelIndex);
-
-                $this->applyGenericFilters($datatable);
-
-                $datatable->filter(function ($table) {
-                    foreach ($table->getRows() as $row) {
-                        $row->setColumns($row->getColumns()); // force processed metrics to be calculated
-                    }
-                });
-            }
+            $this->applyColumnDeleteFilter($dataTable);
+            $dataTable = $this->applyLabelFilter($dataTable);
         }
 
-        $this->resultDataTable = $datatable; // TODO: remove after changing all 'manipulators' to modify tables in-place
+        $this->resultDataTable = $dataTable; // TODO: remove after changing all 'manipulators' to modify tables in-place
     }
 
     /**
@@ -212,13 +173,13 @@ class DataTablePostProcessor extends BaseFilter
      * Apply generic filters to the DataTable object resulting from the API Call.
      * Disable this feature by setting the parameter disable_generic_filters to 1 in the API call request.
      *
-     * @param DataTable $datatable
+     * @param DataTable $dataTable
      * @return bool
      */
-    public function applyGenericFilters($datatable)
+    public function applyGenericFilters($dataTable)
     {
-        if ($datatable instanceof Map) {
-            $tables = $datatable->getDataTables();
+        if ($dataTable instanceof Map) {
+            $tables = $dataTable->getDataTables();
             foreach ($tables as $table) {
                 $this->applyGenericFilters($table);
             }
@@ -226,12 +187,89 @@ class DataTablePostProcessor extends BaseFilter
         }
 
         // TODO: removed error silencing; may cause issues?
-        $this->applyPatternFilters($datatable);
-        $this->applyExcludeLowPopulationFilters($datatable);
-        $this->applyAddProcessedMetricsFilters($datatable);
-        $this->applySortFilter($datatable);
-        $this->applyTruncateFilter($datatable);
-        $this->applyLimitingFilter($datatable);
+        $this->applyPatternFilters($dataTable);
+        $this->applyExcludeLowPopulationFilters($dataTable);
+        $this->applyAddProcessedMetricsFilters($dataTable);
+        $this->applySortFilter($dataTable);
+        $this->applyTruncateFilter($dataTable);
+        $this->applyLimitingFilter($dataTable);
+    }
+
+    /**
+     * TODO
+     */
+    private function applyFlattener($dataTable) {
+        if (Common::getRequestVar('flat', '0', 'string', $this->request) == '1') {
+            $flattener = new Flattener($this->apiModule, $this->apiAction, $this->request);
+            if (Common::getRequestVar('include_aggregate_rows', '0', 'string', $this->request) == '1') {
+                $flattener->includeAggregateRows();
+            }
+            $flattener->flatten($dataTable);
+        }
+    }
+
+    /**
+     * TODO
+     */
+    private function applyReportTotalsCalculator($dataTable) {
+        if (1 == Common::getRequestVar('totals', '1', 'integer', $this->request)) {
+            $genericFilter = new ReportTotalsCalculator($this->apiModule, $this->apiAction, $this->request);
+            $genericFilter->calculate($dataTable);
+        }
+    }
+
+    /**
+     * TODO
+     */
+    private function decodeLabelsSafely($dataTable)
+    {
+        // we automatically safe decode all dataTable labels (against xss)
+        $dataTable->filter('SafeDecodeLabel');
+    }
+
+    /**
+     * TODO
+     */
+    private function applyQueuedFilters($dataTable)
+    {
+        if (Common::getRequestVar('disable_queued_filters', 0, 'int', $this->request) == 0) {
+            $dataTable->applyQueuedFilters();
+        }
+    }
+
+    /**
+     * TODO
+     */
+    private function applyColumnDeleteFilter($dataTable) {
+        $hideColumns = Common::getRequestVar('hideColumns', '', 'string', $this->request);
+        $showColumns = Common::getRequestVar('showColumns', '', 'string', $this->request);
+        if ($hideColumns !== '' || $showColumns !== '') {
+            $dataTable->filter('ColumnDelete', array($hideColumns, $showColumns));
+        }
+    }
+
+    /**
+     * TODO
+     */
+    private function applyLabelFilter($dataTable) {
+        // TODO: make LabelFilter in-place
+
+        // apply label filter: only return rows matching the label parameter (more than one if more than one label)
+        $label = $this->getLabelFromRequest($this->request);
+        if (!empty($label)) {
+            $addLabelIndex = Common::getRequestVar('labelFilterAddLabelIndex', 0, 'int', $this->request) == 1;
+
+            $filter = new LabelFilter($this->apiModule, $this->apiAction, $this->request);
+            $dataTable = $filter->filter($label, $dataTable, $addLabelIndex);
+
+            $this->applyGenericFilters($dataTable);
+
+            $dataTable->filter(function ($table) {
+                foreach ($table->getRows() as $row) {
+                    $row->setColumns($row->getColumns()); // force processed metrics to be calculated
+                }
+            });
+        }
     }
 
     /**
