@@ -270,6 +270,8 @@ class DataTablePostProcessor extends BaseFilter
                 }
             });
         }
+
+        return $dataTable;
     }
 
     /**
