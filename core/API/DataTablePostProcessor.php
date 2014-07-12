@@ -225,46 +225,94 @@ class DataTablePostProcessor extends BaseFilter
             return;
         }
 
-        $genericFilters = self::getGenericFiltersInformation();
+        // TODO: removed error silencing; may cause issues?
+        $this->applyPatternFilters($datatable);
+        $this->applyExcludeLowPopulationFilters($datatable);
+        $this->applyAddProcessedMetricsFilters($datatable);
+        $this->applySortFilter($datatable);
+        $this->applyTruncateFilter($datatable);
+        $this->applyLimitingFilter($datatable);
+    }
 
-        $filterApplied = false;
-        foreach ($genericFilters as $filterMeta) {
-            $filterName = $filterMeta[0];
-            $filterParams = $filterMeta[1];
-            $filterParameters = array();
-            $exceptionRaised = false;
+    /**
+     * TODO
+     */
+    private function applyPatternFilters($dataTable) {
+        $filterColumn = Common::getRequestVar('filter_column', 'label', 'string', $this->request);
+        $filterPattern = Common::getRequestVar('filter_pattern', false, 'string', $this->request);
 
-            foreach ($filterParams as $name => $info) {
-                // parameter type to cast to
-                $type = $info[0];
-
-                // default value if specified, when the parameter doesn't have a value
-                $defaultValue = null;
-                if (isset($info[1])) {
-                    $defaultValue = $info[1];
-                }
-
-                // third element in the array, if it exists, overrides the name of the request variable
-                $varName = $name;
-                if (isset($info[2])) {
-                    $varName = $info[2];
-                }
-
-                try {
-                    $value = Common::getRequestVar($name, $defaultValue, $type, $this->request);
-                    settype($value, $type);
-                    $filterParameters[] = $value;
-                } catch (Exception $e) {
-                    $exceptionRaised = true;
-                    break;
-                }
-            }
-
-            if (!$exceptionRaised) {
-                $datatable->filter($filterName, $filterParameters);
-                $filterApplied = true;
-            }
+        if (!empty($filterPattern)) {
+            $dataTable->filter('Pattern', array($filterColumn, $filterPattern));
         }
-        return $filterApplied;
+
+        $filterColumnRecursive = Common::getRequestVar('filter_column_recursive', 'label', 'string', $this->request);
+        $filterPatternRecursive = Common::getRequestVar('filter_pattern_recursive', false, 'string', $this->request);
+
+        if (!empty($filterPatternRecursive)) {
+            $dataTable->filter('PatternRecursive', array($filterColumnRecursive, $filterPatternRecursive));
+        }
+    }
+
+    /**
+     * TODO
+     */
+    private function applyExcludeLowPopulationFilters($dataTable) {
+        $excludeLowPopulationColumn = Common::getRequestVar('filter_excludelowpop', false, 'string', $this->request);
+        $excludeLowPopulationValue = Common::getRequestVar('filter_excludelowpop_value', 0, 'float', $this->request);
+
+        if (!empty($excludeLowPopulationColumn)) {
+            $dataTable->filter('ExcludeLowPopulation', array($excludeLowPopulationColumn, $excludeLowPopulationValue));
+        }
+    }
+
+    /**
+     * TODO
+     */
+    private function applyAddProcessedMetricsFilters($dataTable) {
+        $shouldAddNormalProcessedMetrics = Common::getRequestVar('filter_add_columns_when_show_all_columns', false, 'integer', $this->request);
+        if (!empty($shouldAddNormalProcessedMetrics)) {
+            $dataTable->filter('AddColumnsProcessedMetrics');
+        }
+
+        $shouldAddGoalProcessedMetrics = Common::getRequestVar('filter_update_columns_when_show_all_goals', false, 'integer', $this->request);
+        if (!empty($shouldAddGoalProcessedMetrics)) {
+            $idGoal = Common::getRequestVar('idGoal', AddColumnsProcessedMetricsGoal::GOALS_OVERVIEW, 'integer', $this->request);
+            $dataTable->filter('AddColumnsProcessedMetricsGoal', array(true, $idGoal));
+        }
+    }
+
+    /**
+     * TODO
+     */
+    private function applySortFilter($dataTable) {
+        $sortColumn = Common::getRequestVar('filter_sort_column', false, 'string', $this->request);
+        $sortOrder = Common::getRequestVar('filter_sort_order', 'desc', 'string', $this->request);
+
+        if (!empty($sortColumn)) {
+            $dataTable->filter('Sort', array($sortColumn, $sortOrder));
+        }
+    }
+
+    /**
+     * TODO
+     */
+    private function applyTruncateFilter($dataTable) {
+        $truncateAfter = Common::getRequestVar('filter_truncate', false, 'integer', $this->request);
+        if (!empty($truncateAfter)) {
+            $dataTable->filter('Truncate', array($truncateAfter));
+        }
+    }
+
+    /**
+     * TODO
+     */
+    private function applyLimitingFilter($dataTable) {
+        $filterOffset = Common::getRequestVar('filter_offset', 0, 'integer', $this->request);
+        $filterLimit = Common::getRequestVar('filter_limit', false, 'integer', $this->request);
+        $keepSummaryRow = Common::getRequestVar('keep_summary_row', 0, 'integer', $this->request);
+
+        if (!empty($filterLimit)) {
+            $dataTable->filter('Limit', array($filterOffset, $filterLimit, $keepSummaryRow));
+        }
     }
 }
