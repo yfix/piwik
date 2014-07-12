@@ -13,8 +13,10 @@ use Piwik\DataTable\BaseFilter;
 use Piwik\API\DataTableManipulator\Flattener;
 use Piwik\API\DataTableManipulator\LabelFilter;
 use Piwik\API\DataTableManipulator\ReportTotalsCalculator;
+use Piwik\DataTable\Filter\AddColumnsProcessedMetricsGoal;
 use Piwik\DataTable;
 use Piwik\DataTable\Map;
+use Exception;
 
 /**
  * TODO
