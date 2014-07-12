@@ -31,13 +31,14 @@ use Piwik\Site;
 use Piwik\Tracker\Cache;
 use Piwik\Translate;
 use Piwik\Url;
-use Piwik\Plugins\CoreUpdater\CoreUpdater;
-use Piwik\Updater;
 use PHPUnit_Framework_Assert;
 use Piwik_TestingEnvironment;
 use FakeAccess;
 use PiwikTracker;
 use Piwik_LocalTracker;
+use Piwik\Updater;
+use Piwik\Plugins\CoreUpdater\CoreUpdater;
+use Exception;
 
 /**
  * Base type for all integration test fixtures. Integration test fixtures
@@ -159,9 +160,12 @@ class Fixture extends PHPUnit_Framework_Assert
             Config::getInstance()->database['dbname'] = $this->dbName;
             Db::createDatabaseObject();
 
+            Db::get()->query("SET wait_timeout=28800;");
+
             DbHelper::createTables();
 
             \Piwik\Plugin\Manager::getInstance()->unloadPlugins();
+
         } catch (Exception $e) {
             static::fail("TEST INITIALIZATION FAILED: " . $e->getMessage() . "\n" . $e->getTraceAsString());
         }
@@ -186,6 +190,8 @@ class Fixture extends PHPUnit_Framework_Assert
         Cache::deleteTrackerCache();
 
         static::loadAllPlugins($this->getTestEnvironment(), $this->testCaseClass, $this->extraPluginsToLoad);
+
+        self::updateDatabase();
 
         $_GET = $_REQUEST = array();
         $_SERVER['HTTP_REFERER'] = '';
@@ -291,7 +297,8 @@ class Fixture extends PHPUnit_Framework_Assert
         // make sure the plugin that executed this method is included in the plugins to load
         $extraPlugins = array_merge($extraPluginsToLoad, array(
             \Piwik\Plugin::getPluginNameFromBacktrace(debug_backtrace()),
-            \Piwik\Plugin::getPluginNameFromNamespace($testCaseClass)
+            \Piwik\Plugin::getPluginNameFromNamespace($testCaseClass),
+            \Piwik\Plugin::getPluginNameFromNamespace(get_called_class())
         ));
         foreach ($extraPlugins as $pluginName) {
             if (empty($pluginName)) {
@@ -325,7 +332,8 @@ class Fixture extends PHPUnit_Framework_Assert
     public static function unloadAllPlugins()
     {
         try {
-            $plugins = \Piwik\Plugin\Manager::getInstance()->getLoadedPlugins();
+            $manager = \Piwik\Plugin\Manager::getInstance();
+            $plugins = $manager->getLoadedPlugins();
             foreach ($plugins AS $plugin) {
                 $plugin->uninstall();
             }
@@ -791,8 +799,16 @@ class Fixture extends PHPUnit_Framework_Assert
         return $result;
     }
 
-    public static function updateDatabase()
+    public static function updateDatabase($force = false)
     {
+        Cache::deleteTrackerCache();
+        
+        if ($force) {
+            // remove version options to force update
+            Option::deleteLike('version%');
+            Option::set('version_core', '0.0');
+        }
+
         $updater = new Updater();
         $componentsWithUpdateFile = CoreUpdater::getComponentUpdates($updater);
         if (empty($componentsWithUpdateFile)) {
@@ -801,8 +817,8 @@ class Fixture extends PHPUnit_Framework_Assert
 
         $result = CoreUpdater::updateComponents($updater, $componentsWithUpdateFile);
         if (!empty($result['coreError'])
-            && !empty($result['warnings'])
-            && !empty($result['errors'])
+            || !empty($result['warnings'])
+            || !empty($result['errors'])
         ) {
             throw new \Exception("Failed to update database (errors or warnings found): " . print_r($result, true));
         }

@@ -297,6 +297,7 @@ class ResponseBuilder
         $filter = new \Piwik\API\DataTablePostProcessor($this->apiModule, $this->apiMethod, $this->request);
         $filter->filter($datatable);
         $datatable = $filter->resultDataTable;
+
         return $this->getRenderedDataTable($datatable);
     }
 
