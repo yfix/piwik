@@ -78,7 +78,10 @@ class DataTablePostProcessor extends BaseFilter
             $genericFilter->filter($datatable);
         }
 
-        // if the flag disable_queued_filters is defined we skip the filters that were queued
+        // if the flag disable_queued_fi
+        // we automatically safe decode all datatable labels (against xss)
+        $datatable->filter('SafeDecodeLabel');
+
         if (Common::getRequestVar('disable_queued_filters', 0, 'int', $this->request) == 0) {
             $datatable->applyQueuedFilters();
         }
@@ -110,9 +113,6 @@ class DataTablePostProcessor extends BaseFilter
                 });
             }
         }
-
-        // we automatically safe decode all datatable labels (against xss)
-        $datatable->filter('SafeDecodeLabel');
 
         $this->resultDataTable = $datatable; // TODO: remove after changing all 'manipulators' to modify tables in-place
     }
