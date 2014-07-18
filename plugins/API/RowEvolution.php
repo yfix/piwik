@@ -207,7 +207,7 @@ class RowEvolution
 
             $result = $mainUrlHost . '/' . $cleanLabel . '/';
         } else {
-            $result = str_replace(LabelFilter::SEPARATOR_RECURSIVE_LABEL, ' - ', $label);
+            $result = preg_replace('/\s*' . preg_quote(LabelFilter::SEPARATOR_RECURSIVE_LABEL) . '\s*/', ' - ', $label);
         }
 
         // remove @ terminal operator occurances
