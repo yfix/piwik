@@ -224,7 +224,7 @@ class DataTablePostProcessor extends BaseFilter
     private function decodeLabelsSafely($dataTable)
     {
         // we automatically safe decode all dataTable labels (against xss)
-        $dataTable->filter('SafeDecodeLabel');
+        $dataTable->queueFilter('SafeDecodeLabel');
     }
 
     /**
