@@ -224,7 +224,7 @@ class DataTablePostProcessor extends BaseFilter
     private function decodeLabelsSafely($dataTable)
     {
         // we automatically safe decode all dataTable labels (against xss)
-        $dataTable->queueFilter('SafeDecodeLabel');
+        $dataTable->filter('SafeDecodeLabel');
     }
 
     /**
@@ -309,9 +309,10 @@ class DataTablePostProcessor extends BaseFilter
      * TODO
      */
     private function applyAddProcessedMetricsFilters($dataTable) {
-        $shouldAddNormalProcessedMetrics = Common::getRequestVar('filter_add_columns_when_show_all_columns', false, 'integer', $this->request);
-        if (!empty($shouldAddNormalProcessedMetrics)) {
-            $dataTable->filter('AddColumnsProcessedMetrics');
+        // TODO: this query param has two functions: it enables the filter and tells whether to delete rows w/ no visit. it needs to be renamed.
+        $shouldAddNormalProcessedMetrics = Common::getRequestVar('filter_add_columns_when_show_all_columns', false, $type = null, $this->request);
+        if ($shouldAddNormalProcessedMetrics !== false) {
+            $dataTable->filter('AddColumnsProcessedMetrics', array((int) $shouldAddNormalProcessedMetrics));
         }
 
         $shouldAddGoalProcessedMetrics = Common::getRequestVar('filter_update_columns_when_show_all_goals', false, 'integer', $this->request);

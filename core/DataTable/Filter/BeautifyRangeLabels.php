@@ -95,13 +95,9 @@ class BeautifyRangeLabels extends ColumnCallbackReplace
             sscanf($value, "%d", $lowerBound);
 
             if ($lowerBound !== null) {
-                $plusEncoded = urlencode('+');
-                $plusLen = strlen($plusEncoded);
-                $len = strlen($value);
-
                 // if the label doesn't end with a '+', append it
-                if ($len < $plusLen || substr($value, $len - $plusLen) != $plusEncoded) {
-                    $value .= $plusEncoded;
+                if (substr($value, -1) != '+') {
+                    $value .= '+';
                 }
 
                 return $this->getUnboundedLabel($value, $lowerBound);
