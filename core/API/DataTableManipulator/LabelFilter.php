@@ -127,11 +127,11 @@ class LabelFilter extends DataTableManipulator
         $variations = array();
         $label = trim(urldecode($originalLabel));
 
-        $sanitizedLabel = Common::sanitizeInputValue($label);
+        $sanitizedLabel = Common::sanitizeInputValue($label); // TODO: is this still needed?
         $variations[] = $sanitizedLabel;
 
-        $decodedLabel = urldecode($label);
-        $variations[] = $decodedLabel;
+        $unsanitizedLabel = Common::unsanitizeInputValue($label);
+        $variations[] = $unsanitizedLabel;
 
         if ($this->apiModule == 'Actions'
             && in_array($this->apiMethod, $pageTitleReports)
@@ -139,13 +139,13 @@ class LabelFilter extends DataTableManipulator
             if ($isTerminal) {
                 array_unshift($variations, ' ' . $sanitizedLabel);
                 array_unshift($variations, ' ' . $label);
-                array_unshift($variations, ' ' . $decodedLabel);
+                array_unshift($variations, ' ' . $unsanitizedLabel);
             } else {
                 // special case: the Actions.getPageTitles report prefixes some labels with a blank.
                 // the blank might be passed by the user but is removed in Request::getRequestArrayFromString.
                 $variations[] = ' ' . $sanitizedLabel;
                 $variations[] = ' ' . $label;
-                $variations[] = ' ' . $decodedLabel;
+                $variations[] = ' ' . $unsanitizedLabel;
             }
         }
         $variations[] = $label;
