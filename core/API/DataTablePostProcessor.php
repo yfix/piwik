@@ -105,6 +105,11 @@ class DataTablePostProcessor extends BaseFilter
     /**
      * TODO
      */
+    private $otherPriorityFilters = array();
+
+    /**
+     * TODO
+     */
     public function __construct($apiModule, $apiAction, $request = false)
     {
         if ($request === false) {
@@ -121,20 +126,28 @@ class DataTablePostProcessor extends BaseFilter
      */
     public function filter($dataTable)
     {
-        // if the flag disable_generic_filters is defined we skip the generic filters
-        if (0 == Common::getRequestVar('disable_generic_filters', '0', 'string', $this->request)) {
-            $this->applyFlattener($dataTable);
-            $this->applyReportTotalsCalculator($dataTable);
-            $this->applyGenericFilters($dataTable);
-        }
+        // TODO: deprecate 'disable_generic_filters' or provide backwards compatibility.
+        $this->applyFlattener($dataTable);
+        $this->applyReportTotalsCalculator($dataTable);
+        $this->applyOtherPriorityFilters($dataTable);
+
+        $this->applyExcludeLowPopulationFilters($dataTable);
 
         $this->decodeLabelsSafely($dataTable);
+
+        $dataTable = $this->applyLabelFilter($dataTable);
+
+        $this->applyPatternFilters($dataTable);
+
+        $this->applyAddProcessedMetricsFilters($dataTable);
+
+        $this->applySortFilter($dataTable);
+        $this->applyTruncateFilter($dataTable);
+        $this->applyLimitingFilter($dataTable);
+
         $this->applyQueuedFilters($dataTable);
 
-        if (0 == Common::getRequestVar('disable_generic_filters', '0', 'string', $this->request)) {
-            $this->applyColumnDeleteFilter($dataTable);
-            $dataTable = $this->applyLabelFilter($dataTable);
-        }
+        $this->applyColumnDeleteFilter($dataTable);
 
         $this->resultDataTable = $dataTable; // TODO: remove after changing all 'manipulators' to modify tables in-place
     }
@@ -193,6 +206,16 @@ class DataTablePostProcessor extends BaseFilter
         $this->applySortFilter($dataTable);
         $this->applyTruncateFilter($dataTable);
         $this->applyLimitingFilter($dataTable);
+    }
+
+    /**
+     * TODO
+     */
+    private function applyOtherPriorityFilters($dataTable)
+    {
+        foreach ($this->otherPriorityFilters as $filter) {
+            $this->dataTable->filter($filter[0], $filter[1]);
+        }
     }
 
     /**
