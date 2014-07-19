@@ -521,7 +521,7 @@ class RowEvolution
      */
     private function cleanOriginalLabel($label)
     {
-        $label = str_replace(LabelFilter::SEPARATOR_RECURSIVE_LABEL, ' - ', $label);
+        $label = preg_replace('/\s*' . preg_quote(LabelFilter::SEPARATOR_RECURSIVE_LABEL) . '\s*/', ' - ', $label);
         $label = SafeDecodeLabel::decodeLabelSafe($label);
         return $label;
     }
