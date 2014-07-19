@@ -37,6 +37,11 @@ class ColumnCallbackAddColumnQuotient extends BaseFilter
     protected $getDivisorFromSummaryRow;
 
     /**
+     * TODO
+     */
+    protected $useLazyColumnValue = true;
+
+    /**
      * Constructor.
      * 
      * @param DataTable $table The DataTable that will eventually be filtered.
@@ -75,31 +80,55 @@ class ColumnCallbackAddColumnQuotient extends BaseFilter
      */
     public function filter($table)
     {
+        $shouldSkipRows = $this->shouldSkipRows;
+
         foreach ($table->getRows() as $row) {
             $self = $this;
-            // TODO: binding $self creates cycle since $table is held as property...
-            $row->addColumn($this->columnNameToAdd, function (Row $row) use ($self) {
-                $value = $self->getDividend($row);
-                if ($value === false && $self->shouldSkipRows) {
-                    continue;
-                }
 
-                // Delete existing column if it exists
-                /* TODO: remove this code if no failures.
-                $existingValue = $row->getColumn($self->columnNameToAdd);
-                if ($existingValue !== false) {
-                    continue;
-                }*/
+            $columnValue = $this->useLazyColumnValue ? $this->getLazyColumnValue() : $this->getColumnValue($row, $this->shouldSkipRows);
 
-                $divisor = $self->getDivisor($row);
-
-                $formattedValue = $self->formatValue($value, $divisor);
-
-                return $formattedValue;
-            });
+            $row->addColumn($this->columnNameToAdd, $columnValue);
 
             $this->filterSubTable($row);
         }
+    }
+
+    /**
+     * TODO
+     */
+    private function getLazyColumnValue()
+    {
+        $shouldSkipRows = $this->shouldSkipRows;
+        $self = $this;
+
+        // TODO: binding $self creates cycle since $table is held as property...
+        return function (Row $row) use ($self, $shouldSkipRows) {
+            return $self->getColumnValue($row, $shouldSkipRows);
+        };
+    }
+
+    /**
+     * TODO
+     */
+    private function getColumnValue($row, $shouldSkipRows)
+    {
+        $value = $this->getDividend($row);
+        if ($value === false && $shouldSkipRows) {
+            continue;
+        }
+
+        // Delete existing column if it exists
+        /* TODO: remove this code if no failures.
+        $existingValue = $row->getColumn($self->columnNameToAdd);
+        if ($existingValue !== false) {
+            continue;
+        }*/
+
+        $divisor = $this->getDivisor($row);
+
+        $formattedValue = $this->formatValue($value, $divisor);
+
+        return $formattedValue;
     }
 
     /**
