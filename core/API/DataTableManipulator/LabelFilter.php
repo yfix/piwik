@@ -91,6 +91,8 @@ class LabelFilter extends DataTableManipulator
             return false;
         }
 
+        $subTable->applyQueuedFilters();
+
         return $this->doFilterRecursiveDescend($labelParts, $subTable);
     }
 

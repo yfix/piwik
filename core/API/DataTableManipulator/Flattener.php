@@ -61,12 +61,14 @@ class Flattener extends DataTableManipulator
      */
     protected function manipulateDataTable($dataTable)
     {
+        // TODO: need to test disable_queued_filters use w/ these filters. (is there a use for disable_queued_filters?)
+
         // apply filters now since subtables have their filters applied before generic filters. if we don't do this
         // now, we'll try to apply filters to rows that have already been manipulated. this results in errors like
         // 'column ... already exists'.
-        if (Common::getRequestVar('disable_queued_filters', 0, 'int', $this->request) == 0) {
+        //if (Common::getRequestVar('disable_queued_filters', 0, 'int', $this->request) == 0) {
             $dataTable->applyQueuedFilters();
-        }
+        //}
 
         foreach ($dataTable->getRows() as $rowId => $row) {
             $this->flattenRow($row, $dataTable);
@@ -108,6 +110,8 @@ class Flattener extends DataTableManipulator
             }
             $dataTable->addRow($row);
         } else {
+            $subTable->applyQueuedFilters();
+
             if ($this->includeAggregateRows) {
                 $row->setMetadata('is_aggregate', 1);
                 $dataTable->addRow($row);

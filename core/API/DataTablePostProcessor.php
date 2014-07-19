@@ -126,6 +126,11 @@ class DataTablePostProcessor extends BaseFilter
      */
     public function filter($dataTable)
     {
+        if (Common::getRequestVar('disable_post_processing', false, null, $this->request)) {
+            $this->resultDataTable = $dataTable;
+            return;
+        }
+
         // TODO: deprecate 'disable_generic_filters' or provide backwards compatibility.
         $this->applyFlattener($dataTable);
         $this->applyReportTotalsCalculator($dataTable);
@@ -134,6 +139,7 @@ class DataTablePostProcessor extends BaseFilter
         $this->applyExcludeLowPopulationFilters($dataTable);
 
         $this->decodeLabelsSafely($dataTable);
+        $this->applyQueuedFilters($dataTable);
 
         $dataTable = $this->applyLabelFilter($dataTable);
 
@@ -144,8 +150,6 @@ class DataTablePostProcessor extends BaseFilter
         $this->applySortFilter($dataTable);
         $this->applyTruncateFilter($dataTable);
         $this->applyLimitingFilter($dataTable);
-
-        $this->applyQueuedFilters($dataTable);
 
         $this->applyColumnDeleteFilter($dataTable);
 
@@ -211,7 +215,7 @@ class DataTablePostProcessor extends BaseFilter
     /**
      * TODO
      */
-    private function applyOtherPriorityFilters($dataTable)
+    public function applyOtherPriorityFilters($dataTable)
     {
         foreach ($this->otherPriorityFilters as $filter) {
             $this->dataTable->filter($filter[0], $filter[1]);
@@ -221,7 +225,7 @@ class DataTablePostProcessor extends BaseFilter
     /**
      * TODO
      */
-    private function applyFlattener($dataTable) {
+    public function applyFlattener($dataTable) {
         if (Common::getRequestVar('flat', '0', 'string', $this->request) == '1') {
             $flattener = new Flattener($this->apiModule, $this->apiAction, $this->request);
             if (Common::getRequestVar('include_aggregate_rows', '0', 'string', $this->request) == '1') {
@@ -234,7 +238,7 @@ class DataTablePostProcessor extends BaseFilter
     /**
      * TODO
      */
-    private function applyReportTotalsCalculator($dataTable) {
+    public function applyReportTotalsCalculator($dataTable) {
         if (1 == Common::getRequestVar('totals', '1', 'integer', $this->request)) {
             $genericFilter = new ReportTotalsCalculator($this->apiModule, $this->apiAction, $this->request);
             $genericFilter->calculate($dataTable);
@@ -244,7 +248,7 @@ class DataTablePostProcessor extends BaseFilter
     /**
      * TODO
      */
-    private function decodeLabelsSafely($dataTable)
+    public function decodeLabelsSafely($dataTable)
     {
         // we automatically safe decode all dataTable labels (against xss)
         $dataTable->filter('SafeDecodeLabel');
@@ -253,7 +257,7 @@ class DataTablePostProcessor extends BaseFilter
     /**
      * TODO
      */
-    private function applyQueuedFilters($dataTable)
+    public function applyQueuedFilters($dataTable)
     {
         if (Common::getRequestVar('disable_queued_filters', 0, 'int', $this->request) == 0) {
             $dataTable->applyQueuedFilters();
@@ -263,7 +267,7 @@ class DataTablePostProcessor extends BaseFilter
     /**
      * TODO
      */
-    private function applyColumnDeleteFilter($dataTable) {
+    public function applyColumnDeleteFilter($dataTable) {
         $hideColumns = Common::getRequestVar('hideColumns', '', 'string', $this->request);
         $showColumns = Common::getRequestVar('showColumns', '', 'string', $this->request);
         if ($hideColumns !== '' || $showColumns !== '') {
@@ -274,7 +278,7 @@ class DataTablePostProcessor extends BaseFilter
     /**
      * TODO
      */
-    private function applyLabelFilter($dataTable) {
+    public function applyLabelFilter($dataTable) {
         // TODO: make LabelFilter in-place
 
         // apply label filter: only return rows matching the label parameter (more than one if more than one label)
@@ -300,7 +304,7 @@ class DataTablePostProcessor extends BaseFilter
     /**
      * TODO
      */
-    private function applyPatternFilters($dataTable) {
+    public function applyPatternFilters($dataTable) {
         $filterColumn = Common::getRequestVar('filter_column', 'label', 'string', $this->request);
         $filterPattern = Common::getRequestVar('filter_pattern', false, 'string', $this->request);
 
@@ -319,7 +323,7 @@ class DataTablePostProcessor extends BaseFilter
     /**
      * TODO
      */
-    private function applyExcludeLowPopulationFilters($dataTable) {
+    public function applyExcludeLowPopulationFilters($dataTable) {
         $excludeLowPopulationColumn = Common::getRequestVar('filter_excludelowpop', false, 'string', $this->request);
         $excludeLowPopulationValue = Common::getRequestVar('filter_excludelowpop_value', 0, 'float', $this->request);
 
@@ -331,7 +335,7 @@ class DataTablePostProcessor extends BaseFilter
     /**
      * TODO
      */
-    private function applyAddProcessedMetricsFilters($dataTable) {
+    public function applyAddProcessedMetricsFilters($dataTable) {
         // TODO: this query param has two functions: it enables the filter and tells whether to delete rows w/ no visit. it needs to be renamed.
         $shouldAddNormalProcessedMetrics = Common::getRequestVar('filter_add_columns_when_show_all_columns', false, $type = null, $this->request);
         if ($shouldAddNormalProcessedMetrics !== false) {
@@ -348,7 +352,7 @@ class DataTablePostProcessor extends BaseFilter
     /**
      * TODO
      */
-    private function applySortFilter($dataTable) {
+    public function applySortFilter($dataTable) {
         $sortColumn = Common::getRequestVar('filter_sort_column', false, 'string', $this->request);
         $sortOrder = Common::getRequestVar('filter_sort_order', 'desc', 'string', $this->request);
 
@@ -360,7 +364,7 @@ class DataTablePostProcessor extends BaseFilter
     /**
      * TODO
      */
-    private function applyTruncateFilter($dataTable) {
+    public function applyTruncateFilter($dataTable) {
         $truncateAfter = Common::getRequestVar('filter_truncate', false, 'integer', $this->request);
         if (!empty($truncateAfter)) {
             $dataTable->filter('Truncate', array($truncateAfter));
@@ -370,7 +374,7 @@ class DataTablePostProcessor extends BaseFilter
     /**
      * TODO
      */
-    private function applyLimitingFilter($dataTable) {
+    public function applyLimitingFilter($dataTable) {
         $filterOffset = Common::getRequestVar('filter_offset', 0, 'integer', $this->request);
         $filterLimit = Common::getRequestVar('filter_limit', false, 'integer', $this->request);
         $keepSummaryRow = Common::getRequestVar('keep_summary_row', 0, 'integer', $this->request);
