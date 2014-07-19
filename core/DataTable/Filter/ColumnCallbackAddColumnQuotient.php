@@ -110,7 +110,7 @@ class ColumnCallbackAddColumnQuotient extends BaseFilter
     /**
      * TODO
      */
-    private function getColumnValue($row, $shouldSkipRows)
+    public function getColumnValue($row, $shouldSkipRows)
     {
         $value = $this->getDividend($row);
         if ($value === false && $shouldSkipRows) {
