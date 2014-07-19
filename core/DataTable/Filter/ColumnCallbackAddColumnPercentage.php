@@ -32,7 +32,7 @@ class ColumnCallbackAddColumnPercentage extends ColumnCallbackAddColumnQuotient
      * @param number $divisor
      * @return string
      */
-    protected function formatValue($value, $divisor)
+    public function formatValue($value, $divisor)
     {
         return Piwik::getPercentageSafe($value, $divisor, $this->quotientPrecision) . '%';
     }

@@ -108,7 +108,7 @@ class ColumnCallbackAddColumnQuotient extends BaseFilter
      * @param number $divisor
      * @return float|int
      */
-    protected function formatValue($value, $divisor)
+    public function formatValue($value, $divisor)
     {
         $quotient = 0;
         if ($divisor > 0 && $value > 0) {
@@ -124,7 +124,7 @@ class ColumnCallbackAddColumnQuotient extends BaseFilter
      * @param Row $row The row being modified.
      * @return int|float
      */
-    protected function getDividend($row)
+    public function getDividend($row)
     {
         return $row->getColumn($this->columnValueToRead);
     }
@@ -136,7 +136,7 @@ class ColumnCallbackAddColumnQuotient extends BaseFilter
      * @param Row $row The row being modified.
      * @return int|float
      */
-    protected function getDivisor($row)
+    public function getDivisor($row)
     {
         if (!is_null($this->totalValueUsedAsDivisor)) {
             return $this->totalValueUsedAsDivisor;
