@@ -67,7 +67,7 @@ class CalculateEvolutionFilter extends ColumnCallbackAddColumnPercentage
      * @param Row $row
      * @return int|float
      */
-    protected function getDividend($row)
+    public function getDividend($row)
     {
         $currentValue = $row->getColumn($this->columnValueToRead);
 
@@ -97,7 +97,7 @@ class CalculateEvolutionFilter extends ColumnCallbackAddColumnPercentage
      * @param Row $row
      * @return int|float
      */
-    protected function getDivisor($row)
+    public function getDivisor($row)
     {
         $pastRow = $this->getPastRowFromCurrent($row);
         if (!$pastRow) return 0;
@@ -117,7 +117,7 @@ class CalculateEvolutionFilter extends ColumnCallbackAddColumnPercentage
      * @param int|float $divisor
      * @return string
      */
-    protected function formatValue($value, $divisor)
+    public function formatValue($value, $divisor)
     {
         $value = self::getPercentageValue($value, $divisor, $this->quotientPrecision);
         $value = self::appendPercentSign($value);
@@ -130,7 +130,7 @@ class CalculateEvolutionFilter extends ColumnCallbackAddColumnPercentage
      * @param Row $row The row in the 'current' DataTable.
      * @return bool|Row
      */
-    protected function getPastRowFromCurrent($row)
+    public function getPastRowFromCurrent($row)
     {
         return $this->pastDataTable->getRowFromLabel($row->getColumn('label'));
     }
