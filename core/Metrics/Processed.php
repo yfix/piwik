@@ -16,7 +16,6 @@ use Piwik\Tracker\GoalManager;
 
 class Processed extends Base
 {
-
     public function getConversionRate(Row $row)
     {
         $nbVisits = $this->getNumVisits($row);

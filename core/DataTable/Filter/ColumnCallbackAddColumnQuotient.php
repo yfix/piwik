@@ -77,6 +77,7 @@ class ColumnCallbackAddColumnQuotient extends BaseFilter
     {
         foreach ($table->getRows() as $row) {
             $self = $this;
+            // TODO: binding $self creates cycle since $table is held as property...
             $row->addColumn($this->columnNameToAdd, function (Row $row) use ($self) {
                 $value = $self->getDividend($row);
                 if ($value === false && $self->shouldSkipRows) {

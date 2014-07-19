@@ -94,6 +94,11 @@ class ColumnDelete extends BaseFilter
      */
     public function filter($table)
     {
+        // make sure processed columns are calculated and set
+        foreach ($table->getRows() as $row) {
+            $row->setColumns($row->getColumns());
+        }
+
         // always do recursive filter
         $this->enableRecursive(true);
         $recurse = false; // only recurse if there are columns to remove/keep

@@ -142,7 +142,6 @@ class DataTablePostProcessor extends BaseFilter
         $this->applyQueuedFilters($dataTable);
 
         $dataTable = $this->applyLabelFilter($dataTable);
-
         $this->applyPatternFilters($dataTable);
 
         $this->applyAddProcessedMetricsFilters($dataTable);
@@ -153,9 +152,20 @@ class DataTablePostProcessor extends BaseFilter
 
         $this->applyQueuedFilters($dataTable); // redundant application in case previous filters queued more filters
 
+        $this->finalizeProcessedColumnValues($dataTable); // TODO redundancy w/ ColumnDelete filter
+
         $this->applyColumnDeleteFilter($dataTable);
 
         $this->resultDataTable = $dataTable; // TODO: remove after changing all 'manipulators' to modify tables in-place
+    }
+
+    private function finalizeProcessedColumnValues($dataTable)
+    {
+        $dataTable->filter(function ($table) {
+            foreach ($table->getRows() as $row) {
+                $row->setColumns($row->getColumns());
+            }
+        });
     }
 
     /**
@@ -264,14 +274,6 @@ class DataTablePostProcessor extends BaseFilter
 
             $filter = new LabelFilter($this->apiModule, $this->apiAction, $this->request);
             $dataTable = $filter->filter($label, $dataTable, $addLabelIndex);
-
-            $this->applyGenericFilters($dataTable);
-
-            $dataTable->filter(function ($table) {
-                foreach ($table->getRows() as $row) {
-                    $row->setColumns($row->getColumns()); // force processed metrics to be calculated
-                }
-            });
         }
 
         return $dataTable;
