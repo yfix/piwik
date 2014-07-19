@@ -151,6 +151,8 @@ class DataTablePostProcessor extends BaseFilter
         $this->applyTruncateFilter($dataTable);
         $this->applyLimitingFilter($dataTable);
 
+        $this->applyQueuedFilters($dataTable); // redundant application in case previous filters queued more filters
+
         $this->applyColumnDeleteFilter($dataTable);
 
         $this->resultDataTable = $dataTable; // TODO: remove after changing all 'manipulators' to modify tables in-place
@@ -184,32 +186,6 @@ class DataTablePostProcessor extends BaseFilter
         // to become &gt; and we need to undo that here.
         $label = Common::unsanitizeInputValues($label);
         return $label;
-    }
-
-    /**
-     * Apply generic filters to the DataTable object resulting from the API Call.
-     * Disable this feature by setting the parameter disable_generic_filters to 1 in the API call request.
-     *
-     * @param DataTable $dataTable
-     * @return bool
-     */
-    public function applyGenericFilters($dataTable)
-    {
-        if ($dataTable instanceof Map) {
-            $tables = $dataTable->getDataTables();
-            foreach ($tables as $table) {
-                $this->applyGenericFilters($table);
-            }
-            return;
-        }
-
-        // TODO: removed error silencing; may cause issues?
-        $this->applyPatternFilters($dataTable);
-        $this->applyExcludeLowPopulationFilters($dataTable);
-        $this->applyAddProcessedMetricsFilters($dataTable);
-        $this->applySortFilter($dataTable);
-        $this->applyTruncateFilter($dataTable);
-        $this->applyLimitingFilter($dataTable);
     }
 
     /**

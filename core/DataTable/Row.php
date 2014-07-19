@@ -525,7 +525,9 @@ class Row
 
             // max_actions is a core metric that is generated in ArchiveProcess_Day. Therefore, it can be
             // present in any data table and is not part of the $aggregationOperations mechanism.
-            if ($columnToSumName == Metrics::INDEX_MAX_ACTIONS) {
+            if ($columnToSumName == Metrics::INDEX_MAX_ACTIONS
+                || $columnToSumName == 'max_actions'
+            ) {
                 $operation = 'max';
             }
             if(empty($operation)) {

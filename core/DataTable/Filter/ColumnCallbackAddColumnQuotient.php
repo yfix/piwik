@@ -76,21 +76,26 @@ class ColumnCallbackAddColumnQuotient extends BaseFilter
     public function filter($table)
     {
         foreach ($table->getRows() as $row) {
-            $value = $this->getDividend($row);
-            if ($value === false && $this->shouldSkipRows) {
-                continue;
-            }
+            $self = $this;
+            $row->addColumn($this->columnNameToAdd, function (Row $row) use ($self) {
+                $value = $self->getDividend($row);
+                if ($value === false && $self->shouldSkipRows) {
+                    continue;
+                }
 
-            // Delete existing column if it exists
-            $existingValue = $row->getColumn($this->columnNameToAdd);
-            if ($existingValue !== false) {
-                continue;
-            }
+                // Delete existing column if it exists
+                /* TODO: remove this code if no failures.
+                $existingValue = $row->getColumn($self->columnNameToAdd);
+                if ($existingValue !== false) {
+                    continue;
+                }*/
 
-            $divisor = $this->getDivisor($row);
+                $divisor = $self->getDivisor($row);
 
-            $formattedValue = $this->formatValue($value, $divisor);
-            $row->addColumn($this->columnNameToAdd, $formattedValue);
+                $formattedValue = $self->formatValue($value, $divisor);
+
+                return $formattedValue;
+            });
 
             $this->filterSubTable($row);
         }
