@@ -163,6 +163,8 @@ class ReportTotalsCalculator extends DataTableManipulator
 
         $table = $this->callApiAndReturnDataTable($module, $action, $request);
 
+        $table->applyQueuedFilters();
+
         if ($table instanceof DataTable\Map) {
             $table = $table->mergeChildren();
         }
