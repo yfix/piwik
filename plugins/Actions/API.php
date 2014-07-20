@@ -518,13 +518,12 @@ class API extends \Piwik\Plugin\API
                       'nb_hits_with_time_generation',
                       $precisionAvgTimeGeneration)
             );
-            $dataTable->queueFilter('ColumnDelete', array('sum_time_generation'));
 
-            /*$dataTable->filter(function ($table) {
+            $dataTable->filter(function ($table) {
                 $columnsToRemove = $table->getMetadata(DataTable::COLUMNS_TO_REMOVE_METADATA_NAME);
                 $columnsToRemove[] = 'sum_time_generation';
                 $table->setMetadata(DataTable::COLUMNS_TO_REMOVE_METADATA_NAME, $columnsToRemove);
-            });*/
+            });
             // TODO: rename COLUMNS_TO_REMOVE metadata name, ie obsolete columns? superfluous columns?
         } else {
             // No generation time: remove it from the API output and add it to empty_columns metadata, so that
