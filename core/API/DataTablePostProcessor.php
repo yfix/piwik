@@ -141,6 +141,7 @@ class DataTablePostProcessor extends BaseFilter
         $this->applyExcludeLowPopulationFilters($dataTable);
 
         $this->decodeLabelsSafely($dataTable);
+
         $this->applyQueuedFilters($dataTable);
 
         $dataTable = $this->applyLabelFilter($dataTable);
