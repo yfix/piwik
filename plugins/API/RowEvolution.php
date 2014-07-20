@@ -162,6 +162,9 @@ class RowEvolution
                     }
                 }
 
+                // finalize processed metrics values
+                $row->setColumns($row->getColumns()); // TODO: move this to a DataTable function?
+
                 // remove all columns that are not in the available metrics.
                 // this removes the label as well (which is desired for two reasons: (1) it was passed
                 // in the request, (2) it would cause the evolution graph to show the label in the legend).

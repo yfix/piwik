@@ -77,6 +77,11 @@ class API extends \Piwik\Plugin\API
         foreach (APIVisitsSummary::getInstance()->getColumns($period) as $oldColumn) {
             $rename[$oldColumn] = $oldColumn . self::COLUMN_SUFFIX;
         }
-        $table->filter('ReplaceColumnNames', array($rename));
+        $table->queueFilter(function ($table) {
+            foreach ($table->getRows() as $row) { // TODO: more redundancy
+                $row->setColumns($row->getColumns());
+            }
+        });
+        $table->queueFilter('ReplaceColumnNames', array($rename));
     }
 }

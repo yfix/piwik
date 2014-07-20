@@ -12,6 +12,7 @@ use Piwik\Archive;
 use Piwik\MetricsFormatter;
 use Piwik\Piwik;
 use Piwik\SettingsPiwik;
+use Piwik\DataTable;
 
 /**
  * VisitsSummary API lets you access the core web analytics metrics (visits, unique visitors,
@@ -70,7 +71,11 @@ class API extends \Piwik\Plugin\API
         }
 
         // remove temp metrics that were used to compute processed metrics
-        $dataTable->deleteColumns($tempColumns);
+        $dataTable->filter(function ($table) use ($tempColumns) {
+            $columnsToRemove = $table->getMetadata(DataTable::COLUMNS_TO_REMOVE_METADATA_NAME) ?: array();
+            $table->setMetadata(DataTable::COLUMNS_TO_REMOVE_METADATA_NAME, array_merge($columnsToRemove, $tempColumns));
+        });
+
         return $dataTable;
     }
 

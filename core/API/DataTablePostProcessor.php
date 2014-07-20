@@ -20,6 +20,8 @@ use Exception;
 
 /**
  * TODO
+ * TODO: all those who call requests within Piwik should disable post processing and apply it themselves (ie for all callers that use format=original,
+ *       there should be no post processing. should be done only when returning data via the API.)
  */
 class DataTablePostProcessor extends BaseFilter
 {
@@ -152,20 +154,9 @@ class DataTablePostProcessor extends BaseFilter
 
         $this->applyQueuedFilters($dataTable); // redundant application in case previous filters queued more filters
 
-        $this->finalizeProcessedColumnValues($dataTable); // TODO redundancy w/ ColumnDelete filter
-
         $this->applyColumnDeleteFilter($dataTable);
 
         $this->resultDataTable = $dataTable; // TODO: remove after changing all 'manipulators' to modify tables in-place
-    }
-
-    private function finalizeProcessedColumnValues($dataTable)
-    {
-        $dataTable->filter(function ($table) {
-            foreach ($table->getRows() as $row) {
-                $row->setColumns($row->getColumns());
-            }
-        });
     }
 
     /**
@@ -256,9 +247,9 @@ class DataTablePostProcessor extends BaseFilter
     public function applyColumnDeleteFilter($dataTable) {
         $hideColumns = Common::getRequestVar('hideColumns', '', 'string', $this->request);
         $showColumns = Common::getRequestVar('showColumns', '', 'string', $this->request);
-        if ($hideColumns !== '' || $showColumns !== '') {
-            $dataTable->filter('ColumnDelete', array($hideColumns, $showColumns));
-        }
+
+        $dataTable->filter('ColumnDelete', array($hideColumns, $showColumns, $deleteIfZeroOnly = false,
+            $checkColumnDeleteTableMetadata = true)); // TODO
     }
 
     /**

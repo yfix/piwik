@@ -69,8 +69,10 @@ class ColumnDelete extends BaseFilter
      *                                    comma-separated list of column names. Columns not in
      *                                    this list will be removed.
      * @param bool $deleteIfZeroOnly If true, columns will be removed only if their value is 0.
+     * @param bool $checkColumnDeleteTableMetadata TODO
      */
-    public function __construct($table, $columnsToRemove, $columnsToKeep = array(), $deleteIfZeroOnly = false)
+    public function __construct($table, $columnsToRemove, $columnsToKeep = array(), $deleteIfZeroOnly = false,
+                                $checkColumnDeleteTableMetadata = false)
     {
         parent::__construct($table);
 
@@ -85,6 +87,10 @@ class ColumnDelete extends BaseFilter
         $this->columnsToRemove = $columnsToRemove;
         $this->columnsToKeep = array_flip($columnsToKeep); // flip so we can use isset instead of in_array
         $this->deleteIfZeroOnly = $deleteIfZeroOnly;
+
+        if ($checkColumnDeleteTableMetadata) {
+            $this->columnsToRemove = array_merge($this->columnsToRemove, $table->getMetadata(DataTable::COLUMNS_TO_REMOVE_METADATA_NAME) ?: array());
+        }
     }
 
     /**
@@ -94,9 +100,12 @@ class ColumnDelete extends BaseFilter
      */
     public function filter($table)
     {
-        // make sure processed columns are calculated and set
-        foreach ($table->getRows() as $row) {
-            $row->setColumns($row->getColumns());
+        if (!empty($this->columnsToRemove)
+            || !empty($this->columnsToKeep)
+        ) {
+            foreach ($table->getRows() as $row) {
+                $row->setColumns($row->getColumns());
+            }
         }
 
         // always do recursive filter

@@ -193,6 +193,11 @@ class DataTable implements DataTableInterface
      */
     const COLUMN_AGGREGATION_OPS_METADATA_NAME = 'column_aggregation_ops';
 
+    /**
+     * TODO
+     */
+    const COLUMNS_TO_REMOVE_METADATA_NAME = 'columns_to_remove';
+
     /** The ID of the Summary Row. */
     const ID_SUMMARY_ROW = -1;
 

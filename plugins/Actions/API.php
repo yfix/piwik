@@ -518,7 +518,14 @@ class API extends \Piwik\Plugin\API
                       'nb_hits_with_time_generation',
                       $precisionAvgTimeGeneration)
             );
-            $dataTable->queueFilter('ColumnDelete', array(array('sum_time_generation')));
+            $dataTable->queueFilter('ColumnDelete', array('sum_time_generation'));
+
+            /*$dataTable->filter(function ($table) {
+                $columnsToRemove = $table->getMetadata(DataTable::COLUMNS_TO_REMOVE_METADATA_NAME);
+                $columnsToRemove[] = 'sum_time_generation';
+                $table->setMetadata(DataTable::COLUMNS_TO_REMOVE_METADATA_NAME, $columnsToRemove);
+            });*/
+            // TODO: rename COLUMNS_TO_REMOVE metadata name, ie obsolete columns? superfluous columns?
         } else {
             // No generation time: remove it from the API output and add it to empty_columns metadata, so that
             // the columns can also be removed from the view
@@ -529,8 +536,8 @@ class API extends \Piwik\Plugin\API
                                                          Metrics::INDEX_PAGE_MAX_TIME_GENERATION
                                                      )));
 
-            if ($dataTable instanceof DataTable) {
-                $emptyColumns = $dataTable->getMetadata(DataTable::EMPTY_COLUMNS_METADATA_NAME);
+            $dataTable->filter(function ($table) {
+                $emptyColumns = $table->getMetadata(DataTable::EMPTY_COLUMNS_METADATA_NAME);
                 if (!is_array($emptyColumns)) {
                     $emptyColumns = array();
                 }
@@ -538,8 +545,8 @@ class API extends \Piwik\Plugin\API
                 $emptyColumns[] = 'avg_time_generation';
                 $emptyColumns[] = 'min_time_generation';
                 $emptyColumns[] = 'max_time_generation';
-                $dataTable->setMetadata(DataTable::EMPTY_COLUMNS_METADATA_NAME, $emptyColumns);
-            }
+                $table->setMetadata(DataTable::EMPTY_COLUMNS_METADATA_NAME, $emptyColumns);
+            });
         }
     }
 

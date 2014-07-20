@@ -362,6 +362,8 @@ class API extends \Piwik\Plugin\API
             $params['columns'] = implode(',', $columns);
             $dataTable = Proxy::getInstance()->call($className, 'get', $params);
             
+            $dataTable->applyQueuedFilters();
+
             // make sure the table has all columns
             $array = ($dataTable instanceof DataTable\Map ? $dataTable->getDataTables() : array($dataTable));
             foreach ($array as $table) {

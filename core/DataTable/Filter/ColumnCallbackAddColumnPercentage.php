@@ -26,6 +26,18 @@ use Piwik\Piwik;
 class ColumnCallbackAddColumnPercentage extends ColumnCallbackAddColumnQuotient
 {
     /**
+     * TODO
+     */
+    public function __construct($table, $columnNameToAdd, $columnValueToRead, $divisorValueOrDivisorColumnName,
+                                $quotientPrecision = 0, $shouldSkipRows = false, $getDivisorFromSummaryRow = false)
+    {
+        parent::__construct($table, $columnNameToAdd, $columnValueToRead, $divisorValueOrDivisorColumnName,
+                            $quotientPrecision, $shouldSkipRows, $getDivisorFromSummaryRow);
+
+        $this->useLazyColumnValue = true;
+    }
+
+    /**
      * Formats the given value as a percentage.
      *
      * @param number $value

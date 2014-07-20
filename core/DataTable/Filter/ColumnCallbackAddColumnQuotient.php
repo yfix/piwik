@@ -39,7 +39,7 @@ class ColumnCallbackAddColumnQuotient extends BaseFilter
     /**
      * TODO
      */
-    protected $useLazyColumnValue = true;
+    protected $useLazyColumnValue = false;
 
     /**
      * Constructor.
@@ -83,7 +83,9 @@ class ColumnCallbackAddColumnQuotient extends BaseFilter
         $shouldSkipRows = $this->shouldSkipRows;
 
         foreach ($table->getRows() as $row) {
-            $self = $this;
+            if ($row->getColumn($this->columnNameToAdd) !== false) {
+                continue;
+            }
 
             $columnValue = $this->useLazyColumnValue ? $this->getLazyColumnValue() : $this->getColumnValue($row, $this->shouldSkipRows);
 
@@ -114,15 +116,8 @@ class ColumnCallbackAddColumnQuotient extends BaseFilter
     {
         $value = $this->getDividend($row);
         if ($value === false && $shouldSkipRows) {
-            continue;
+            return false;
         }
-
-        // Delete existing column if it exists
-        /* TODO: remove this code if no failures.
-        $existingValue = $row->getColumn($self->columnNameToAdd);
-        if ($existingValue !== false) {
-            continue;
-        }*/
 
         $divisor = $this->getDivisor($row);
 
