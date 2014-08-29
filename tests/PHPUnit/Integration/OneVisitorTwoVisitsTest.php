@@ -58,9 +58,9 @@ class OneVisitorTwoVisitsTest extends IntegrationTestCase
 
     public function getApiForTesting()
     {
-        $idSite = self::$fixture->idSite;
-        $idSiteBis = self::$fixture->idSiteEmptyBis;
-        $idSiteTer = self::$fixture->idSiteEmptyTer;
+        $idSite = self::$fixture->sites['main']['idSite'];
+        $idSiteBis = self::$fixture->sites['emptyBis']['idSite'];
+        $idSiteTer = self::$fixture->sites['emptyTer']['idSite'];
 
         $dateTime = self::$fixture->dateTime;
 
@@ -193,7 +193,7 @@ class OneVisitorTwoVisitsTest extends IntegrationTestCase
      */
     public function testArchiveSingleGetBlob()
     {
-        $archive = Archive::build(self::$fixture->idSite, 'day', self::$fixture->dateTime);
+        $archive = Archive::build(self::$fixture->sites['main']['idSite'], 'day', self::$fixture->dateTime);
         $cache = $archive->getBlob('Actions_actions', 'all');
 
         $foundSubtable = false;

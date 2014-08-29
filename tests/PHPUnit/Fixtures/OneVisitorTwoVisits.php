@@ -17,45 +17,30 @@ use Piwik\Tests\Fixture;
  */
 class OneVisitorTwoVisits extends Fixture
 {
-    public $idSite = 1;
-    public $idSiteEmptyBis;
-    public $idSiteEmptyTer;
     public $dateTime = '2010-03-06 11:22:33';
 
     public $useThirdPartyCookies = false;
     public $useSiteSearch = false;
     public $excludeMozilla = false;
 
+    public function __construct()
+    {
+        $sites = array();
+        $sites['main'] = array('ts_created' => $this->dateTime);
+        $sites['emptyBis'] = array('ts_created' => $this->dateTime);
+        $sites['emptyTer'] = array('ts_created' => $this->dateTime);
+        $this->setSites($sites);
+    }
+
     public function setUp()
     {
-        $this->setUpWebsitesAndGoals();
         $this->trackVisits();
-    }
-
-    public function tearDown()
-    {
-        // empty
-    }
-
-    private function setUpWebsitesAndGoals()
-    {
-        if (!self::siteCreated($idSite = 1)) {
-            self::createWebsite($this->dateTime);
-        }
-
-        if (!self::siteCreated($idSite = 2)) {
-            $this->idSiteEmptyBis = $this->createWebsite($this->dateTime);
-        }
-
-        if (!self::siteCreated($idSite = 3)) {
-            $this->idSiteEmptyTer = $this->createWebsite($this->dateTime);
-        }
     }
 
     private function trackVisits()
     {
         $dateTime = $this->dateTime;
-        $idSite = $this->idSite;
+        $idSite = $this->sites['main']['idSite'];
 
         if ($this->excludeMozilla) {
             APISitesManager::getInstance()->setSiteSpecificUserAgentExcludeEnabled(false);

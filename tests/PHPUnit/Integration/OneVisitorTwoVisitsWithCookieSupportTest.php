@@ -38,7 +38,7 @@ class OneVisitorTwoVisitsWithCookieSupportTest extends IntegrationTestCase
             'Actions', 'Live.getLastVisitsDetails');
 
         return array(
-            array($apiToCall, array('idSite' => self::$fixture->idSite, 'date' => self::$fixture->dateTime))
+            array($apiToCall, array('idSite' => self::$fixture->sites['main']['idSite'], 'date' => self::$fixture->dateTime))
         );
     }
 

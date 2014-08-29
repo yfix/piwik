@@ -83,6 +83,26 @@ class Fixture extends PHPUnit_Framework_Assert
     public $testEnvironment = null;
 
     /**
+     * TODO
+     */
+    public $sites = array();
+
+    /**
+     * TODO
+     */
+    public function setSites($sites)
+    {
+        $id = 1;
+        foreach ($sites as &$site) {
+            $site['idSite'] = $id;
+
+            ++$id;
+        }
+
+        $this->sites = $sites;
+    }
+
+    /**
      * @return string
      */
     protected static function getPythonBinary()
@@ -229,12 +249,46 @@ class Fixture extends PHPUnit_Framework_Assert
         if ($this->overwriteExisting
             || !$this->isFixtureSetUp()
         ) {
+            $this->createDerivedClassSites();
+
             $this->setUp();
 
             $this->markFixtureSetUp();
             $this->log("Database {$this->dbName} marked as successfully set up.");
         } else {
             $this->log("Using existing database {$this->dbName}.");
+        }
+    }
+
+    private function createDerivedClassSites() // TODO: merge w/ createWebsite?
+    {
+        $defaultValues = array(
+            'ecommerce' => 0,
+            'name' => false,
+            'url' => false,
+            'siteSearch' => 1,
+            'searchKeywordParameters' => null,
+            'searchCategoryParameters' => null,
+            'timezone' => null
+        );
+
+        foreach ($this->sites as &$site) {
+            $site = $site + $defaultValues;
+
+            $idSite = self::createWebsite(
+                $site['ts_created'],
+                $site['ecommerce'],
+                $site['name'],
+                $site['url'],
+                $site['siteSearch'],
+                $site['searchKeywordParameters'],
+                $site['searchCategoryParameters'],
+                $site['timezone']
+            );
+
+            if ($idSite !== $site['idSite']) { // sanity check
+                throw new Exception("configured idSite does not match actual (expected $idSite, got {$site['idSite']})");
+            }
         }
     }
 
