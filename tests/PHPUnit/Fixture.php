@@ -82,6 +82,8 @@ class Fixture extends PHPUnit_Framework_Assert
 
     public $testEnvironment = null;
 
+    public $skipAlreadyCreatedSites = true;
+
     /**
      * TODO
      */
@@ -274,6 +276,12 @@ class Fixture extends PHPUnit_Framework_Assert
 
         foreach ($this->sites as &$site) {
             $site = $site + $defaultValues;
+
+            if ($this->skipAlreadyCreatedSites
+                && self::siteCreated($site['idSite'])
+            ) {
+                continue;
+            }
 
             $idSite = self::createWebsite(
                 $site['ts_created'],
