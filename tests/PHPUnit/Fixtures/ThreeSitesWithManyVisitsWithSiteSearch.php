@@ -17,42 +17,43 @@ use Piwik\Tests\Fixture;
  */
 class ThreeSitesWithManyVisitsWithSiteSearch extends Fixture
 {
-    public $idSite1 = 1;
-    public $idSite2 = 2;
-    public $idSite3 = 3;
     public $dateTime = '2010-01-03 11:22:33';
-
-    public function setUp()
-    {
-        self::setUpWebsites();
-        self::trackVisits();
-    }
-
-    public function tearDown()
-    {
-        // empty
-    }
 
     /**
      * One site with custom search parameters,
      * One site using default search parameters,
      * One site with disabled site search
      */
-    protected function setUpWebsites()
+    public function __construct()
+    {
+        $sites = array();
+        $sites['site1'] = array(
+            'ts_created' => Date::factory($this->dateTime)->subHour(200)->getDatetime(),
+            'name' => "Site 1 - Site search",
+            'siteSearch' => 1,
+            'searchKeywordParameters' => 'q,mykwd,p',
+            'searchCategoryParameters' => 'cats'
+        );
+        $sites['site2'] = array(
+            'ts_created' => Date::factory($this->dateTime)->subHour(400)->getDatetime(),
+            'name' => "Site 2 - Site search use default",
+            'siteSearch' => 1,
+            'searchKeywordParameters' => '',
+            'searchCategoryParameters' => ''
+        );
+        $sites['site3'] = array(
+            'ts_created' => Date::factory($this->dateTime)->subHour(600)->getDatetime(),
+            'name' => "Site 3 - No site search",
+            'siteSearch' => 0
+        );
+        $this->setSites($sites);
+    }
+
+    public function setUp()
     {
         API::getInstance()->setGlobalSearchParameters($searchKeywordParameters = 'gkwd', $searchCategoryParameters = 'gcat');
 
-        if (!self::siteCreated($idSite = 1)) {
-            self::createWebsite(Date::factory($this->dateTime)->subHour(200)->getDatetime(), 0, "Site 1 - Site search", $siteurl = false, $search = 1, $searchKwd = 'q,mykwd,p', $searchCat = 'cats');
-        }
-
-        if (!self::siteCreated($idSite = 2)) {
-            self::createWebsite(Date::factory($this->dateTime)->subHour(400)->getDatetime(), 0, "Site 2 - Site search use default", $siteurl = false, $search = 1, $searchKwd = '', $searchCat = '');
-        }
-
-        if (!self::siteCreated($idSite = 3)) {
-            self::createWebsite(Date::factory($this->dateTime)->subHour(600)->getDatetime(), 0, "Site 3 - No site search", $siteurl = false, $search = 0);
-        }
+        self::trackVisits();
     }
 
     protected function trackVisits()
@@ -66,7 +67,7 @@ class ThreeSitesWithManyVisitsWithSiteSearch extends Fixture
     {
         // -
         // Visitor site1
-        $visitor = self::getTracker($this->idSite1, $this->dateTime, $defaultInit = true);
+        $visitor = self::getTracker($this->sites['site1']['idSite'], $this->dateTime, $defaultInit = true);
 
         $visitor->setForceVisitDateTime(Date::factory($this->dateTime)->addHour(0.2)->getDatetime());
         $visitor->setUrl('http://example.org/index.htm?q=Search 1  ');
@@ -142,7 +143,7 @@ class ThreeSitesWithManyVisitsWithSiteSearch extends Fixture
 
         // -
         // Visitor BIS
-        $visitorB = self::getTracker($this->idSite1, $this->dateTime, $defaultInit = true);
+        $visitorB = self::getTracker($this->sites['site1']['idSite'], $this->dateTime, $defaultInit = true);
         $visitorB->setIp('156.66.6.66');
         $visitorB->setResolution(1600, 1000);
 
@@ -161,7 +162,7 @@ class ThreeSitesWithManyVisitsWithSiteSearch extends Fixture
 
     protected function recordVisitorSite2()
     {
-        $visitor = self::getTracker($this->idSite2, $this->dateTime, $defaultInit = true);
+        $visitor = self::getTracker($this->sites['site2']['idSite'], $this->dateTime, $defaultInit = true);
         $visitor->setResolution(801, 301);
 
         $visitor->setForceVisitDateTime(Date::factory($this->dateTime)->addHour(0.2)->getDatetime());
@@ -190,7 +191,7 @@ class ThreeSitesWithManyVisitsWithSiteSearch extends Fixture
     protected function recordVisitorSite3()
     {
         // Third new visitor on Idsite 3
-        $visitor = self::getTracker($this->idSite3, $this->dateTime, $defaultInit = true);
+        $visitor = self::getTracker($this->sites['site3']['idSite'], $this->dateTime, $defaultInit = true);
         $visitor->setResolution(1801, 1301);
 
         $visitor->setForceVisitDateTime(Date::factory($this->dateTime)->addHour(0.2)->getDatetime());

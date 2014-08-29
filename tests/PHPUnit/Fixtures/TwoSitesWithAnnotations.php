@@ -19,18 +19,18 @@ use FakeAccess;
 class TwoSitesWithAnnotations extends Fixture
 {
     public $dateTime = '2011-01-01 00:11:42';
-    public $idSite1 = 1;
-    public $idSite2 = 2;
+
+    public function __construct()
+    {
+        $sites = array();
+        $sites['site1'] = array('ts_created' => $this->dateTime, 'eccomerce' => 1);
+        $sites['site2'] = array('ts_created' => $this->dateTime, 'eccomerce' => 1);
+        $this->setSites($sites);
+    }
 
     public function setUp()
     {
-        $this->setUpWebsitesAndGoals();
         $this->addAnnotations();
-    }
-
-    public function tearDown()
-    {
-        // empty
     }
 
     private function addAnnotations()
@@ -50,8 +50,8 @@ class TwoSitesWithAnnotations extends Fixture
             $site1Text = "$count: Site 1 annotation for " . $dateStart->toString();
             $site2Text = "$count: Site 2 annotation for " . $dateStart->toString();
 
-            API::getInstance()->add($this->idSite1, $dateStart->toString(), $site1Text, $starred);
-            API::getInstance()->add($this->idSite2, $dateStart->toString(), $site2Text, $starred);
+            API::getInstance()->add($this->sites['site1']['idSite'], $dateStart->toString(), $site1Text, $starred);
+            API::getInstance()->add($this->sites['site2']['idSite'], $dateStart->toString(), $site2Text, $starred);
 
             $nextDay = $dateStart->addDay(1);
             ++$count;
@@ -60,8 +60,8 @@ class TwoSitesWithAnnotations extends Fixture
             $site1Text = "$count: Site 1 annotation for " . $nextDay->toString();
             $site2Text = "$count: Site 2 annotation for " . $nextDay->toString();
 
-            API::getInstance()->add($this->idSite1, $nextDay->toString(), $site1Text, $starred);
-            API::getInstance()->add($this->idSite2, $nextDay->toString(), $site2Text, $starred);
+            API::getInstance()->add($this->sites['site1']['idSite'], $nextDay->toString(), $site1Text, $starred);
+            API::getInstance()->add($this->sites['site2']['idSite'], $nextDay->toString(), $site2Text, $starred);
 
             $dateStart = $dateStart->addPeriod(1, 'WEEK');
             ++$count;

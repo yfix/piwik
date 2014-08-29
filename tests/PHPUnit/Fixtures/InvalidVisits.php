@@ -18,27 +18,20 @@ use Exception;
  */
 class InvalidVisits extends Fixture
 {
-    public $idSite = 1;
     public $dateTime = '2009-01-04 00:11:42';
 
     public $trackInvalidRequests = true;
 
+    public function __construct()
+    {
+        $sites = array();
+        $sites['main'] = array('ts_created' => $this->dateTime);
+        $this->setSites($sites);
+    }
+
     public function setUp()
     {
-        $this->setUpWebsitesAndGoals();
         $this->trackVisits();
-    }
-
-    public function tearDown()
-    {
-        // empty
-    }
-
-    private function setUpWebsitesAndGoals()
-    {
-        if (!self::siteCreated($idSite = 1)) {
-            self::createWebsite($this->dateTime);
-        }
     }
 
     private function trackVisits()
@@ -48,7 +41,7 @@ class InvalidVisits extends Fixture
         }
 
         $dateTime = $this->dateTime;
-        $idSite = $this->idSite;
+        $idSite = $this->sites['main']['idSite'];
 
         API::getInstance()->setSiteSpecificUserAgentExcludeEnabled(true);
         API::getInstance()->setGlobalExcludedUserAgents('globalexcludeduseragent');

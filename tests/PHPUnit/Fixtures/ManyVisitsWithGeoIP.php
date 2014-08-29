@@ -24,7 +24,6 @@ class ManyVisitsWithGeoIP extends Fixture
 {
     const GEOIP_IMPL_TO_TEST = 'geoip_php';
 
-    public $idSite = 1;
     public $dateTime = '2010-01-03 11:22:33';
 
     public $ips = array(
@@ -38,12 +37,34 @@ class ManyVisitsWithGeoIP extends Fixture
         '103.29.196.229', // in Indonesia (Bali), (only Indonesia will show up)
     );
 
-    protected $idGoal;
-    protected $idGoal2;
+    public function __construct()
+    {
+        $sites = array();
+        $sites['site1'] = array(
+            'ts_created' => $this->dateTime,
+            'name' => 'Site 1',
+            'goals' => array(
+                'Goal1' => array(
+                    'name' => 'all',
+                    'match_attribute' => 'url',
+                    'pattern' => 'http',
+                    'pattern_type' => 'contains',
+                    'revenue' => 5
+                ),
+                'Goal2' => array(
+                    'name' => 'two',
+                    'match_attribute' => 'url',
+                    'pattern' => 'xxxxxxxxxxxxx',
+                    'pattern_type' => 'contains',
+                    'revenue' => 5
+                )
+            )
+        );
+        $this->setSites($sites);
+    }
 
     public function setUp()
     {
-        $this->setUpWebsitesAndGoals();
         self::downloadGeoIpDbs();
 
         $this->setMockLocationProvider();
@@ -66,28 +87,13 @@ class ManyVisitsWithGeoIP extends Fixture
         $this->unsetLocationProvider();
     }
 
-    private function setUpWebsitesAndGoals()
-    {
-        if (!self::siteCreated($idSite = 1)) {
-            self::createWebsite($this->dateTime, 0, "Site 1");
-        }
-
-        if (!self::goalExists($idSite = 1, $idGoal = 1)) {
-            $this->idGoal = API::getInstance()->addGoal($this->idSite, 'all', 'url', 'http', 'contains', false, 5);
-        }
-
-        if (!self::goalExists($idSite = 1, $idGoal = 2)) {
-            $this->idGoal2 = API::getInstance()->addGoal($this->idSite, 'two', 'url', 'xxxxxxxxxxxxx', 'contains', false, 5);
-        }
-    }
-
     private function trackVisits($visitorCount, $setIp = false, $useLocal = true, $doBulk = false)
     {
         static $calledCounter = 0;
         $calledCounter++;
 
         $dateTime = $this->dateTime;
-        $idSite = $this->idSite;
+        $idSite = $this->sites['site1']['idSite'];
 
         // use local tracker so mock location provider can be used
         $t = self::getTracker($idSite, $dateTime, $defaultInit = true, $useLocal);
@@ -150,7 +156,7 @@ class ManyVisitsWithGeoIP extends Fixture
 
             $date = $date->addHour(0.2);
             $t->setForceVisitDateTime($date->getDatetime());
-            $r = $t->doTrackGoal($this->idGoal2);
+            $r = $t->doTrackGoal($this->sites['site1']['Goal2']['idGoal']);
             if (!$doBulk) {
                 self::checkResponse($r);
             }
@@ -172,7 +178,7 @@ class ManyVisitsWithGeoIP extends Fixture
     private function trackOtherVisits()
     {
         $dateTime = $this->dateTime;
-        $idSite = $this->idSite;
+        $idSite = $this->sites['site1']['idSite'];
 
         $t = self::getTracker($idSite, $dateTime, $defaultInit = true);
         $t->setVisitorId('fed33392d3a48ab2');

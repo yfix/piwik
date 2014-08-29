@@ -18,40 +18,48 @@ use PiwikTracker;
 class TwoVisitsWithCustomEvents extends Fixture
 {
     public $dateTime = '2010-01-03 11:22:33';
-    public $idSite = 1;
-    public $idGoal1 = 1;
+
+    public function __construct()
+    {
+        $sites = array();
+        $sites['main'] = array(
+            'ts_created' => $this->dateTime,
+            'goals' => array(
+                // These two goals are to check events don't trigger for URL or Title matching
+                'Goal1' => array(
+                    'name' => 'triggered js',
+                    'match_attribute' => 'url',
+                    'pattern' => 'webradio',
+                    'pattern_type' => 'contains'
+                ),
+
+                'Goal2' => array(
+                    'name' => 'triggered js',
+                    'match_attribute' => 'title',
+                    'pattern' => 'Music',
+                    'pattern_type' => 'contains'
+                )
+            )
+        );
+        $this->setSites($sites);
+    }
 
     public function setUp()
     {
-        $this->setUpWebsitesAndGoals();
         $this->trackVisits();
-    }
-
-    private function setUpWebsitesAndGoals()
-    {
-        // tests run in UTC, the Tracker in UTC
-        if (!self::siteCreated($idSite = 1)) {
-            self::createWebsite($this->dateTime);
-        }
-
-        if (!self::goalExists($idSite = 1, $idGoal = 1)) {
-            // These two goals are to check events don't trigger for URL or Title matching
-            APIGoals::getInstance()->addGoal($this->idSite, 'triggered js', 'url', 'webradio', 'contains');
-            APIGoals::getInstance()->addGoal($this->idSite, 'triggered js', 'title', 'Music', 'contains');
-        }
     }
 
     public function trackVisits()
     {
         $uselocal = false;
-        $vis = self::getTracker($this->idSite, $this->dateTime, $useDefault = true, $uselocal);
+        $vis = self::getTracker($this->sites['main']['idSite'], $this->dateTime, $useDefault = true, $uselocal);
 
         $this->trackMusicPlaying($vis);
         $this->trackMusicRatings($vis);
         $this->trackMovieWatchingIncludingInterval($vis);
 
         $this->dateTime = Date::factory($this->dateTime)->addHour(0.5);
-        $vis2 = self::getTracker($this->idSite, $this->dateTime, $useDefault = true, $uselocal);
+        $vis2 = self::getTracker($this->sites['main']['idSite'], $this->dateTime, $useDefault = true, $uselocal);
         $vis2->setIp('111.1.1.1');
         $vis2->setPlugins($flash = false, $java = false, $director = true);
 

@@ -26,44 +26,42 @@ class TwoSitesManyVisitsOverSeveralDaysWithSearchEngineReferrers extends Fixture
         'justice )(&^#%$ NOT corruption!',
     );
 
+    public function __construct()
+    {
+        $sites = array();
+        $sites['site1'] = array(
+            'ts_created' => $this->dateTime,
+            'goals' => array(
+                'goal1' => array(
+                    'name' => 'triggered php',
+                    'match_attribute' => 'manually',
+                    'pattern' => '',
+                    'pattern_type' => ''
+                ),
+                'goal2' => array(
+                    'name' => 'another triggered php',
+                    'match_attribute' => 'manually',
+                    'pattern' => '',
+                    'pattern_type' => '',
+                    'case_sensitive' => false,
+                    'allow_multiple_conversions_per_visit' => true
+                ),
+            )
+        );
+        $sites['site2'] = array('ts_created' => $this->dateTime);
+        $this->setSites($sites);
+    }
+
     public function setUp()
     {
-        $this->setUpWebsitesAndGoals();
         $this->trackVisits();
-    }
-
-    public function tearDown()
-    {
-        // empty
-    }
-
-    private function setUpWebsitesAndGoals()
-    {
-        $siteCreated = $this->dateTime;
-
-        if (!self::siteCreated($idSite = 1)) {
-            self::createWebsite($siteCreated);
-        }
-
-        if (!self::goalExists($idSite = 1, $idGoal = 1)) {
-            API::getInstance()->addGoal($this->idSite, 'triggered php', 'manually', '', '');
-        }
-
-        if (!self::goalExists($idSite = 1, $idGoal = 2)) {
-            API::getInstance()->addGoal(
-                $this->idSite, 'another triggered php', 'manually', '', '', false, false, true);
-        }
-
-        if (!self::siteCreated($idSite = 2)) {
-            self::createWebsite($siteCreated);
-        }
     }
 
     private function trackVisits()
     {
         $dateTime = Date::factory($this->dateTime)->addPeriod(1, 'MONTH')->addDay(5)->getDatetime();
-        $idSite = $this->idSite;
-        $idSite2 = $this->idSite2;
+        $idSite = $this->sites['site1']['idSite'];
+        $idSite2 = $this->sites['site2']['idSite'];
 
         $mozillaUserAgent = "Mozilla/5.0 (Windows; U; Windows NT 6.1; fr; rv:1.9.1.6) Gecko/20100101 Firefox/6.0";
         $operaUserAgent = "Opera/9.80 (iPod; U; CPU iPhone OS 4_3_3 like Mac OS X; ja-jp) Presto/2.9.181 Version/12.00";

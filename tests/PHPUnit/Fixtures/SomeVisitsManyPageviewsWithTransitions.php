@@ -17,32 +17,30 @@ use Piwik\Tests\Fixture;
 class SomeVisitsManyPageviewsWithTransitions extends Fixture
 {
     public $dateTime = '2010-03-06 11:22:33';
-    public $idSite = 1;
 
     private $prefixCounter = 0;
 
+    public function __construct()
+    {
+        $sites = array();
+        $sites['main'] = array(
+            'ts_created' => $this->dateTime,
+            'name' => 'Piwik test',
+            'siteSearch' => true
+        );
+        $this->setSites($sites);
+    }
+
     public function setUp()
     {
-        $this->setUpWebsitesAndGoals();
         $this->trackVisits();
-    }
-
-    public function tearDown()
-    {
-        // empty
-    }
-
-    private function setUpWebsitesAndGoals()
-    {
-        if (!self::siteCreated($idSite = 1)) {
-            self::createWebsite($this->dateTime, $ecommerce = 0, $siteName = 'Piwik test', $siteUrl = false,
-                                $siteSearch = 1);
-        }
     }
 
     private function trackVisits()
     {
-        $tracker = self::getTracker($this->idSite, $this->dateTime, $defaultInit = true);
+        $idSite = $this->sites['main']['idSite'];
+
+        $tracker = self::getTracker($idSite, $this->dateTime, $defaultInit = true);
         $tracker->enableBulkTracking();
 
         $tracker->setIp('156.5.3.1');

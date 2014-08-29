@@ -96,9 +96,12 @@ class Fixture extends PHPUnit_Framework_Assert
     {
         $id = 1;
         foreach ($sites as &$site) {
-            $site['idSite'] = $id;
+            $site['idSite'] = $id++;
 
-            ++$id;
+            $idGoal = 1;
+            foreach ($site as &$goal) {
+                $goal['idGoal'] = $idGoal++;
+            }
         }
 
         $this->sites = $sites;
@@ -264,7 +267,7 @@ class Fixture extends PHPUnit_Framework_Assert
 
     private function createDerivedClassSites() // TODO: merge w/ createWebsite?
     {
-        $defaultValues = array(
+        $defaultSiteValues = array(
             'ecommerce' => 0,
             'name' => false,
             'url' => false,
@@ -274,28 +277,54 @@ class Fixture extends PHPUnit_Framework_Assert
             'timezone' => null
         );
 
-        foreach ($this->sites as &$site) {
-            $site = $site + $defaultValues;
+        $defaultGoalValues = array(
+            'case_sensitive' => false,
+            'revenue' => false,
+            'allow_multiple_conversions_per_visit' => false
+        );
 
-            if ($this->skipAlreadyCreatedSites
-                && self::siteCreated($site['idSite'])
+        foreach ($this->sites as &$site) {
+            $site = $site + $defaultSiteValues;
+
+            if (!$this->skipAlreadyCreatedSites
+                || !self::siteCreated($site['idSite'])
             ) {
-                continue;
+                $idSite = self::createWebsite(
+                    $site['ts_created'],
+                    $site['ecommerce'],
+                    $site['name'],
+                    $site['url'],
+                    $site['siteSearch'],
+                    $site['searchKeywordParameters'],
+                    $site['searchCategoryParameters'],
+                    $site['timezone']
+                );
+
+                if ($idSite !== $site['idSite']) { // sanity check
+                    throw new Exception("configured idSite does not match actual (expected $idSite, got {$site['idSite']})");
+                }
             }
 
-            $idSite = self::createWebsite(
-                $site['ts_created'],
-                $site['ecommerce'],
-                $site['name'],
-                $site['url'],
-                $site['siteSearch'],
-                $site['searchKeywordParameters'],
-                $site['searchCategoryParameters'],
-                $site['timezone']
-            );
+            // create goals
+            foreach ($site['goals'] as &$goal) {
+                $goal = $goal + $defaultGoalValues;
 
-            if ($idSite !== $site['idSite']) { // sanity check
-                throw new Exception("configured idSite does not match actual (expected $idSite, got {$site['idSite']})");
+                if ($this->skipAlreadyCreatedSites // TODO: pick better name for this var
+                    && self::goalExists($idSite, $goal['idGoal'])
+                ) {
+                    continue;
+                }
+
+                GoalsApi::getInstance()->addGoal(
+                    $idSite,
+                    $goal['name'],
+                    $goal['match_attribute'], 
+                    $goal['pattern'],
+                    $goal['pattern_type'],
+                    $goal['case_sensitive'],
+                    $goal['revenue'],
+                    $goal['allow_multiple_conversions_per_visit']
+                );
             }
         }
     }

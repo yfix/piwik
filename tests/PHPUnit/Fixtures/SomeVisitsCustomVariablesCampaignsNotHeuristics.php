@@ -19,36 +19,34 @@ use PiwikTracker;
 class SomeVisitsCustomVariablesCampaignsNotHeuristics extends Fixture
 {
     public $dateTime = '2009-01-04 00:11:42';
-    public $idSite = 1;
-    public $idGoal = 1;
     private $tmpHost = '';
+
+    public function __construct()
+    {
+        $sites = array();
+        $sites['main'] = array(
+            'ts_created' => $this->dateTime,
+            'goals' => array(
+                'triggeredJs' => array(
+                    'name' => 'triggered js',
+                    'match_attribute' => 'manually',
+                    'pattern' => '',
+                    'pattern_type' => ''
+                )
+            )
+        );
+        $this->setSites($sites);
 
     public function setUp()
     {
-        $this->setUpWebsitesAndGoals();
         $this->trackVisits();
-    }
-
-    public function tearDown()
-    {
-    }
-
-    private function setUpWebsitesAndGoals()
-    {
-        if (!self::siteCreated($idSite = 1)) {
-            self::createWebsite($this->dateTime);
-        }
-
-        if (!self::goalExists($idSite = 1, $idGoal = 1)) {
-            API::getInstance()->addGoal($this->idSite, 'triggered js', 'manually', '', '');
-        }
     }
 
     private function trackVisits()
     {
         $dateTime = $this->dateTime;
-        $idSite = $this->idSite;
-        $idGoal = $this->idGoal;
+        $idSite = $this->sites['main']['idSite'];
+        $idGoal = $this->sites['main']['goals']['triggeredJs']['idGoal'];
 
         $t = self::getTracker($idSite, $dateTime, $defaultInit = true);
 

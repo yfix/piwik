@@ -16,37 +16,36 @@ use Piwik\Tests\Fixture;
  */
 class SomeVisitsWithNonUnicodePageTitles extends Fixture
 {
-    public $idSite1 = 1;
     public $dateTime = '2010-01-03 11:22:33';
-
-    public function setUp()
-    {
-        $this->setUpWebsites();
-        $this->trackVisits();
-    }
-
-    public function tearDown()
-    {
-        // empty
-    }
 
     /**
      * One site with custom search parameters,
      * One site using default search parameters,
      * One site with disabled site search
      */
-    private function setUpWebsites()
+    public function __construct()
+    {
+        $sites = array();
+        $sites['main'] = array(
+            'ts_created' => $this->dateTime,
+            'name' => "Site 1 - Site search",
+            'siteSearch' => 1,
+            'searchKeywordParameters' => 'q,mykwd,p',
+            'searchCategoryParameters' => 'cats'
+        );
+        $this->setSites($sites);
+    }
+
+    public function setUp()
     {
         API::getInstance()->setGlobalSearchParameters($searchKeywordParameters = 'gkwd', $searchCategoryParameters = 'gcat');
 
-        if (!self::siteCreated($idSite = 1)) {
-            self::createWebsite(Date::factory($this->dateTime)->getDatetime(), 0, "Site 1 - Site search", $siteurl = false, $search = 1, $searchKwd = 'q,mykwd,p', $searchCat = 'cats');
-        }
+        $this->trackVisits();
     }
 
     private function trackVisits()
     {
-        $idSite1 = $this->idSite1;
+        $idSite1 = $this->sites['main']['idSite'];
         $dateTime = $this->dateTime;
 
         self::assertTrue(function_exists('mb_check_encoding'), ' check mb_check_encoding ');

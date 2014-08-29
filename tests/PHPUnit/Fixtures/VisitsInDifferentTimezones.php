@@ -22,33 +22,25 @@ class VisitsInDifferentTimezones extends Fixture
     public function __construct()
     {
         $this->date = Date::factory($this->dateTime)->toString();
+
+        $sites = array();
+        $sites['main'] = array(
+            'ts_archived' => $this->dateTime,
+            'ecommerce' => 0,
+            'timezone' => 'America/New_York'
+        );
+        $this->setSites($sites);
     }
 
     public function setUp()
     {
-        $this->setUpWebsitesAndGoals();
         $this->trackVisits();
-    }
-
-    public function tearDown()
-    {
-        // empty
-    }
-
-    private function setUpWebsitesAndGoals()
-    {
-        // tests run in UTC, the Tracker in UTC
-        if (!self::siteCreated($idSite = 1)) {
-            self::createWebsite($this->dateTime, $ecommerce = 0, $siteName = false, $siteUrl = false,
-                                $siteSearch = 1, $searchKeywordParameters = null,
-                                $searchCategoryParameters = null, $timezone = 'America/New_York');
-        }
     }
 
     private function trackVisits()
     {
         $dateTime = Date::factory($this->date)->addHour(27); // tracking a visit that is tomorrow in New York time
-        $idSite = $this->idSite;
+        $idSite = $this->sites['main']['idSite'];
 
         $t = self::getTracker($idSite, $dateTime, $defaultInit = true);
 

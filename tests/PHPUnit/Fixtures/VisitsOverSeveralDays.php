@@ -24,8 +24,6 @@ class VisitsOverSeveralDays extends Fixture
         '2011-01-16 01:00:00',
     );
 
-    public $idSite = 1;
-    public $idSite2 = 2;
     public $forceLargeWindowLookBackForVisitor = false;
 
     // one per visit
@@ -42,26 +40,17 @@ class VisitsOverSeveralDays extends Fixture
         'http://mixi.jp',
     );
 
+    public function __construct()
+    {
+        $sites = array();
+        $sites['site1'] = array('ts_created' => $this->dateTimes[0], 'name' => 'Site AAAAAA');
+        $sites['site2'] = array('ts_created' => $this->dateTimes[0], 'name' => 'SITE BBbbBB');
+        $this->setSites($sites);
+    }
+
     public function setUp()
     {
-        $this->setUpWebsitesAndGoals();
         $this->trackVisits();
-    }
-
-    public function tearDown()
-    {
-        // empty
-    }
-
-    private function setUpWebsitesAndGoals()
-    {
-        if (!self::siteCreated($idSite = 1)) {
-            self::createWebsite($this->dateTimes[0], $ecommerce = 0, $siteName = 'Site AAAAAA');
-        }
-
-        if (!self::siteCreated($idSite = 2)) {
-            self::createWebsite($this->dateTimes[0], $ecommerce = 0, $siteName = 'SITE BBbbBB');
-        }
     }
 
     private function trackVisits()
@@ -76,7 +65,7 @@ class VisitsOverSeveralDays extends Fixture
             // Fake the visit count cookie
             $debugStringAppend = "&_idvc=$days";
 
-            $visitor = $this->makeTracker($this->idSite, $dateTime, $debugStringAppend);
+            $visitor = $this->makeTracker($this->sites['site1']['idSite'], $dateTime, $debugStringAppend);
 
             // FIRST VISIT THIS DAY
             $visitor->setForceVisitDateTime(Date::factory($dateTime)->addHour(0.1)->getDatetime());
@@ -99,7 +88,7 @@ class VisitsOverSeveralDays extends Fixture
             self::checkResponse($visitor->doTrackPageView('ou pas'));
 
             if ($days <= 3) {
-                $visitor = $this->makeTracker($this->idSite2, $dateTime);
+                $visitor = $this->makeTracker($this->sites['site2']['idSite'], $dateTime);
                 $visitor->setForceVisitDateTime(Date::factory($dateTime)->addHour(0.1)->getDatetime());
                 $visitor->setUrl('http://example.org/homepage');
                 $visitor->setUrlReferrer($this->referrerUrls[$ridx - 1]);

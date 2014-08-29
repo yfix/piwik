@@ -26,6 +26,28 @@ class ManySitesImportedLogsWithXssAttempts extends ManySitesImportedLogs
     public function __construct()
     {
         $this->now = Date::factory('now');
+
+        $sites = array();
+        $sites['site1'] = array(
+            'ts_created' => $this->dateTime,
+            'ecommerce' => 1,
+            'name' => self::makeXssContent("site name", $sanitize = true),
+            'goals' => array(
+                'Goal1' => array(
+                    'name' => self::makeXssContent('goal name'),
+                    'match_attribute' => 'url',
+                    'pattern' => 'http',
+                    'pattern_type' => 'contains',
+                    'revenue' => 5
+                )
+            )
+        );
+        $sites['site2'] = array(
+            'ts_created' => $this->dateTime,
+            'name' => 'Piwik test two',
+            'url' => 'http://example-site-two.com'
+        );
+        $this->setSites($sites);
     }
 
     public function setUp()
@@ -38,31 +60,14 @@ class ManySitesImportedLogsWithXssAttempts extends ManySitesImportedLogs
         $this->trackVisitsForRealtimeMap($this->now);
     }
 
-    public function setUpWebsitesAndGoals()
-    {
-        // for conversion testing
-        if (!self::siteCreated($idSite = 1)) {
-            $siteName = self::makeXssContent("site name", $sanitize = true);
-            self::createWebsite($this->dateTime, $ecommerce = 1, $siteName);
-        }
-
-        if (!self::goalExists($idSite = 1, $idGoal = 1)) {
-            APIGoals::getInstance()->addGoal(
-                $this->idSite, self::makeXssContent("goal name"), 'url', 'http', 'contains', false, 5);
-        }
-
-        if (!self::siteCreated($idSite = 2)) {
-            self::createWebsite($this->dateTime, $ecommerce = 0, $siteName = 'Piwik test two',
-                $siteUrl = 'http://example-site-two.com');
-        }
-    }
-
     public function addAnnotations()
     {
-        APIAnnotations::getInstance()->add($this->idSite, '2012-08-09', "Note 1", $starred = 1);
+        $idSite = $this->sites['site1']['idSite'];
+
+        APIAnnotations::getInstance()->add($idSite, '2012-08-09', "Note 1", $starred = 1);
         APIAnnotations::getInstance()->add(
-            $this->idSite, '2012-08-08', self::makeXssContent("annotation"), $starred = 0);
-        APIAnnotations::getInstance()->add($this->idSite, '2012-08-10', "Note 3", $starred = 1);
+            $idSite, '2012-08-08', self::makeXssContent("annotation"), $starred = 0);
+        APIAnnotations::getInstance()->add($idSite, '2012-08-10', "Note 3", $starred = 1);
     }
 
     public function trackVisitsForRealtimeMap($date, $createSeperateVisitors = true)

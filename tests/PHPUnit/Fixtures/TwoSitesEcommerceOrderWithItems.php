@@ -17,45 +17,40 @@ use Piwik\Tests\Fixture;
 class TwoSitesEcommerceOrderWithItems extends Fixture
 {
     public $dateTime = '2011-04-05 00:11:42';
-    public $idSite = 1;
-    public $idSite2 = 2;
-    public $idGoalStandard = 1;
+
+    public function __construct()
+    {
+        $sites = array();
+        $sites['site1'] = array(
+            'ts_created' => $this->dateTime,
+            'ecommerce' => 1,
+            'goals' => array(
+                'goal1' => array(
+                    'name' => 'title match, triggered ONCE',
+                    'match_attribute' => 'title',
+                    'pattern' => 'incredible',
+                    'pattern_type' => 'contains',
+                    'case_sensitive' => false,
+                    'revenue' => 10,
+                    'allow_multiple_conversions_per_visit' => true
+                )
+            )
+        );
+        $sites['site2'] = array('ts_created' => $this->dateTime);
+        $this->setSites($sites);
+    }
 
     public function setUp()
     {
-        $this->setUpWebsitesAndGoals();
-        self::setUpScheduledReports($this->idSite);
+        self::setUpScheduledReports($this->sites['site1']['idSite']);
 
         $this->trackVisitsSite1($url = 'http://example.org/index.htm');
         $this->trackVisitsSite2($url = 'http://example-site2.com/index.htm');
     }
 
-    public function tearDown()
-    {
-        // empty
-    }
-
-    private function setUpWebsitesAndGoals()
-    {
-        if (!self::siteCreated($this->idSite)) {
-            $this->idSite = self::createWebsite($this->dateTime, $ecommerce = 1);
-        }
-
-        if (!self::siteCreated($this->idSite2)) {
-            $this->idSite2 = self::createWebsite($this->dateTime);
-        }
-
-        if (!self::goalExists($this->idSite, $this->idGoalStandard)) {
-            API::getInstance()->addGoal(
-                $this->idSite, 'title match, triggered ONCE', 'title', 'incredible', 'contains',
-                $caseSensitive = false, $revenue = 10, $allowMultipleConversions = true
-            );
-        }
-    }
-
     protected function trackVisitsSite1($url, $orderId = '937nsjusu 3894', $orderId2 = '1037nsjusu4s3894', $orderId3 = '666', $orderId4 = '777')
     {
-        $t = self::getTracker($this->idSite, $this->dateTime, $defaultInit = true);
+        $t = self::getTracker($this->sites['site1']['idSite'], $this->dateTime, $defaultInit = true);
 
         // VISIT NO 1
         $t->setUrl($url);
@@ -197,7 +192,7 @@ class TwoSitesEcommerceOrderWithItems extends Fixture
      */
     protected function trackVisitsSite2($url)
     {
-        $t = self::getTracker($this->idSite2, $this->dateTime, $defaultInit = true);
+        $t = self::getTracker($this->sites['site2']['idGoal'], $this->dateTime, $defaultInit = true);
 
         // Same page name as on website1, different domain (for MetaSites test)
         $t->setUrl($url);
@@ -206,7 +201,7 @@ class TwoSitesEcommerceOrderWithItems extends Fixture
         self::checkResponse($t->doTrackPageView('one page visit'));
 
         // testing the same order in a different website should record
-        $t = self::getTracker($this->idSite2, $this->dateTime, $defaultInit = true);
+        $t = self::getTracker($this->sites['site2']['idGoal'], $this->dateTime, $defaultInit = true);
         $t->setForceVisitDateTime(Date::factory($this->dateTime)->addHour(30.9)->getDatetime());
         $t->addEcommerceItem($sku = 'TRIPOD SKU', $name = 'TRIPOD - bought day after', $category = 'Tools', $price = 100, $quantity = 2);
         self::checkResponse($t->doTrackEcommerceOrder($orderId = '777', $grandTotal = 250));

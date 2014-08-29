@@ -18,31 +18,24 @@ use Piwik\Tests\Fixture;
 class TwoVisitsNoKeywordWithBot extends Fixture
 {
     public $dateTime = '2010-03-06 11:22:33';
-    public $idSite = 1;
+
+    public function __construct()
+    {
+        $sites = array();
+        $sites['main'] = array('ts_created' => $this->dateTime);
+        $this->setSites($sites);
+    }
 
     public function setUp()
     {
-        $this->setUpWebsitesAndGoals();
         $this->trackVisits();
-    }
-
-    public function tearDown()
-    {
-        // empty
-    }
-
-    private function setUpWebsitesAndGoals()
-    {
-        if (!self::siteCreated($idSite = 1)) {
-            self::createWebsite($this->dateTime);
-        }
     }
 
     private function trackVisits()
     {
         // tests run in UTC, the Tracker in UTC
         $dateTime = $this->dateTime;
-        $idSite = $this->idSite;
+        $idSite = $this->sites['main']['idSite'];
         $t = self::getTracker($idSite, $dateTime, $defaultInit = true, $useThirdPartyCookie = 1);
 
         // Also testing to record this as a bot while specifically allowing bots

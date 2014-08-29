@@ -17,9 +17,6 @@ use Piwik\Tests\Fixture;
 class TwoVisitsWithCustomVariables extends Fixture
 {
     public $dateTime = '2010-01-03 11:22:33';
-    public $idSite = 1;
-    public $idGoal1 = 1;
-    public $idGoal2 = 2;
     public $visitorId = '61e8cc2d51fea26d';
 
     public $useEscapedQuotes = true;
@@ -28,41 +25,45 @@ class TwoVisitsWithCustomVariables extends Fixture
     public $resolutionWidthToUse = 1111;
     public $resolutionHeightToUse = 222;
 
+    public function __construct()
+    {
+        $sites = array();
+        $sites['main'] = array(
+            'ts_created' => $this->dateTime,
+            'goals' => array(
+                // tests run in UTC, the Tracker in UTC
+                'Goal1' => array(
+                    'name' => 'triggered js',
+                    'match_attribute' => 'manually',
+                    'pattern' => '',
+                    'pattern_type' => ''
+                ),
+
+                'Goal2' => array(
+                    'name' => 'second goal',
+                    'match_attribute' => 'manually',
+                    'pattern' => '',
+                    'pattern_type' => ''
+                )
+            )
+        );
+        $this->setSites($sites);
+    }
+
     public function setUp()
     {
-        $this->setUpWebsitesAndGoals();
         $this->trackVisits();
-    }
-
-    public function tearDown()
-    {
-        // empty
-    }
-
-    private function setUpWebsitesAndGoals()
-    {
-        // tests run in UTC, the Tracker in UTC
-        if (!self::siteCreated($idSite = 1)) {
-            self::createWebsite($this->dateTime);
-        }
-
-        if (!self::goalExists($idSite = 1, $idGoal = 1)) {
-            API::getInstance()->addGoal($this->idSite, 'triggered js', 'manually', '', '');
-        }
-
-        if (!self::goalExists($idSite = 1, $idGoal = 2)) {
-            API::getInstance()->addGoal($this->idSite, 'second goal', 'manually', '', '');
-        }
     }
 
     private function trackVisits()
     {
         $dateTime = $this->dateTime;
-        $idSite = $this->idSite;
-        $idGoal = $this->idGoal1;
-        $idGoal2 = $this->idGoal2;
+        $idSite = $this->sites['main']['idSite'];
+        $idGoal = $this->sites['main']['goals']['Goal1']['idGoal'];
+        $idGoal2 = $this->sites['main']['goals']['Goal2']['idGoal'];
 
-        $visitorA = self::getTracker($this->idSite, $this->dateTime, $defaultInit = true);
+        $visitorA = self::getTracker($idSite, $this->dateTime, $defaultInit = true);
+
         // Used to test actual referrer + keyword position in Live!
         $visitorA->setUrlReferrer(urldecode('http://www.google.com/url?sa=t&source=web&cd=1&ved=0CB4QFjAA&url=http%3A%2F%2Fpiwik.org%2F&rct=j&q=this%20keyword%20should%20be%20ranked&ei=V8WfTePkKKLfiALrpZWGAw&usg=AFQjCNF_MGJRqKPvaKuUokHtZ3VvNG9ALw&sig2=BvKAdCtNixsmfNWXjsNyMw'));
 

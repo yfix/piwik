@@ -21,12 +21,33 @@ use Piwik\Tests\OverrideLogin;
 class ManySitesImportedLogs extends Fixture
 {
     public $dateTime = '2012-08-09 11:22:33';
-    public $idSite = 1;
-    public $idSite2 = 2;
-    public $idGoal = 1;
     public $segments = null; // should be array mapping segment name => segment definition
 
     public $addSegments = false;
+
+    public function __construct()
+    {
+        $sites = array();
+        $sites['site1'] = array(
+            'ts_created' => $this->dateTime,
+            'goals' => array(
+                'Goal1' => array( // for conversion testing
+                    'name' => 'all',
+                    'match_attribute' => 'url',
+                    'pattern' => 'http',
+                    'pattern_type' => 'contains',
+                    'revenue' => 5
+                )
+            )
+        );
+        $sites['site2'] = array(
+            'ts_created' => $this->dateTime,
+            'ecommerce' => 0,
+            'name' => 'Piwik test two',
+            'url' => 'http://example-site-two.com'
+        );
+        $this->setSites($sites);
+    }
 
     public static function createAccessInstance()
     {
@@ -36,7 +57,6 @@ class ManySitesImportedLogs extends Fixture
 
     public function setUp()
     {
-        $this->setUpWebsitesAndGoals();
         self::downloadGeoIpDbs();
 
         LocationProvider::$providers = null;
@@ -54,23 +74,6 @@ class ManySitesImportedLogs extends Fixture
         ManyVisitsWithGeoIP::unsetLocationProvider();
     }
 
-    public function setUpWebsitesAndGoals()
-    {
-        // for conversion testing
-        if (!self::siteCreated($idSite = 1)) {
-            self::createWebsite($this->dateTime);
-        }
-
-        if (!self::goalExists($idSite = 1, $idGoal = 1)) {
-            APIGoals::getInstance()->addGoal($this->idSite, 'all', 'url', 'http', 'contains', false, 5);
-        }
-
-        if (!self::siteCreated($idSite = 2)) {
-            self::createWebsite($this->dateTime, $ecommerce = 0, $siteName = 'Piwik test two',
-                $siteUrl = 'http://example-site-two.com');
-        }
-    }
-
     const SEGMENT_PRE_ARCHIVED = 'visitCount<=5;visitorType!=non-existing-type;daysSinceFirstVisit<=50';
     const SEGMENT_PRE_ARCHIVED_CONTAINS_ENCODED = 'visitCount<=5;visitorType!=re%2C%3Btest%20is%20encoded;daysSinceFirstVisit<=50';
 
@@ -78,7 +81,7 @@ class ManySitesImportedLogs extends Fixture
     {
         return array(
             'segmentOnlyOneSite'   => array('definition'      => 'browserCode==IE',
-                                            'idSite'          => $this->idSite,
+                                            'idSite'          => $this->sites['site1']['idSite'],
                                             'autoArchive'     => true,
                                             'enabledAllUsers' => true),
 
@@ -152,7 +155,7 @@ class ManySitesImportedLogs extends Fixture
 
         // We do not pass the "--token_auth" parameter here to make sure import_logs.py finds the auth_token
         // automatically if needed
-        $opts = array('--idsite'                    => $this->idSite,
+        $opts = array('--idsite'                    => $this->sites['site1']['idSite'],
                       '--enable-testmode'           => false,
                       '--recorders'                 => '1',
                       '--recorder-max-payload-size' => '1');
@@ -185,7 +188,7 @@ class ManySitesImportedLogs extends Fixture
     {
         $logFile = PIWIK_INCLUDE_PATH . '/tests/resources/access-logs/fake_logs_enable_all.log';
 
-        $opts = array('--idsite'                    => $this->idSite,
+        $opts = array('--idsite'                    => $this->sites['site1']['idSite'],
                       '--token-auth'                => self::getTokenAuth(),
                       '--recorders'                 => '1',
                       '--recorder-max-payload-size' => '1',
@@ -222,7 +225,7 @@ class ManySitesImportedLogs extends Fixture
     {
         $logFile = PIWIK_INCLUDE_PATH . '/tests/resources/access-logs/fake_logs_custom.log';
 
-        $opts = array('--idsite'           => $this->idSite,
+        $opts = array('--idsite'           => $this->sites['site1']['idSite'],
                       '--token-auth'       => self::getTokenAuth(),
                       '--log-format-regex' => '(?P<ip>\S+) - - \[(?P<date>.*?) (?P<timezone>.*?)\] (?P<status>\S+) '
                           . '\"\S+ (?P<path>.*?) \S+\" (?P<generation_time_micro>\S+)');

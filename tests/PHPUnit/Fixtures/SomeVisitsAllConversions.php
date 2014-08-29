@@ -17,63 +17,73 @@ use Piwik\Tests\Fixture;
 class SomeVisitsAllConversions extends Fixture
 {
     public $dateTime = '2009-01-04 00:11:42';
-    public $idSite = 1;
-    public $idGoal_OneConversionPerVisit = 1;
-    public $idGoal_MultipleConversionPerVisit = 2;
+
+    public function __construct()
+    {
+        $this->sites = array();
+        $sites['main'] = array(
+            'ts_archived' => $this->idSite,
+            'goals' => array( // TODO: add goals
+                // First, a goal that is only recorded once per visit
+                'OneConversionPerVisit' => array(
+                    'name' => 'triggered js ONCE',
+                    'match_attribute' => 'title',
+                    'pattern' => 'Thank you',
+                    'pattern_type' => 'contains',
+                    'case_sensitive' => false,
+                    'revenue' => 10,
+                    'allow_multiple_conversions_per_visit' => false
+                ),
+
+                // Second, a goal allowing multiple conversions
+                'MultipleConversionsPerVisit' => array(
+                    'name' => 'triggered js MULTIPLE ALLOWED',
+                    'match_attribute' => 'manually',
+                    'pattern' => '',
+                    'pattern_type' => '',
+                    'case_sensitive' => false,
+                    'revenue' => 10,
+                    'allow_multiple_conversions_per_visit' => true
+                ),
+
+                'ClickEvent' => array(
+                    'name' => 'click event',
+                    'match_attribute' => 'event_action',
+                    'pattern' => 'click',
+                    'pattern_type' => 'contains'
+                ),
+
+                'CategoryEvent' => array(
+                    'name' => 'category event',
+                    'match_attribute' => 'event_category',
+                    'pattern' => 'The_Category',
+                    'pattern_type' => 'exact',
+                    'case_sensitive' => true
+                ),
+
+                // including a few characters that are HTML entitiable
+                'NameEvent' => array(
+                    'name' => 'name event',
+                    'match_attribute' => 'event_name',
+                    'pattern' => '<the_\'"name>',
+                    'pattern_type' => 'exact'
+                )
+            )
+        );
+        $this->setSites($sites);
+    }
 
     public function setUp()
     {
-        $this->setUpWebsitesAndGoals();
         $this->trackVisits();
-    }
-
-    public function tearDown()
-    {
-        // empty
-    }
-
-    private function setUpWebsitesAndGoals()
-    {
-        if (!self::siteCreated($idSite = 1)) {
-            self::createWebsite($this->dateTime);
-        }
-
-        // First, a goal that is only recorded once per visit
-        if (!self::goalExists($idSite = 1, $idGoal = 1)) {
-            API::getInstance()->addGoal(
-                $this->idSite, 'triggered js ONCE', 'title', 'Thank you', 'contains', $caseSensitive = false,
-                $revenue = 10, $allowMultipleConversions = false
-            );
-        }
-
-        // Second, a goal allowing multiple conversions
-        if (!self::goalExists($idSite = 1, $idGoal = 2)) {
-            API::getInstance()->addGoal(
-                $this->idSite, 'triggered js MULTIPLE ALLOWED', 'manually', '', '', $caseSensitive = false,
-                $revenue = 10, $allowMultipleConversions = true
-            );
-        }
-
-        if (!self::goalExists($idSite = 1, $idGoal = 3)) {
-            API::getInstance()->addGoal($this->idSite, 'click event', 'event_action', 'click', 'contains');
-        }
-
-        if (!self::goalExists($idSite = 1, $idGoal = 4)) {
-            API::getInstance()->addGoal($this->idSite, 'category event', 'event_category', 'The_Category', 'exact', true);
-        }
-
-        if (!self::goalExists($idSite = 1, $idGoal = 5)) {
-            // including a few characters that are HTML entitiable
-            API::getInstance()->addGoal($this->idSite, 'name event', 'event_name', '<the_\'"name>', 'exact');
-        }
     }
 
     private function trackVisits()
     {
         $dateTime = $this->dateTime;
-        $idSite = 1;
-        $idGoal_OneConversionPerVisit = $this->idGoal_OneConversionPerVisit;
-        $idGoal_MultipleConversionPerVisit = $this->idGoal_MultipleConversionPerVisit;
+        $idSite = $this->sites['main']['idSite'];
+        $idGoal_OneConversionPerVisit = $this->sites['main']['goals']['OneConversionPerVisit']['idGoal'];
+        $idGoal_MultipleConversionPerVisit = $this->sites['main']['goals']['MultipleConversionPerVisit']['idGoal'];
 
         $t = self::getTracker($idSite, $dateTime, $defaultInit = true);
 

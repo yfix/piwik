@@ -25,11 +25,14 @@ class ManyVisitsWithMockLocationProvider extends Fixture
     public function __construct()
     {
         $this->nextDay = Date::factory($this->dateTime)->addDay(1)->getDatetime();
+
+        $sites = array();
+        $sites['main'] = array('ts_created' => $this->dateTime);
+        $this->setSites($sites);
     }
 
     public function setUp()
     {
-        $this->setUpWebsitesAndGoals();
         $this->setMockLocationProvider();
         $this->trackVisits();
     }
@@ -37,13 +40,6 @@ class ManyVisitsWithMockLocationProvider extends Fixture
     public function tearDown()
     {
         ManyVisitsWithGeoIP::unsetLocationProvider();
-    }
-
-    private function setUpWebsitesAndGoals()
-    {
-        if (!self::siteCreated($idSite = 1)) {
-            self::createWebsite($this->dateTime);
-        }
     }
 
     private function trackVisits()
@@ -110,7 +106,7 @@ class ManyVisitsWithMockLocationProvider extends Fixture
         );
 
         $visitorCounter = 0;
-        $t = self::getTracker($this->idSite, $this->dateTime, $defaultInit = true, $useLocal = true);
+        $t = self::getTracker($this->sites['main']['idSite'], $this->dateTime, $defaultInit = true, $useLocal = true);
 
         // track regular actions
         $this->trackActions($t, $visitorCounter, 'pageview', $userAgents, $resolutions, $referrers, $customVars);

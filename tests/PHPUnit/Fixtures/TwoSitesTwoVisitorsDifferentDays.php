@@ -17,66 +17,74 @@ use Piwik\Tests\Fixture;
  */
 class TwoSitesTwoVisitorsDifferentDays extends Fixture
 {
-    public $idSite1 = 1;
-    public $idSite2 = 2;
-    public $idGoal1 = 1;
-    public $idGoal2 = 2;
     public $dateTime = '2010-01-03 11:22:33';
 
     public $allowConversions = false;
 
-    public function setUp()
-    {
-        $this->setUpWebsitesAndGoals();
-        self::setUpScheduledReports($this->idSite1);
-        $this->trackVisits();
-    }
-
-    public function tearDown()
-    {
-        // empty
-    }
-
-    private function setUpWebsitesAndGoals()
+    public function __construct()
     {
         $ecommerce = $this->allowConversions ? 1 : 0;
 
-        // tests run in UTC, the Tracker in UTC
-        if (!self::siteCreated($idSite = 1)) {
-            self::createWebsite($this->dateTime, $ecommerce, "Site 1");
-        }
+        $sites = array();
 
-        if (!self::siteCreated($idSite = 2)) {
-            self::createWebsite($this->dateTime, 0, "Site 2");
-        }
+        // tests run in UTC, the Tracker in UTC
+        $sites['site1'] = array(
+            'ts_created' => $this->dateTime,
+            'ecommerce' => $ecommerce,
+            'name' => 'Site 1',
+        );
 
         if ($this->allowConversions) {
-            if (!self::goalExists($idSite = 1, $idGoal = 1)) {
-                APIGoals::getInstance()->addGoal($this->idSite1, 'all', 'url', 'http', 'contains', false, 5);
-            }
-
-            if (!self::goalExists($idSite = 1, $idGoal = 2)) {
-                APIGoals::getInstance()->addGoal($this->idSite2, 'all', 'url', 'http', 'contains');
-            }
+            $sites['site1']['goals'][] = array(
+                'name' => 'all',
+                'match_attribute' => 'url',
+                'pattern' => 'http',
+                'pattern_type' => 'contains',
+                'revenue' => 5
+            );
         }
 
+        $sites['site2'] = array(
+            'ts_created' => $this->dateTime,
+            'ecommerce' => 0,
+            'name' => 'Site 2'
+        );
+
+        if ($this->allowConversions) {
+            $sites['site2']['goals'][] = array(
+                'name' => 'all',
+                'match_attribute' => 'url',
+                'pattern' => 'http',
+                'pattern_type' => 'contains'
+            );
+        }
+
+        $this->setSites($sites);
+    }
+
+    public function setUp()
+    {
+        // TODO: move this to $this->sites metadata
         APISitesManager::getInstance()->updateSite(
-            $this->idSite1, "Site 1", $urls = null, $ecommerce = null, $siteSearch = null,
+            $this->sites['site1']['idSite'], "Site 1", $urls = null, $ecommerce = null, $siteSearch = null,
             $searchKeywordParameters = null, $searchCategoryParameters = null, $excludedIps = null,
             $excludedQueryParameters = null, $timezone = null, $currency = null, $group = null,
             $startDate = null, $excludedUserAgents = null, $keepURLFragments = 2); // KEEP_URL_FRAGMENT_NO No for idSite 1
         APISitesManager::getInstance()->updateSite(
-            $this->idSite2, "Site 2", $urls = null, $ecommerce = null, $siteSearch = null,
+            $this->sites['site2']['idSite'], "Site 2", $urls = null, $ecommerce = null, $siteSearch = null,
             $searchKeywordParameters = null, $searchCategoryParameters = null, $excludedIps = null,
             $excludedQueryParameters = null, $timezone = null, $currency = null, $group = null,
             $startDate = null, $excludedUserAgents = null, $keepURLFragments = 1); // KEEP_URL_FRAGMENT_YES Yes for idSite 2
+
+        self::setUpScheduledReports($this->sites['site1']['idSite']);
+        $this->trackVisits();
     }
 
     private function trackVisits()
     {
         $dateTime = $this->dateTime;
-        $idSite = $this->idSite1;
-        $idSite2 = $this->idSite2;
+        $idSite = $this->sites['site1']['idSite'];
+        $idSite2 = $this->sites['site2']['idSite'];
 
         $this->trackVisitsSite1($idSite, $dateTime);
         $this->trackVisitsSite2($idSite2, $dateTime);

@@ -17,30 +17,23 @@ use Piwik\Tests\Fixture;
 class ManyVisitsWithSubDirReferrersAndCustomVars extends Fixture
 {
     public $dateTime = '2010-03-05 11:22:33';
-    public $idSite = 1;
+
+    public function __construct()
+    {
+        $sites = array();
+        $sites['main'] = array('ts_created' => $this->dateTime);
+        $this->setSites($sites);
+    }
 
     public function setUp()
     {
-        $this->setUpWebsitesAndGoals();
         $this->trackVisits();
-    }
-
-    public function tearDown()
-    {
-        // empty
-    }
-
-    private function setUpWebsitesAndGoals()
-    {
-        if (!self::siteCreated($idSite = 1)) {
-            self::createWebsite($this->dateTime);
-        }
     }
 
     private function trackVisits()
     {
         $dateTime = $this->dateTime;
-        $idSite = $this->idSite;
+        $idSite = $this->sites['main']['idSite'];
 
         for ($referrerSite = 1; $referrerSite < 4; $referrerSite++) {
             for ($referrerPage = 1; $referrerPage < 3; $referrerPage++) {

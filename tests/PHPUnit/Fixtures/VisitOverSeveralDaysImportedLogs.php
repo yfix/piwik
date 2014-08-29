@@ -17,24 +17,17 @@ use Piwik\Tests\Fixture;
 class VisitOverSeveralDaysImportedLogs extends Fixture
 {
     public $dateTime = '2013-04-07 19:00:00';
-    public $idSite = 1;
+
+    public function __construct()
+    {
+        $sites = array();
+        $sites['main'] = array('ts_created' => $this->dateTime);
+        $this->setSites($sites);
+    }
 
     public function setUp()
     {
-        $this->setUpWebsitesAndGoals();
         $this->trackVisits();
-    }
-
-    public function tearDown()
-    {
-        // empty
-    }
-
-    public function setUpWebsitesAndGoals()
-    {
-        if (!self::siteCreated($idSite = 1)) {
-            self::createWebsite($this->dateTime);
-        }
     }
 
     private function trackVisits()
@@ -50,7 +43,7 @@ class VisitOverSeveralDaysImportedLogs extends Fixture
     {
         $logFile = PIWIK_INCLUDE_PATH . '/tests/resources/access-logs/fake_logs_visits_in_reverse_chronological_order.log';
 
-        $opts = array('--idsite'                    => $this->idSite,
+        $opts = array('--idsite'                    => $this->sites['main']['idSite'],
                       '--token-auth'                => self::getTokenAuth(),);
 
         self::executeLogImporter($logFile, $opts);

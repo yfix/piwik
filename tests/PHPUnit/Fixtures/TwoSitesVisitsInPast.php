@@ -19,29 +19,18 @@ class TwoSitesVisitsInPast extends Fixture
     public $dateTimeDateInPastWebsite1 = '2010-01-06 01:22:33';
     public $dateTimeFirstDateWebsite2 = '2010-01-03 20:22:33';
     public $dateTimeDateInPastWebsite2 = '2009-10-30 01:22:33';
-    public $idSite = 1;
-    public $idSite2 = 2;
+
+    public function __construct()
+    {
+        $sites = array();
+        $sites['site1'] = array('ts_created' => $this->dateTimeFirstDateWebsite1);
+        $sites['site2'] = array('ts_created' => $this->dateTimeFirstDateWebsite2);
+        $this->setSites($sites);
+    }
 
     public function setUp()
     {
-        $this->setUpWebsitesAndGoals();
         $this->trackVisits();
-    }
-
-    public function tearDown()
-    {
-        // empty
-    }
-
-    public function setUpWebsitesAndGoals()
-    {
-        if (!self::siteCreated($idSite = 1)) {
-            self::createWebsite($this->dateTimeFirstDateWebsite1);
-        }
-
-        if (!self::siteCreated($idSite = 2)) {
-            self::createWebsite($this->dateTimeFirstDateWebsite2);
-        }
     }
 
     protected function trackVisits()
@@ -50,7 +39,7 @@ class TwoSitesVisitsInPast extends Fixture
          * Track Visits normal date for the 2 websites
          */
         // WEBSITE 1
-        $t = self::getTracker($this->idSite, $this->dateTimeFirstDateWebsite1, $defaultInit = true);
+        $t = self::getTracker($this->sites['site1']['idSite'], $this->dateTimeFirstDateWebsite1, $defaultInit = true);
         $t->setUrl('http://example.org/category/Page1');
         self::checkResponse($t->doTrackPageView('Hello'));
         $t->setUrl('http://example.org/category/Page2');
@@ -65,7 +54,7 @@ class TwoSitesVisitsInPast extends Fixture
         self::checkResponse($t->doTrackPageView('Hello'));
 
         // WEBSITE 2
-        $t = self::getTracker($this->idSite2, $this->dateTimeFirstDateWebsite2, $defaultInit = true);
+        $t = self::getTracker($this->sites['site2']['idSite'], $this->dateTimeFirstDateWebsite2, $defaultInit = true);
         $t->setIp('156.15.13.12');
         $t->setUrl('http://example.org/category/Page1');
         self::checkResponse($t->doTrackPageView('Hello'));
@@ -84,7 +73,7 @@ class TwoSitesVisitsInPast extends Fixture
          * Track visits in the past (before website creation date) for the 2 websites
          */
         // WEBSITE1
-        $t = self::getTracker($this->idSite, $this->dateTimeDateInPastWebsite1, $defaultInit = true);
+        $t = self::getTracker($this->sites['site1']['idSite'], $this->dateTimeDateInPastWebsite1, $defaultInit = true);
         $t->setIp('156.5.55.2');
         $t->setUrl('http://example.org/category/Page1');
         self::checkResponse($t->doTrackPageView('Hello'));
@@ -96,7 +85,7 @@ class TwoSitesVisitsInPast extends Fixture
         self::checkResponse($t->doTrackPageView('Blabla'));
 
         // WEBSITE2
-        $t = self::getTracker($this->idSite2, $this->dateTimeDateInPastWebsite2, $defaultInit = true);
+        $t = self::getTracker($this->sites['site2']['idSite'], $this->dateTimeDateInPastWebsite2, $defaultInit = true);
         $t->setIp('156.52.3.22');
         $t->setUrl('http://example.org/category/Page1');
         self::checkResponse($t->doTrackPageView('Hello'));
