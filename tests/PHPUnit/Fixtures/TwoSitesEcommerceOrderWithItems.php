@@ -192,7 +192,7 @@ class TwoSitesEcommerceOrderWithItems extends Fixture
      */
     protected function trackVisitsSite2($url)
     {
-        $t = self::getTracker($this->sites['site2']['idGoal'], $this->dateTime, $defaultInit = true);
+        $t = self::getTracker($this->sites['site2']['idSite'], $this->dateTime, $defaultInit = true);
 
         // Same page name as on website1, different domain (for MetaSites test)
         $t->setUrl($url);
@@ -201,7 +201,7 @@ class TwoSitesEcommerceOrderWithItems extends Fixture
         self::checkResponse($t->doTrackPageView('one page visit'));
 
         // testing the same order in a different website should record
-        $t = self::getTracker($this->sites['site2']['idGoal'], $this->dateTime, $defaultInit = true);
+        $t = self::getTracker($this->sites['site2']['idSite'], $this->dateTime, $defaultInit = true);
         $t->setForceVisitDateTime(Date::factory($this->dateTime)->addHour(30.9)->getDatetime());
         $t->addEcommerceItem($sku = 'TRIPOD SKU', $name = 'TRIPOD - bought day after', $category = 'Tools', $price = 100, $quantity = 2);
         self::checkResponse($t->doTrackEcommerceOrder($orderId = '777', $grandTotal = 250));
