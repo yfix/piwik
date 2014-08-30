@@ -22,7 +22,7 @@ class SomeVisitsAllConversions extends Fixture
     {
         $this->sites = array();
         $sites['main'] = array(
-            'ts_archived' => $this->idSite,
+            'ts_archived' => $this->dateTime,
             'goals' => array( // TODO: add goals
                 // First, a goal that is only recorded once per visit
                 'OneConversionPerVisit' => array(

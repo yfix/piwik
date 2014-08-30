@@ -98,9 +98,11 @@ class Fixture extends PHPUnit_Framework_Assert
         foreach ($sites as &$site) {
             $site['idSite'] = $id++;
 
-            $idGoal = 1;
-            foreach ($site as &$goal) {
-                $goal['idGoal'] = $idGoal++;
+            if (!empty($site['goals'])) {
+                $idGoal = 1;
+                foreach ($site['goals'] as &$goal) {
+                    $goal['idGoal'] = $idGoal++;
+                }
             }
         }
 
@@ -306,25 +308,27 @@ class Fixture extends PHPUnit_Framework_Assert
             }
 
             // create goals
-            foreach ($site['goals'] as &$goal) {
-                $goal = $goal + $defaultGoalValues;
+            if (!empty($site['goals'])) {
+                foreach ($site['goals'] as &$goal) {
+                    $goal = $goal + $defaultGoalValues;
 
-                if ($this->skipAlreadyCreatedSites // TODO: pick better name for this var
-                    && self::goalExists($idSite, $goal['idGoal'])
-                ) {
-                    continue;
+                    if ($this->skipAlreadyCreatedSites // TODO: pick better name for this var
+                        && self::goalExists($idSite, $goal['idGoal'])
+                    ) {
+                        continue;
+                    }
+
+                    GoalsApi::getInstance()->addGoal(
+                        $idSite,
+                        $goal['name'],
+                        $goal['match_attribute'], 
+                        $goal['pattern'],
+                        $goal['pattern_type'],
+                        $goal['case_sensitive'],
+                        $goal['revenue'],
+                        $goal['allow_multiple_conversions_per_visit']
+                    );
                 }
-
-                GoalsApi::getInstance()->addGoal(
-                    $idSite,
-                    $goal['name'],
-                    $goal['match_attribute'], 
-                    $goal['pattern'],
-                    $goal['pattern_type'],
-                    $goal['case_sensitive'],
-                    $goal['revenue'],
-                    $goal['allow_multiple_conversions_per_visit']
-                );
             }
         }
     }

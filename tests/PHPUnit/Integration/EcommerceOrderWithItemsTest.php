@@ -39,6 +39,7 @@ class EcommerceOrderWithItemsTest extends IntegrationTestCase
     {
         $idSite = self::$fixture->sites['site1']['idSite'];
         $idSite2 = self::$fixture->sites['site2']['idSite'];
+        $idGoal = self::$fixture->sites['site1']['goals']['goal1']['idGoal'];
         $dateTime = self::$fixture->dateTime;
 
         $dayApi = array('VisitsSummary.get', 'VisitTime', 'CustomVariables.getCustomVariables',
@@ -130,7 +131,7 @@ class EcommerceOrderWithItemsTest extends IntegrationTestCase
                 // normal standard goal test
                 array($processedReportApi, array('idSite'     => $idSite, 'date' => $dateTime,
                                                  'periods'    => array('day'), 'apiModule' => 'Goals', 'apiAction' => 'get',
-                                                 'idGoal'     => self::$fixture->idGoalStandard,
+                                                 'idGoal'     => $idGoal,
                                                  'testSuffix' => '_Metadata_Goals.Get_NormalGoal')),
 
                 // non-existant goal test
@@ -171,10 +172,10 @@ class EcommerceOrderWithItemsTest extends IntegrationTestCase
                 // test segment visitConvertedGoalId
                 array('VisitsSummary.get', array('idSite'  => $idSite, 'date' => $dateTime,
                                                  'periods' => array('day', 'week'), 'testSuffix' => '_SegmentConvertedGoalId1',
-                                                 'segment' => "visitConvertedGoalId==" . self::$fixture->idGoalStandard)),
+                                                 'segment' => "visitConvertedGoalId==" . $idGoal)),
                 array('VisitsSummary.get', array('idSite'  => $idSite, 'date' => $dateTime,
                                                  'periods' => array('day'), 'testSuffix' => '_SegmentDidNotConvertGoalId1',
-                                                 'segment' => "visitConvertedGoalId!=" . self::$fixture->idGoalStandard)),
+                                                 'segment' => "visitConvertedGoalId!=" . $idGoal)),
 
                 // test segment visitorType
                 array('VisitsSummary.get', array('idSite'     => $idSite, 'date' => $dateTime,

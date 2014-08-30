@@ -36,6 +36,7 @@ class SomeVisitsCustomVariablesCampaignsNotHeuristics extends Fixture
             )
         );
         $this->setSites($sites);
+    }
 
     public function setUp()
     {
