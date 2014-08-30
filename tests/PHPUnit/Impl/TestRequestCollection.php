@@ -12,6 +12,7 @@ use Piwik\API\DocumentationGenerator;
 use Piwik\API\Proxy;
 use Piwik\API\Request;
 use Piwik\UrlHelper;
+use Piwik\Plugin\Manager as PluginManager;
 use Piwik\Tests\IntegrationTestCase;
 use \Exception;
 use \PHPUnit_Framework_Assert;
@@ -291,6 +292,10 @@ class TestRequestCollection
 
     private function shouldSkipApiMethod($moduleName, $methodName) {
         $apiId = $moduleName . '.' . $methodName;
+
+        if (!PluginManager::getInstance()->isPluginLoaded($moduleName)) {
+            return true;
+        }
 
         // If Api to test were set, we only test these
         if (!empty($this->apiToCall)

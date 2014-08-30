@@ -156,7 +156,7 @@ class ManyVisitsWithGeoIP extends Fixture
 
             $date = $date->addHour(0.2);
             $t->setForceVisitDateTime($date->getDatetime());
-            $r = $t->doTrackGoal($this->sites['site1']['Goal2']['idGoal']);
+            $r = $t->doTrackGoal($this->sites['site1']['goals']['Goal2']['idGoal']);
             if (!$doBulk) {
                 self::checkResponse($r);
             }
