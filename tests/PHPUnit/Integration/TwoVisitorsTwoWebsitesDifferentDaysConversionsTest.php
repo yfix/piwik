@@ -115,5 +115,4 @@ class TwoVisitorsTwoWebsitesDifferentDaysConversionsTest extends IntegrationTest
     }
 }
 
-TwoVisitorsTwoWebsitesDifferentDaysConversionsTest::$fixture = new TwoSitesTwoVisitorsDifferentDays();
-TwoVisitorsTwoWebsitesDifferentDaysConversionsTest::$fixture->allowConversions = true;
+TwoVisitorsTwoWebsitesDifferentDaysConversionsTest::$fixture = new TwoSitesTwoVisitorsDifferentDays($allowConversions = true);

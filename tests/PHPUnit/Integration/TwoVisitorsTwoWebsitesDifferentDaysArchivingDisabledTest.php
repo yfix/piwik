@@ -85,5 +85,4 @@ class TwoVisitorsTwoWebsitesDifferentDaysArchivingDisabledTest extends Integrati
     }
 }
 
-TwoVisitorsTwoWebsitesDifferentDaysArchivingDisabledTest::$fixture = new TwoSitesTwoVisitorsDifferentDays();
-TwoVisitorsTwoWebsitesDifferentDaysArchivingDisabledTest::$fixture->allowConversions = true;
+TwoVisitorsTwoWebsitesDifferentDaysArchivingDisabledTest::$fixture = new TwoSitesTwoVisitorsDifferentDays($allowConversions = true);
