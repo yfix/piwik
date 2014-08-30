@@ -23,7 +23,7 @@ class ApiGetReportMetadataYearTest extends IntegrationTestCase
 
     public function getApiForTesting()
     {
-        $params = array('idSite'   => self::$fixture->idSite,
+        $params = array('idSite'   => self::$fixture->sites['main']['idSite'],
                         'date'     => self::$fixture->dateTime,
                         'periods'  => 'year',
                         'language' => 'fr');

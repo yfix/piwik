@@ -49,7 +49,7 @@ class TwoVisitsWithCustomVariablesSegmentMatchNONETest extends IntegrationTestCa
     public function getSegmentToTest()
     {
         // Segment matching NONE
-        $segments = API::getInstance()->getSegmentsMetadata(self::$fixture->idSite);
+        $segments = API::getInstance()->getSegmentsMetadata(self::$fixture->sites['main']['idSite']);
 
         $minimumExpectedSegmentsCount = 55; // as of Piwik 1.12
         $this->assertTrue( count($segments) >= $minimumExpectedSegmentsCount);

@@ -31,7 +31,7 @@ class TrackerWindowLookBackTest extends IntegrationTestCase
 
     public function getApiForTesting()
     {
-        $idSite = self::$fixture->idSite;
+        $idSite = self::$fixture->sites['site1']['idSite'];
 
         return array(
             array('VisitsSummary.getVisits', array( 'date'    => '2010-12-01,2011-01-31',

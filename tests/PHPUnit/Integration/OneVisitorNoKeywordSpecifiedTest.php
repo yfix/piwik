@@ -41,7 +41,7 @@ class OneVisitorNoKeywordSpecifiedTest extends IntegrationTestCase
         }
 
         return array(
-            array($apiToCall, array('idSite'   => self::$fixture->idSite,
+            array($apiToCall, array('idSite'   => self::$fixture->sites['main']['idSite'],
                                     'date'     => self::$fixture->dateTime,
                                     'language' => 'fr'))
         );

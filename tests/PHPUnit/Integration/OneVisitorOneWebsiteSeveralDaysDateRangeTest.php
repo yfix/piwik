@@ -34,7 +34,7 @@ class OneVisitorOneWebsiteSeveralDaysDateRangeTest extends IntegrationTestCase
 
     public function getApiForTesting()
     {
-        $idSite = self::$fixture->idSite;
+        $idSite = self::$fixture->sites['site1']['idSite'];
 
         return array(
             // FIRST some MultiSites API goodness!

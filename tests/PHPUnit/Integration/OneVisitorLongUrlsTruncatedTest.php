@@ -38,7 +38,7 @@ class OneVisitorLongUrlsTruncatedTest extends IntegrationTestCase
             'UserSettings.getPlugin');
 
         return array(
-            array($apiToCall, array('idSite'                 => self::$fixture->idSite,
+            array($apiToCall, array('idSite'                 => self::$fixture->sites['main']['idSite'],
                                     'date'                   => self::$fixture->dateTime,
                                     'language'               => 'fr',
                                     'otherRequestParameters' => array('expanded' => 1, 'filter_truncate' => 2)))

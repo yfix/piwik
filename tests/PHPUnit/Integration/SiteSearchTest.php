@@ -46,7 +46,7 @@ class SiteSearchTest extends IntegrationTestCase
     public function getApiForTesting()
     {
         $dateTime = self::$fixture->dateTime;
-        $idSite1 = self::$fixture->idSite1;
+        $idSite1 = self::$fixture->sites['site1']['idSite'];
 
         $apiToCall = $this->getApiToCall();
 

@@ -37,7 +37,7 @@ class PeriodIsRangeDateIsLastNMetadataAndNormalAPITest extends IntegrationTestCa
 
     public function getApiForTesting()
     {
-        $idSite = self::$fixture->idSite;
+        $idSite = self::$fixture->sites['main']['idSite'];
         $visitorId = self::$fixture->visitorId;
 
         $apiToCall = array(

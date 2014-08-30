@@ -147,7 +147,7 @@ class PurgeDataTest extends IntegrationTestCase
     private function assertNumVisits($expectedNumVisits, $period)
     {
         $url = 'method=VisitsSummary.getVisits'
-             . '&idSite=' . self::$fixture->idSite
+             . '&idSite=' . self::$fixture->sites['main']['idSite']
              . '&date=' . self::$fixture->dateTime
              . '&period='. $period
              . '&format=original';
@@ -173,7 +173,7 @@ class PurgeDataTest extends IntegrationTestCase
     private function getDownloadApiRequestUrl($period)
     {
         return 'method=Actions.getDownloads'
-             . '&idSite=' . self::$fixture->idSite
+             . '&idSite=' . self::$fixture->sites['main']['idSite']
              . '&date=' . self::$fixture->dateTime
              . '&period='. $period
              . '&format=original';

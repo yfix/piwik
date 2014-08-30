@@ -30,7 +30,7 @@ class AnnotationsTest extends IntegrationTestCase
 
     public function getApiForTesting()
     {
-        $idSite1 = self::$fixture->idSite1;
+        $idSite1 = self::$fixture->sites['site1']['idSite'];
 
         return array(
 
@@ -107,7 +107,7 @@ class AnnotationsTest extends IntegrationTestCase
     public function testAddInvalidDateFail()
     {
         try {
-            API::getInstance()->add(self::$fixture->idSite1, "invaliddate", "whatever");
+            API::getInstance()->add(self::$fixture->sites['site1']['idSite'], "invaliddate", "whatever");
             $this->fail("add should fail when given invalid date");
         } catch (Exception $ex) {
             // pass
@@ -127,7 +127,7 @@ class AnnotationsTest extends IntegrationTestCase
     public function testSaveInvalidDateFail()
     {
         try {
-            API::getInstance()->save(self::$fixture->idSite1, 0, "invaliddate");
+            API::getInstance()->save(self::$fixture->sites['site1']['idSite'], 0, "invaliddate");
             $this->fail("save should fail when given an invalid date");
         } catch (Exception $ex) {
             // pass
@@ -137,7 +137,7 @@ class AnnotationsTest extends IntegrationTestCase
     public function testSaveInvalidNoteIdFail()
     {
         try {
-            API::getInstance()->save(self::$fixture->idSite1, -1);
+            API::getInstance()->save(self::$fixture->sites['site1']['idSite'], -1);
             $this->fail("save should fail when given an invalid note id");
         } catch (Exception $ex) {
             // pass
@@ -157,7 +157,7 @@ class AnnotationsTest extends IntegrationTestCase
     public function testDeleteInvalidNoteIdFail()
     {
         try {
-            API::getInstance()->delete(self::$fixture->idSite1, -1);
+            API::getInstance()->delete(self::$fixture->sites['site1']['idSite'], -1);
             $this->fail("delete should fail when given an invalid site ID");
         } catch (Exception $ex) {
             // pass
@@ -177,7 +177,7 @@ class AnnotationsTest extends IntegrationTestCase
     public function testGetInvalidNoteIdFail()
     {
         try {
-            API::getInstance()->get(self::$fixture->idSite1, -1);
+            API::getInstance()->get(self::$fixture->sites['site1']['idSite'], -1);
             $this->fail("get should fail when given an invalid note ID");
         } catch (Exception $ex) {
             // pass
@@ -187,7 +187,7 @@ class AnnotationsTest extends IntegrationTestCase
     public function testSaveSuccess()
     {
         API::getInstance()->save(
-            self::$fixture->idSite1, 0, $date = '2011-04-01', $note = 'new note text', $starred = 1);
+            self::$fixture->sites['site1']['idSite'], 0, $date = '2011-04-01', $note = 'new note text', $starred = 1);
 
         $expectedAnnotation = array(
             'date'            => '2011-04-01',
@@ -197,12 +197,12 @@ class AnnotationsTest extends IntegrationTestCase
             'idNote'          => 0,
             'canEditOrDelete' => true
         );
-        $this->assertEquals($expectedAnnotation, API::getInstance()->get(self::$fixture->idSite1, 0));
+        $this->assertEquals($expectedAnnotation, API::getInstance()->get(self::$fixture->sites['site1']['idSite'], 0));
     }
 
     public function testSaveNoChangesSuccess()
     {
-        API::getInstance()->save(self::$fixture->idSite1, 1);
+        API::getInstance()->save(self::$fixture->sites['site1']['idSite'], 1);
 
         $expectedAnnotation = array(
             'date'            => '2011-12-02',
@@ -212,15 +212,15 @@ class AnnotationsTest extends IntegrationTestCase
             'idNote'          => 1,
             'canEditOrDelete' => true
         );
-        $this->assertEquals($expectedAnnotation, API::getInstance()->get(self::$fixture->idSite1, 1));
+        $this->assertEquals($expectedAnnotation, API::getInstance()->get(self::$fixture->sites['site1']['idSite'], 1));
     }
 
     public function testDeleteSuccess()
     {
-        API::getInstance()->delete(self::$fixture->idSite1, 1);
+        API::getInstance()->delete(self::$fixture->sites['site1']['idSite'], 1);
 
         try {
-            API::getInstance()->get(self::$fixture->idSite1, 1);
+            API::getInstance()->get(self::$fixture->sites['site1']['idSite'], 1);
             $this->fail("failed to delete annotation");
         } catch (Exception $ex) {
             // pass
@@ -264,8 +264,8 @@ class AnnotationsTest extends IntegrationTestCase
         // create fake access that denies user access
         $access = new FakeAccess();
         FakeAccess::$superUser = false;
-        FakeAccess::$idSitesAdmin = $hasAdminAccess ? array(self::$fixture->idSite1) : array();
-        FakeAccess::$idSitesView = $hasViewAccess ? array(self::$fixture->idSite1) : array();
+        FakeAccess::$idSitesAdmin = $hasAdminAccess ? array(self::$fixture->sites['site1']['idSite']) : array();
+        FakeAccess::$idSitesView = $hasViewAccess ? array(self::$fixture->sites['site1']['idSite']) : array();
         Access::setSingletonInstance($access);
 
         if ($checkException) {

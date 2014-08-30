@@ -54,7 +54,7 @@ class TwoVisitorsTwoWebsitesDifferentDaysTest extends IntegrationTestCase
 
     public function getApiForTesting()
     {
-        $idSite1 = self::$fixture->idSite1;
+        $idSite1 = self::$fixture->sites['site1']['idSite'];
         $dateTime = self::$fixture->dateTime;
 
         $apiToCall = $this->getApiToCall();

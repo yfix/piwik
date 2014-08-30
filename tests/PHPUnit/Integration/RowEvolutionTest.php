@@ -30,8 +30,8 @@ class RowEvolutionTest extends IntegrationTestCase
 
     public function getApiForTesting()
     {
-        $idSite = self::$fixture->idSite;
-        $idSite2 = self::$fixture->idSite2;
+        $idSite = self::$fixture->sites['site1']['idSite'];
+        $idSite2 = self::$fixture->sites['site2']['idSite'];
         $dateTime = self::$fixture->dateTime;
         $keywords = self::$fixture->keywords;
 

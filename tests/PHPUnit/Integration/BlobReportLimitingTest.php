@@ -47,11 +47,11 @@ class BlobReportLimitingTest extends IntegrationTestCase
         $ecommerceApi = array('Goals.getItemsSku', 'Goals.getItemsName', 'Goals.getItemsCategory');
 
         return array(
-            array($apiToCall, array('idSite'  => self::$fixture->idSite,
+            array($apiToCall, array('idSite'  => self::$fixture->sites['main']['idSite'],
                                     'date'    => self::$fixture->dateTime,
                                     'periods' => array('day'))),
 
-            array($ecommerceApi, array('idSite'  => self::$fixture->idSite,
+            array($ecommerceApi, array('idSite'  => self::$fixture->sites['main']['idSite'],
                                        'date'    => self::$fixture->nextDay,
                                        'periods' => 'day')),
         );
@@ -59,7 +59,7 @@ class BlobReportLimitingTest extends IntegrationTestCase
 
     public function getRankingQueryDisabledApiForTesting()
     {
-        $idSite = self::$fixture->idSite;
+        $idSite = self::$fixture->sites['main']['idSite'];
         $dateTime = self::$fixture->dateTime;
 
         return array(

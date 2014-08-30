@@ -42,7 +42,7 @@ class TwoVisitorsTwoWebsitesDifferentDaysConversionsTest extends IntegrationTest
     public function getApiForTesting()
     {
         $dateTime = self::$fixture->dateTime;
-        $idSite1 = self::$fixture->idSite1;
+        $idSite1 = self::$fixture->sites['site1']['idSite'];
 
         // NOTE: copied from TwoVisitors_TwoWebsites_DifferentDays (including the test or inheriting means
         // the test will get run by phpunit, even when we only want to run this one. should be put into

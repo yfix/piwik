@@ -43,10 +43,10 @@ class AutoSuggestAPITest extends IntegrationTestCase
         // we will test all segments from all plugins
         Fixture::loadAllPlugins();
 
-        $idSite = self::$fixture->idSite;
+        $idSite = self::$fixture->sites['site1']['idSite'];
         $apiForTesting = array();
 
-        $segments = \Piwik\Plugins\API\API::getInstance()->getSegmentsMetadata(self::$fixture->idSite);
+        $segments = \Piwik\Plugins\API\API::getInstance()->getSegmentsMetadata($idSite);
         foreach ($segments as $segment) {
             $apiForTesting[] = $this->getApiForTestingForSegment($idSite, $segment['segment']);
         }
@@ -112,14 +112,14 @@ class AutoSuggestAPITest extends IntegrationTestCase
     public function getAnotherApiForTesting()
     {
         $apiForTesting = array();
-        $segments = \Piwik\Plugins\API\API::getInstance()->getSegmentsMetadata(self::$fixture->idSite);
+        $segments = \Piwik\Plugins\API\API::getInstance()->getSegmentsMetadata(self::$fixture->sites['site1']['idSite']);
         foreach ($segments as $segment) {
             if(self::isTravisCI() && $segment['segment'] == 'deviceType') {
                 // test started failing after bc19503 and I cannot understand why
                 continue;
             }
             $apiForTesting[] = array('VisitsSummary.get',
-                                     array('idSite'            => self::$fixture->idSite,
+                                     array('idSite'            => self::$fixture->sites['site1']['idSite'],
                                            'date'              => date("Y-m-d", strtotime(self::$fixture->dateTime)) . ',today',
                                            'period'            => 'range',
                                            'testSuffix'        => '_' . $segment['segment'],

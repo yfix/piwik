@@ -22,7 +22,7 @@ class CsvExportTest extends IntegrationTestCase
 
     public function getApiForTesting()
     {
-        $idSite = self::$fixture->idSite;
+        $idSite = self::$fixture->sites['main']['idSite'];
         $dateTime = self::$fixture->dateTime;
 
         $apiToCall = array('VisitsSummary.get', 'CustomVariables.getCustomVariables');

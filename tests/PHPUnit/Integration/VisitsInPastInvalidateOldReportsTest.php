@@ -35,8 +35,8 @@ class VisitsInPastInvalidateOldReportsTest extends IntegrationTestCase
      */
     public function getApiForTesting()
     {
-        $idSite = self::$fixture->idSite;
-        $idSite2 = self::$fixture->idSite2;
+        $idSite = self::$fixture->sites['site1']['idSite'];
+        $idSite2 = self::$fixture->sites['site2']['idSite'];
         $dateTimeDateInPastWebsite1 = self::$fixture->dateTimeDateInPastWebsite1;
         $dateTimeDateInPastWebsite2 = self::$fixture->dateTimeDateInPastWebsite2;
 
@@ -69,8 +69,8 @@ class VisitsInPastInvalidateOldReportsTest extends IntegrationTestCase
      */
     public function testAnotherApi($api, $params)
     {
-        $idSite = self::$fixture->idSite;
-        $idSite2 = self::$fixture->idSite2;
+        $idSite = self::$fixture->sites['site1']['idSite'];
+        $idSite2 = self::$fixture->sites['site2']['idSite'];
 
         // 1) Invalidate old reports for the 2 websites
         // Test invalidate 1 date only
@@ -109,8 +109,8 @@ class VisitsInPastInvalidateOldReportsTest extends IntegrationTestCase
      */
     public function getAnotherApiForTesting()
     {
-        $idSite = self::$fixture->idSite;
-        $idSite2 = self::$fixture->idSite2;
+        $idSite = self::$fixture->sites['site1']['idSite'];
+        $idSite2 = self::$fixture->sites['site2']['idSite'];
         $dateTimeDateInPastWebsite1 = self::$fixture->dateTimeDateInPastWebsite1;
         $dateTimeDateInPastWebsite2 = self::$fixture->dateTimeDateInPastWebsite2;
 

@@ -39,7 +39,7 @@ class NonUnicodeTest extends IntegrationTestCase
         );
 
         return array(
-            array($apiToCall, array('idSite'  => self::$fixture->idSite1,
+            array($apiToCall, array('idSite'  => self::$fixture->sites['main']['idSite'],
                                     'date'    => self::$fixture->dateTime,
                                     'periods' => 'day'))
         );

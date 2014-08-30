@@ -23,7 +23,7 @@ class TimezonesTest extends IntegrationTestCase
 
     public function getApiForTesting()
     {
-        $idSite = self::$fixture->idSite;
+        $idSite = self::$fixture->sites['main']['idSite'];
         $date = self::$fixture->date;
 
         return array(

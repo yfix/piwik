@@ -32,7 +32,7 @@ class TransitionsTest extends IntegrationTestCase
     {
         $return = array();
         $return[] = array('Transitions.getTransitionsForPageUrl', array(
-            'idSite'                 => self::$fixture->idSite,
+            'idSite'                 => self::$fixture->sites['main']['idSite'],
             'date'                   => self::$fixture->dateTime,
             'periods'                => array('day', 'month'),
             'testSuffix'             => '_noLimit',
@@ -41,7 +41,7 @@ class TransitionsTest extends IntegrationTestCase
             )
         ));
         $return[] = array('Transitions.getTransitionsForPageTitle', array(
-            'idSite'                 => self::$fixture->idSite,
+            'idSite'                 => self::$fixture->sites['main']['idSite'],
             'date'                   => self::$fixture->dateTime,
             'periods'                => array('day', 'month'),
             'testSuffix'             => '_noLimit',
@@ -52,7 +52,7 @@ class TransitionsTest extends IntegrationTestCase
 
         // test w/ pages that don't exist
         $return[] = array('Transitions.getTransitionsForPageUrl', array(
-            'idSite'                 => self::$fixture->idSite,
+            'idSite'                 => self::$fixture->sites['main']['idSite'],
             'date'                   => self::$fixture->dateTime,
             'periods'                => array('day', 'month'),
             'testSuffix'             => '_noData',
@@ -61,7 +61,7 @@ class TransitionsTest extends IntegrationTestCase
             )
         ));
         $return[] = array('Transitions.getTransitionsForPageTitle', array(
-            'idSite'                 => self::$fixture->idSite,
+            'idSite'                 => self::$fixture->sites['main']['idSite'],
             'date'                   => self::$fixture->dateTime,
             'periods'                => array('day', 'month'),
             'testSuffix'             => '_noData',
@@ -71,7 +71,7 @@ class TransitionsTest extends IntegrationTestCase
         ));
 
         $return[] = array('Transitions.getTransitionsForPageUrl', array( // test w/ limiting
-            'idSite'                 => self::$fixture->idSite,
+            'idSite'                 => self::$fixture->sites['main']['idSite'],
             'date'                   => self::$fixture->dateTime,
             'periods'                => array('day', 'month'),
             'otherRequestParameters' => array(

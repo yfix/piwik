@@ -47,7 +47,7 @@ class TrackingAPISetVisitorIdTest extends IntegrationTestCase
     public function getApiForTesting()
     {
         return array(
-            array('VisitsSummary.get', array('idSite'     => self::$fixture->idSite,
+            array('VisitsSummary.get', array('idSite'     => self::$fixture->sites['main']['idSite'],
                                              'date'       => self::$fixture->dateTime,
                                              'periods'    => 'day',
                                              'testSuffix' => '',

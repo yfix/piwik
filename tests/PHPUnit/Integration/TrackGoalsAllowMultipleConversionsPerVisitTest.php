@@ -35,13 +35,13 @@ class TrackGoalsAllowMultipleConversionsPerVisitTest extends IntegrationTestCase
      */
     public function testCheck()
     {
-        $idSite = self::$fixture->idSite;
+        $idSite = self::$fixture->sites['main']['idSite'];
 
         // test delete is working as expected
         $goals = API::getInstance()->getGoals($idSite);
         $this->assertTrue(5 == count($goals));
-        API::getInstance()->deleteGoal($idSite, self::$fixture->idGoal_OneConversionPerVisit);
-        API::getInstance()->deleteGoal($idSite, self::$fixture->idGoal_MultipleConversionPerVisit);
+        API::getInstance()->deleteGoal($idSite, self::$fixture->sites['main']['goals']['OneConversionPerVisit']['idGoal']);
+        API::getInstance()->deleteGoal($idSite, self::$fixture->sites['main']['goals']['MultipleConversionsPerVisit']['idGoal']);
         $goals = API::getInstance()->getGoals($idSite);
         $this->assertTrue(3 == count($goals));
     }
@@ -54,7 +54,7 @@ class TrackGoalsAllowMultipleConversionsPerVisitTest extends IntegrationTestCase
         );
 
         return array(
-            array($apiToCall, array('idSite' => self::$fixture->idSite, 'date' => self::$fixture->dateTime))
+            array($apiToCall, array('idSite' => self::$fixture->sites['main']['idSite'], 'date' => self::$fixture->dateTime))
         );
     }
 

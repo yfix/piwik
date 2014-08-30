@@ -37,7 +37,7 @@ class ManyVisitorsOneWebsiteTest extends IntegrationTestCase
 
     public function getApiForTesting()
     {
-        $idSite = self::$fixture->idSite;
+        $idSite = self::$fixture->sites['site1']['idSite'];
         $dateTime = self::$fixture->dateTime;
 
         $dateString = Date::factory($dateTime)->toString();

@@ -18,7 +18,6 @@ require_once PIWIK_INCLUDE_PATH . '/tests/PHPUnit/MockLocationProvider.php';
  */
 class ManyVisitsWithMockLocationProvider extends Fixture
 {
-    public $idSite = 1;
     public $dateTime = '2010-01-03 01:22:33';
     public $nextDay = null;
 

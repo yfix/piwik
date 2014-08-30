@@ -34,9 +34,9 @@ class NoVisitTest extends IntegrationTestCase
     {
         // this will output empty XML result sets as no visit was tracked
         return array(
-            array('all', array('idSite' => self::$fixture->idSite,
+            array('all', array('idSite' => self::$fixture->sites['main']['idSite'],
                                'date'   => self::$fixture->dateTime)),
-            array('all', array('idSite'       => self::$fixture->idSite,
+            array('all', array('idSite'       => self::$fixture->sites['main']['idSite'],
                                'date'         => self::$fixture->dateTime,
                                'periods'      => array('day', 'week'),
                                'setDateLastN' => true,

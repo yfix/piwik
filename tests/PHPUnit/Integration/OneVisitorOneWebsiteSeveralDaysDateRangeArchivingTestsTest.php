@@ -39,7 +39,7 @@ class OneVisitorOneWebsiteSeveralDaysDateRangeArchivingTest extends IntegrationT
 
     public function getApiForTesting()
     {
-        $idSite = self::$fixture->idSite;
+        $idSite = self::$fixture->sites['site1']['idSite'];
 
         $apiToCall = array('Actions.getPageUrls',
                            'VisitsSummary.get',

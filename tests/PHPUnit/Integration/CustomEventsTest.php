@@ -48,7 +48,7 @@ class CustomEventsTest extends IntegrationTestCase
     public function getApiForTesting()
     {
         $dateTime = self::$fixture->dateTime;
-        $idSite1 = self::$fixture->idSite;
+        $idSite1 = self::$fixture->sites['main']['idSite'];
 
         $apiToCallProcessedReportMetadata = $this->getApiToCall();
 

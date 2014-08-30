@@ -33,11 +33,11 @@ class ImportLogsTest extends IntegrationTestCase
     public function getApiForTesting()
     {
         $apis = array(
-            array('all', array('idSite'  => self::$fixture->idSite,
+            array('all', array('idSite'  => self::$fixture->sites['site1']['idSite'],
                                'date'    => '2012-08-09',
                                'periods' => 'month')),
 
-            array('MultiSites.getAll', array('idSite'   => self::$fixture->idSite,
+            array('MultiSites.getAll', array('idSite'   => self::$fixture->sites['site1']['idSite'],
                                              'date'     => '2012-08-09',
                                              'periods'  => array('month'),
                                              'setDateLastN' => true,
@@ -45,11 +45,11 @@ class ImportLogsTest extends IntegrationTestCase
                                              'testSuffix' => '_withEnhancedAndLast7')),
 
             // report generated from custom log format including generation time
-            array('Actions.getPageUrls', array('idSite'  => self::$fixture->idSite,
+            array('Actions.getPageUrls', array('idSite'  => self::$fixture->sites['site1']['idSite'],
                                                'date'    => '2012-09-30',
                                                'periods' => 'day')),
 
-            array('VisitsSummary.get', array('idSite'     => self::$fixture->idSite2,
+            array('VisitsSummary.get', array('idSite'     => self::$fixture->sites['site2']['idSite'],
                                              'date'       => '2012-08-09',
                                              'periods'    => 'month',
                                              'testSuffix' => '_siteIdTwo_TrackedUsingLogReplay')),
@@ -65,7 +65,7 @@ class ImportLogsTest extends IntegrationTestCase
         $apiMethods[] = 'VisitorInterest';
         $apiMethods[] = 'VisitFrequency';
         $apis[] = array($apiMethods, array(
-            'idSite'  => self::$fixture->idSite,
+            'idSite'  => self::$fixture->sites['site1']['idSite'],
             'date'    => '2012-08-09,2014-04-01',
             'periods' => 'range',
             'otherRequestParameters' => array(
