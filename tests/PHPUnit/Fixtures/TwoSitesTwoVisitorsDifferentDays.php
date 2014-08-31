@@ -21,10 +21,10 @@ class TwoSitesTwoVisitorsDifferentDays extends Fixture
 
     public $allowConversions = false;
 
-    public function __construct($allowConversions)
+    public function __construct($allowConversions = false)
     {
         $this->allowConversions = $allowConversions;
-        
+
         $ecommerce = $this->allowConversions ? 1 : 0;
 
         $sites = array();
