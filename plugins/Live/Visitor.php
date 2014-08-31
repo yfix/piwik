@@ -73,6 +73,8 @@ class Visitor implements VisitorInterface
          */
         Piwik::postEvent('Live.getAllVisitorDetails', array(&$visitor, $this->details));
 
+        ksort($visitor);
+
         return $visitor;
     }
 
