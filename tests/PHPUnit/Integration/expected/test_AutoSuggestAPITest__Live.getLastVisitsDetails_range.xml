@@ -1652,12 +1652,12 @@
 			</row>
 		</actionDetails>
 		<actions>2</actions>
-		<browserCode>UNK</browserCode>
-		<browserFamily>unknown</browserFamily>
-		<browserFamilyDescription>Unknown</browserFamilyDescription>
-		<browserIcon>plugins/UserSettings/images/browsers/UNK.gif</browserIcon>
-		<browserName>Unknown</browserName>
-		<browserVersion />
+		<browserCode>FF</browserCode>
+		<browserFamily>gecko</browserFamily>
+		<browserFamilyDescription>Gecko (Firefox)</browserFamilyDescription>
+		<browserIcon>plugins/UserSettings/images/browsers/FF.gif</browserIcon>
+		<browserName>Firefox 3.6</browserName>
+		<browserVersion>3.6</browserVersion>
 		<city>Lhasa</city>
 		<continent>Asia</continent>
 		<continentCode>asi</continentCode>
@@ -1669,7 +1669,7 @@
 		<daysSinceFirstVisit>100</daysSinceFirstVisit>
 		<daysSinceLastEcommerceOrder>50</daysSinceLastEcommerceOrder>
 		<daysSinceLastVisit>10</daysSinceLastVisit>
-		<deviceType>Unknown</deviceType>
+		<deviceType>Desktop</deviceType>
 		<events>1</events>
 		
 		<goalConversions>2</goalConversions>
@@ -1680,10 +1680,10 @@
 		<latitude>29.650000</latitude>
 		<location>Lhasa, Unknown, Tibet</location>
 		<longitude>91.099998</longitude>
-		<operatingSystem>Unknown</operatingSystem>
-		<operatingSystemCode>UNK</operatingSystemCode>
-		<operatingSystemIcon>plugins/UserSettings/images/os/UNK.gif</operatingSystemIcon>
-		<operatingSystemShortName>Unknown</operatingSystemShortName>
+		<operatingSystem>Windows XP</operatingSystem>
+		<operatingSystemCode>WXP</operatingSystemCode>
+		<operatingSystemIcon>plugins/UserSettings/images/os/WXP.gif</operatingSystemIcon>
+		<operatingSystemShortName>Win XP</operatingSystemShortName>
 		<plugins>flash, java</plugins>
 		<pluginsIcons>
 			<row>
@@ -1892,12 +1892,12 @@
 			</row>
 		</actionDetails>
 		<actions>1</actions>
-		<browserCode>UNK</browserCode>
-		<browserFamily>unknown</browserFamily>
-		<browserFamilyDescription>Unknown</browserFamilyDescription>
-		<browserIcon>plugins/UserSettings/images/browsers/UNK.gif</browserIcon>
-		<browserName>Unknown</browserName>
-		<browserVersion />
+		<browserCode>FF</browserCode>
+		<browserFamily>gecko</browserFamily>
+		<browserFamilyDescription>Gecko (Firefox)</browserFamilyDescription>
+		<browserIcon>plugins/UserSettings/images/browsers/FF.gif</browserIcon>
+		<browserName>Firefox 3.6</browserName>
+		<browserVersion>3.6</browserVersion>
 		<city>Lhasa</city>
 		<continent>Asia</continent>
 		<continentCode>asi</continentCode>
@@ -1917,7 +1917,7 @@
 		<daysSinceFirstVisit>101</daysSinceFirstVisit>
 		<daysSinceLastEcommerceOrder>51</daysSinceLastEcommerceOrder>
 		<daysSinceLastVisit>11</daysSinceLastVisit>
-		<deviceType>Unknown</deviceType>
+		<deviceType>Desktop</deviceType>
 		<events>0</events>
 		
 		<goalConversions>1</goalConversions>
@@ -1928,10 +1928,10 @@
 		<latitude>29.650000</latitude>
 		<location>Lhasa, Unknown, Tibet</location>
 		<longitude>91.099998</longitude>
-		<operatingSystem>Unknown</operatingSystem>
-		<operatingSystemCode>UNK</operatingSystemCode>
-		<operatingSystemIcon>plugins/UserSettings/images/os/UNK.gif</operatingSystemIcon>
-		<operatingSystemShortName>Unknown</operatingSystemShortName>
+		<operatingSystem>Windows XP</operatingSystem>
+		<operatingSystemCode>WXP</operatingSystemCode>
+		<operatingSystemIcon>plugins/UserSettings/images/os/WXP.gif</operatingSystemIcon>
+		<operatingSystemShortName>Win XP</operatingSystemShortName>
 		<plugins>flash, java</plugins>
 		<pluginsIcons>
 			<row>
@@ -2202,24 +2202,24 @@
 			</row>
 		</actionDetails>
 		<actions>3</actions>
-		<browserCode>UNK</browserCode>
-		<browserFamily>unknown</browserFamily>
-		<browserFamilyDescription>Unknown</browserFamilyDescription>
-		<browserIcon>plugins/UserSettings/images/browsers/UNK.gif</browserIcon>
-		<browserName>Unknown</browserName>
-		<browserVersion />
+		<browserCode>FF</browserCode>
+		<browserFamily>gecko</browserFamily>
+		<browserFamilyDescription>Gecko (Firefox)</browserFamilyDescription>
+		<browserIcon>plugins/UserSettings/images/browsers/FF.gif</browserIcon>
+		<browserName>Firefox 3.6</browserName>
+		<browserVersion>3.6</browserVersion>
 		<city />
-		<continent>Unknown</continent>
-		<continentCode>unk</continentCode>
-		<country>Unknown</country>
-		<countryCode>xx</countryCode>
-		<countryFlag>plugins/UserCountry/images/flags/xx.png</countryFlag>
+		<continent>Europe</continent>
+		<continentCode>eur</continentCode>
+		<country>France</country>
+		<countryCode>fr</countryCode>
+		<countryFlag>plugins/UserCountry/images/flags/fr.png</countryFlag>
 		<customVariables>
 		</customVariables>
 		<daysSinceFirstVisit>100</daysSinceFirstVisit>
 		<daysSinceLastEcommerceOrder>50</daysSinceLastEcommerceOrder>
 		<daysSinceLastVisit>10</daysSinceLastVisit>
-		<deviceType>Unknown</deviceType>
+		<deviceType>Desktop</deviceType>
 		<events>1</events>
 		
 		<goalConversions>2</goalConversions>
@@ -2228,12 +2228,12 @@
 		
 		
 		<latitude />
-		<location>Unknown</location>
+		<location>France</location>
 		<longitude />
-		<operatingSystem>Unknown</operatingSystem>
-		<operatingSystemCode>UNK</operatingSystemCode>
-		<operatingSystemIcon>plugins/UserSettings/images/os/UNK.gif</operatingSystemIcon>
-		<operatingSystemShortName>Unknown</operatingSystemShortName>
+		<operatingSystem>Windows XP</operatingSystem>
+		<operatingSystemCode>WXP</operatingSystemCode>
+		<operatingSystemIcon>plugins/UserSettings/images/os/WXP.gif</operatingSystemIcon>
+		<operatingSystemShortName>Win XP</operatingSystemShortName>
 		<plugins>flash, java</plugins>
 		<pluginsIcons>
 			<row>
@@ -2442,18 +2442,18 @@
 			</row>
 		</actionDetails>
 		<actions>1</actions>
-		<browserCode>UNK</browserCode>
-		<browserFamily>unknown</browserFamily>
-		<browserFamilyDescription>Unknown</browserFamilyDescription>
-		<browserIcon>plugins/UserSettings/images/browsers/UNK.gif</browserIcon>
-		<browserName>Unknown</browserName>
-		<browserVersion />
+		<browserCode>FF</browserCode>
+		<browserFamily>gecko</browserFamily>
+		<browserFamilyDescription>Gecko (Firefox)</browserFamilyDescription>
+		<browserIcon>plugins/UserSettings/images/browsers/FF.gif</browserIcon>
+		<browserName>Firefox 3.6</browserName>
+		<browserVersion>3.6</browserVersion>
 		<city />
-		<continent>Unknown</continent>
-		<continentCode>unk</continentCode>
-		<country>Unknown</country>
-		<countryCode>xx</countryCode>
-		<countryFlag>plugins/UserCountry/images/flags/xx.png</countryFlag>
+		<continent>Europe</continent>
+		<continentCode>eur</continentCode>
+		<country>France</country>
+		<countryCode>fr</countryCode>
+		<countryFlag>plugins/UserCountry/images/flags/fr.png</countryFlag>
 		<customVariables>
 			<row>
 				<customVariableName1>Cvar 1 name</customVariableName1>
@@ -2467,7 +2467,7 @@
 		<daysSinceFirstVisit>101</daysSinceFirstVisit>
 		<daysSinceLastEcommerceOrder>51</daysSinceLastEcommerceOrder>
 		<daysSinceLastVisit>11</daysSinceLastVisit>
-		<deviceType>Unknown</deviceType>
+		<deviceType>Desktop</deviceType>
 		<events>0</events>
 		
 		<goalConversions>1</goalConversions>
@@ -2476,12 +2476,12 @@
 		
 		
 		<latitude />
-		<location>Unknown</location>
+		<location>France</location>
 		<longitude />
-		<operatingSystem>Unknown</operatingSystem>
-		<operatingSystemCode>UNK</operatingSystemCode>
-		<operatingSystemIcon>plugins/UserSettings/images/os/UNK.gif</operatingSystemIcon>
-		<operatingSystemShortName>Unknown</operatingSystemShortName>
+		<operatingSystem>Windows XP</operatingSystem>
+		<operatingSystemCode>WXP</operatingSystemCode>
+		<operatingSystemIcon>plugins/UserSettings/images/os/WXP.gif</operatingSystemIcon>
+		<operatingSystemShortName>Win XP</operatingSystemShortName>
 		<plugins>flash, java</plugins>
 		<pluginsIcons>
 			<row>
@@ -2856,12 +2856,12 @@
 			</row>
 		</actionDetails>
 		<actions>2</actions>
-		<browserCode>UNK</browserCode>
-		<browserFamily>unknown</browserFamily>
-		<browserFamilyDescription>Unknown</browserFamilyDescription>
-		<browserIcon>plugins/UserSettings/images/browsers/UNK.gif</browserIcon>
-		<browserName>Unknown</browserName>
-		<browserVersion />
+		<browserCode>FF</browserCode>
+		<browserFamily>gecko</browserFamily>
+		<browserFamilyDescription>Gecko (Firefox)</browserFamilyDescription>
+		<browserIcon>plugins/UserSettings/images/browsers/FF.gif</browserIcon>
+		<browserName>Firefox 3.6</browserName>
+		<browserVersion>3.6</browserVersion>
 		<city>Vancouver</city>
 		<continent>North America</continent>
 		<continentCode>amn</continentCode>
@@ -2873,7 +2873,7 @@
 		<daysSinceFirstVisit>100</daysSinceFirstVisit>
 		<daysSinceLastEcommerceOrder>50</daysSinceLastEcommerceOrder>
 		<daysSinceLastVisit>10</daysSinceLastVisit>
-		<deviceType>Unknown</deviceType>
+		<deviceType>Desktop</deviceType>
 		<events>1</events>
 		
 		<goalConversions>2</goalConversions>
@@ -2884,10 +2884,10 @@
 		<latitude>49.250000</latitude>
 		<location>Vancouver, British Columbia, Canada</location>
 		<longitude>-123.133003</longitude>
-		<operatingSystem>Unknown</operatingSystem>
-		<operatingSystemCode>UNK</operatingSystemCode>
-		<operatingSystemIcon>plugins/UserSettings/images/os/UNK.gif</operatingSystemIcon>
-		<operatingSystemShortName>Unknown</operatingSystemShortName>
+		<operatingSystem>Windows XP</operatingSystem>
+		<operatingSystemCode>WXP</operatingSystemCode>
+		<operatingSystemIcon>plugins/UserSettings/images/os/WXP.gif</operatingSystemIcon>
+		<operatingSystemShortName>Win XP</operatingSystemShortName>
 		<plugins>flash, java</plugins>
 		<pluginsIcons>
 			<row>
@@ -3358,12 +3358,12 @@
 			</row>
 		</actionDetails>
 		<actions>1</actions>
-		<browserCode>UNK</browserCode>
-		<browserFamily>unknown</browserFamily>
-		<browserFamilyDescription>Unknown</browserFamilyDescription>
-		<browserIcon>plugins/UserSettings/images/browsers/UNK.gif</browserIcon>
-		<browserName>Unknown</browserName>
-		<browserVersion />
+		<browserCode>FF</browserCode>
+		<browserFamily>gecko</browserFamily>
+		<browserFamilyDescription>Gecko (Firefox)</browserFamilyDescription>
+		<browserIcon>plugins/UserSettings/images/browsers/FF.gif</browserIcon>
+		<browserName>Firefox 3.6</browserName>
+		<browserVersion>3.6</browserVersion>
 		<city>Vancouver</city>
 		<continent>North America</continent>
 		<continentCode>amn</continentCode>
@@ -3383,7 +3383,7 @@
 		<daysSinceFirstVisit>101</daysSinceFirstVisit>
 		<daysSinceLastEcommerceOrder>51</daysSinceLastEcommerceOrder>
 		<daysSinceLastVisit>11</daysSinceLastVisit>
-		<deviceType>Unknown</deviceType>
+		<deviceType>Desktop</deviceType>
 		<events>0</events>
 		
 		<goalConversions>1</goalConversions>
@@ -3394,10 +3394,10 @@
 		<latitude>49.250000</latitude>
 		<location>Vancouver, British Columbia, Canada</location>
 		<longitude>-123.133003</longitude>
-		<operatingSystem>Unknown</operatingSystem>
-		<operatingSystemCode>UNK</operatingSystemCode>
-		<operatingSystemIcon>plugins/UserSettings/images/os/UNK.gif</operatingSystemIcon>
-		<operatingSystemShortName>Unknown</operatingSystemShortName>
+		<operatingSystem>Windows XP</operatingSystem>
+		<operatingSystemCode>WXP</operatingSystemCode>
+		<operatingSystemIcon>plugins/UserSettings/images/os/WXP.gif</operatingSystemIcon>
+		<operatingSystemShortName>Win XP</operatingSystemShortName>
 		<plugins>flash, java</plugins>
 		<pluginsIcons>
 			<row>
@@ -3947,12 +3947,12 @@
 			</row>
 		</actionDetails>
 		<actions>3</actions>
-		<browserCode>UNK</browserCode>
-		<browserFamily>unknown</browserFamily>
-		<browserFamilyDescription>Unknown</browserFamilyDescription>
-		<browserIcon>plugins/UserSettings/images/browsers/UNK.gif</browserIcon>
-		<browserName>Unknown</browserName>
-		<browserVersion />
+		<browserCode>FF</browserCode>
+		<browserFamily>gecko</browserFamily>
+		<browserFamilyDescription>Gecko (Firefox)</browserFamilyDescription>
+		<browserIcon>plugins/UserSettings/images/browsers/FF.gif</browserIcon>
+		<browserName>Firefox 3.6</browserName>
+		<browserVersion>3.6</browserVersion>
 		<city>Vancouver</city>
 		<continent>North America</continent>
 		<continentCode>amn</continentCode>
@@ -3964,7 +3964,7 @@
 		<daysSinceFirstVisit>100</daysSinceFirstVisit>
 		<daysSinceLastEcommerceOrder>50</daysSinceLastEcommerceOrder>
 		<daysSinceLastVisit>10</daysSinceLastVisit>
-		<deviceType>Unknown</deviceType>
+		<deviceType>Desktop</deviceType>
 		<events>1</events>
 		
 		<goalConversions>2</goalConversions>
@@ -3975,10 +3975,10 @@
 		<latitude>49.250000</latitude>
 		<location>Vancouver, British Columbia, Canada</location>
 		<longitude>-123.133003</longitude>
-		<operatingSystem>Unknown</operatingSystem>
-		<operatingSystemCode>UNK</operatingSystemCode>
-		<operatingSystemIcon>plugins/UserSettings/images/os/UNK.gif</operatingSystemIcon>
-		<operatingSystemShortName>Unknown</operatingSystemShortName>
+		<operatingSystem>Windows XP</operatingSystem>
+		<operatingSystemCode>WXP</operatingSystemCode>
+		<operatingSystemIcon>plugins/UserSettings/images/os/WXP.gif</operatingSystemIcon>
+		<operatingSystemShortName>Win XP</operatingSystemShortName>
 		<plugins>flash, java</plugins>
 		<pluginsIcons>
 			<row>

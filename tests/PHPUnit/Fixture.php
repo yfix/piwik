@@ -65,6 +65,9 @@ class Fixture extends PHPUnit_Framework_Assert
     const ADMIN_USER_LOGIN = 'superUserLogin';
     const ADMIN_USER_PASSWORD = 'superUserPass';
 
+    const DEFAULT_TRACKER_UA = "Mozilla/5.0 (Windows; U; Windows NT 5.1; en-GB; rv:1.9.2.6) Gecko/20100625 Firefox/3.6.6 (.NET CLR 3.5.30729)";
+    const DEFAULT_TRACKER_LANG = 'fr';
+
     public $dbName = false;
     public $createConfig = true;
     public $dropDatabaseInSetUp = true;
@@ -561,8 +564,8 @@ class Fixture extends PHPUnit_Framework_Assert
             $t->setIp('156.5.3.2');
 
             // Optional tracking
-            $t->setUserAgent("Mozilla/5.0 (Windows; U; Windows NT 5.1; en-GB; rv:1.9.2.6) Gecko/20100625 Firefox/3.6.6 (.NET CLR 3.5.30729)");
-            $t->setBrowserLanguage('fr');
+            $t->setUserAgent(self::DEFAULT_TRACKER_UA);
+            $t->setBrowserLanguage(self::DEFAULT_TRACKER_LANG);
             $t->setLocalTime('12:34:06');
             $t->setResolution(1024, 768);
             $t->setBrowserHasCookies(true);

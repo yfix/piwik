@@ -118,6 +118,8 @@ class ManyVisitsWithGeoIP extends Fixture
             $t->setCustomVariable(5, 'Cvar 5 name', 'Cvar5 value is ' .$i , 'visit');
             $t->setCustomVariable(2, 'Cvar 2 PAGE name', 'Cvar2 PAGE value is ' .$i, 'page');
             $t->setCustomVariable(5, 'Cvar 5 PAGE name', 'Cvar5 PAGE value is ' .$i, 'page');
+            $t->setUserAgent(self::DEFAULT_TRACKER_UA);
+            $t->setBrowserLanguage(self::DEFAULT_TRACKER_LANG);
 
             $r = $t->doTrackPageView('It\'s <script> pitch black...');
             if (!$doBulk) {
@@ -128,6 +130,8 @@ class ManyVisitsWithGeoIP extends Fixture
             $date = $date->addHour(1);
             $t->setForceVisitDateTime($date->getDatetime());
             $t->setUrl("http://piwik.net/space/quest/iv");
+            $t->setUserAgent(self::DEFAULT_TRACKER_UA);
+            $t->setBrowserLanguage(self::DEFAULT_TRACKER_LANG);
 
             // Manually record some data
             $t->setDebugStringAppend(
@@ -146,6 +150,8 @@ class ManyVisitsWithGeoIP extends Fixture
             // Only for half visitors so they don't all have a "site search" as last action and some of them have a standard page view as last action
             $date = $date->addHour(0.1);
             $t->setForceVisitDateTime($date->getDatetime());
+            $t->setUserAgent(self::DEFAULT_TRACKER_UA);
+            $t->setBrowserLanguage(self::DEFAULT_TRACKER_LANG);
             if( ($i % 2) == 0) {
                 $r = $t->doTrackSiteSearch('Bring on the party', 'CAT');
             }
@@ -157,12 +163,16 @@ class ManyVisitsWithGeoIP extends Fixture
             $date = $date->addHour(0.2);
             $t->setForceVisitDateTime($date->getDatetime());
             $r = $t->doTrackGoal($this->sites['site1']['goals']['Goal2']['idGoal']);
+            $t->setUserAgent(self::DEFAULT_TRACKER_UA);
+            $t->setBrowserLanguage(self::DEFAULT_TRACKER_LANG);
             if (!$doBulk) {
                 self::checkResponse($r);
             }
 
             $date = $date->addHour(0.05);
             $t->setForceVisitDateTime($date->getDatetime());
+            $t->setUserAgent(self::DEFAULT_TRACKER_UA);
+            $t->setBrowserLanguage(self::DEFAULT_TRACKER_LANG);
             $r = $t->doTrackEvent('Cat' . $i, 'Action' . $i, 'Name' . $i, 345.678 + $i );
 
             if (!$doBulk) {
