@@ -1,10 +1,6 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <result>
 	<row>
-		<idSite>1</idSite>
-		<idVisit>40</idVisit>
-		<visitIp>174.97.139.63</visitIp>
-		
 		<actionDetails>
 			<row>
 				<type>goal</type>
@@ -33,70 +29,43 @@
 				<icon />
 			</row>
 		</actionDetails>
-		<goalConversions>1</goalConversions>
-		<siteCurrency>USD</siteCurrency>
-		<siteCurrencySymbol>$</siteCurrencySymbol>
-		
-		
-		
-		
-		<searches>0</searches>
 		<actions>1</actions>
-		<visitorType>returning</visitorType>
-		<visitorTypeIcon>plugins/Live/images/returningVisitor.gif</visitorTypeIcon>
-		<visitConverted>1</visitConverted>
-		<visitConvertedIcon>plugins/Morpheus/images/goal.png</visitConvertedIcon>
-		<visitCount>77</visitCount>
-		
-		<visitEcommerceStatus>none</visitEcommerceStatus>
-		<visitEcommerceStatusIcon />
-		<daysSinceFirstVisit>0</daysSinceFirstVisit>
-		<daysSinceLastEcommerceOrder>0</daysSinceLastEcommerceOrder>
-		<visitDuration>0</visitDuration>
-		<visitDurationPretty>0s</visitDurationPretty>
+		<browserCode>CH</browserCode>
+		<browserFamily>webkit</browserFamily>
+		<browserFamilyDescription>WebKit (Safari, Chrome)</browserFamilyDescription>
+		<browserIcon>plugins/UserSettings/images/browsers/CH.gif</browserIcon>
+		<browserName>Chrome 33.0</browserName>
+		<browserVersion>33.0</browserVersion>
+		<city>Raleigh</city>
+		<continent>North America</continent>
+		<continentCode>amn</continentCode>
+		<country>United States</country>
+		<countryCode>us</countryCode>
+		<countryFlag>plugins/UserCountry/images/flags/us.png</countryFlag>
 		<customVariables>
 			<row>
 				<customVariableName1>Domain landed</customVariableName1>
 				<customVariableValue1>piwik.org</customVariableValue1>
 			</row>
 		</customVariables>
+		<daysSinceFirstVisit>0</daysSinceFirstVisit>
+		<daysSinceLastEcommerceOrder>0</daysSinceLastEcommerceOrder>
+		<daysSinceLastVisit>0</daysSinceLastVisit>
 		<deviceType>Desktop</deviceType>
 		<events>0</events>
-		<provider>Unknown</provider>
-		<providerName>Unknown</providerName>
-		<providerUrl>http://piwik.org/faq/general/#faq_52</providerUrl>
-		<referrerType>website</referrerType>
-		<referrerTypeName>Websites</referrerTypeName>
-		<referrerName>blog.comperiosearch.com</referrerName>
-		<referrerKeyword />
-		<referrerKeywordPosition />
-		<referrerUrl>http://blog.comperiosearch.com/blog/2014/02/05/dynamic-search-ranking-using-elasticsearch-neo4j-and-piwik/</referrerUrl>
-		<referrerSearchEngineUrl />
-		<referrerSearchEngineIcon />
-		<continent>North America</continent>
-		<continentCode>amn</continentCode>
-		<country>United States</country>
-		<countryCode>us</countryCode>
-		<countryFlag>plugins/UserCountry/images/flags/us.png</countryFlag>
-		<region>North Carolina</region>
-		<regionCode>NC</regionCode>
-		<city>Raleigh</city>
-		<location>Raleigh, North Carolina, United States</location>
+		
+		<goalConversions>1</goalConversions>
+		<idSite>1</idSite>
+		<idVisit>40</idVisit>
+		
+		
 		<latitude>35.771999</latitude>
+		<location>Raleigh, North Carolina, United States</location>
 		<longitude>-78.639000</longitude>
 		<operatingSystem>Windows 8</operatingSystem>
 		<operatingSystemCode>WI8</operatingSystemCode>
-		<operatingSystemShortName>Win 8</operatingSystemShortName>
 		<operatingSystemIcon>plugins/UserSettings/images/os/WI8.gif</operatingSystemIcon>
-		<browserFamily>webkit</browserFamily>
-		<browserFamilyDescription>WebKit (Safari, Chrome)</browserFamilyDescription>
-		<browserName>Chrome 33.0</browserName>
-		<browserIcon>plugins/UserSettings/images/browsers/CH.gif</browserIcon>
-		<browserCode>CH</browserCode>
-		<browserVersion>33.0</browserVersion>
-		<screenType>wide</screenType>
-		<resolution>1366x768</resolution>
-		<screenTypeIcon>plugins/UserSettings/images/screens/wide.gif</screenTypeIcon>
+		<operatingSystemShortName>Win 8</operatingSystemShortName>
 		<plugins>pdf, flash, java</plugins>
 		<pluginsIcons>
 			<row>
@@ -112,9 +81,40 @@
 				<pluginName>java</pluginName>
 			</row>
 		</pluginsIcons>
-		<visitLocalTime>20:34:49</visitLocalTime>
+		<provider>Unknown</provider>
+		<providerName>Unknown</providerName>
+		<providerUrl>http://piwik.org/faq/general/#faq_52</providerUrl>
+		<referrerKeyword />
+		<referrerKeywordPosition />
+		<referrerName>blog.comperiosearch.com</referrerName>
+		<referrerSearchEngineIcon />
+		<referrerSearchEngineUrl />
+		<referrerType>website</referrerType>
+		<referrerTypeName>Websites</referrerTypeName>
+		<referrerUrl>http://blog.comperiosearch.com/blog/2014/02/05/dynamic-search-ranking-using-elasticsearch-neo4j-and-piwik/</referrerUrl>
+		<region>North Carolina</region>
+		<regionCode>NC</regionCode>
+		<resolution>1366x768</resolution>
+		<screenType>wide</screenType>
+		<screenTypeIcon>plugins/UserSettings/images/screens/wide.gif</screenTypeIcon>
+		<searches>0</searches>
+		
+		<siteCurrency>USD</siteCurrency>
+		<siteCurrencySymbol>$</siteCurrencySymbol>
+		<visitConverted>1</visitConverted>
+		<visitConvertedIcon>plugins/Morpheus/images/goal.png</visitConvertedIcon>
+		<visitCount>77</visitCount>
+		<visitDuration>0</visitDuration>
+		<visitDurationPretty>0s</visitDurationPretty>
+		<visitEcommerceStatus>none</visitEcommerceStatus>
+		<visitEcommerceStatusIcon />
+		<visitIp>174.97.139.63</visitIp>
 		<visitLocalHour>20</visitLocalHour>
-		<daysSinceLastVisit>0</daysSinceLastVisit>
+		<visitLocalTime>20:34:49</visitLocalTime>
+		
+		
+		<visitorType>returning</visitorType>
+		<visitorTypeIcon>plugins/Live/images/returningVisitor.gif</visitorTypeIcon>
 		
 		
 		
@@ -122,10 +122,6 @@
 		
 	</row>
 	<row>
-		<idSite>1</idSite>
-		<idVisit>33</idVisit>
-		<visitIp>206.190.75.8</visitIp>
-		
 		<actionDetails>
 			<row>
 				<type>action</type>
@@ -170,75 +166,79 @@
 				<icon />
 			</row>
 		</actionDetails>
-		<goalConversions>1</goalConversions>
-		<siteCurrency>USD</siteCurrency>
-		<siteCurrencySymbol>$</siteCurrencySymbol>
-		
-		
-		
-		
-		<searches>0</searches>
 		<actions>2</actions>
-		<visitorType>returning</visitorType>
-		<visitorTypeIcon>plugins/Live/images/returningVisitor.gif</visitorTypeIcon>
-		<visitConverted>1</visitConverted>
-		<visitConvertedIcon>plugins/Morpheus/images/goal.png</visitConvertedIcon>
-		<visitCount>2</visitCount>
-		
-		<visitEcommerceStatus>none</visitEcommerceStatus>
-		<visitEcommerceStatusIcon />
-		<daysSinceFirstVisit>181</daysSinceFirstVisit>
-		<daysSinceLastEcommerceOrder>0</daysSinceLastEcommerceOrder>
-		<visitDuration>81</visitDuration>
-		<visitDurationPretty>1 min 21s</visitDurationPretty>
+		<browserCode>IE</browserCode>
+		<browserFamily>ie</browserFamily>
+		<browserFamilyDescription>Trident (IE)</browserFamilyDescription>
+		<browserIcon>plugins/UserSettings/images/browsers/IE.gif</browserIcon>
+		<browserName>Internet Explorer 8.0</browserName>
+		<browserVersion>8.0</browserVersion>
+		<city>Lake Forest</city>
+		<continent>North America</continent>
+		<continentCode>amn</continentCode>
+		<country>United States</country>
+		<countryCode>us</countryCode>
+		<countryFlag>plugins/UserCountry/images/flags/us.png</countryFlag>
 		<customVariables>
 			<row>
 				<customVariableName1>Domain landed</customVariableName1>
 				<customVariableValue1>piwik.org</customVariableValue1>
 			</row>
 		</customVariables>
+		<daysSinceFirstVisit>181</daysSinceFirstVisit>
+		<daysSinceLastEcommerceOrder>0</daysSinceLastEcommerceOrder>
+		<daysSinceLastVisit>181</daysSinceLastVisit>
 		<deviceType>Desktop</deviceType>
 		<events>0</events>
-		<provider>Unknown</provider>
-		<providerName>Unknown</providerName>
-		<providerUrl>http://piwik.org/faq/general/#faq_52</providerUrl>
-		<referrerType>direct</referrerType>
-		<referrerTypeName>Direct Entry</referrerTypeName>
-		<referrerName />
-		<referrerKeyword />
-		<referrerKeywordPosition />
-		<referrerUrl>http://piwik.org/what-is-piwik/</referrerUrl>
-		<referrerSearchEngineUrl />
-		<referrerSearchEngineIcon />
-		<continent>North America</continent>
-		<continentCode>amn</continentCode>
-		<country>United States</country>
-		<countryCode>us</countryCode>
-		<countryFlag>plugins/UserCountry/images/flags/us.png</countryFlag>
-		<region>California</region>
-		<regionCode>CA</regionCode>
-		<city>Lake Forest</city>
-		<location>Lake Forest, California, United States</location>
+		
+		<goalConversions>1</goalConversions>
+		<idSite>1</idSite>
+		<idVisit>33</idVisit>
+		
+		
 		<latitude>33.645000</latitude>
+		<location>Lake Forest, California, United States</location>
 		<longitude>-117.679001</longitude>
 		<operatingSystem>Windows 7</operatingSystem>
 		<operatingSystemCode>WI7</operatingSystemCode>
-		<operatingSystemShortName>Win 7</operatingSystemShortName>
 		<operatingSystemIcon>plugins/UserSettings/images/os/WI7.gif</operatingSystemIcon>
-		<browserFamily>ie</browserFamily>
-		<browserFamilyDescription>Trident (IE)</browserFamilyDescription>
-		<browserName>Internet Explorer 8.0</browserName>
-		<browserIcon>plugins/UserSettings/images/browsers/IE.gif</browserIcon>
-		<browserCode>IE</browserCode>
-		<browserVersion>8.0</browserVersion>
-		<screenType>wide</screenType>
-		<resolution>1536x864</resolution>
-		<screenTypeIcon>plugins/UserSettings/images/screens/wide.gif</screenTypeIcon>
+		<operatingSystemShortName>Win 7</operatingSystemShortName>
 		<plugins />
 		<pluginsIcons />
-		<visitLocalTime>17:33:27</visitLocalTime>
+		<provider>Unknown</provider>
+		<providerName>Unknown</providerName>
+		<providerUrl>http://piwik.org/faq/general/#faq_52</providerUrl>
+		<referrerKeyword />
+		<referrerKeywordPosition />
+		<referrerName />
+		<referrerSearchEngineIcon />
+		<referrerSearchEngineUrl />
+		<referrerType>direct</referrerType>
+		<referrerTypeName>Direct Entry</referrerTypeName>
+		<referrerUrl>http://piwik.org/what-is-piwik/</referrerUrl>
+		<region>California</region>
+		<regionCode>CA</regionCode>
+		<resolution>1536x864</resolution>
+		<screenType>wide</screenType>
+		<screenTypeIcon>plugins/UserSettings/images/screens/wide.gif</screenTypeIcon>
+		<searches>0</searches>
+		
+		<siteCurrency>USD</siteCurrency>
+		<siteCurrencySymbol>$</siteCurrencySymbol>
+		<visitConverted>1</visitConverted>
+		<visitConvertedIcon>plugins/Morpheus/images/goal.png</visitConvertedIcon>
+		<visitCount>2</visitCount>
+		<visitDuration>81</visitDuration>
+		<visitDurationPretty>1 min 21s</visitDurationPretty>
+		<visitEcommerceStatus>none</visitEcommerceStatus>
+		<visitEcommerceStatusIcon />
+		<visitIp>206.190.75.8</visitIp>
 		<visitLocalHour>17</visitLocalHour>
-		<daysSinceLastVisit>181</daysSinceLastVisit>
+		<visitLocalTime>17:33:27</visitLocalTime>
+		
+		
+		<visitorType>returning</visitorType>
+		<visitorTypeIcon>plugins/Live/images/returningVisitor.gif</visitorTypeIcon>
 		
 		
 		
@@ -246,10 +246,6 @@
 		
 	</row>
 	<row>
-		<idSite>1</idSite>
-		<idVisit>39</idVisit>
-		<visitIp>193.159.20.129</visitIp>
-		
 		<actionDetails>
 			<row>
 				<type>goal</type>
@@ -278,27 +274,19 @@
 				<icon />
 			</row>
 		</actionDetails>
-		<goalConversions>1</goalConversions>
-		<siteCurrency>USD</siteCurrency>
-		<siteCurrencySymbol>$</siteCurrencySymbol>
-		
-		
-		
-		
-		<searches>0</searches>
 		<actions>1</actions>
-		<visitorType>returning</visitorType>
-		<visitorTypeIcon>plugins/Live/images/returningVisitor.gif</visitorTypeIcon>
-		<visitConverted>1</visitConverted>
-		<visitConvertedIcon>plugins/Morpheus/images/goal.png</visitConvertedIcon>
-		<visitCount>1</visitCount>
-		
-		<visitEcommerceStatus>none</visitEcommerceStatus>
-		<visitEcommerceStatusIcon />
-		<daysSinceFirstVisit>0</daysSinceFirstVisit>
-		<daysSinceLastEcommerceOrder>0</daysSinceLastEcommerceOrder>
-		<visitDuration>0</visitDuration>
-		<visitDurationPretty>0s</visitDurationPretty>
+		<browserCode>CH</browserCode>
+		<browserFamily>webkit</browserFamily>
+		<browserFamilyDescription>WebKit (Safari, Chrome)</browserFamilyDescription>
+		<browserIcon>plugins/UserSettings/images/browsers/CH.gif</browserIcon>
+		<browserName>Chrome 34.0</browserName>
+		<browserVersion>34.0</browserVersion>
+		<city />
+		<continent>Europe</continent>
+		<continentCode>eur</continentCode>
+		<country>Germany</country>
+		<countryCode>de</countryCode>
+		<countryFlag>plugins/UserCountry/images/flags/de.png</countryFlag>
 		<customVariables>
 			<row>
 				<customVariableName1>Domain landed</customVariableName1>
@@ -309,43 +297,24 @@
 				<customVariableValue2>English</customVariableValue2>
 			</row>
 		</customVariables>
+		<daysSinceFirstVisit>0</daysSinceFirstVisit>
+		<daysSinceLastEcommerceOrder>0</daysSinceLastEcommerceOrder>
+		<daysSinceLastVisit>4</daysSinceLastVisit>
 		<deviceType>Desktop</deviceType>
 		<events>0</events>
-		<provider>Unknown</provider>
-		<providerName>Unknown</providerName>
-		<providerUrl>http://piwik.org/faq/general/#faq_52</providerUrl>
-		<referrerType>direct</referrerType>
-		<referrerTypeName>Direct Entry</referrerTypeName>
-		<referrerName />
-		<referrerKeyword />
-		<referrerKeywordPosition />
-		<referrerUrl>http://demo.piwik.org/index.php?module=MultiSites&amp;action=index&amp;date=yesterday&amp;period=day&amp;idSite=32</referrerUrl>
-		<referrerSearchEngineUrl />
-		<referrerSearchEngineIcon />
-		<continent>Europe</continent>
-		<continentCode>eur</continentCode>
-		<country>Germany</country>
-		<countryCode>de</countryCode>
-		<countryFlag>plugins/UserCountry/images/flags/de.png</countryFlag>
-		<region />
-		<regionCode />
-		<city />
-		<location>Germany</location>
+		
+		<goalConversions>1</goalConversions>
+		<idSite>1</idSite>
+		<idVisit>39</idVisit>
+		
+		
 		<latitude>51</latitude>
+		<location>Germany</location>
 		<longitude>9</longitude>
 		<operatingSystem>Windows 7</operatingSystem>
 		<operatingSystemCode>WI7</operatingSystemCode>
-		<operatingSystemShortName>Win 7</operatingSystemShortName>
 		<operatingSystemIcon>plugins/UserSettings/images/os/WI7.gif</operatingSystemIcon>
-		<browserFamily>webkit</browserFamily>
-		<browserFamilyDescription>WebKit (Safari, Chrome)</browserFamilyDescription>
-		<browserName>Chrome 34.0</browserName>
-		<browserIcon>plugins/UserSettings/images/browsers/CH.gif</browserIcon>
-		<browserCode>CH</browserCode>
-		<browserVersion>34.0</browserVersion>
-		<screenType>wide</screenType>
-		<resolution>1920x1200</resolution>
-		<screenTypeIcon>plugins/UserSettings/images/screens/wide.gif</screenTypeIcon>
+		<operatingSystemShortName>Win 7</operatingSystemShortName>
 		<plugins>pdf, flash, java, quicktime, silverlight</plugins>
 		<pluginsIcons>
 			<row>
@@ -369,9 +338,40 @@
 				<pluginName>silverlight</pluginName>
 			</row>
 		</pluginsIcons>
-		<visitLocalTime>01:34:37</visitLocalTime>
+		<provider>Unknown</provider>
+		<providerName>Unknown</providerName>
+		<providerUrl>http://piwik.org/faq/general/#faq_52</providerUrl>
+		<referrerKeyword />
+		<referrerKeywordPosition />
+		<referrerName />
+		<referrerSearchEngineIcon />
+		<referrerSearchEngineUrl />
+		<referrerType>direct</referrerType>
+		<referrerTypeName>Direct Entry</referrerTypeName>
+		<referrerUrl>http://demo.piwik.org/index.php?module=MultiSites&amp;action=index&amp;date=yesterday&amp;period=day&amp;idSite=32</referrerUrl>
+		<region />
+		<regionCode />
+		<resolution>1920x1200</resolution>
+		<screenType>wide</screenType>
+		<screenTypeIcon>plugins/UserSettings/images/screens/wide.gif</screenTypeIcon>
+		<searches>0</searches>
+		
+		<siteCurrency>USD</siteCurrency>
+		<siteCurrencySymbol>$</siteCurrencySymbol>
+		<visitConverted>1</visitConverted>
+		<visitConvertedIcon>plugins/Morpheus/images/goal.png</visitConvertedIcon>
+		<visitCount>1</visitCount>
+		<visitDuration>0</visitDuration>
+		<visitDurationPretty>0s</visitDurationPretty>
+		<visitEcommerceStatus>none</visitEcommerceStatus>
+		<visitEcommerceStatusIcon />
+		<visitIp>193.159.20.129</visitIp>
 		<visitLocalHour>1</visitLocalHour>
-		<daysSinceLastVisit>4</daysSinceLastVisit>
+		<visitLocalTime>01:34:37</visitLocalTime>
+		
+		
+		<visitorType>returning</visitorType>
+		<visitorTypeIcon>plugins/Live/images/returningVisitor.gif</visitorTypeIcon>
 		
 		
 		
@@ -379,10 +379,6 @@
 		
 	</row>
 	<row>
-		<idSite>1</idSite>
-		<idVisit>37</idVisit>
-		<visitIp>50.244.17.130</visitIp>
-		
 		<actionDetails>
 			<row>
 				<type>action</type>
@@ -427,70 +423,43 @@
 				<icon />
 			</row>
 		</actionDetails>
-		<goalConversions>1</goalConversions>
-		<siteCurrency>USD</siteCurrency>
-		<siteCurrencySymbol>$</siteCurrencySymbol>
-		
-		
-		
-		
-		<searches>0</searches>
 		<actions>2</actions>
-		<visitorType>returning</visitorType>
-		<visitorTypeIcon>plugins/Live/images/returningVisitor.gif</visitorTypeIcon>
-		<visitConverted>1</visitConverted>
-		<visitConvertedIcon>plugins/Morpheus/images/goal.png</visitConvertedIcon>
-		<visitCount>7</visitCount>
-		
-		<visitEcommerceStatus>none</visitEcommerceStatus>
-		<visitEcommerceStatusIcon />
-		<daysSinceFirstVisit>17</daysSinceFirstVisit>
-		<daysSinceLastEcommerceOrder>0</daysSinceLastEcommerceOrder>
-		<visitDuration>34</visitDuration>
-		<visitDurationPretty>34s</visitDurationPretty>
+		<browserCode>SF</browserCode>
+		<browserFamily>webkit</browserFamily>
+		<browserFamilyDescription>WebKit (Safari, Chrome)</browserFamilyDescription>
+		<browserIcon>plugins/UserSettings/images/browsers/SF.gif</browserIcon>
+		<browserName>Safari 7.0</browserName>
+		<browserVersion>7.0</browserVersion>
+		<city />
+		<continent>North America</continent>
+		<continentCode>amn</continentCode>
+		<country>United States</country>
+		<countryCode>us</countryCode>
+		<countryFlag>plugins/UserCountry/images/flags/us.png</countryFlag>
 		<customVariables>
 			<row>
 				<customVariableName1>Domain landed</customVariableName1>
 				<customVariableValue1>piwik.org</customVariableValue1>
 			</row>
 		</customVariables>
+		<daysSinceFirstVisit>17</daysSinceFirstVisit>
+		<daysSinceLastEcommerceOrder>0</daysSinceLastEcommerceOrder>
+		<daysSinceLastVisit>6</daysSinceLastVisit>
 		<deviceType>Desktop</deviceType>
 		<events>0</events>
-		<provider>Unknown</provider>
-		<providerName>Unknown</providerName>
-		<providerUrl>http://piwik.org/faq/general/#faq_52</providerUrl>
-		<referrerType>search</referrerType>
-		<referrerTypeName>Search Engines</referrerTypeName>
-		<referrerName>Google</referrerName>
-		<referrerKeyword>Keyword not defined</referrerKeyword>
-		<referrerKeywordPosition>1</referrerKeywordPosition>
-		<referrerUrl>http://piwik.org/faq/general/#faq_144</referrerUrl>
-		<referrerSearchEngineUrl>http://google.com</referrerSearchEngineUrl>
-		<referrerSearchEngineIcon>plugins/Referrers/images/searchEngines/google.com.png</referrerSearchEngineIcon>
-		<continent>North America</continent>
-		<continentCode>amn</continentCode>
-		<country>United States</country>
-		<countryCode>us</countryCode>
-		<countryFlag>plugins/UserCountry/images/flags/us.png</countryFlag>
-		<region />
-		<regionCode />
-		<city />
-		<location>United States</location>
+		
+		<goalConversions>1</goalConversions>
+		<idSite>1</idSite>
+		<idVisit>37</idVisit>
+		
+		
 		<latitude>38</latitude>
+		<location>United States</location>
 		<longitude>-97</longitude>
 		<operatingSystem>Mac OS</operatingSystem>
 		<operatingSystemCode>MAC</operatingSystemCode>
-		<operatingSystemShortName>Mac OS</operatingSystemShortName>
 		<operatingSystemIcon>plugins/UserSettings/images/os/MAC.gif</operatingSystemIcon>
-		<browserFamily>webkit</browserFamily>
-		<browserFamilyDescription>WebKit (Safari, Chrome)</browserFamilyDescription>
-		<browserName>Safari 7.0</browserName>
-		<browserIcon>plugins/UserSettings/images/browsers/SF.gif</browserIcon>
-		<browserCode>SF</browserCode>
-		<browserVersion>7.0</browserVersion>
-		<screenType>wide</screenType>
-		<resolution>2880x1800</resolution>
-		<screenTypeIcon>plugins/UserSettings/images/screens/wide.gif</screenTypeIcon>
+		<operatingSystemShortName>Mac OS</operatingSystemShortName>
 		<plugins>pdf, flash, java, quicktime</plugins>
 		<pluginsIcons>
 			<row>
@@ -510,9 +479,40 @@
 				<pluginName>quicktime</pluginName>
 			</row>
 		</pluginsIcons>
-		<visitLocalTime>19:34:01</visitLocalTime>
+		<provider>Unknown</provider>
+		<providerName>Unknown</providerName>
+		<providerUrl>http://piwik.org/faq/general/#faq_52</providerUrl>
+		<referrerKeyword>Keyword not defined</referrerKeyword>
+		<referrerKeywordPosition>1</referrerKeywordPosition>
+		<referrerName>Google</referrerName>
+		<referrerSearchEngineIcon>plugins/Referrers/images/searchEngines/google.com.png</referrerSearchEngineIcon>
+		<referrerSearchEngineUrl>http://google.com</referrerSearchEngineUrl>
+		<referrerType>search</referrerType>
+		<referrerTypeName>Search Engines</referrerTypeName>
+		<referrerUrl>http://piwik.org/faq/general/#faq_144</referrerUrl>
+		<region />
+		<regionCode />
+		<resolution>2880x1800</resolution>
+		<screenType>wide</screenType>
+		<screenTypeIcon>plugins/UserSettings/images/screens/wide.gif</screenTypeIcon>
+		<searches>0</searches>
+		
+		<siteCurrency>USD</siteCurrency>
+		<siteCurrencySymbol>$</siteCurrencySymbol>
+		<visitConverted>1</visitConverted>
+		<visitConvertedIcon>plugins/Morpheus/images/goal.png</visitConvertedIcon>
+		<visitCount>7</visitCount>
+		<visitDuration>34</visitDuration>
+		<visitDurationPretty>34s</visitDurationPretty>
+		<visitEcommerceStatus>none</visitEcommerceStatus>
+		<visitEcommerceStatusIcon />
+		<visitIp>50.244.17.130</visitIp>
 		<visitLocalHour>19</visitLocalHour>
-		<daysSinceLastVisit>6</daysSinceLastVisit>
+		<visitLocalTime>19:34:01</visitLocalTime>
+		
+		
+		<visitorType>returning</visitorType>
+		<visitorTypeIcon>plugins/Live/images/returningVisitor.gif</visitorTypeIcon>
 		
 		
 		
@@ -520,10 +520,6 @@
 		
 	</row>
 	<row>
-		<idSite>1</idSite>
-		<idVisit>38</idVisit>
-		<visitIp>84.194.72.21</visitIp>
-		
 		<actionDetails>
 			<row>
 				<type>outlink</type>
@@ -541,70 +537,43 @@
 				<icon>plugins/Morpheus/images/link.gif</icon>
 			</row>
 		</actionDetails>
-		<goalConversions>0</goalConversions>
-		<siteCurrency>USD</siteCurrency>
-		<siteCurrencySymbol>$</siteCurrencySymbol>
-		
-		
-		
-		
-		<searches>0</searches>
 		<actions>1</actions>
-		<visitorType>returning</visitorType>
-		<visitorTypeIcon>plugins/Live/images/returningVisitor.gif</visitorTypeIcon>
-		<visitConverted>0</visitConverted>
-		<visitConvertedIcon />
-		<visitCount>1</visitCount>
-		
-		<visitEcommerceStatus>none</visitEcommerceStatus>
-		<visitEcommerceStatusIcon />
-		<daysSinceFirstVisit>0</daysSinceFirstVisit>
-		<daysSinceLastEcommerceOrder>0</daysSinceLastEcommerceOrder>
-		<visitDuration>0</visitDuration>
-		<visitDurationPretty>0s</visitDurationPretty>
+		<browserCode>CH</browserCode>
+		<browserFamily>webkit</browserFamily>
+		<browserFamilyDescription>WebKit (Safari, Chrome)</browserFamilyDescription>
+		<browserIcon>plugins/UserSettings/images/browsers/CH.gif</browserIcon>
+		<browserName>Chrome 33.0</browserName>
+		<browserVersion>33.0</browserVersion>
+		<city>Maaseik</city>
+		<continent>Europe</continent>
+		<continentCode>eur</continentCode>
+		<country>Belgium</country>
+		<countryCode>be</countryCode>
+		<countryFlag>plugins/UserCountry/images/flags/be.png</countryFlag>
 		<customVariables>
 			<row>
 				<customVariableName1>Domain landed</customVariableName1>
 				<customVariableValue1>piwik.org</customVariableValue1>
 			</row>
 		</customVariables>
+		<daysSinceFirstVisit>0</daysSinceFirstVisit>
+		<daysSinceLastEcommerceOrder>0</daysSinceLastEcommerceOrder>
+		<daysSinceLastVisit>0</daysSinceLastVisit>
 		<deviceType>Desktop</deviceType>
 		<events>0</events>
-		<provider>Unknown</provider>
-		<providerName>Unknown</providerName>
-		<providerUrl>http://piwik.org/faq/general/#faq_52</providerUrl>
-		<referrerType>website</referrerType>
-		<referrerTypeName>Websites</referrerTypeName>
-		<referrerName>musicforeveryoneradio.be</referrerName>
-		<referrerKeyword />
-		<referrerKeywordPosition />
-		<referrerUrl>http://musicforeveryoneradio.be:2222/CMD_PLUGINS/installatron/index.raw</referrerUrl>
-		<referrerSearchEngineUrl />
-		<referrerSearchEngineIcon />
-		<continent>Europe</continent>
-		<continentCode>eur</continentCode>
-		<country>Belgium</country>
-		<countryCode>be</countryCode>
-		<countryFlag>plugins/UserCountry/images/flags/be.png</countryFlag>
-		<region>Limburg</region>
-		<regionCode>05</regionCode>
-		<city>Maaseik</city>
-		<location>Maaseik, Limburg, Belgium</location>
+		
+		<goalConversions>0</goalConversions>
+		<idSite>1</idSite>
+		<idVisit>38</idVisit>
+		
+		
 		<latitude>51.099998</latitude>
+		<location>Maaseik, Limburg, Belgium</location>
 		<longitude>5.800000</longitude>
 		<operatingSystem>Windows 7</operatingSystem>
 		<operatingSystemCode>WI7</operatingSystemCode>
-		<operatingSystemShortName>Win 7</operatingSystemShortName>
 		<operatingSystemIcon>plugins/UserSettings/images/os/WI7.gif</operatingSystemIcon>
-		<browserFamily>webkit</browserFamily>
-		<browserFamilyDescription>WebKit (Safari, Chrome)</browserFamilyDescription>
-		<browserName>Chrome 33.0</browserName>
-		<browserIcon>plugins/UserSettings/images/browsers/CH.gif</browserIcon>
-		<browserCode>CH</browserCode>
-		<browserVersion>33.0</browserVersion>
-		<screenType>wide</screenType>
-		<resolution>1920x1080</resolution>
-		<screenTypeIcon>plugins/UserSettings/images/screens/wide.gif</screenTypeIcon>
+		<operatingSystemShortName>Win 7</operatingSystemShortName>
 		<plugins>pdf, flash, java, silverlight</plugins>
 		<pluginsIcons>
 			<row>
@@ -624,9 +593,40 @@
 				<pluginName>silverlight</pluginName>
 			</row>
 		</pluginsIcons>
-		<visitLocalTime>01:34:24</visitLocalTime>
+		<provider>Unknown</provider>
+		<providerName>Unknown</providerName>
+		<providerUrl>http://piwik.org/faq/general/#faq_52</providerUrl>
+		<referrerKeyword />
+		<referrerKeywordPosition />
+		<referrerName>musicforeveryoneradio.be</referrerName>
+		<referrerSearchEngineIcon />
+		<referrerSearchEngineUrl />
+		<referrerType>website</referrerType>
+		<referrerTypeName>Websites</referrerTypeName>
+		<referrerUrl>http://musicforeveryoneradio.be:2222/CMD_PLUGINS/installatron/index.raw</referrerUrl>
+		<region>Limburg</region>
+		<regionCode>05</regionCode>
+		<resolution>1920x1080</resolution>
+		<screenType>wide</screenType>
+		<screenTypeIcon>plugins/UserSettings/images/screens/wide.gif</screenTypeIcon>
+		<searches>0</searches>
+		
+		<siteCurrency>USD</siteCurrency>
+		<siteCurrencySymbol>$</siteCurrencySymbol>
+		<visitConverted>0</visitConverted>
+		<visitConvertedIcon />
+		<visitCount>1</visitCount>
+		<visitDuration>0</visitDuration>
+		<visitDurationPretty>0s</visitDurationPretty>
+		<visitEcommerceStatus>none</visitEcommerceStatus>
+		<visitEcommerceStatusIcon />
+		<visitIp>84.194.72.21</visitIp>
 		<visitLocalHour>1</visitLocalHour>
-		<daysSinceLastVisit>0</daysSinceLastVisit>
+		<visitLocalTime>01:34:24</visitLocalTime>
+		
+		
+		<visitorType>returning</visitorType>
+		<visitorTypeIcon>plugins/Live/images/returningVisitor.gif</visitorTypeIcon>
 		
 		
 		
@@ -634,10 +634,6 @@
 		
 	</row>
 	<row>
-		<idSite>1</idSite>
-		<idVisit>36</idVisit>
-		<visitIp>108.211.181.12</visitIp>
-		
 		<actionDetails>
 			<row>
 				<type>goal</type>
@@ -666,70 +662,43 @@
 				<icon />
 			</row>
 		</actionDetails>
-		<goalConversions>1</goalConversions>
-		<siteCurrency>USD</siteCurrency>
-		<siteCurrencySymbol>$</siteCurrencySymbol>
-		
-		
-		
-		
-		<searches>0</searches>
 		<actions>1</actions>
-		<visitorType>new</visitorType>
-		<visitorTypeIcon />
-		<visitConverted>1</visitConverted>
-		<visitConvertedIcon>plugins/Morpheus/images/goal.png</visitConvertedIcon>
-		<visitCount>1</visitCount>
-		
-		<visitEcommerceStatus>none</visitEcommerceStatus>
-		<visitEcommerceStatusIcon />
-		<daysSinceFirstVisit>0</daysSinceFirstVisit>
-		<daysSinceLastEcommerceOrder>0</daysSinceLastEcommerceOrder>
-		<visitDuration>0</visitDuration>
-		<visitDurationPretty>0s</visitDurationPretty>
+		<browserCode>CH</browserCode>
+		<browserFamily>webkit</browserFamily>
+		<browserFamilyDescription>WebKit (Safari, Chrome)</browserFamilyDescription>
+		<browserIcon>plugins/UserSettings/images/browsers/CH.gif</browserIcon>
+		<browserName>Chrome 33.0</browserName>
+		<browserVersion>33.0</browserVersion>
+		<city>San Francisco</city>
+		<continent>North America</continent>
+		<continentCode>amn</continentCode>
+		<country>United States</country>
+		<countryCode>us</countryCode>
+		<countryFlag>plugins/UserCountry/images/flags/us.png</countryFlag>
 		<customVariables>
 			<row>
 				<customVariableName1>Domain landed</customVariableName1>
 				<customVariableValue1>piwik.org</customVariableValue1>
 			</row>
 		</customVariables>
+		<daysSinceFirstVisit>0</daysSinceFirstVisit>
+		<daysSinceLastEcommerceOrder>0</daysSinceLastEcommerceOrder>
+		<daysSinceLastVisit>0</daysSinceLastVisit>
 		<deviceType>Desktop</deviceType>
 		<events>0</events>
-		<provider>Unknown</provider>
-		<providerName>Unknown</providerName>
-		<providerUrl>http://piwik.org/faq/general/#faq_52</providerUrl>
-		<referrerType>search</referrerType>
-		<referrerTypeName>Search Engines</referrerTypeName>
-		<referrerName>Google</referrerName>
-		<referrerKeyword>Keyword not defined</referrerKeyword>
-		<referrerKeywordPosition />
-		<referrerUrl>http://piwik.org/faq/general/#faq_144</referrerUrl>
-		<referrerSearchEngineUrl>http://google.com</referrerSearchEngineUrl>
-		<referrerSearchEngineIcon>plugins/Referrers/images/searchEngines/google.com.png</referrerSearchEngineIcon>
-		<continent>North America</continent>
-		<continentCode>amn</continentCode>
-		<country>United States</country>
-		<countryCode>us</countryCode>
-		<countryFlag>plugins/UserCountry/images/flags/us.png</countryFlag>
-		<region>California</region>
-		<regionCode>CA</regionCode>
-		<city>San Francisco</city>
-		<location>San Francisco, California, United States</location>
+		
+		<goalConversions>1</goalConversions>
+		<idSite>1</idSite>
+		<idVisit>36</idVisit>
+		
+		
 		<latitude>37.792000</latitude>
+		<location>San Francisco, California, United States</location>
 		<longitude>-122.408997</longitude>
 		<operatingSystem>Mac OS</operatingSystem>
 		<operatingSystemCode>MAC</operatingSystemCode>
-		<operatingSystemShortName>Mac OS</operatingSystemShortName>
 		<operatingSystemIcon>plugins/UserSettings/images/os/MAC.gif</operatingSystemIcon>
-		<browserFamily>webkit</browserFamily>
-		<browserFamilyDescription>WebKit (Safari, Chrome)</browserFamilyDescription>
-		<browserName>Chrome 33.0</browserName>
-		<browserIcon>plugins/UserSettings/images/browsers/CH.gif</browserIcon>
-		<browserCode>CH</browserCode>
-		<browserVersion>33.0</browserVersion>
-		<screenType>wide</screenType>
-		<resolution>1360x768</resolution>
-		<screenTypeIcon>plugins/UserSettings/images/screens/wide.gif</screenTypeIcon>
+		<operatingSystemShortName>Mac OS</operatingSystemShortName>
 		<plugins>pdf, flash, java, quicktime, windowsmedia, silverlight</plugins>
 		<pluginsIcons>
 			<row>
@@ -757,9 +726,40 @@
 				<pluginName>silverlight</pluginName>
 			</row>
 		</pluginsIcons>
-		<visitLocalTime>17:33:58</visitLocalTime>
+		<provider>Unknown</provider>
+		<providerName>Unknown</providerName>
+		<providerUrl>http://piwik.org/faq/general/#faq_52</providerUrl>
+		<referrerKeyword>Keyword not defined</referrerKeyword>
+		<referrerKeywordPosition />
+		<referrerName>Google</referrerName>
+		<referrerSearchEngineIcon>plugins/Referrers/images/searchEngines/google.com.png</referrerSearchEngineIcon>
+		<referrerSearchEngineUrl>http://google.com</referrerSearchEngineUrl>
+		<referrerType>search</referrerType>
+		<referrerTypeName>Search Engines</referrerTypeName>
+		<referrerUrl>http://piwik.org/faq/general/#faq_144</referrerUrl>
+		<region>California</region>
+		<regionCode>CA</regionCode>
+		<resolution>1360x768</resolution>
+		<screenType>wide</screenType>
+		<screenTypeIcon>plugins/UserSettings/images/screens/wide.gif</screenTypeIcon>
+		<searches>0</searches>
+		
+		<siteCurrency>USD</siteCurrency>
+		<siteCurrencySymbol>$</siteCurrencySymbol>
+		<visitConverted>1</visitConverted>
+		<visitConvertedIcon>plugins/Morpheus/images/goal.png</visitConvertedIcon>
+		<visitCount>1</visitCount>
+		<visitDuration>0</visitDuration>
+		<visitDurationPretty>0s</visitDurationPretty>
+		<visitEcommerceStatus>none</visitEcommerceStatus>
+		<visitEcommerceStatusIcon />
+		<visitIp>108.211.181.12</visitIp>
 		<visitLocalHour>17</visitLocalHour>
-		<daysSinceLastVisit>0</daysSinceLastVisit>
+		<visitLocalTime>17:33:58</visitLocalTime>
+		
+		
+		<visitorType>new</visitorType>
+		<visitorTypeIcon />
 		
 		
 		
@@ -767,10 +767,6 @@
 		
 	</row>
 	<row>
-		<idSite>1</idSite>
-		<idVisit>35</idVisit>
-		<visitIp>219.101.46.222</visitIp>
-		
 		<actionDetails>
 			<row>
 				<type>goal</type>
@@ -798,70 +794,43 @@
 				<icon />
 			</row>
 		</actionDetails>
-		<goalConversions>1</goalConversions>
-		<siteCurrency>USD</siteCurrency>
-		<siteCurrencySymbol>$</siteCurrencySymbol>
-		
-		
-		
-		
-		<searches>0</searches>
 		<actions>1</actions>
-		<visitorType>returning</visitorType>
-		<visitorTypeIcon>plugins/Live/images/returningVisitor.gif</visitorTypeIcon>
-		<visitConverted>1</visitConverted>
-		<visitConvertedIcon>plugins/Morpheus/images/goal.png</visitConvertedIcon>
-		<visitCount>4</visitCount>
-		
-		<visitEcommerceStatus>none</visitEcommerceStatus>
-		<visitEcommerceStatusIcon />
-		<daysSinceFirstVisit>3</daysSinceFirstVisit>
-		<daysSinceLastEcommerceOrder>0</daysSinceLastEcommerceOrder>
-		<visitDuration>0</visitDuration>
-		<visitDurationPretty>0s</visitDurationPretty>
+		<browserCode>SF</browserCode>
+		<browserFamily>webkit</browserFamily>
+		<browserFamilyDescription>WebKit (Safari, Chrome)</browserFamilyDescription>
+		<browserIcon>plugins/UserSettings/images/browsers/SF.gif</browserIcon>
+		<browserName>Safari 7.0</browserName>
+		<browserVersion>7.0</browserVersion>
+		<city>Nihon'odori</city>
+		<continent>Asia</continent>
+		<continentCode>asi</continentCode>
+		<country>Japan</country>
+		<countryCode>jp</countryCode>
+		<countryFlag>plugins/UserCountry/images/flags/jp.png</countryFlag>
 		<customVariables>
 			<row>
 				<customVariableName1>Domain landed</customVariableName1>
 				<customVariableValue1>piwik.org</customVariableValue1>
 			</row>
 		</customVariables>
+		<daysSinceFirstVisit>3</daysSinceFirstVisit>
+		<daysSinceLastEcommerceOrder>0</daysSinceLastEcommerceOrder>
+		<daysSinceLastVisit>1</daysSinceLastVisit>
 		<deviceType>Desktop</deviceType>
 		<events>0</events>
-		<provider>Unknown</provider>
-		<providerName>Unknown</providerName>
-		<providerUrl>http://piwik.org/faq/general/#faq_52</providerUrl>
-		<referrerType>search</referrerType>
-		<referrerTypeName>Search Engines</referrerTypeName>
-		<referrerName>Google</referrerName>
-		<referrerKeyword>Keyword not defined</referrerKeyword>
-		<referrerKeywordPosition>2</referrerKeywordPosition>
-		<referrerUrl>http://piwik.org/faq/general/#faq_144</referrerUrl>
-		<referrerSearchEngineUrl>http://google.com</referrerSearchEngineUrl>
-		<referrerSearchEngineIcon>plugins/Referrers/images/searchEngines/google.com.png</referrerSearchEngineIcon>
-		<continent>Asia</continent>
-		<continentCode>asi</continentCode>
-		<country>Japan</country>
-		<countryCode>jp</countryCode>
-		<countryFlag>plugins/UserCountry/images/flags/jp.png</countryFlag>
-		<region>Kanagawa</region>
-		<regionCode>19</regionCode>
-		<city>Nihon'odori</city>
-		<location>Nihon'odori, Kanagawa, Japan</location>
+		
+		<goalConversions>1</goalConversions>
+		<idSite>1</idSite>
+		<idVisit>35</idVisit>
+		
+		
 		<latitude>35.450001</latitude>
+		<location>Nihon'odori, Kanagawa, Japan</location>
 		<longitude>139.649994</longitude>
 		<operatingSystem>Mac OS</operatingSystem>
 		<operatingSystemCode>MAC</operatingSystemCode>
-		<operatingSystemShortName>Mac OS</operatingSystemShortName>
 		<operatingSystemIcon>plugins/UserSettings/images/os/MAC.gif</operatingSystemIcon>
-		<browserFamily>webkit</browserFamily>
-		<browserFamilyDescription>WebKit (Safari, Chrome)</browserFamilyDescription>
-		<browserName>Safari 7.0</browserName>
-		<browserIcon>plugins/UserSettings/images/browsers/SF.gif</browserIcon>
-		<browserCode>SF</browserCode>
-		<browserVersion>7.0</browserVersion>
-		<screenType>wide</screenType>
-		<resolution>2560x1440</resolution>
-		<screenTypeIcon>plugins/UserSettings/images/screens/wide.gif</screenTypeIcon>
+		<operatingSystemShortName>Mac OS</operatingSystemShortName>
 		<plugins>pdf, java, quicktime</plugins>
 		<pluginsIcons>
 			<row>
@@ -877,9 +846,40 @@
 				<pluginName>quicktime</pluginName>
 			</row>
 		</pluginsIcons>
-		<visitLocalTime>09:33:50</visitLocalTime>
+		<provider>Unknown</provider>
+		<providerName>Unknown</providerName>
+		<providerUrl>http://piwik.org/faq/general/#faq_52</providerUrl>
+		<referrerKeyword>Keyword not defined</referrerKeyword>
+		<referrerKeywordPosition>2</referrerKeywordPosition>
+		<referrerName>Google</referrerName>
+		<referrerSearchEngineIcon>plugins/Referrers/images/searchEngines/google.com.png</referrerSearchEngineIcon>
+		<referrerSearchEngineUrl>http://google.com</referrerSearchEngineUrl>
+		<referrerType>search</referrerType>
+		<referrerTypeName>Search Engines</referrerTypeName>
+		<referrerUrl>http://piwik.org/faq/general/#faq_144</referrerUrl>
+		<region>Kanagawa</region>
+		<regionCode>19</regionCode>
+		<resolution>2560x1440</resolution>
+		<screenType>wide</screenType>
+		<screenTypeIcon>plugins/UserSettings/images/screens/wide.gif</screenTypeIcon>
+		<searches>0</searches>
+		
+		<siteCurrency>USD</siteCurrency>
+		<siteCurrencySymbol>$</siteCurrencySymbol>
+		<visitConverted>1</visitConverted>
+		<visitConvertedIcon>plugins/Morpheus/images/goal.png</visitConvertedIcon>
+		<visitCount>4</visitCount>
+		<visitDuration>0</visitDuration>
+		<visitDurationPretty>0s</visitDurationPretty>
+		<visitEcommerceStatus>none</visitEcommerceStatus>
+		<visitEcommerceStatusIcon />
+		<visitIp>219.101.46.222</visitIp>
 		<visitLocalHour>9</visitLocalHour>
-		<daysSinceLastVisit>1</daysSinceLastVisit>
+		<visitLocalTime>09:33:50</visitLocalTime>
+		
+		
+		<visitorType>returning</visitorType>
+		<visitorTypeIcon>plugins/Live/images/returningVisitor.gif</visitorTypeIcon>
 		
 		
 		
@@ -887,10 +887,6 @@
 		
 	</row>
 	<row>
-		<idSite>1</idSite>
-		<idVisit>34</idVisit>
-		<visitIp>80.136.160.65</visitIp>
-		
 		<actionDetails>
 			<row>
 				<type>goal</type>
@@ -919,70 +915,43 @@
 				<icon />
 			</row>
 		</actionDetails>
-		<goalConversions>1</goalConversions>
-		<siteCurrency>USD</siteCurrency>
-		<siteCurrencySymbol>$</siteCurrencySymbol>
-		
-		
-		
-		
-		<searches>0</searches>
 		<actions>1</actions>
-		<visitorType>returning</visitorType>
-		<visitorTypeIcon>plugins/Live/images/returningVisitor.gif</visitorTypeIcon>
-		<visitConverted>1</visitConverted>
-		<visitConvertedIcon>plugins/Morpheus/images/goal.png</visitConvertedIcon>
-		<visitCount>2</visitCount>
-		
-		<visitEcommerceStatus>none</visitEcommerceStatus>
-		<visitEcommerceStatusIcon />
-		<daysSinceFirstVisit>0</daysSinceFirstVisit>
-		<daysSinceLastEcommerceOrder>0</daysSinceLastEcommerceOrder>
-		<visitDuration>0</visitDuration>
-		<visitDurationPretty>0s</visitDurationPretty>
+		<browserCode>FF</browserCode>
+		<browserFamily>gecko</browserFamily>
+		<browserFamilyDescription>Gecko (Firefox)</browserFamilyDescription>
+		<browserIcon>plugins/UserSettings/images/browsers/FF.gif</browserIcon>
+		<browserName>Firefox 27.0</browserName>
+		<browserVersion>27.0</browserVersion>
+		<city>Weilerswist</city>
+		<continent>Europe</continent>
+		<continentCode>eur</continentCode>
+		<country>Germany</country>
+		<countryCode>de</countryCode>
+		<countryFlag>plugins/UserCountry/images/flags/de.png</countryFlag>
 		<customVariables>
 			<row>
 				<customVariableName1>Domain landed</customVariableName1>
 				<customVariableValue1>piwik.org</customVariableValue1>
 			</row>
 		</customVariables>
+		<daysSinceFirstVisit>0</daysSinceFirstVisit>
+		<daysSinceLastEcommerceOrder>0</daysSinceLastEcommerceOrder>
+		<daysSinceLastVisit>0</daysSinceLastVisit>
 		<deviceType>Unknown</deviceType>
 		<events>0</events>
-		<provider>Unknown</provider>
-		<providerName>Unknown</providerName>
-		<providerUrl>http://piwik.org/faq/general/#faq_52</providerUrl>
-		<referrerType>website</referrerType>
-		<referrerTypeName>Websites</referrerTypeName>
-		<referrerName>berndjung.com</referrerName>
-		<referrerKeyword />
-		<referrerKeywordPosition />
-		<referrerUrl>http://berndjung.com/piwik/index.php?module=CoreHome&amp;action=index&amp;idSite=1&amp;period=day&amp;date=today</referrerUrl>
-		<referrerSearchEngineUrl />
-		<referrerSearchEngineIcon />
-		<continent>Europe</continent>
-		<continentCode>eur</continentCode>
-		<country>Germany</country>
-		<countryCode>de</countryCode>
-		<countryFlag>plugins/UserCountry/images/flags/de.png</countryFlag>
-		<region>Nordrhein-Westfalen</region>
-		<regionCode>07</regionCode>
-		<city>Weilerswist</city>
-		<location>Weilerswist, Nordrhein-Westfalen, Germany</location>
+		
+		<goalConversions>1</goalConversions>
+		<idSite>1</idSite>
+		<idVisit>34</idVisit>
+		
+		
 		<latitude>50.766998</latitude>
+		<location>Weilerswist, Nordrhein-Westfalen, Germany</location>
 		<longitude>6.833000</longitude>
 		<operatingSystem>Android</operatingSystem>
 		<operatingSystemCode>AND</operatingSystemCode>
-		<operatingSystemShortName>Android</operatingSystemShortName>
 		<operatingSystemIcon>plugins/UserSettings/images/os/AND.gif</operatingSystemIcon>
-		<browserFamily>gecko</browserFamily>
-		<browserFamilyDescription>Gecko (Firefox)</browserFamilyDescription>
-		<browserName>Firefox 27.0</browserName>
-		<browserIcon>plugins/UserSettings/images/browsers/FF.gif</browserIcon>
-		<browserCode>FF</browserCode>
-		<browserVersion>27.0</browserVersion>
-		<screenType>mobile</screenType>
-		<resolution>360x640</resolution>
-		<screenTypeIcon>plugins/UserSettings/images/screens/mobile.gif</screenTypeIcon>
+		<operatingSystemShortName>Android</operatingSystemShortName>
 		<plugins>flash</plugins>
 		<pluginsIcons>
 			<row>
@@ -990,9 +959,40 @@
 				<pluginName>flash</pluginName>
 			</row>
 		</pluginsIcons>
-		<visitLocalTime>01:33:31</visitLocalTime>
+		<provider>Unknown</provider>
+		<providerName>Unknown</providerName>
+		<providerUrl>http://piwik.org/faq/general/#faq_52</providerUrl>
+		<referrerKeyword />
+		<referrerKeywordPosition />
+		<referrerName>berndjung.com</referrerName>
+		<referrerSearchEngineIcon />
+		<referrerSearchEngineUrl />
+		<referrerType>website</referrerType>
+		<referrerTypeName>Websites</referrerTypeName>
+		<referrerUrl>http://berndjung.com/piwik/index.php?module=CoreHome&amp;action=index&amp;idSite=1&amp;period=day&amp;date=today</referrerUrl>
+		<region>Nordrhein-Westfalen</region>
+		<regionCode>07</regionCode>
+		<resolution>360x640</resolution>
+		<screenType>mobile</screenType>
+		<screenTypeIcon>plugins/UserSettings/images/screens/mobile.gif</screenTypeIcon>
+		<searches>0</searches>
+		
+		<siteCurrency>USD</siteCurrency>
+		<siteCurrencySymbol>$</siteCurrencySymbol>
+		<visitConverted>1</visitConverted>
+		<visitConvertedIcon>plugins/Morpheus/images/goal.png</visitConvertedIcon>
+		<visitCount>2</visitCount>
+		<visitDuration>0</visitDuration>
+		<visitDurationPretty>0s</visitDurationPretty>
+		<visitEcommerceStatus>none</visitEcommerceStatus>
+		<visitEcommerceStatusIcon />
+		<visitIp>80.136.160.65</visitIp>
 		<visitLocalHour>1</visitLocalHour>
-		<daysSinceLastVisit>0</daysSinceLastVisit>
+		<visitLocalTime>01:33:31</visitLocalTime>
+		
+		
+		<visitorType>returning</visitorType>
+		<visitorTypeIcon>plugins/Live/images/returningVisitor.gif</visitorTypeIcon>
 		
 		
 		
@@ -1000,10 +1000,6 @@
 		
 	</row>
 	<row>
-		<idSite>1</idSite>
-		<idVisit>32</idVisit>
-		<visitIp>188.107.238.9</visitIp>
-		
 		<actionDetails>
 			<row>
 				<type>goal</type>
@@ -1032,70 +1028,43 @@
 				<icon />
 			</row>
 		</actionDetails>
-		<goalConversions>1</goalConversions>
-		<siteCurrency>USD</siteCurrency>
-		<siteCurrencySymbol>$</siteCurrencySymbol>
-		
-		
-		
-		
-		<searches>0</searches>
 		<actions>1</actions>
-		<visitorType>returning</visitorType>
-		<visitorTypeIcon>plugins/Live/images/returningVisitor.gif</visitorTypeIcon>
-		<visitConverted>1</visitConverted>
-		<visitConvertedIcon>plugins/Morpheus/images/goal.png</visitConvertedIcon>
-		<visitCount>5</visitCount>
-		
-		<visitEcommerceStatus>none</visitEcommerceStatus>
-		<visitEcommerceStatusIcon />
-		<daysSinceFirstVisit>1</daysSinceFirstVisit>
-		<daysSinceLastEcommerceOrder>0</daysSinceLastEcommerceOrder>
-		<visitDuration>0</visitDuration>
-		<visitDurationPretty>0s</visitDurationPretty>
+		<browserCode>FF</browserCode>
+		<browserFamily>gecko</browserFamily>
+		<browserFamilyDescription>Gecko (Firefox)</browserFamilyDescription>
+		<browserIcon>plugins/UserSettings/images/browsers/FF.gif</browserIcon>
+		<browserName>Firefox 27.0</browserName>
+		<browserVersion>27.0</browserVersion>
+		<city>Mainz</city>
+		<continent>Europe</continent>
+		<continentCode>eur</continentCode>
+		<country>Germany</country>
+		<countryCode>de</countryCode>
+		<countryFlag>plugins/UserCountry/images/flags/de.png</countryFlag>
 		<customVariables>
 			<row>
 				<customVariableName1>Domain landed</customVariableName1>
 				<customVariableValue1>piwik.org</customVariableValue1>
 			</row>
 		</customVariables>
+		<daysSinceFirstVisit>1</daysSinceFirstVisit>
+		<daysSinceLastEcommerceOrder>0</daysSinceLastEcommerceOrder>
+		<daysSinceLastVisit>3</daysSinceLastVisit>
 		<deviceType>Desktop</deviceType>
 		<events>0</events>
-		<provider>Unknown</provider>
-		<providerName>Unknown</providerName>
-		<providerUrl>http://piwik.org/faq/general/#faq_52</providerUrl>
-		<referrerType>website</referrerType>
-		<referrerTypeName>Websites</referrerTypeName>
-		<referrerName>forum.golem.de</referrerName>
-		<referrerKeyword />
-		<referrerKeywordPosition />
-		<referrerUrl>http://forum.golem.de/kommentare/security/urteil-zu-tracking-nutzer-muessen-piwik-analyse-widersprechen-koennen/piwik-log-analytics/80715,3669355,3669355,read.html</referrerUrl>
-		<referrerSearchEngineUrl />
-		<referrerSearchEngineIcon />
-		<continent>Europe</continent>
-		<continentCode>eur</continentCode>
-		<country>Germany</country>
-		<countryCode>de</countryCode>
-		<countryFlag>plugins/UserCountry/images/flags/de.png</countryFlag>
-		<region>Rheinland-Pfalz</region>
-		<regionCode>08</regionCode>
-		<city>Mainz</city>
-		<location>Mainz, Rheinland-Pfalz, Germany</location>
+		
+		<goalConversions>1</goalConversions>
+		<idSite>1</idSite>
+		<idVisit>32</idVisit>
+		
+		
 		<latitude>50</latitude>
+		<location>Mainz, Rheinland-Pfalz, Germany</location>
 		<longitude>8.271000</longitude>
 		<operatingSystem>Windows 7</operatingSystem>
 		<operatingSystemCode>WI7</operatingSystemCode>
-		<operatingSystemShortName>Win 7</operatingSystemShortName>
 		<operatingSystemIcon>plugins/UserSettings/images/os/WI7.gif</operatingSystemIcon>
-		<browserFamily>gecko</browserFamily>
-		<browserFamilyDescription>Gecko (Firefox)</browserFamilyDescription>
-		<browserName>Firefox 27.0</browserName>
-		<browserIcon>plugins/UserSettings/images/browsers/FF.gif</browserIcon>
-		<browserCode>FF</browserCode>
-		<browserVersion>27.0</browserVersion>
-		<screenType>wide</screenType>
-		<resolution>2560x1440</resolution>
-		<screenTypeIcon>plugins/UserSettings/images/screens/wide.gif</screenTypeIcon>
+		<operatingSystemShortName>Win 7</operatingSystemShortName>
 		<plugins>pdf, flash, java, quicktime, windowsmedia, silverlight</plugins>
 		<pluginsIcons>
 			<row>
@@ -1123,9 +1092,40 @@
 				<pluginName>silverlight</pluginName>
 			</row>
 		</pluginsIcons>
-		<visitLocalTime>01:33:13</visitLocalTime>
+		<provider>Unknown</provider>
+		<providerName>Unknown</providerName>
+		<providerUrl>http://piwik.org/faq/general/#faq_52</providerUrl>
+		<referrerKeyword />
+		<referrerKeywordPosition />
+		<referrerName>forum.golem.de</referrerName>
+		<referrerSearchEngineIcon />
+		<referrerSearchEngineUrl />
+		<referrerType>website</referrerType>
+		<referrerTypeName>Websites</referrerTypeName>
+		<referrerUrl>http://forum.golem.de/kommentare/security/urteil-zu-tracking-nutzer-muessen-piwik-analyse-widersprechen-koennen/piwik-log-analytics/80715,3669355,3669355,read.html</referrerUrl>
+		<region>Rheinland-Pfalz</region>
+		<regionCode>08</regionCode>
+		<resolution>2560x1440</resolution>
+		<screenType>wide</screenType>
+		<screenTypeIcon>plugins/UserSettings/images/screens/wide.gif</screenTypeIcon>
+		<searches>0</searches>
+		
+		<siteCurrency>USD</siteCurrency>
+		<siteCurrencySymbol>$</siteCurrencySymbol>
+		<visitConverted>1</visitConverted>
+		<visitConvertedIcon>plugins/Morpheus/images/goal.png</visitConvertedIcon>
+		<visitCount>5</visitCount>
+		<visitDuration>0</visitDuration>
+		<visitDurationPretty>0s</visitDurationPretty>
+		<visitEcommerceStatus>none</visitEcommerceStatus>
+		<visitEcommerceStatusIcon />
+		<visitIp>188.107.238.9</visitIp>
 		<visitLocalHour>1</visitLocalHour>
-		<daysSinceLastVisit>3</daysSinceLastVisit>
+		<visitLocalTime>01:33:13</visitLocalTime>
+		
+		
+		<visitorType>returning</visitorType>
+		<visitorTypeIcon>plugins/Live/images/returningVisitor.gif</visitorTypeIcon>
 		
 		
 		
@@ -1133,10 +1133,6 @@
 		
 	</row>
 	<row>
-		<idSite>1</idSite>
-		<idVisit>30</idVisit>
-		<visitIp>93.80.130.163</visitIp>
-		
 		<actionDetails>
 			<row>
 				<type>action</type>
@@ -1200,70 +1196,43 @@
 				<icon>plugins/Morpheus/images/download.png</icon>
 			</row>
 		</actionDetails>
-		<goalConversions>1</goalConversions>
-		<siteCurrency>USD</siteCurrency>
-		<siteCurrencySymbol>$</siteCurrencySymbol>
-		
-		
-		
-		
-		<searches>0</searches>
 		<actions>3</actions>
-		<visitorType>new</visitorType>
-		<visitorTypeIcon />
-		<visitConverted>1</visitConverted>
-		<visitConvertedIcon>plugins/Morpheus/images/goal.png</visitConvertedIcon>
-		<visitCount>1</visitCount>
-		
-		<visitEcommerceStatus>none</visitEcommerceStatus>
-		<visitEcommerceStatusIcon />
-		<daysSinceFirstVisit>0</daysSinceFirstVisit>
-		<daysSinceLastEcommerceOrder>0</daysSinceLastEcommerceOrder>
-		<visitDuration>10</visitDuration>
-		<visitDurationPretty>10s</visitDurationPretty>
+		<browserCode>FF</browserCode>
+		<browserFamily>gecko</browserFamily>
+		<browserFamilyDescription>Gecko (Firefox)</browserFamilyDescription>
+		<browserIcon>plugins/UserSettings/images/browsers/FF.gif</browserIcon>
+		<browserName>Firefox 27.0</browserName>
+		<browserVersion>27.0</browserVersion>
+		<city>Moscow</city>
+		<continent>Europe</continent>
+		<continentCode>eur</continentCode>
+		<country>Russian Federation</country>
+		<countryCode>ru</countryCode>
+		<countryFlag>plugins/UserCountry/images/flags/ru.png</countryFlag>
 		<customVariables>
 			<row>
 				<customVariableName1>Domain landed</customVariableName1>
 				<customVariableValue1>piwik.org</customVariableValue1>
 			</row>
 		</customVariables>
+		<daysSinceFirstVisit>0</daysSinceFirstVisit>
+		<daysSinceLastEcommerceOrder>0</daysSinceLastEcommerceOrder>
+		<daysSinceLastVisit>0</daysSinceLastVisit>
 		<deviceType>Desktop</deviceType>
 		<events>0</events>
-		<provider>Unknown</provider>
-		<providerName>Unknown</providerName>
-		<providerUrl>http://piwik.org/faq/general/#faq_52</providerUrl>
-		<referrerType>search</referrerType>
-		<referrerTypeName>Search Engines</referrerTypeName>
-		<referrerName>Google</referrerName>
-		<referrerKeyword>Keyword not defined</referrerKeyword>
-		<referrerKeywordPosition>1</referrerKeywordPosition>
-		<referrerUrl>http://piwik.org/faq/general/#faq_144</referrerUrl>
-		<referrerSearchEngineUrl>http://google.com</referrerSearchEngineUrl>
-		<referrerSearchEngineIcon>plugins/Referrers/images/searchEngines/google.com.png</referrerSearchEngineIcon>
-		<continent>Europe</continent>
-		<continentCode>eur</continentCode>
-		<country>Russian Federation</country>
-		<countryCode>ru</countryCode>
-		<countryFlag>plugins/UserCountry/images/flags/ru.png</countryFlag>
-		<region>Moscow City</region>
-		<regionCode>48</regionCode>
-		<city>Moscow</city>
-		<location>Moscow, Moscow City, Russian Federation</location>
+		
+		<goalConversions>1</goalConversions>
+		<idSite>1</idSite>
+		<idVisit>30</idVisit>
+		
+		
 		<latitude>55.751999</latitude>
+		<location>Moscow, Moscow City, Russian Federation</location>
 		<longitude>37.616001</longitude>
 		<operatingSystem>Windows 8</operatingSystem>
 		<operatingSystemCode>WI8</operatingSystemCode>
-		<operatingSystemShortName>Win 8</operatingSystemShortName>
 		<operatingSystemIcon>plugins/UserSettings/images/os/WI8.gif</operatingSystemIcon>
-		<browserFamily>gecko</browserFamily>
-		<browserFamilyDescription>Gecko (Firefox)</browserFamilyDescription>
-		<browserName>Firefox 27.0</browserName>
-		<browserIcon>plugins/UserSettings/images/browsers/FF.gif</browserIcon>
-		<browserCode>FF</browserCode>
-		<browserVersion>27.0</browserVersion>
-		<screenType>wide</screenType>
-		<resolution>1920x1080</resolution>
-		<screenTypeIcon>plugins/UserSettings/images/screens/wide.gif</screenTypeIcon>
+		<operatingSystemShortName>Win 8</operatingSystemShortName>
 		<plugins>flash, java</plugins>
 		<pluginsIcons>
 			<row>
@@ -1275,9 +1244,40 @@
 				<pluginName>java</pluginName>
 			</row>
 		</pluginsIcons>
-		<visitLocalTime>04:28:18</visitLocalTime>
+		<provider>Unknown</provider>
+		<providerName>Unknown</providerName>
+		<providerUrl>http://piwik.org/faq/general/#faq_52</providerUrl>
+		<referrerKeyword>Keyword not defined</referrerKeyword>
+		<referrerKeywordPosition>1</referrerKeywordPosition>
+		<referrerName>Google</referrerName>
+		<referrerSearchEngineIcon>plugins/Referrers/images/searchEngines/google.com.png</referrerSearchEngineIcon>
+		<referrerSearchEngineUrl>http://google.com</referrerSearchEngineUrl>
+		<referrerType>search</referrerType>
+		<referrerTypeName>Search Engines</referrerTypeName>
+		<referrerUrl>http://piwik.org/faq/general/#faq_144</referrerUrl>
+		<region>Moscow City</region>
+		<regionCode>48</regionCode>
+		<resolution>1920x1080</resolution>
+		<screenType>wide</screenType>
+		<screenTypeIcon>plugins/UserSettings/images/screens/wide.gif</screenTypeIcon>
+		<searches>0</searches>
+		
+		<siteCurrency>USD</siteCurrency>
+		<siteCurrencySymbol>$</siteCurrencySymbol>
+		<visitConverted>1</visitConverted>
+		<visitConvertedIcon>plugins/Morpheus/images/goal.png</visitConvertedIcon>
+		<visitCount>1</visitCount>
+		<visitDuration>10</visitDuration>
+		<visitDurationPretty>10s</visitDurationPretty>
+		<visitEcommerceStatus>none</visitEcommerceStatus>
+		<visitEcommerceStatusIcon />
+		<visitIp>93.80.130.163</visitIp>
 		<visitLocalHour>4</visitLocalHour>
-		<daysSinceLastVisit>0</daysSinceLastVisit>
+		<visitLocalTime>04:28:18</visitLocalTime>
+		
+		
+		<visitorType>new</visitorType>
+		<visitorTypeIcon />
 		
 		
 		
@@ -1285,10 +1285,6 @@
 		
 	</row>
 	<row>
-		<idSite>1</idSite>
-		<idVisit>31</idVisit>
-		<visitIp>176.41.226.154</visitIp>
-		
 		<actionDetails>
 			<row>
 				<type>goal</type>
@@ -1317,70 +1313,43 @@
 				<icon />
 			</row>
 		</actionDetails>
-		<goalConversions>1</goalConversions>
-		<siteCurrency>USD</siteCurrency>
-		<siteCurrencySymbol>$</siteCurrencySymbol>
-		
-		
-		
-		
-		<searches>0</searches>
 		<actions>1</actions>
-		<visitorType>returning</visitorType>
-		<visitorTypeIcon>plugins/Live/images/returningVisitor.gif</visitorTypeIcon>
-		<visitConverted>1</visitConverted>
-		<visitConvertedIcon>plugins/Morpheus/images/goal.png</visitConvertedIcon>
-		<visitCount>5</visitCount>
-		
-		<visitEcommerceStatus>none</visitEcommerceStatus>
-		<visitEcommerceStatusIcon />
-		<daysSinceFirstVisit>30</daysSinceFirstVisit>
-		<daysSinceLastEcommerceOrder>0</daysSinceLastEcommerceOrder>
-		<visitDuration>0</visitDuration>
-		<visitDurationPretty>0s</visitDurationPretty>
+		<browserCode>CH</browserCode>
+		<browserFamily>webkit</browserFamily>
+		<browserFamilyDescription>WebKit (Safari, Chrome)</browserFamilyDescription>
+		<browserIcon>plugins/UserSettings/images/browsers/CH.gif</browserIcon>
+		<browserName>Chrome 33.0</browserName>
+		<browserVersion>33.0</browserVersion>
+		<city>Esentepe</city>
+		<continent>Europe</continent>
+		<continentCode>eur</continentCode>
+		<country>Turkey</country>
+		<countryCode>tr</countryCode>
+		<countryFlag>plugins/UserCountry/images/flags/tr.png</countryFlag>
 		<customVariables>
 			<row>
 				<customVariableName1>Domain landed</customVariableName1>
 				<customVariableValue1>piwik.org</customVariableValue1>
 			</row>
 		</customVariables>
+		<daysSinceFirstVisit>30</daysSinceFirstVisit>
+		<daysSinceLastEcommerceOrder>0</daysSinceLastEcommerceOrder>
+		<daysSinceLastVisit>8</daysSinceLastVisit>
 		<deviceType>Desktop</deviceType>
 		<events>0</events>
-		<provider>Unknown</provider>
-		<providerName>Unknown</providerName>
-		<providerUrl>http://piwik.org/faq/general/#faq_52</providerUrl>
-		<referrerType>direct</referrerType>
-		<referrerTypeName>Direct Entry</referrerTypeName>
-		<referrerName />
-		<referrerKeyword />
-		<referrerKeywordPosition />
-		<referrerUrl>http://piwik.org/docs/installation/</referrerUrl>
-		<referrerSearchEngineUrl />
-		<referrerSearchEngineIcon />
-		<continent>Europe</continent>
-		<continentCode>eur</continentCode>
-		<country>Turkey</country>
-		<countryCode>tr</countryCode>
-		<countryFlag>plugins/UserCountry/images/flags/tr.png</countryFlag>
-		<region>Rize</region>
-		<regionCode>53</regionCode>
-		<city>Esentepe</city>
-		<location>Esentepe, Rize, Turkey</location>
+		
+		<goalConversions>1</goalConversions>
+		<idSite>1</idSite>
+		<idVisit>31</idVisit>
+		
+		
 		<latitude>40.979000</latitude>
+		<location>Esentepe, Rize, Turkey</location>
 		<longitude>40.415001</longitude>
 		<operatingSystem>Windows 7</operatingSystem>
 		<operatingSystemCode>WI7</operatingSystemCode>
-		<operatingSystemShortName>Win 7</operatingSystemShortName>
 		<operatingSystemIcon>plugins/UserSettings/images/os/WI7.gif</operatingSystemIcon>
-		<browserFamily>webkit</browserFamily>
-		<browserFamilyDescription>WebKit (Safari, Chrome)</browserFamilyDescription>
-		<browserName>Chrome 33.0</browserName>
-		<browserIcon>plugins/UserSettings/images/browsers/CH.gif</browserIcon>
-		<browserCode>CH</browserCode>
-		<browserVersion>33.0</browserVersion>
-		<screenType>wide</screenType>
-		<resolution>1366x768</resolution>
-		<screenTypeIcon>plugins/UserSettings/images/screens/wide.gif</screenTypeIcon>
+		<operatingSystemShortName>Win 7</operatingSystemShortName>
 		<plugins>pdf, flash, java, silverlight</plugins>
 		<pluginsIcons>
 			<row>
@@ -1400,9 +1369,40 @@
 				<pluginName>silverlight</pluginName>
 			</row>
 		</pluginsIcons>
-		<visitLocalTime>02:32:21</visitLocalTime>
+		<provider>Unknown</provider>
+		<providerName>Unknown</providerName>
+		<providerUrl>http://piwik.org/faq/general/#faq_52</providerUrl>
+		<referrerKeyword />
+		<referrerKeywordPosition />
+		<referrerName />
+		<referrerSearchEngineIcon />
+		<referrerSearchEngineUrl />
+		<referrerType>direct</referrerType>
+		<referrerTypeName>Direct Entry</referrerTypeName>
+		<referrerUrl>http://piwik.org/docs/installation/</referrerUrl>
+		<region>Rize</region>
+		<regionCode>53</regionCode>
+		<resolution>1366x768</resolution>
+		<screenType>wide</screenType>
+		<screenTypeIcon>plugins/UserSettings/images/screens/wide.gif</screenTypeIcon>
+		<searches>0</searches>
+		
+		<siteCurrency>USD</siteCurrency>
+		<siteCurrencySymbol>$</siteCurrencySymbol>
+		<visitConverted>1</visitConverted>
+		<visitConvertedIcon>plugins/Morpheus/images/goal.png</visitConvertedIcon>
+		<visitCount>5</visitCount>
+		<visitDuration>0</visitDuration>
+		<visitDurationPretty>0s</visitDurationPretty>
+		<visitEcommerceStatus>none</visitEcommerceStatus>
+		<visitEcommerceStatusIcon />
+		<visitIp>176.41.226.154</visitIp>
 		<visitLocalHour>2</visitLocalHour>
-		<daysSinceLastVisit>8</daysSinceLastVisit>
+		<visitLocalTime>02:32:21</visitLocalTime>
+		
+		
+		<visitorType>returning</visitorType>
+		<visitorTypeIcon>plugins/Live/images/returningVisitor.gif</visitorTypeIcon>
 		
 		
 		
@@ -1410,10 +1410,6 @@
 		
 	</row>
 	<row>
-		<idSite>1</idSite>
-		<idVisit>29</idVisit>
-		<visitIp>84.194.72.21</visitIp>
-		
 		<actionDetails>
 			<row>
 				<type>goal</type>
@@ -1442,70 +1438,43 @@
 				<icon />
 			</row>
 		</actionDetails>
-		<goalConversions>1</goalConversions>
-		<siteCurrency>USD</siteCurrency>
-		<siteCurrencySymbol>$</siteCurrencySymbol>
-		
-		
-		
-		
-		<searches>0</searches>
 		<actions>1</actions>
-		<visitorType>new</visitorType>
-		<visitorTypeIcon />
-		<visitConverted>1</visitConverted>
-		<visitConvertedIcon>plugins/Morpheus/images/goal.png</visitConvertedIcon>
-		<visitCount>1</visitCount>
-		
-		<visitEcommerceStatus>none</visitEcommerceStatus>
-		<visitEcommerceStatusIcon />
-		<daysSinceFirstVisit>0</daysSinceFirstVisit>
-		<daysSinceLastEcommerceOrder>0</daysSinceLastEcommerceOrder>
-		<visitDuration>0</visitDuration>
-		<visitDurationPretty>0s</visitDurationPretty>
+		<browserCode>CH</browserCode>
+		<browserFamily>webkit</browserFamily>
+		<browserFamilyDescription>WebKit (Safari, Chrome)</browserFamilyDescription>
+		<browserIcon>plugins/UserSettings/images/browsers/CH.gif</browserIcon>
+		<browserName>Chrome 33.0</browserName>
+		<browserVersion>33.0</browserVersion>
+		<city>Maaseik</city>
+		<continent>Europe</continent>
+		<continentCode>eur</continentCode>
+		<country>Belgium</country>
+		<countryCode>be</countryCode>
+		<countryFlag>plugins/UserCountry/images/flags/be.png</countryFlag>
 		<customVariables>
 			<row>
 				<customVariableName1>Domain landed</customVariableName1>
 				<customVariableValue1>piwik.org</customVariableValue1>
 			</row>
 		</customVariables>
+		<daysSinceFirstVisit>0</daysSinceFirstVisit>
+		<daysSinceLastEcommerceOrder>0</daysSinceLastEcommerceOrder>
+		<daysSinceLastVisit>0</daysSinceLastVisit>
 		<deviceType>Desktop</deviceType>
 		<events>0</events>
-		<provider>Unknown</provider>
-		<providerName>Unknown</providerName>
-		<providerUrl>http://piwik.org/faq/general/#faq_52</providerUrl>
-		<referrerType>website</referrerType>
-		<referrerTypeName>Websites</referrerTypeName>
-		<referrerName>musicforeveryoneradio.be</referrerName>
-		<referrerKeyword />
-		<referrerKeywordPosition />
-		<referrerUrl>http://musicforeveryoneradio.be:2222/CMD_PLUGINS/installatron/index.raw</referrerUrl>
-		<referrerSearchEngineUrl />
-		<referrerSearchEngineIcon />
-		<continent>Europe</continent>
-		<continentCode>eur</continentCode>
-		<country>Belgium</country>
-		<countryCode>be</countryCode>
-		<countryFlag>plugins/UserCountry/images/flags/be.png</countryFlag>
-		<region>Limburg</region>
-		<regionCode>05</regionCode>
-		<city>Maaseik</city>
-		<location>Maaseik, Limburg, Belgium</location>
+		
+		<goalConversions>1</goalConversions>
+		<idSite>1</idSite>
+		<idVisit>29</idVisit>
+		
+		
 		<latitude>51.099998</latitude>
+		<location>Maaseik, Limburg, Belgium</location>
 		<longitude>5.800000</longitude>
 		<operatingSystem>Windows 7</operatingSystem>
 		<operatingSystemCode>WI7</operatingSystemCode>
-		<operatingSystemShortName>Win 7</operatingSystemShortName>
 		<operatingSystemIcon>plugins/UserSettings/images/os/WI7.gif</operatingSystemIcon>
-		<browserFamily>webkit</browserFamily>
-		<browserFamilyDescription>WebKit (Safari, Chrome)</browserFamilyDescription>
-		<browserName>Chrome 33.0</browserName>
-		<browserIcon>plugins/UserSettings/images/browsers/CH.gif</browserIcon>
-		<browserCode>CH</browserCode>
-		<browserVersion>33.0</browserVersion>
-		<screenType>wide</screenType>
-		<resolution>1920x1080</resolution>
-		<screenTypeIcon>plugins/UserSettings/images/screens/wide.gif</screenTypeIcon>
+		<operatingSystemShortName>Win 7</operatingSystemShortName>
 		<plugins>pdf, flash, java, silverlight</plugins>
 		<pluginsIcons>
 			<row>
@@ -1525,9 +1494,40 @@
 				<pluginName>silverlight</pluginName>
 			</row>
 		</pluginsIcons>
-		<visitLocalTime>01:34:18</visitLocalTime>
+		<provider>Unknown</provider>
+		<providerName>Unknown</providerName>
+		<providerUrl>http://piwik.org/faq/general/#faq_52</providerUrl>
+		<referrerKeyword />
+		<referrerKeywordPosition />
+		<referrerName>musicforeveryoneradio.be</referrerName>
+		<referrerSearchEngineIcon />
+		<referrerSearchEngineUrl />
+		<referrerType>website</referrerType>
+		<referrerTypeName>Websites</referrerTypeName>
+		<referrerUrl>http://musicforeveryoneradio.be:2222/CMD_PLUGINS/installatron/index.raw</referrerUrl>
+		<region>Limburg</region>
+		<regionCode>05</regionCode>
+		<resolution>1920x1080</resolution>
+		<screenType>wide</screenType>
+		<screenTypeIcon>plugins/UserSettings/images/screens/wide.gif</screenTypeIcon>
+		<searches>0</searches>
+		
+		<siteCurrency>USD</siteCurrency>
+		<siteCurrencySymbol>$</siteCurrencySymbol>
+		<visitConverted>1</visitConverted>
+		<visitConvertedIcon>plugins/Morpheus/images/goal.png</visitConvertedIcon>
+		<visitCount>1</visitCount>
+		<visitDuration>0</visitDuration>
+		<visitDurationPretty>0s</visitDurationPretty>
+		<visitEcommerceStatus>none</visitEcommerceStatus>
+		<visitEcommerceStatusIcon />
+		<visitIp>84.194.72.21</visitIp>
 		<visitLocalHour>1</visitLocalHour>
-		<daysSinceLastVisit>0</daysSinceLastVisit>
+		<visitLocalTime>01:34:18</visitLocalTime>
+		
+		
+		<visitorType>new</visitorType>
+		<visitorTypeIcon />
 		
 		
 		
@@ -1535,10 +1535,6 @@
 		
 	</row>
 	<row>
-		<idSite>1</idSite>
-		<idVisit>41</idVisit>
-		<visitIp>175.41.192.40</visitIp>
-		
 		<actionDetails>
 			<row>
 				<type>goal</type>
@@ -1729,71 +1725,75 @@
 				<icon />
 			</row>
 		</actionDetails>
-		<goalConversions>1</goalConversions>
-		<siteCurrency>USD</siteCurrency>
-		<siteCurrencySymbol>$</siteCurrencySymbol>
-		
-		
-		
-		
-		<searches>0</searches>
 		<actions>10</actions>
-		<visitorType>new</visitorType>
-		<visitorTypeIcon />
-		<visitConverted>1</visitConverted>
-		<visitConvertedIcon>plugins/Morpheus/images/goal.png</visitConvertedIcon>
-		<visitCount>1</visitCount>
-		
-		<visitEcommerceStatus>none</visitEcommerceStatus>
-		<visitEcommerceStatusIcon />
-		<daysSinceFirstVisit>0</daysSinceFirstVisit>
-		<daysSinceLastEcommerceOrder>0</daysSinceLastEcommerceOrder>
-		<visitDuration>54</visitDuration>
-		<visitDurationPretty>54s</visitDurationPretty>
-		<customVariables>
-		</customVariables>
-		<deviceType>Unknown</deviceType>
-		<events>0</events>
-		<provider>Unknown</provider>
-		<providerName>Unknown</providerName>
-		<providerUrl>http://piwik.org/faq/general/#faq_52</providerUrl>
-		<referrerType>direct</referrerType>
-		<referrerTypeName>Direct Entry</referrerTypeName>
-		<referrerName />
-		<referrerKeyword />
-		<referrerKeywordPosition />
-		<referrerUrl />
-		<referrerSearchEngineUrl />
-		<referrerSearchEngineIcon />
+		<browserCode>UNK</browserCode>
+		<browserFamily>unknown</browserFamily>
+		<browserFamilyDescription>Unknown</browserFamilyDescription>
+		<browserIcon>plugins/UserSettings/images/browsers/UNK.gif</browserIcon>
+		<browserName>Unknown</browserName>
+		<browserVersion />
+		<city />
 		<continent>Asia</continent>
 		<continentCode>asi</continentCode>
 		<country>Japan</country>
 		<countryCode>jp</countryCode>
 		<countryFlag>plugins/UserCountry/images/flags/jp.png</countryFlag>
-		<region />
-		<regionCode />
-		<city />
-		<location>Japan</location>
+		<customVariables>
+		</customVariables>
+		<daysSinceFirstVisit>0</daysSinceFirstVisit>
+		<daysSinceLastEcommerceOrder>0</daysSinceLastEcommerceOrder>
+		<daysSinceLastVisit>0</daysSinceLastVisit>
+		<deviceType>Unknown</deviceType>
+		<events>0</events>
+		
+		<goalConversions>1</goalConversions>
+		<idSite>1</idSite>
+		<idVisit>41</idVisit>
+		
+		
 		<latitude>36</latitude>
+		<location>Japan</location>
 		<longitude>138</longitude>
 		<operatingSystem>Unknown</operatingSystem>
 		<operatingSystemCode>UNK</operatingSystemCode>
-		<operatingSystemShortName>Unknown</operatingSystemShortName>
 		<operatingSystemIcon>plugins/UserSettings/images/os/UNK.gif</operatingSystemIcon>
-		<browserFamily>unknown</browserFamily>
-		<browserFamilyDescription>Unknown</browserFamilyDescription>
-		<browserName>Unknown</browserName>
-		<browserIcon>plugins/UserSettings/images/browsers/UNK.gif</browserIcon>
-		<browserCode>UNK</browserCode>
-		<browserVersion />
-		<screenType>unknown</screenType>
-		<resolution>unknown</resolution>
-		<screenTypeIcon>plugins/UserSettings/images/screens/unknown.gif</screenTypeIcon>
+		<operatingSystemShortName>Unknown</operatingSystemShortName>
 		<plugins />
 		<pluginsIcons />
-		<visitLocalTime>08:10:38</visitLocalTime>
+		<provider>Unknown</provider>
+		<providerName>Unknown</providerName>
+		<providerUrl>http://piwik.org/faq/general/#faq_52</providerUrl>
+		<referrerKeyword />
+		<referrerKeywordPosition />
+		<referrerName />
+		<referrerSearchEngineIcon />
+		<referrerSearchEngineUrl />
+		<referrerType>direct</referrerType>
+		<referrerTypeName>Direct Entry</referrerTypeName>
+		<referrerUrl />
+		<region />
+		<regionCode />
+		<resolution>unknown</resolution>
+		<screenType>unknown</screenType>
+		<screenTypeIcon>plugins/UserSettings/images/screens/unknown.gif</screenTypeIcon>
+		<searches>0</searches>
+		
+		<siteCurrency>USD</siteCurrency>
+		<siteCurrencySymbol>$</siteCurrencySymbol>
+		<visitConverted>1</visitConverted>
+		<visitConvertedIcon>plugins/Morpheus/images/goal.png</visitConvertedIcon>
+		<visitCount>1</visitCount>
+		<visitDuration>54</visitDuration>
+		<visitDurationPretty>54s</visitDurationPretty>
+		<visitEcommerceStatus>none</visitEcommerceStatus>
+		<visitEcommerceStatusIcon />
+		<visitIp>175.41.192.40</visitIp>
 		<visitLocalHour>8</visitLocalHour>
-		<daysSinceLastVisit>0</daysSinceLastVisit>
+		<visitLocalTime>08:10:38</visitLocalTime>
+		
+		
+		<visitorType>new</visitorType>
+		<visitorTypeIcon />
 		
 		
 		
@@ -1801,10 +1801,6 @@
 		
 	</row>
 	<row>
-		<idSite>1</idSite>
-		<idVisit>26</idVisit>
-		<visitIp>0.0.0.0</visitIp>
-		
 		<actionDetails>
 			<row>
 				<type>goal</type>
@@ -1840,70 +1836,43 @@
 				<icon />
 			</row>
 		</actionDetails>
-		<goalConversions>1</goalConversions>
-		<siteCurrency>USD</siteCurrency>
-		<siteCurrencySymbol>$</siteCurrencySymbol>
-		
-		
-		
-		
-		<searches>0</searches>
 		<actions>1</actions>
-		<visitorType>new</visitorType>
-		<visitorTypeIcon />
-		<visitConverted>1</visitConverted>
-		<visitConvertedIcon>plugins/Morpheus/images/goal.png</visitConvertedIcon>
-		<visitCount>1</visitCount>
-		
-		<visitEcommerceStatus>none</visitEcommerceStatus>
-		<visitEcommerceStatusIcon />
-		<daysSinceFirstVisit>0</daysSinceFirstVisit>
-		<daysSinceLastEcommerceOrder>0</daysSinceLastEcommerceOrder>
-		<visitDuration>0</visitDuration>
-		<visitDurationPretty>0s</visitDurationPretty>
+		<browserCode>IE</browserCode>
+		<browserFamily>ie</browserFamily>
+		<browserFamilyDescription>Trident (IE)</browserFamilyDescription>
+		<browserIcon>plugins/UserSettings/images/browsers/IE.gif</browserIcon>
+		<browserName>Internet Explorer 6.0</browserName>
+		<browserVersion>6.0</browserVersion>
+		<city />
+		<continent>Unknown</continent>
+		<continentCode>unk</continentCode>
+		<country>Unknown</country>
+		<countryCode>xx</countryCode>
+		<countryFlag>plugins/UserCountry/images/flags/xx.png</countryFlag>
 		<customVariables>
 			<row>
 				<customVariableName5>VisitorType</customVariableName5>
 				<customVariableValue5>NewLoggedOut</customVariableValue5>
 			</row>
 		</customVariables>
+		<daysSinceFirstVisit>0</daysSinceFirstVisit>
+		<daysSinceLastEcommerceOrder>0</daysSinceLastEcommerceOrder>
+		<daysSinceLastVisit>0</daysSinceLastVisit>
 		<deviceType>Desktop</deviceType>
 		<events>0</events>
-		<provider>Unknown</provider>
-		<providerName>Unknown</providerName>
-		<providerUrl>http://piwik.org/faq/general/#faq_52</providerUrl>
-		<referrerType>website</referrerType>
-		<referrerTypeName>Websites</referrerTypeName>
-		<referrerName>piwik.org</referrerName>
-		<referrerKeyword />
-		<referrerKeywordPosition />
-		<referrerUrl>http://piwik.org/contribute%</referrerUrl>
-		<referrerSearchEngineUrl />
-		<referrerSearchEngineIcon />
-		<continent>Unknown</continent>
-		<continentCode>unk</continentCode>
-		<country>Unknown</country>
-		<countryCode>xx</countryCode>
-		<countryFlag>plugins/UserCountry/images/flags/xx.png</countryFlag>
-		<region />
-		<regionCode />
-		<city />
-		<location>Unknown</location>
+		
+		<goalConversions>1</goalConversions>
+		<idSite>1</idSite>
+		<idVisit>26</idVisit>
+		
+		
 		<latitude />
+		<location>Unknown</location>
 		<longitude />
 		<operatingSystem>Windows XP</operatingSystem>
 		<operatingSystemCode>WXP</operatingSystemCode>
-		<operatingSystemShortName>Win XP</operatingSystemShortName>
 		<operatingSystemIcon>plugins/UserSettings/images/os/WXP.gif</operatingSystemIcon>
-		<browserFamily>ie</browserFamily>
-		<browserFamilyDescription>Trident (IE)</browserFamilyDescription>
-		<browserName>Internet Explorer 6.0</browserName>
-		<browserIcon>plugins/UserSettings/images/browsers/IE.gif</browserIcon>
-		<browserCode>IE</browserCode>
-		<browserVersion>6.0</browserVersion>
-		<screenType>normal</screenType>
-		<resolution>1024x768</resolution>
-		<screenTypeIcon>plugins/UserSettings/images/screens/normal.gif</screenTypeIcon>
+		<operatingSystemShortName>Win XP</operatingSystemShortName>
 		<plugins>flash, java</plugins>
 		<pluginsIcons>
 			<row>
@@ -1915,9 +1884,40 @@
 				<pluginName>java</pluginName>
 			</row>
 		</pluginsIcons>
-		<visitLocalTime>12:34:06</visitLocalTime>
+		<provider>Unknown</provider>
+		<providerName>Unknown</providerName>
+		<providerUrl>http://piwik.org/faq/general/#faq_52</providerUrl>
+		<referrerKeyword />
+		<referrerKeywordPosition />
+		<referrerName>piwik.org</referrerName>
+		<referrerSearchEngineIcon />
+		<referrerSearchEngineUrl />
+		<referrerType>website</referrerType>
+		<referrerTypeName>Websites</referrerTypeName>
+		<referrerUrl>http://piwik.org/contribute%</referrerUrl>
+		<region />
+		<regionCode />
+		<resolution>1024x768</resolution>
+		<screenType>normal</screenType>
+		<screenTypeIcon>plugins/UserSettings/images/screens/normal.gif</screenTypeIcon>
+		<searches>0</searches>
+		
+		<siteCurrency>USD</siteCurrency>
+		<siteCurrencySymbol>$</siteCurrencySymbol>
+		<visitConverted>1</visitConverted>
+		<visitConvertedIcon>plugins/Morpheus/images/goal.png</visitConvertedIcon>
+		<visitCount>1</visitCount>
+		<visitDuration>0</visitDuration>
+		<visitDurationPretty>0s</visitDurationPretty>
+		<visitEcommerceStatus>none</visitEcommerceStatus>
+		<visitEcommerceStatusIcon />
+		<visitIp>0.0.0.0</visitIp>
 		<visitLocalHour>12</visitLocalHour>
-		<daysSinceLastVisit>0</daysSinceLastVisit>
+		<visitLocalTime>12:34:06</visitLocalTime>
+		
+		
+		<visitorType>new</visitorType>
+		<visitorTypeIcon />
 		
 		
 		
@@ -1925,10 +1925,6 @@
 		
 	</row>
 	<row>
-		<idSite>1</idSite>
-		<idVisit>27</idVisit>
-		<visitIp>0.0.0.0</visitIp>
-		
 		<actionDetails>
 			<row>
 				<type>goal</type>
@@ -1956,70 +1952,43 @@
 				<icon />
 			</row>
 		</actionDetails>
-		<goalConversions>1</goalConversions>
-		<siteCurrency>USD</siteCurrency>
-		<siteCurrencySymbol>$</siteCurrencySymbol>
-		
-		
-		
-		
-		<searches>0</searches>
 		<actions>1</actions>
-		<visitorType>returning</visitorType>
-		<visitorTypeIcon>plugins/Live/images/returningVisitor.gif</visitorTypeIcon>
-		<visitConverted>1</visitConverted>
-		<visitConvertedIcon>plugins/Morpheus/images/goal.png</visitConvertedIcon>
-		<visitCount>1</visitCount>
-		
-		<visitEcommerceStatus>none</visitEcommerceStatus>
-		<visitEcommerceStatusIcon />
-		<daysSinceFirstVisit>444</daysSinceFirstVisit>
-		<daysSinceLastEcommerceOrder>0</daysSinceLastEcommerceOrder>
-		<visitDuration>0</visitDuration>
-		<visitDurationPretty>0s</visitDurationPretty>
+		<browserCode>CH</browserCode>
+		<browserFamily>webkit</browserFamily>
+		<browserFamilyDescription>WebKit (Safari, Chrome)</browserFamilyDescription>
+		<browserIcon>plugins/UserSettings/images/browsers/CH.gif</browserIcon>
+		<browserName>Chrome 11.0</browserName>
+		<browserVersion>11.0</browserVersion>
+		<city />
+		<continent>Unknown</continent>
+		<continentCode>unk</continentCode>
+		<country>Unknown</country>
+		<countryCode>xx</countryCode>
+		<countryFlag>plugins/UserCountry/images/flags/xx.png</countryFlag>
 		<customVariables>
 			<row>
 				<customVariableName3>Forum status</customVariableName3>
 				<customVariableValue3>Anonymous</customVariableValue3>
 			</row>
 		</customVariables>
+		<daysSinceFirstVisit>444</daysSinceFirstVisit>
+		<daysSinceLastEcommerceOrder>0</daysSinceLastEcommerceOrder>
+		<daysSinceLastVisit>444</daysSinceLastVisit>
 		<deviceType>Desktop</deviceType>
 		<events>0</events>
-		<provider>Unknown</provider>
-		<providerName>Unknown</providerName>
-		<providerUrl>http://piwik.org/faq/general/#faq_52</providerUrl>
-		<referrerType>website</referrerType>
-		<referrerTypeName>Websites</referrerTypeName>
-		<referrerName>sn110w.snt110.mail.live.com</referrerName>
-		<referrerKeyword />
-		<referrerKeywordPosition />
-		<referrerUrl>http://sn110w.snt110.mail.live.com/mail/InboxLight.aspx?n=184083971</referrerUrl>
-		<referrerSearchEngineUrl />
-		<referrerSearchEngineIcon />
-		<continent>Unknown</continent>
-		<continentCode>unk</continentCode>
-		<country>Unknown</country>
-		<countryCode>xx</countryCode>
-		<countryFlag>plugins/UserCountry/images/flags/xx.png</countryFlag>
-		<region />
-		<regionCode />
-		<city />
-		<location>Unknown</location>
+		
+		<goalConversions>1</goalConversions>
+		<idSite>1</idSite>
+		<idVisit>27</idVisit>
+		
+		
 		<latitude />
+		<location>Unknown</location>
 		<longitude />
 		<operatingSystem>Windows XP</operatingSystem>
 		<operatingSystemCode>WXP</operatingSystemCode>
-		<operatingSystemShortName>Win XP</operatingSystemShortName>
 		<operatingSystemIcon>plugins/UserSettings/images/os/WXP.gif</operatingSystemIcon>
-		<browserFamily>webkit</browserFamily>
-		<browserFamilyDescription>WebKit (Safari, Chrome)</browserFamilyDescription>
-		<browserName>Chrome 11.0</browserName>
-		<browserIcon>plugins/UserSettings/images/browsers/CH.gif</browserIcon>
-		<browserCode>CH</browserCode>
-		<browserVersion>11.0</browserVersion>
-		<screenType>wide</screenType>
-		<resolution>1280x800</resolution>
-		<screenTypeIcon>plugins/UserSettings/images/screens/wide.gif</screenTypeIcon>
+		<operatingSystemShortName>Win XP</operatingSystemShortName>
 		<plugins>pdf, flash, java, director, windowsmedia, gears</plugins>
 		<pluginsIcons>
 			<row>
@@ -2047,9 +2016,40 @@
 				<pluginName>gears</pluginName>
 			</row>
 		</pluginsIcons>
-		<visitLocalTime>08:00:47</visitLocalTime>
+		<provider>Unknown</provider>
+		<providerName>Unknown</providerName>
+		<providerUrl>http://piwik.org/faq/general/#faq_52</providerUrl>
+		<referrerKeyword />
+		<referrerKeywordPosition />
+		<referrerName>sn110w.snt110.mail.live.com</referrerName>
+		<referrerSearchEngineIcon />
+		<referrerSearchEngineUrl />
+		<referrerType>website</referrerType>
+		<referrerTypeName>Websites</referrerTypeName>
+		<referrerUrl>http://sn110w.snt110.mail.live.com/mail/InboxLight.aspx?n=184083971</referrerUrl>
+		<region />
+		<regionCode />
+		<resolution>1280x800</resolution>
+		<screenType>wide</screenType>
+		<screenTypeIcon>plugins/UserSettings/images/screens/wide.gif</screenTypeIcon>
+		<searches>0</searches>
+		
+		<siteCurrency>USD</siteCurrency>
+		<siteCurrencySymbol>$</siteCurrencySymbol>
+		<visitConverted>1</visitConverted>
+		<visitConvertedIcon>plugins/Morpheus/images/goal.png</visitConvertedIcon>
+		<visitCount>1</visitCount>
+		<visitDuration>0</visitDuration>
+		<visitDurationPretty>0s</visitDurationPretty>
+		<visitEcommerceStatus>none</visitEcommerceStatus>
+		<visitEcommerceStatusIcon />
+		<visitIp>0.0.0.0</visitIp>
 		<visitLocalHour>8</visitLocalHour>
-		<daysSinceLastVisit>444</daysSinceLastVisit>
+		<visitLocalTime>08:00:47</visitLocalTime>
+		
+		
+		<visitorType>returning</visitorType>
+		<visitorTypeIcon>plugins/Live/images/returningVisitor.gif</visitorTypeIcon>
 		
 		
 		
@@ -2057,10 +2057,6 @@
 		
 	</row>
 	<row>
-		<idSite>1</idSite>
-		<idVisit>25</idVisit>
-		<visitIp>175.41.192.41</visitIp>
-		
 		<actionDetails>
 			<row>
 				<type>goal</type>
@@ -2088,75 +2084,79 @@
 				<icon />
 			</row>
 		</actionDetails>
-		<goalConversions>1</goalConversions>
-		<siteCurrency>USD</siteCurrency>
-		<siteCurrencySymbol>$</siteCurrencySymbol>
-		
-		
-		
-		
-		<searches>0</searches>
 		<actions>1</actions>
-		<visitorType>new</visitorType>
-		<visitorTypeIcon />
-		<visitConverted>1</visitConverted>
-		<visitConvertedIcon>plugins/Morpheus/images/goal.png</visitConvertedIcon>
-		<visitCount>1</visitCount>
-		
-		<visitEcommerceStatus>none</visitEcommerceStatus>
-		<visitEcommerceStatusIcon />
-		<daysSinceFirstVisit>0</daysSinceFirstVisit>
-		<daysSinceLastEcommerceOrder>0</daysSinceLastEcommerceOrder>
-		<visitDuration>0</visitDuration>
-		<visitDurationPretty>0s</visitDurationPretty>
+		<browserCode>RM</browserCode>
+		<browserFamily>unknown</browserFamily>
+		<browserFamilyDescription>Unknown</browserFamilyDescription>
+		<browserIcon>plugins/UserSettings/images/browsers/UNK.gif</browserIcon>
+		<browserName>RockMelt 0.9</browserName>
+		<browserVersion>0.9</browserVersion>
+		<city />
+		<continent>Asia</continent>
+		<continentCode>asi</continentCode>
+		<country>Japan</country>
+		<countryCode>jp</countryCode>
+		<countryFlag>plugins/UserCountry/images/flags/jp.png</countryFlag>
 		<customVariables>
 			<row>
 				<customVariableName1>Not-Bot</customVariableName1>
 				<customVariableValue1>Mozilla/5.0 (Macintosh; Intel Mac OS X 10_6_7) AppleWebKit/534.24 (KHTML, like Gecko) RockMelt/0.9.58.494 Chrome/11.0.696.71 Safari/534.24</customVariableValue1>
 			</row>
 		</customVariables>
+		<daysSinceFirstVisit>0</daysSinceFirstVisit>
+		<daysSinceLastEcommerceOrder>0</daysSinceLastEcommerceOrder>
+		<daysSinceLastVisit>0</daysSinceLastVisit>
 		<deviceType>Desktop</deviceType>
 		<events>0</events>
-		<provider>Unknown</provider>
-		<providerName>Unknown</providerName>
-		<providerUrl>http://piwik.org/faq/general/#faq_52</providerUrl>
-		<referrerType>direct</referrerType>
-		<referrerTypeName>Direct Entry</referrerTypeName>
-		<referrerName />
-		<referrerKeyword />
-		<referrerKeywordPosition />
-		<referrerUrl />
-		<referrerSearchEngineUrl />
-		<referrerSearchEngineIcon />
-		<continent>Asia</continent>
-		<continentCode>asi</continentCode>
-		<country>Japan</country>
-		<countryCode>jp</countryCode>
-		<countryFlag>plugins/UserCountry/images/flags/jp.png</countryFlag>
-		<region />
-		<regionCode />
-		<city />
-		<location>Japan</location>
+		
+		<goalConversions>1</goalConversions>
+		<idSite>1</idSite>
+		<idVisit>25</idVisit>
+		
+		
 		<latitude>36</latitude>
+		<location>Japan</location>
 		<longitude>138</longitude>
 		<operatingSystem>Mac OS</operatingSystem>
 		<operatingSystemCode>MAC</operatingSystemCode>
-		<operatingSystemShortName>Mac OS</operatingSystemShortName>
 		<operatingSystemIcon>plugins/UserSettings/images/os/MAC.gif</operatingSystemIcon>
-		<browserFamily>unknown</browserFamily>
-		<browserFamilyDescription>Unknown</browserFamilyDescription>
-		<browserName>RockMelt 0.9</browserName>
-		<browserIcon>plugins/UserSettings/images/browsers/UNK.gif</browserIcon>
-		<browserCode>RM</browserCode>
-		<browserVersion>0.9</browserVersion>
-		<screenType>unknown</screenType>
-		<resolution>unknown</resolution>
-		<screenTypeIcon>plugins/UserSettings/images/screens/unknown.gif</screenTypeIcon>
+		<operatingSystemShortName>Mac OS</operatingSystemShortName>
 		<plugins />
 		<pluginsIcons />
-		<visitLocalTime>20:15:41</visitLocalTime>
+		<provider>Unknown</provider>
+		<providerName>Unknown</providerName>
+		<providerUrl>http://piwik.org/faq/general/#faq_52</providerUrl>
+		<referrerKeyword />
+		<referrerKeywordPosition />
+		<referrerName />
+		<referrerSearchEngineIcon />
+		<referrerSearchEngineUrl />
+		<referrerType>direct</referrerType>
+		<referrerTypeName>Direct Entry</referrerTypeName>
+		<referrerUrl />
+		<region />
+		<regionCode />
+		<resolution>unknown</resolution>
+		<screenType>unknown</screenType>
+		<screenTypeIcon>plugins/UserSettings/images/screens/unknown.gif</screenTypeIcon>
+		<searches>0</searches>
+		
+		<siteCurrency>USD</siteCurrency>
+		<siteCurrencySymbol>$</siteCurrencySymbol>
+		<visitConverted>1</visitConverted>
+		<visitConvertedIcon>plugins/Morpheus/images/goal.png</visitConvertedIcon>
+		<visitCount>1</visitCount>
+		<visitDuration>0</visitDuration>
+		<visitDurationPretty>0s</visitDurationPretty>
+		<visitEcommerceStatus>none</visitEcommerceStatus>
+		<visitEcommerceStatusIcon />
+		<visitIp>175.41.192.41</visitIp>
 		<visitLocalHour>20</visitLocalHour>
-		<daysSinceLastVisit>0</daysSinceLastVisit>
+		<visitLocalTime>20:15:41</visitLocalTime>
+		
+		
+		<visitorType>new</visitorType>
+		<visitorTypeIcon />
 		
 		
 		
@@ -2164,10 +2164,6 @@
 		
 	</row>
 	<row>
-		<idSite>1</idSite>
-		<idVisit>24</idVisit>
-		<visitIp>175.41.192.43</visitIp>
-		
 		<actionDetails>
 			<row>
 				<type>action</type>
@@ -2212,75 +2208,79 @@
 				<icon />
 			</row>
 		</actionDetails>
-		<goalConversions>1</goalConversions>
-		<siteCurrency>USD</siteCurrency>
-		<siteCurrencySymbol>$</siteCurrencySymbol>
-		
-		
-		
-		
-		<searches>0</searches>
 		<actions>2</actions>
-		<visitorType>new</visitorType>
-		<visitorTypeIcon />
-		<visitConverted>1</visitConverted>
-		<visitConvertedIcon>plugins/Morpheus/images/goal.png</visitConvertedIcon>
-		<visitCount>1</visitCount>
-		
-		<visitEcommerceStatus>none</visitEcommerceStatus>
-		<visitEcommerceStatusIcon />
-		<daysSinceFirstVisit>0</daysSinceFirstVisit>
-		<daysSinceLastEcommerceOrder>0</daysSinceLastEcommerceOrder>
-		<visitDuration>182</visitDuration>
-		<visitDurationPretty>3 min 2s</visitDurationPretty>
+		<browserCode>RM</browserCode>
+		<browserFamily>unknown</browserFamily>
+		<browserFamilyDescription>Unknown</browserFamilyDescription>
+		<browserIcon>plugins/UserSettings/images/browsers/UNK.gif</browserIcon>
+		<browserName>RockMelt 0.9</browserName>
+		<browserVersion>0.9</browserVersion>
+		<city />
+		<continent>Asia</continent>
+		<continentCode>asi</continentCode>
+		<country>Japan</country>
+		<countryCode>jp</countryCode>
+		<countryFlag>plugins/UserCountry/images/flags/jp.png</countryFlag>
 		<customVariables>
 			<row>
 				<customVariableName1>Not-Bot</customVariableName1>
 				<customVariableValue1>Mozilla/5.0 (Macintosh; Intel Mac OS X 10_6_7) AppleWebKit/534.24 (KHTML, like Gecko) RockMelt/0.9.58.494 Chrome/11.0.696.71 Safari/534.24</customVariableValue1>
 			</row>
 		</customVariables>
+		<daysSinceFirstVisit>0</daysSinceFirstVisit>
+		<daysSinceLastEcommerceOrder>0</daysSinceLastEcommerceOrder>
+		<daysSinceLastVisit>0</daysSinceLastVisit>
 		<deviceType>Desktop</deviceType>
 		<events>0</events>
-		<provider>Unknown</provider>
-		<providerName>Unknown</providerName>
-		<providerUrl>http://piwik.org/faq/general/#faq_52</providerUrl>
-		<referrerType>direct</referrerType>
-		<referrerTypeName>Direct Entry</referrerTypeName>
-		<referrerName />
-		<referrerKeyword />
-		<referrerKeywordPosition />
-		<referrerUrl />
-		<referrerSearchEngineUrl />
-		<referrerSearchEngineIcon />
-		<continent>Asia</continent>
-		<continentCode>asi</continentCode>
-		<country>Japan</country>
-		<countryCode>jp</countryCode>
-		<countryFlag>plugins/UserCountry/images/flags/jp.png</countryFlag>
-		<region />
-		<regionCode />
-		<city />
-		<location>Japan</location>
+		
+		<goalConversions>1</goalConversions>
+		<idSite>1</idSite>
+		<idVisit>24</idVisit>
+		
+		
 		<latitude>36</latitude>
+		<location>Japan</location>
 		<longitude>138</longitude>
 		<operatingSystem>Mac OS</operatingSystem>
 		<operatingSystemCode>MAC</operatingSystemCode>
-		<operatingSystemShortName>Mac OS</operatingSystemShortName>
 		<operatingSystemIcon>plugins/UserSettings/images/os/MAC.gif</operatingSystemIcon>
-		<browserFamily>unknown</browserFamily>
-		<browserFamilyDescription>Unknown</browserFamilyDescription>
-		<browserName>RockMelt 0.9</browserName>
-		<browserIcon>plugins/UserSettings/images/browsers/UNK.gif</browserIcon>
-		<browserCode>RM</browserCode>
-		<browserVersion>0.9</browserVersion>
-		<screenType>unknown</screenType>
-		<resolution>unknown</resolution>
-		<screenTypeIcon>plugins/UserSettings/images/screens/unknown.gif</screenTypeIcon>
+		<operatingSystemShortName>Mac OS</operatingSystemShortName>
 		<plugins />
 		<pluginsIcons />
-		<visitLocalTime>19:12:40</visitLocalTime>
+		<provider>Unknown</provider>
+		<providerName>Unknown</providerName>
+		<providerUrl>http://piwik.org/faq/general/#faq_52</providerUrl>
+		<referrerKeyword />
+		<referrerKeywordPosition />
+		<referrerName />
+		<referrerSearchEngineIcon />
+		<referrerSearchEngineUrl />
+		<referrerType>direct</referrerType>
+		<referrerTypeName>Direct Entry</referrerTypeName>
+		<referrerUrl />
+		<region />
+		<regionCode />
+		<resolution>unknown</resolution>
+		<screenType>unknown</screenType>
+		<screenTypeIcon>plugins/UserSettings/images/screens/unknown.gif</screenTypeIcon>
+		<searches>0</searches>
+		
+		<siteCurrency>USD</siteCurrency>
+		<siteCurrencySymbol>$</siteCurrencySymbol>
+		<visitConverted>1</visitConverted>
+		<visitConvertedIcon>plugins/Morpheus/images/goal.png</visitConvertedIcon>
+		<visitCount>1</visitCount>
+		<visitDuration>182</visitDuration>
+		<visitDurationPretty>3 min 2s</visitDurationPretty>
+		<visitEcommerceStatus>none</visitEcommerceStatus>
+		<visitEcommerceStatusIcon />
+		<visitIp>175.41.192.43</visitIp>
 		<visitLocalHour>19</visitLocalHour>
-		<daysSinceLastVisit>0</daysSinceLastVisit>
+		<visitLocalTime>19:12:40</visitLocalTime>
+		
+		
+		<visitorType>new</visitorType>
+		<visitorTypeIcon />
 		
 		
 		
@@ -2288,10 +2288,6 @@
 		
 	</row>
 	<row>
-		<idSite>1</idSite>
-		<idVisit>23</idVisit>
-		<visitIp>175.41.192.42</visitIp>
-		
 		<actionDetails>
 			<row>
 				<type>download</type>
@@ -2343,75 +2339,79 @@
 				<icon>plugins/Morpheus/images/download.png</icon>
 			</row>
 		</actionDetails>
-		<goalConversions>0</goalConversions>
-		<siteCurrency>USD</siteCurrency>
-		<siteCurrencySymbol>$</siteCurrencySymbol>
-		
-		
-		
-		
-		<searches>0</searches>
 		<actions>3</actions>
-		<visitorType>new</visitorType>
-		<visitorTypeIcon />
-		<visitConverted>0</visitConverted>
-		<visitConvertedIcon />
-		<visitCount>1</visitCount>
-		
-		<visitEcommerceStatus>none</visitEcommerceStatus>
-		<visitEcommerceStatusIcon />
-		<daysSinceFirstVisit>0</daysSinceFirstVisit>
-		<daysSinceLastEcommerceOrder>0</daysSinceLastEcommerceOrder>
-		<visitDuration>123</visitDuration>
-		<visitDurationPretty>2 min 3s</visitDurationPretty>
+		<browserCode>RM</browserCode>
+		<browserFamily>unknown</browserFamily>
+		<browserFamilyDescription>Unknown</browserFamilyDescription>
+		<browserIcon>plugins/UserSettings/images/browsers/UNK.gif</browserIcon>
+		<browserName>RockMelt 0.9</browserName>
+		<browserVersion>0.9</browserVersion>
+		<city />
+		<continent>Asia</continent>
+		<continentCode>asi</continentCode>
+		<country>Japan</country>
+		<countryCode>jp</countryCode>
+		<countryFlag>plugins/UserCountry/images/flags/jp.png</countryFlag>
 		<customVariables>
 			<row>
 				<customVariableName1>Not-Bot</customVariableName1>
 				<customVariableValue1>Mozilla/5.0 (Macintosh; Intel Mac OS X 10_6_7) AppleWebKit/534.24 (KHTML, like Gecko) RockMelt/0.9.58.494 Chrome/11.0.696.71 Safari/534.24</customVariableValue1>
 			</row>
 		</customVariables>
+		<daysSinceFirstVisit>0</daysSinceFirstVisit>
+		<daysSinceLastEcommerceOrder>0</daysSinceLastEcommerceOrder>
+		<daysSinceLastVisit>0</daysSinceLastVisit>
 		<deviceType>Desktop</deviceType>
 		<events>0</events>
-		<provider>Unknown</provider>
-		<providerName>Unknown</providerName>
-		<providerUrl>http://piwik.org/faq/general/#faq_52</providerUrl>
-		<referrerType>direct</referrerType>
-		<referrerTypeName>Direct Entry</referrerTypeName>
-		<referrerName />
-		<referrerKeyword />
-		<referrerKeywordPosition />
-		<referrerUrl />
-		<referrerSearchEngineUrl />
-		<referrerSearchEngineIcon />
-		<continent>Asia</continent>
-		<continentCode>asi</continentCode>
-		<country>Japan</country>
-		<countryCode>jp</countryCode>
-		<countryFlag>plugins/UserCountry/images/flags/jp.png</countryFlag>
-		<region />
-		<regionCode />
-		<city />
-		<location>Japan</location>
+		
+		<goalConversions>0</goalConversions>
+		<idSite>1</idSite>
+		<idVisit>23</idVisit>
+		
+		
 		<latitude>36</latitude>
+		<location>Japan</location>
 		<longitude>138</longitude>
 		<operatingSystem>Mac OS</operatingSystem>
 		<operatingSystemCode>MAC</operatingSystemCode>
-		<operatingSystemShortName>Mac OS</operatingSystemShortName>
 		<operatingSystemIcon>plugins/UserSettings/images/os/MAC.gif</operatingSystemIcon>
-		<browserFamily>unknown</browserFamily>
-		<browserFamilyDescription>Unknown</browserFamilyDescription>
-		<browserName>RockMelt 0.9</browserName>
-		<browserIcon>plugins/UserSettings/images/browsers/UNK.gif</browserIcon>
-		<browserCode>RM</browserCode>
-		<browserVersion>0.9</browserVersion>
-		<screenType>unknown</screenType>
-		<resolution>unknown</resolution>
-		<screenTypeIcon>plugins/UserSettings/images/screens/unknown.gif</screenTypeIcon>
+		<operatingSystemShortName>Mac OS</operatingSystemShortName>
 		<plugins />
 		<pluginsIcons />
-		<visitLocalTime>18:10:38</visitLocalTime>
+		<provider>Unknown</provider>
+		<providerName>Unknown</providerName>
+		<providerUrl>http://piwik.org/faq/general/#faq_52</providerUrl>
+		<referrerKeyword />
+		<referrerKeywordPosition />
+		<referrerName />
+		<referrerSearchEngineIcon />
+		<referrerSearchEngineUrl />
+		<referrerType>direct</referrerType>
+		<referrerTypeName>Direct Entry</referrerTypeName>
+		<referrerUrl />
+		<region />
+		<regionCode />
+		<resolution>unknown</resolution>
+		<screenType>unknown</screenType>
+		<screenTypeIcon>plugins/UserSettings/images/screens/unknown.gif</screenTypeIcon>
+		<searches>0</searches>
+		
+		<siteCurrency>USD</siteCurrency>
+		<siteCurrencySymbol>$</siteCurrencySymbol>
+		<visitConverted>0</visitConverted>
+		<visitConvertedIcon />
+		<visitCount>1</visitCount>
+		<visitDuration>123</visitDuration>
+		<visitDurationPretty>2 min 3s</visitDurationPretty>
+		<visitEcommerceStatus>none</visitEcommerceStatus>
+		<visitEcommerceStatusIcon />
+		<visitIp>175.41.192.42</visitIp>
 		<visitLocalHour>18</visitLocalHour>
-		<daysSinceLastVisit>0</daysSinceLastVisit>
+		<visitLocalTime>18:10:38</visitLocalTime>
+		
+		
+		<visitorType>new</visitorType>
+		<visitorTypeIcon />
 		
 		
 		
@@ -2419,10 +2419,6 @@
 		
 	</row>
 	<row>
-		<idSite>1</idSite>
-		<idVisit>22</idVisit>
-		<visitIp>72.44.32.11</visitIp>
-		
 		<actionDetails>
 			<row>
 				<type>goal</type>
@@ -2450,75 +2446,79 @@
 				<icon />
 			</row>
 		</actionDetails>
-		<goalConversions>1</goalConversions>
-		<siteCurrency>USD</siteCurrency>
-		<siteCurrencySymbol>$</siteCurrencySymbol>
-		
-		
-		
-		
-		<searches>0</searches>
 		<actions>1</actions>
-		<visitorType>new</visitorType>
-		<visitorTypeIcon />
-		<visitConverted>1</visitConverted>
-		<visitConvertedIcon>plugins/Morpheus/images/goal.png</visitConvertedIcon>
-		<visitCount>1</visitCount>
-		
-		<visitEcommerceStatus>none</visitEcommerceStatus>
-		<visitEcommerceStatusIcon />
-		<daysSinceFirstVisit>0</daysSinceFirstVisit>
-		<daysSinceLastEcommerceOrder>0</daysSinceLastEcommerceOrder>
-		<visitDuration>0</visitDuration>
-		<visitDurationPretty>0s</visitDurationPretty>
+		<browserCode>UNK</browserCode>
+		<browserFamily>unknown</browserFamily>
+		<browserFamilyDescription>Unknown</browserFamilyDescription>
+		<browserIcon>plugins/UserSettings/images/browsers/UNK.gif</browserIcon>
+		<browserName>Unknown</browserName>
+		<browserVersion />
+		<city>Ashburn</city>
+		<continent>North America</continent>
+		<continentCode>amn</continentCode>
+		<country>United States</country>
+		<countryCode>us</countryCode>
+		<countryFlag>plugins/UserCountry/images/flags/us.png</countryFlag>
 		<customVariables>
 			<row>
 				<customVariableName1>Bot</customVariableName1>
 				<customVariableValue1>Googlebot/2.1 (+http://www.googlebot.com/bot.html)</customVariableValue1>
 			</row>
 		</customVariables>
+		<daysSinceFirstVisit>0</daysSinceFirstVisit>
+		<daysSinceLastEcommerceOrder>0</daysSinceLastEcommerceOrder>
+		<daysSinceLastVisit>0</daysSinceLastVisit>
 		<deviceType>Unknown</deviceType>
 		<events>0</events>
-		<provider>Unknown</provider>
-		<providerName>Unknown</providerName>
-		<providerUrl>http://piwik.org/faq/general/#faq_52</providerUrl>
-		<referrerType>direct</referrerType>
-		<referrerTypeName>Direct Entry</referrerTypeName>
-		<referrerName />
-		<referrerKeyword />
-		<referrerKeywordPosition />
-		<referrerUrl />
-		<referrerSearchEngineUrl />
-		<referrerSearchEngineIcon />
-		<continent>North America</continent>
-		<continentCode>amn</continentCode>
-		<country>United States</country>
-		<countryCode>us</countryCode>
-		<countryFlag>plugins/UserCountry/images/flags/us.png</countryFlag>
-		<region>Virginia</region>
-		<regionCode>VA</regionCode>
-		<city>Ashburn</city>
-		<location>Ashburn, Virginia, United States</location>
+		
+		<goalConversions>1</goalConversions>
+		<idSite>1</idSite>
+		<idVisit>22</idVisit>
+		
+		
 		<latitude>39.043999</latitude>
+		<location>Ashburn, Virginia, United States</location>
 		<longitude>-77.487999</longitude>
 		<operatingSystem>Bot</operatingSystem>
 		<operatingSystemCode>BOT</operatingSystemCode>
-		<operatingSystemShortName>BOT</operatingSystemShortName>
 		<operatingSystemIcon>plugins/UserSettings/images/os/UNK.gif</operatingSystemIcon>
-		<browserFamily>unknown</browserFamily>
-		<browserFamilyDescription>Unknown</browserFamilyDescription>
-		<browserName>Unknown</browserName>
-		<browserIcon>plugins/UserSettings/images/browsers/UNK.gif</browserIcon>
-		<browserCode>UNK</browserCode>
-		<browserVersion />
-		<screenType>unknown</screenType>
-		<resolution>unknown</resolution>
-		<screenTypeIcon>plugins/UserSettings/images/screens/unknown.gif</screenTypeIcon>
+		<operatingSystemShortName>BOT</operatingSystemShortName>
 		<plugins />
 		<pluginsIcons />
-		<visitLocalTime>17:48:08</visitLocalTime>
+		<provider>Unknown</provider>
+		<providerName>Unknown</providerName>
+		<providerUrl>http://piwik.org/faq/general/#faq_52</providerUrl>
+		<referrerKeyword />
+		<referrerKeywordPosition />
+		<referrerName />
+		<referrerSearchEngineIcon />
+		<referrerSearchEngineUrl />
+		<referrerType>direct</referrerType>
+		<referrerTypeName>Direct Entry</referrerTypeName>
+		<referrerUrl />
+		<region>Virginia</region>
+		<regionCode>VA</regionCode>
+		<resolution>unknown</resolution>
+		<screenType>unknown</screenType>
+		<screenTypeIcon>plugins/UserSettings/images/screens/unknown.gif</screenTypeIcon>
+		<searches>0</searches>
+		
+		<siteCurrency>USD</siteCurrency>
+		<siteCurrencySymbol>$</siteCurrencySymbol>
+		<visitConverted>1</visitConverted>
+		<visitConvertedIcon>plugins/Morpheus/images/goal.png</visitConvertedIcon>
+		<visitCount>1</visitCount>
+		<visitDuration>0</visitDuration>
+		<visitDurationPretty>0s</visitDurationPretty>
+		<visitEcommerceStatus>none</visitEcommerceStatus>
+		<visitEcommerceStatusIcon />
+		<visitIp>72.44.32.11</visitIp>
 		<visitLocalHour>17</visitLocalHour>
-		<daysSinceLastVisit>0</daysSinceLastVisit>
+		<visitLocalTime>17:48:08</visitLocalTime>
+		
+		
+		<visitorType>new</visitorType>
+		<visitorTypeIcon />
 		
 		
 		
@@ -2526,10 +2526,6 @@
 		
 	</row>
 	<row>
-		<idSite>1</idSite>
-		<idVisit>21</idVisit>
-		<visitIp>72.44.32.11</visitIp>
-		
 		<actionDetails>
 			<row>
 				<type>goal</type>
@@ -2557,75 +2553,79 @@
 				<icon />
 			</row>
 		</actionDetails>
-		<goalConversions>1</goalConversions>
-		<siteCurrency>USD</siteCurrency>
-		<siteCurrencySymbol>$</siteCurrencySymbol>
-		
-		
-		
-		
-		<searches>0</searches>
 		<actions>1</actions>
-		<visitorType>new</visitorType>
-		<visitorTypeIcon />
-		<visitConverted>1</visitConverted>
-		<visitConvertedIcon>plugins/Morpheus/images/goal.png</visitConvertedIcon>
-		<visitCount>1</visitCount>
-		
-		<visitEcommerceStatus>none</visitEcommerceStatus>
-		<visitEcommerceStatusIcon />
-		<daysSinceFirstVisit>0</daysSinceFirstVisit>
-		<daysSinceLastEcommerceOrder>0</daysSinceLastEcommerceOrder>
-		<visitDuration>0</visitDuration>
-		<visitDurationPretty>0s</visitDurationPretty>
+		<browserCode>IE</browserCode>
+		<browserFamily>ie</browserFamily>
+		<browserFamilyDescription>Trident (IE)</browserFamilyDescription>
+		<browserIcon>plugins/UserSettings/images/browsers/IE.gif</browserIcon>
+		<browserName>Internet Explorer 9.0</browserName>
+		<browserVersion>9.0</browserVersion>
+		<city>Ashburn</city>
+		<continent>North America</continent>
+		<continentCode>amn</continentCode>
+		<country>United States</country>
+		<countryCode>us</countryCode>
+		<countryFlag>plugins/UserCountry/images/flags/us.png</countryFlag>
 		<customVariables>
 			<row>
 				<customVariableName1>Not-Bot</customVariableName1>
 				<customVariableValue1>Mozilla/5.0 (compatible; MSIE 10.6; Windows NT 6.1; Trident/5.0; InfoPath.2; SLCC1; .NET CLR 3.0.4506.2152; .NET CLR 3.5.30729; .NET CLR 2.0.50727) 3gpp-gba UNTRUSTED/1.0</customVariableValue1>
 			</row>
 		</customVariables>
+		<daysSinceFirstVisit>0</daysSinceFirstVisit>
+		<daysSinceLastEcommerceOrder>0</daysSinceLastEcommerceOrder>
+		<daysSinceLastVisit>0</daysSinceLastVisit>
 		<deviceType>Desktop</deviceType>
 		<events>0</events>
-		<provider>Unknown</provider>
-		<providerName>Unknown</providerName>
-		<providerUrl>http://piwik.org/faq/general/#faq_52</providerUrl>
-		<referrerType>direct</referrerType>
-		<referrerTypeName>Direct Entry</referrerTypeName>
-		<referrerName />
-		<referrerKeyword />
-		<referrerKeywordPosition />
-		<referrerUrl />
-		<referrerSearchEngineUrl />
-		<referrerSearchEngineIcon />
-		<continent>North America</continent>
-		<continentCode>amn</continentCode>
-		<country>United States</country>
-		<countryCode>us</countryCode>
-		<countryFlag>plugins/UserCountry/images/flags/us.png</countryFlag>
-		<region>Virginia</region>
-		<regionCode>VA</regionCode>
-		<city>Ashburn</city>
-		<location>Ashburn, Virginia, United States</location>
+		
+		<goalConversions>1</goalConversions>
+		<idSite>1</idSite>
+		<idVisit>21</idVisit>
+		
+		
 		<latitude>39.043999</latitude>
+		<location>Ashburn, Virginia, United States</location>
 		<longitude>-77.487999</longitude>
 		<operatingSystem>Windows 7</operatingSystem>
 		<operatingSystemCode>WI7</operatingSystemCode>
-		<operatingSystemShortName>Win 7</operatingSystemShortName>
 		<operatingSystemIcon>plugins/UserSettings/images/os/WI7.gif</operatingSystemIcon>
-		<browserFamily>ie</browserFamily>
-		<browserFamilyDescription>Trident (IE)</browserFamilyDescription>
-		<browserName>Internet Explorer 9.0</browserName>
-		<browserIcon>plugins/UserSettings/images/browsers/IE.gif</browserIcon>
-		<browserCode>IE</browserCode>
-		<browserVersion>9.0</browserVersion>
-		<screenType>unknown</screenType>
-		<resolution>unknown</resolution>
-		<screenTypeIcon>plugins/UserSettings/images/screens/unknown.gif</screenTypeIcon>
+		<operatingSystemShortName>Win 7</operatingSystemShortName>
 		<plugins />
 		<pluginsIcons />
-		<visitLocalTime>17:48:07</visitLocalTime>
+		<provider>Unknown</provider>
+		<providerName>Unknown</providerName>
+		<providerUrl>http://piwik.org/faq/general/#faq_52</providerUrl>
+		<referrerKeyword />
+		<referrerKeywordPosition />
+		<referrerName />
+		<referrerSearchEngineIcon />
+		<referrerSearchEngineUrl />
+		<referrerType>direct</referrerType>
+		<referrerTypeName>Direct Entry</referrerTypeName>
+		<referrerUrl />
+		<region>Virginia</region>
+		<regionCode>VA</regionCode>
+		<resolution>unknown</resolution>
+		<screenType>unknown</screenType>
+		<screenTypeIcon>plugins/UserSettings/images/screens/unknown.gif</screenTypeIcon>
+		<searches>0</searches>
+		
+		<siteCurrency>USD</siteCurrency>
+		<siteCurrencySymbol>$</siteCurrencySymbol>
+		<visitConverted>1</visitConverted>
+		<visitConvertedIcon>plugins/Morpheus/images/goal.png</visitConvertedIcon>
+		<visitCount>1</visitCount>
+		<visitDuration>0</visitDuration>
+		<visitDurationPretty>0s</visitDurationPretty>
+		<visitEcommerceStatus>none</visitEcommerceStatus>
+		<visitEcommerceStatusIcon />
+		<visitIp>72.44.32.11</visitIp>
 		<visitLocalHour>17</visitLocalHour>
-		<daysSinceLastVisit>0</daysSinceLastVisit>
+		<visitLocalTime>17:48:07</visitLocalTime>
+		
+		
+		<visitorType>new</visitorType>
+		<visitorTypeIcon />
 		
 		
 		
@@ -2633,10 +2633,6 @@
 		
 	</row>
 	<row>
-		<idSite>1</idSite>
-		<idVisit>18</idVisit>
-		<visitIp>1.2.3.4</visitIp>
-		
 		<actionDetails>
 			<row>
 				<type>download</type>
@@ -2654,75 +2650,79 @@
 				<icon>plugins/Morpheus/images/download.png</icon>
 			</row>
 		</actionDetails>
-		<goalConversions>0</goalConversions>
-		<siteCurrency>USD</siteCurrency>
-		<siteCurrencySymbol>$</siteCurrencySymbol>
-		
-		
-		
-		
-		<searches>0</searches>
 		<actions>1</actions>
-		<visitorType>new</visitorType>
-		<visitorTypeIcon />
-		<visitConverted>0</visitConverted>
-		<visitConvertedIcon />
-		<visitCount>1</visitCount>
-		
-		<visitEcommerceStatus>none</visitEcommerceStatus>
-		<visitEcommerceStatusIcon />
-		<daysSinceFirstVisit>0</daysSinceFirstVisit>
-		<daysSinceLastEcommerceOrder>0</daysSinceLastEcommerceOrder>
-		<visitDuration>0</visitDuration>
-		<visitDurationPretty>0s</visitDurationPretty>
+		<browserCode>UNK</browserCode>
+		<browserFamily>unknown</browserFamily>
+		<browserFamilyDescription>Unknown</browserFamilyDescription>
+		<browserIcon>plugins/UserSettings/images/browsers/UNK.gif</browserIcon>
+		<browserName>Unknown</browserName>
+		<browserVersion />
+		<city />
+		<continent>Oceania</continent>
+		<continentCode>oce</continentCode>
+		<country>Australia</country>
+		<countryCode>au</countryCode>
+		<countryFlag>plugins/UserCountry/images/flags/au.png</countryFlag>
 		<customVariables>
 			<row>
 				<customVariableName1>Not-Bot</customVariableName1>
 				<customVariableValue1>Apache-HttpClient/4.2.1 (java 1.5)</customVariableValue1>
 			</row>
 		</customVariables>
+		<daysSinceFirstVisit>0</daysSinceFirstVisit>
+		<daysSinceLastEcommerceOrder>0</daysSinceLastEcommerceOrder>
+		<daysSinceLastVisit>0</daysSinceLastVisit>
 		<deviceType>Unknown</deviceType>
 		<events>0</events>
-		<provider>Unknown</provider>
-		<providerName>Unknown</providerName>
-		<providerUrl>http://piwik.org/faq/general/#faq_52</providerUrl>
-		<referrerType>direct</referrerType>
-		<referrerTypeName>Direct Entry</referrerTypeName>
-		<referrerName />
-		<referrerKeyword />
-		<referrerKeywordPosition />
-		<referrerUrl />
-		<referrerSearchEngineUrl />
-		<referrerSearchEngineIcon />
-		<continent>Oceania</continent>
-		<continentCode>oce</continentCode>
-		<country>Australia</country>
-		<countryCode>au</countryCode>
-		<countryFlag>plugins/UserCountry/images/flags/au.png</countryFlag>
-		<region />
-		<regionCode />
-		<city />
-		<location>Australia</location>
+		
+		<goalConversions>0</goalConversions>
+		<idSite>1</idSite>
+		<idVisit>18</idVisit>
+		
+		
 		<latitude>-27</latitude>
+		<location>Australia</location>
 		<longitude>133</longitude>
 		<operatingSystem>Unknown</operatingSystem>
 		<operatingSystemCode>UNK</operatingSystemCode>
-		<operatingSystemShortName>Unknown</operatingSystemShortName>
 		<operatingSystemIcon>plugins/UserSettings/images/os/UNK.gif</operatingSystemIcon>
-		<browserFamily>unknown</browserFamily>
-		<browserFamilyDescription>Unknown</browserFamilyDescription>
-		<browserName>Unknown</browserName>
-		<browserIcon>plugins/UserSettings/images/browsers/UNK.gif</browserIcon>
-		<browserCode>UNK</browserCode>
-		<browserVersion />
-		<screenType>unknown</screenType>
-		<resolution>unknown</resolution>
-		<screenTypeIcon>plugins/UserSettings/images/screens/unknown.gif</screenTypeIcon>
+		<operatingSystemShortName>Unknown</operatingSystemShortName>
 		<plugins />
 		<pluginsIcons />
-		<visitLocalTime>17:46:03</visitLocalTime>
+		<provider>Unknown</provider>
+		<providerName>Unknown</providerName>
+		<providerUrl>http://piwik.org/faq/general/#faq_52</providerUrl>
+		<referrerKeyword />
+		<referrerKeywordPosition />
+		<referrerName />
+		<referrerSearchEngineIcon />
+		<referrerSearchEngineUrl />
+		<referrerType>direct</referrerType>
+		<referrerTypeName>Direct Entry</referrerTypeName>
+		<referrerUrl />
+		<region />
+		<regionCode />
+		<resolution>unknown</resolution>
+		<screenType>unknown</screenType>
+		<screenTypeIcon>plugins/UserSettings/images/screens/unknown.gif</screenTypeIcon>
+		<searches>0</searches>
+		
+		<siteCurrency>USD</siteCurrency>
+		<siteCurrencySymbol>$</siteCurrencySymbol>
+		<visitConverted>0</visitConverted>
+		<visitConvertedIcon />
+		<visitCount>1</visitCount>
+		<visitDuration>0</visitDuration>
+		<visitDurationPretty>0s</visitDurationPretty>
+		<visitEcommerceStatus>none</visitEcommerceStatus>
+		<visitEcommerceStatusIcon />
+		<visitIp>1.2.3.4</visitIp>
 		<visitLocalHour>17</visitLocalHour>
-		<daysSinceLastVisit>0</daysSinceLastVisit>
+		<visitLocalTime>17:46:03</visitLocalTime>
+		
+		
+		<visitorType>new</visitorType>
+		<visitorTypeIcon />
 		
 		
 		
@@ -2730,10 +2730,6 @@
 		
 	</row>
 	<row>
-		<idSite>1</idSite>
-		<idVisit>20</idVisit>
-		<visitIp>175.41.192.41</visitIp>
-		
 		<actionDetails>
 			<row>
 				<type>goal</type>
@@ -2761,75 +2757,79 @@
 				<icon />
 			</row>
 		</actionDetails>
-		<goalConversions>1</goalConversions>
-		<siteCurrency>USD</siteCurrency>
-		<siteCurrencySymbol>$</siteCurrencySymbol>
-		
-		
-		
-		
-		<searches>0</searches>
 		<actions>1</actions>
-		<visitorType>new</visitorType>
-		<visitorTypeIcon />
-		<visitConverted>1</visitConverted>
-		<visitConvertedIcon>plugins/Morpheus/images/goal.png</visitConvertedIcon>
-		<visitCount>1</visitCount>
-		
-		<visitEcommerceStatus>none</visitEcommerceStatus>
-		<visitEcommerceStatusIcon />
-		<daysSinceFirstVisit>0</daysSinceFirstVisit>
-		<daysSinceLastEcommerceOrder>0</daysSinceLastEcommerceOrder>
-		<visitDuration>0</visitDuration>
-		<visitDurationPretty>0s</visitDurationPretty>
+		<browserCode>AN</browserCode>
+		<browserFamily>unknown</browserFamily>
+		<browserFamilyDescription>Unknown</browserFamilyDescription>
+		<browserIcon>plugins/UserSettings/images/browsers/AN.gif</browserIcon>
+		<browserName>Android Browser </browserName>
+		<browserVersion />
+		<city />
+		<continent>Asia</continent>
+		<continentCode>asi</continentCode>
+		<country>Japan</country>
+		<countryCode>jp</countryCode>
+		<countryFlag>plugins/UserCountry/images/flags/jp.png</countryFlag>
 		<customVariables>
 			<row>
 				<customVariableName1>Not-Bot</customVariableName1>
 				<customVariableValue1>Mozilla/5.0 (Linux; U; Android 2.3.5; en-us; HTC Vision Build/GRI40) AppleWebKit/533.1 (KHTML, like Gecko) Version/4.0 Mobile Safari/533.1</customVariableValue1>
 			</row>
 		</customVariables>
+		<daysSinceFirstVisit>0</daysSinceFirstVisit>
+		<daysSinceLastEcommerceOrder>0</daysSinceLastEcommerceOrder>
+		<daysSinceLastVisit>0</daysSinceLastVisit>
 		<deviceType>Smartphone</deviceType>
 		<events>0</events>
-		<provider>Unknown</provider>
-		<providerName>Unknown</providerName>
-		<providerUrl>http://piwik.org/faq/general/#faq_52</providerUrl>
-		<referrerType>direct</referrerType>
-		<referrerTypeName>Direct Entry</referrerTypeName>
-		<referrerName />
-		<referrerKeyword />
-		<referrerKeywordPosition />
-		<referrerUrl />
-		<referrerSearchEngineUrl />
-		<referrerSearchEngineIcon />
-		<continent>Asia</continent>
-		<continentCode>asi</continentCode>
-		<country>Japan</country>
-		<countryCode>jp</countryCode>
-		<countryFlag>plugins/UserCountry/images/flags/jp.png</countryFlag>
-		<region />
-		<regionCode />
-		<city />
-		<location>Japan</location>
+		
+		<goalConversions>1</goalConversions>
+		<idSite>1</idSite>
+		<idVisit>20</idVisit>
+		
+		
 		<latitude>36</latitude>
+		<location>Japan</location>
 		<longitude>138</longitude>
 		<operatingSystem>Android</operatingSystem>
 		<operatingSystemCode>AND</operatingSystemCode>
-		<operatingSystemShortName>Android</operatingSystemShortName>
 		<operatingSystemIcon>plugins/UserSettings/images/os/AND.gif</operatingSystemIcon>
-		<browserFamily>unknown</browserFamily>
-		<browserFamilyDescription>Unknown</browserFamilyDescription>
-		<browserName>Android Browser </browserName>
-		<browserIcon>plugins/UserSettings/images/browsers/AN.gif</browserIcon>
-		<browserCode>AN</browserCode>
-		<browserVersion />
-		<screenType>unknown</screenType>
-		<resolution>unknown</resolution>
-		<screenTypeIcon>plugins/UserSettings/images/screens/unknown.gif</screenTypeIcon>
+		<operatingSystemShortName>Android</operatingSystemShortName>
 		<plugins />
 		<pluginsIcons />
-		<visitLocalTime>16:11:30</visitLocalTime>
+		<provider>Unknown</provider>
+		<providerName>Unknown</providerName>
+		<providerUrl>http://piwik.org/faq/general/#faq_52</providerUrl>
+		<referrerKeyword />
+		<referrerKeywordPosition />
+		<referrerName />
+		<referrerSearchEngineIcon />
+		<referrerSearchEngineUrl />
+		<referrerType>direct</referrerType>
+		<referrerTypeName>Direct Entry</referrerTypeName>
+		<referrerUrl />
+		<region />
+		<regionCode />
+		<resolution>unknown</resolution>
+		<screenType>unknown</screenType>
+		<screenTypeIcon>plugins/UserSettings/images/screens/unknown.gif</screenTypeIcon>
+		<searches>0</searches>
+		
+		<siteCurrency>USD</siteCurrency>
+		<siteCurrencySymbol>$</siteCurrencySymbol>
+		<visitConverted>1</visitConverted>
+		<visitConvertedIcon>plugins/Morpheus/images/goal.png</visitConvertedIcon>
+		<visitCount>1</visitCount>
+		<visitDuration>0</visitDuration>
+		<visitDurationPretty>0s</visitDurationPretty>
+		<visitEcommerceStatus>none</visitEcommerceStatus>
+		<visitEcommerceStatusIcon />
+		<visitIp>175.41.192.41</visitIp>
 		<visitLocalHour>16</visitLocalHour>
-		<daysSinceLastVisit>0</daysSinceLastVisit>
+		<visitLocalTime>16:11:30</visitLocalTime>
+		
+		
+		<visitorType>new</visitorType>
+		<visitorTypeIcon />
 		
 		
 		
@@ -2837,10 +2837,6 @@
 		
 	</row>
 	<row>
-		<idSite>1</idSite>
-		<idVisit>19</idVisit>
-		<visitIp>175.41.192.41</visitIp>
-		
 		<actionDetails>
 			<row>
 				<type>goal</type>
@@ -2868,75 +2864,79 @@
 				<icon />
 			</row>
 		</actionDetails>
-		<goalConversions>1</goalConversions>
-		<siteCurrency>USD</siteCurrency>
-		<siteCurrencySymbol>$</siteCurrencySymbol>
-		
-		
-		
-		
-		<searches>0</searches>
 		<actions>1</actions>
-		<visitorType>new</visitorType>
-		<visitorTypeIcon />
-		<visitConverted>1</visitConverted>
-		<visitConvertedIcon>plugins/Morpheus/images/goal.png</visitConvertedIcon>
-		<visitCount>1</visitCount>
-		
-		<visitEcommerceStatus>none</visitEcommerceStatus>
-		<visitEcommerceStatusIcon />
-		<daysSinceFirstVisit>0</daysSinceFirstVisit>
-		<daysSinceLastEcommerceOrder>0</daysSinceLastEcommerceOrder>
-		<visitDuration>0</visitDuration>
-		<visitDurationPretty>0s</visitDurationPretty>
+		<browserCode>RM</browserCode>
+		<browserFamily>unknown</browserFamily>
+		<browserFamilyDescription>Unknown</browserFamilyDescription>
+		<browserIcon>plugins/UserSettings/images/browsers/UNK.gif</browserIcon>
+		<browserName>RockMelt 0.9</browserName>
+		<browserVersion>0.9</browserVersion>
+		<city />
+		<continent>Asia</continent>
+		<continentCode>asi</continentCode>
+		<country>Japan</country>
+		<countryCode>jp</countryCode>
+		<countryFlag>plugins/UserCountry/images/flags/jp.png</countryFlag>
 		<customVariables>
 			<row>
 				<customVariableName1>Not-Bot</customVariableName1>
 				<customVariableValue1>Mozilla/5.0 (Macintosh; Intel Mac OS X 10_6_7) AppleWebKit/534.24 (KHTML, like Gecko) RockMelt/0.9.58.494 Chrome/11.0.696.71 Safari/534.24</customVariableValue1>
 			</row>
 		</customVariables>
+		<daysSinceFirstVisit>0</daysSinceFirstVisit>
+		<daysSinceLastEcommerceOrder>0</daysSinceLastEcommerceOrder>
+		<daysSinceLastVisit>0</daysSinceLastVisit>
 		<deviceType>Desktop</deviceType>
 		<events>0</events>
-		<provider>Unknown</provider>
-		<providerName>Unknown</providerName>
-		<providerUrl>http://piwik.org/faq/general/#faq_52</providerUrl>
-		<referrerType>direct</referrerType>
-		<referrerTypeName>Direct Entry</referrerTypeName>
-		<referrerName />
-		<referrerKeyword />
-		<referrerKeywordPosition />
-		<referrerUrl />
-		<referrerSearchEngineUrl />
-		<referrerSearchEngineIcon />
-		<continent>Asia</continent>
-		<continentCode>asi</continentCode>
-		<country>Japan</country>
-		<countryCode>jp</countryCode>
-		<countryFlag>plugins/UserCountry/images/flags/jp.png</countryFlag>
-		<region />
-		<regionCode />
-		<city />
-		<location>Japan</location>
+		
+		<goalConversions>1</goalConversions>
+		<idSite>1</idSite>
+		<idVisit>19</idVisit>
+		
+		
 		<latitude>36</latitude>
+		<location>Japan</location>
 		<longitude>138</longitude>
 		<operatingSystem>Mac OS</operatingSystem>
 		<operatingSystemCode>MAC</operatingSystemCode>
-		<operatingSystemShortName>Mac OS</operatingSystemShortName>
 		<operatingSystemIcon>plugins/UserSettings/images/os/MAC.gif</operatingSystemIcon>
-		<browserFamily>unknown</browserFamily>
-		<browserFamilyDescription>Unknown</browserFamilyDescription>
-		<browserName>RockMelt 0.9</browserName>
-		<browserIcon>plugins/UserSettings/images/browsers/UNK.gif</browserIcon>
-		<browserCode>RM</browserCode>
-		<browserVersion>0.9</browserVersion>
-		<screenType>unknown</screenType>
-		<resolution>unknown</resolution>
-		<screenTypeIcon>plugins/UserSettings/images/screens/unknown.gif</screenTypeIcon>
+		<operatingSystemShortName>Mac OS</operatingSystemShortName>
 		<plugins />
 		<pluginsIcons />
-		<visitLocalTime>16:10:38</visitLocalTime>
+		<provider>Unknown</provider>
+		<providerName>Unknown</providerName>
+		<providerUrl>http://piwik.org/faq/general/#faq_52</providerUrl>
+		<referrerKeyword />
+		<referrerKeywordPosition />
+		<referrerName />
+		<referrerSearchEngineIcon />
+		<referrerSearchEngineUrl />
+		<referrerType>direct</referrerType>
+		<referrerTypeName>Direct Entry</referrerTypeName>
+		<referrerUrl />
+		<region />
+		<regionCode />
+		<resolution>unknown</resolution>
+		<screenType>unknown</screenType>
+		<screenTypeIcon>plugins/UserSettings/images/screens/unknown.gif</screenTypeIcon>
+		<searches>0</searches>
+		
+		<siteCurrency>USD</siteCurrency>
+		<siteCurrencySymbol>$</siteCurrencySymbol>
+		<visitConverted>1</visitConverted>
+		<visitConvertedIcon>plugins/Morpheus/images/goal.png</visitConvertedIcon>
+		<visitCount>1</visitCount>
+		<visitDuration>0</visitDuration>
+		<visitDurationPretty>0s</visitDurationPretty>
+		<visitEcommerceStatus>none</visitEcommerceStatus>
+		<visitEcommerceStatusIcon />
+		<visitIp>175.41.192.41</visitIp>
 		<visitLocalHour>16</visitLocalHour>
-		<daysSinceLastVisit>0</daysSinceLastVisit>
+		<visitLocalTime>16:10:38</visitLocalTime>
+		
+		
+		<visitorType>new</visitorType>
+		<visitorTypeIcon />
 		
 		
 		
@@ -2944,10 +2944,6 @@
 		
 	</row>
 	<row>
-		<idSite>1</idSite>
-		<idVisit>17</idVisit>
-		<visitIp>0.0.0.0</visitIp>
-		
 		<actionDetails>
 			<row>
 				<type>goal</type>
@@ -2975,71 +2971,75 @@
 				<icon />
 			</row>
 		</actionDetails>
-		<goalConversions>1</goalConversions>
-		<siteCurrency>USD</siteCurrency>
-		<siteCurrencySymbol>$</siteCurrencySymbol>
-		
-		
-		
-		
-		<searches>0</searches>
 		<actions>1</actions>
-		<visitorType>new</visitorType>
-		<visitorTypeIcon />
-		<visitConverted>1</visitConverted>
-		<visitConvertedIcon>plugins/Morpheus/images/goal.png</visitConvertedIcon>
-		<visitCount>1</visitCount>
-		
-		<visitEcommerceStatus>none</visitEcommerceStatus>
-		<visitEcommerceStatusIcon />
-		<daysSinceFirstVisit>0</daysSinceFirstVisit>
-		<daysSinceLastEcommerceOrder>0</daysSinceLastEcommerceOrder>
-		<visitDuration>0</visitDuration>
-		<visitDurationPretty>0s</visitDurationPretty>
-		<customVariables>
-		</customVariables>
-		<deviceType>Desktop</deviceType>
-		<events>0</events>
-		<provider>Unknown</provider>
-		<providerName>Unknown</providerName>
-		<providerUrl>http://piwik.org/faq/general/#faq_52</providerUrl>
-		<referrerType>direct</referrerType>
-		<referrerTypeName>Direct Entry</referrerTypeName>
-		<referrerName />
-		<referrerKeyword />
-		<referrerKeywordPosition />
-		<referrerUrl />
-		<referrerSearchEngineUrl />
-		<referrerSearchEngineIcon />
+		<browserCode>CH</browserCode>
+		<browserFamily>webkit</browserFamily>
+		<browserFamilyDescription>WebKit (Safari, Chrome)</browserFamilyDescription>
+		<browserIcon>plugins/UserSettings/images/browsers/CH.gif</browserIcon>
+		<browserName>Chrome 20.0</browserName>
+		<browserVersion>20.0</browserVersion>
+		<city />
 		<continent>Unknown</continent>
 		<continentCode>unk</continentCode>
 		<country>Unknown</country>
 		<countryCode>xx</countryCode>
 		<countryFlag>plugins/UserCountry/images/flags/xx.png</countryFlag>
-		<region />
-		<regionCode />
-		<city />
-		<location>Unknown</location>
+		<customVariables>
+		</customVariables>
+		<daysSinceFirstVisit>0</daysSinceFirstVisit>
+		<daysSinceLastEcommerceOrder>0</daysSinceLastEcommerceOrder>
+		<daysSinceLastVisit>0</daysSinceLastVisit>
+		<deviceType>Desktop</deviceType>
+		<events>0</events>
+		
+		<goalConversions>1</goalConversions>
+		<idSite>1</idSite>
+		<idVisit>17</idVisit>
+		
+		
 		<latitude />
+		<location>Unknown</location>
 		<longitude />
 		<operatingSystem>Windows 7</operatingSystem>
 		<operatingSystemCode>WI7</operatingSystemCode>
-		<operatingSystemShortName>Win 7</operatingSystemShortName>
 		<operatingSystemIcon>plugins/UserSettings/images/os/WI7.gif</operatingSystemIcon>
-		<browserFamily>webkit</browserFamily>
-		<browserFamilyDescription>WebKit (Safari, Chrome)</browserFamilyDescription>
-		<browserName>Chrome 20.0</browserName>
-		<browserIcon>plugins/UserSettings/images/browsers/CH.gif</browserIcon>
-		<browserCode>CH</browserCode>
-		<browserVersion>20.0</browserVersion>
-		<screenType>unknown</screenType>
-		<resolution>unknown</resolution>
-		<screenTypeIcon>plugins/UserSettings/images/screens/unknown.gif</screenTypeIcon>
+		<operatingSystemShortName>Win 7</operatingSystemShortName>
 		<plugins />
 		<pluginsIcons />
-		<visitLocalTime>15:31:05</visitLocalTime>
+		<provider>Unknown</provider>
+		<providerName>Unknown</providerName>
+		<providerUrl>http://piwik.org/faq/general/#faq_52</providerUrl>
+		<referrerKeyword />
+		<referrerKeywordPosition />
+		<referrerName />
+		<referrerSearchEngineIcon />
+		<referrerSearchEngineUrl />
+		<referrerType>direct</referrerType>
+		<referrerTypeName>Direct Entry</referrerTypeName>
+		<referrerUrl />
+		<region />
+		<regionCode />
+		<resolution>unknown</resolution>
+		<screenType>unknown</screenType>
+		<screenTypeIcon>plugins/UserSettings/images/screens/unknown.gif</screenTypeIcon>
+		<searches>0</searches>
+		
+		<siteCurrency>USD</siteCurrency>
+		<siteCurrencySymbol>$</siteCurrencySymbol>
+		<visitConverted>1</visitConverted>
+		<visitConvertedIcon>plugins/Morpheus/images/goal.png</visitConvertedIcon>
+		<visitCount>1</visitCount>
+		<visitDuration>0</visitDuration>
+		<visitDurationPretty>0s</visitDurationPretty>
+		<visitEcommerceStatus>none</visitEcommerceStatus>
+		<visitEcommerceStatusIcon />
+		<visitIp>0.0.0.0</visitIp>
 		<visitLocalHour>15</visitLocalHour>
-		<daysSinceLastVisit>0</daysSinceLastVisit>
+		<visitLocalTime>15:31:05</visitLocalTime>
+		
+		
+		<visitorType>new</visitorType>
+		<visitorTypeIcon />
 		
 		
 		
@@ -3047,10 +3047,6 @@
 		
 	</row>
 	<row>
-		<idSite>1</idSite>
-		<idVisit>16</idVisit>
-		<visitIp>0.0.0.0</visitIp>
-		
 		<actionDetails>
 			<row>
 				<type>goal</type>
@@ -3078,71 +3074,75 @@
 				<icon />
 			</row>
 		</actionDetails>
-		<goalConversions>1</goalConversions>
-		<siteCurrency>USD</siteCurrency>
-		<siteCurrencySymbol>$</siteCurrencySymbol>
-		
-		
-		
-		
-		<searches>0</searches>
 		<actions>1</actions>
-		<visitorType>new</visitorType>
-		<visitorTypeIcon />
-		<visitConverted>1</visitConverted>
-		<visitConvertedIcon>plugins/Morpheus/images/goal.png</visitConvertedIcon>
-		<visitCount>1</visitCount>
-		
-		<visitEcommerceStatus>none</visitEcommerceStatus>
-		<visitEcommerceStatusIcon />
-		<daysSinceFirstVisit>0</daysSinceFirstVisit>
-		<daysSinceLastEcommerceOrder>0</daysSinceLastEcommerceOrder>
-		<visitDuration>0</visitDuration>
-		<visitDurationPretty>0s</visitDurationPretty>
-		<customVariables>
-		</customVariables>
-		<deviceType>Desktop</deviceType>
-		<events>0</events>
-		<provider>Unknown</provider>
-		<providerName>Unknown</providerName>
-		<providerUrl>http://piwik.org/faq/general/#faq_52</providerUrl>
-		<referrerType>direct</referrerType>
-		<referrerTypeName>Direct Entry</referrerTypeName>
-		<referrerName />
-		<referrerKeyword />
-		<referrerKeywordPosition />
-		<referrerUrl />
-		<referrerSearchEngineUrl />
-		<referrerSearchEngineIcon />
+		<browserCode>EP</browserCode>
+		<browserFamily>webkit</browserFamily>
+		<browserFamilyDescription>WebKit (Safari, Chrome)</browserFamilyDescription>
+		<browserIcon>plugins/UserSettings/images/browsers/EP.gif</browserIcon>
+		<browserName>Epiphany 2.30</browserName>
+		<browserVersion>2.30</browserVersion>
+		<city />
 		<continent>Unknown</continent>
 		<continentCode>unk</continentCode>
 		<country>Unknown</country>
 		<countryCode>xx</countryCode>
 		<countryFlag>plugins/UserCountry/images/flags/xx.png</countryFlag>
-		<region />
-		<regionCode />
-		<city />
-		<location>Unknown</location>
+		<customVariables>
+		</customVariables>
+		<daysSinceFirstVisit>0</daysSinceFirstVisit>
+		<daysSinceLastEcommerceOrder>0</daysSinceLastEcommerceOrder>
+		<daysSinceLastVisit>0</daysSinceLastVisit>
+		<deviceType>Desktop</deviceType>
+		<events>0</events>
+		
+		<goalConversions>1</goalConversions>
+		<idSite>1</idSite>
+		<idVisit>16</idVisit>
+		
+		
 		<latitude />
+		<location>Unknown</location>
 		<longitude />
 		<operatingSystem>Linux</operatingSystem>
 		<operatingSystemCode>LIN</operatingSystemCode>
-		<operatingSystemShortName>Linux</operatingSystemShortName>
 		<operatingSystemIcon>plugins/UserSettings/images/os/LIN.gif</operatingSystemIcon>
-		<browserFamily>webkit</browserFamily>
-		<browserFamilyDescription>WebKit (Safari, Chrome)</browserFamilyDescription>
-		<browserName>Epiphany 2.30</browserName>
-		<browserIcon>plugins/UserSettings/images/browsers/EP.gif</browserIcon>
-		<browserCode>EP</browserCode>
-		<browserVersion>2.30</browserVersion>
-		<screenType>unknown</screenType>
-		<resolution>unknown</resolution>
-		<screenTypeIcon>plugins/UserSettings/images/screens/unknown.gif</screenTypeIcon>
+		<operatingSystemShortName>Linux</operatingSystemShortName>
 		<plugins />
 		<pluginsIcons />
-		<visitLocalTime>13:49:46</visitLocalTime>
+		<provider>Unknown</provider>
+		<providerName>Unknown</providerName>
+		<providerUrl>http://piwik.org/faq/general/#faq_52</providerUrl>
+		<referrerKeyword />
+		<referrerKeywordPosition />
+		<referrerName />
+		<referrerSearchEngineIcon />
+		<referrerSearchEngineUrl />
+		<referrerType>direct</referrerType>
+		<referrerTypeName>Direct Entry</referrerTypeName>
+		<referrerUrl />
+		<region />
+		<regionCode />
+		<resolution>unknown</resolution>
+		<screenType>unknown</screenType>
+		<screenTypeIcon>plugins/UserSettings/images/screens/unknown.gif</screenTypeIcon>
+		<searches>0</searches>
+		
+		<siteCurrency>USD</siteCurrency>
+		<siteCurrencySymbol>$</siteCurrencySymbol>
+		<visitConverted>1</visitConverted>
+		<visitConvertedIcon>plugins/Morpheus/images/goal.png</visitConvertedIcon>
+		<visitCount>1</visitCount>
+		<visitDuration>0</visitDuration>
+		<visitDurationPretty>0s</visitDurationPretty>
+		<visitEcommerceStatus>none</visitEcommerceStatus>
+		<visitEcommerceStatusIcon />
+		<visitIp>0.0.0.0</visitIp>
 		<visitLocalHour>13</visitLocalHour>
-		<daysSinceLastVisit>0</daysSinceLastVisit>
+		<visitLocalTime>13:49:46</visitLocalTime>
+		
+		
+		<visitorType>new</visitorType>
+		<visitorTypeIcon />
 		
 		
 		
@@ -3150,10 +3150,6 @@
 		
 	</row>
 	<row>
-		<idSite>1</idSite>
-		<idVisit>15</idVisit>
-		<visitIp>177.71.128.21</visitIp>
-		
 		<actionDetails>
 			<row>
 				<type>goal</type>
@@ -3181,71 +3177,75 @@
 				<icon />
 			</row>
 		</actionDetails>
-		<goalConversions>1</goalConversions>
-		<siteCurrency>USD</siteCurrency>
-		<siteCurrencySymbol>$</siteCurrencySymbol>
-		
-		
-		
-		
-		<searches>0</searches>
 		<actions>1</actions>
-		<visitorType>new</visitorType>
-		<visitorTypeIcon />
-		<visitConverted>1</visitConverted>
-		<visitConvertedIcon>plugins/Morpheus/images/goal.png</visitConvertedIcon>
-		<visitCount>1</visitCount>
-		
-		<visitEcommerceStatus>none</visitEcommerceStatus>
-		<visitEcommerceStatusIcon />
-		<daysSinceFirstVisit>0</daysSinceFirstVisit>
-		<daysSinceLastEcommerceOrder>0</daysSinceLastEcommerceOrder>
-		<visitDuration>0</visitDuration>
-		<visitDurationPretty>0s</visitDurationPretty>
-		<customVariables>
-		</customVariables>
-		<deviceType>Desktop</deviceType>
-		<events>0</events>
-		<provider>Unknown</provider>
-		<providerName>Unknown</providerName>
-		<providerUrl>http://piwik.org/faq/general/#faq_52</providerUrl>
-		<referrerType>direct</referrerType>
-		<referrerTypeName>Direct Entry</referrerTypeName>
-		<referrerName />
-		<referrerKeyword />
-		<referrerKeywordPosition />
-		<referrerUrl />
-		<referrerSearchEngineUrl />
-		<referrerSearchEngineIcon />
+		<browserCode>CH</browserCode>
+		<browserFamily>webkit</browserFamily>
+		<browserFamilyDescription>WebKit (Safari, Chrome)</browserFamilyDescription>
+		<browserIcon>plugins/UserSettings/images/browsers/CH.gif</browserIcon>
+		<browserName>Chrome 20.0</browserName>
+		<browserVersion>20.0</browserVersion>
+		<city />
 		<continent>South America</continent>
 		<continentCode>ams</continentCode>
 		<country>Brazil</country>
 		<countryCode>br</countryCode>
 		<countryFlag>plugins/UserCountry/images/flags/br.png</countryFlag>
-		<region />
-		<regionCode />
-		<city />
-		<location>Brazil</location>
+		<customVariables>
+		</customVariables>
+		<daysSinceFirstVisit>0</daysSinceFirstVisit>
+		<daysSinceLastEcommerceOrder>0</daysSinceLastEcommerceOrder>
+		<daysSinceLastVisit>0</daysSinceLastVisit>
+		<deviceType>Desktop</deviceType>
+		<events>0</events>
+		
+		<goalConversions>1</goalConversions>
+		<idSite>1</idSite>
+		<idVisit>15</idVisit>
+		
+		
 		<latitude>-10</latitude>
+		<location>Brazil</location>
 		<longitude>-55</longitude>
 		<operatingSystem>Windows 7</operatingSystem>
 		<operatingSystemCode>WI7</operatingSystemCode>
-		<operatingSystemShortName>Win 7</operatingSystemShortName>
 		<operatingSystemIcon>plugins/UserSettings/images/os/WI7.gif</operatingSystemIcon>
-		<browserFamily>webkit</browserFamily>
-		<browserFamilyDescription>WebKit (Safari, Chrome)</browserFamilyDescription>
-		<browserName>Chrome 20.0</browserName>
-		<browserIcon>plugins/UserSettings/images/browsers/CH.gif</browserIcon>
-		<browserCode>CH</browserCode>
-		<browserVersion>20.0</browserVersion>
-		<screenType>unknown</screenType>
-		<resolution>unknown</resolution>
-		<screenTypeIcon>plugins/UserSettings/images/screens/unknown.gif</screenTypeIcon>
+		<operatingSystemShortName>Win 7</operatingSystemShortName>
 		<plugins />
 		<pluginsIcons />
-		<visitLocalTime>20:22:08</visitLocalTime>
+		<provider>Unknown</provider>
+		<providerName>Unknown</providerName>
+		<providerUrl>http://piwik.org/faq/general/#faq_52</providerUrl>
+		<referrerKeyword />
+		<referrerKeywordPosition />
+		<referrerName />
+		<referrerSearchEngineIcon />
+		<referrerSearchEngineUrl />
+		<referrerType>direct</referrerType>
+		<referrerTypeName>Direct Entry</referrerTypeName>
+		<referrerUrl />
+		<region />
+		<regionCode />
+		<resolution>unknown</resolution>
+		<screenType>unknown</screenType>
+		<screenTypeIcon>plugins/UserSettings/images/screens/unknown.gif</screenTypeIcon>
+		<searches>0</searches>
+		
+		<siteCurrency>USD</siteCurrency>
+		<siteCurrencySymbol>$</siteCurrencySymbol>
+		<visitConverted>1</visitConverted>
+		<visitConvertedIcon>plugins/Morpheus/images/goal.png</visitConvertedIcon>
+		<visitCount>1</visitCount>
+		<visitDuration>0</visitDuration>
+		<visitDurationPretty>0s</visitDurationPretty>
+		<visitEcommerceStatus>none</visitEcommerceStatus>
+		<visitEcommerceStatusIcon />
+		<visitIp>177.71.128.21</visitIp>
 		<visitLocalHour>20</visitLocalHour>
-		<daysSinceLastVisit>0</daysSinceLastVisit>
+		<visitLocalTime>20:22:08</visitLocalTime>
+		
+		
+		<visitorType>new</visitorType>
+		<visitorTypeIcon />
 		
 		
 		
@@ -3253,10 +3253,6 @@
 		
 	</row>
 	<row>
-		<idSite>1</idSite>
-		<idVisit>14</idVisit>
-		<visitIp>177.71.128.21</visitIp>
-		
 		<actionDetails>
 			<row>
 				<type>goal</type>
@@ -3284,71 +3280,75 @@
 				<icon />
 			</row>
 		</actionDetails>
-		<goalConversions>1</goalConversions>
-		<siteCurrency>USD</siteCurrency>
-		<siteCurrencySymbol>$</siteCurrencySymbol>
-		
-		
-		
-		
-		<searches>0</searches>
 		<actions>1</actions>
-		<visitorType>new</visitorType>
-		<visitorTypeIcon />
-		<visitConverted>1</visitConverted>
-		<visitConvertedIcon>plugins/Morpheus/images/goal.png</visitConvertedIcon>
-		<visitCount>1</visitCount>
-		
-		<visitEcommerceStatus>none</visitEcommerceStatus>
-		<visitEcommerceStatusIcon />
-		<daysSinceFirstVisit>0</daysSinceFirstVisit>
-		<daysSinceLastEcommerceOrder>0</daysSinceLastEcommerceOrder>
-		<visitDuration>0</visitDuration>
-		<visitDurationPretty>0s</visitDurationPretty>
-		<customVariables>
-		</customVariables>
-		<deviceType>Desktop</deviceType>
-		<events>0</events>
-		<provider>Unknown</provider>
-		<providerName>Unknown</providerName>
-		<providerUrl>http://piwik.org/faq/general/#faq_52</providerUrl>
-		<referrerType>direct</referrerType>
-		<referrerTypeName>Direct Entry</referrerTypeName>
-		<referrerName />
-		<referrerKeyword />
-		<referrerKeywordPosition />
-		<referrerUrl />
-		<referrerSearchEngineUrl />
-		<referrerSearchEngineIcon />
+		<browserCode>EP</browserCode>
+		<browserFamily>webkit</browserFamily>
+		<browserFamilyDescription>WebKit (Safari, Chrome)</browserFamilyDescription>
+		<browserIcon>plugins/UserSettings/images/browsers/EP.gif</browserIcon>
+		<browserName>Epiphany 2.30</browserName>
+		<browserVersion>2.30</browserVersion>
+		<city />
 		<continent>South America</continent>
 		<continentCode>ams</continentCode>
 		<country>Brazil</country>
 		<countryCode>br</countryCode>
 		<countryFlag>plugins/UserCountry/images/flags/br.png</countryFlag>
-		<region />
-		<regionCode />
-		<city />
-		<location>Brazil</location>
+		<customVariables>
+		</customVariables>
+		<daysSinceFirstVisit>0</daysSinceFirstVisit>
+		<daysSinceLastEcommerceOrder>0</daysSinceLastEcommerceOrder>
+		<daysSinceLastVisit>0</daysSinceLastVisit>
+		<deviceType>Desktop</deviceType>
+		<events>0</events>
+		
+		<goalConversions>1</goalConversions>
+		<idSite>1</idSite>
+		<idVisit>14</idVisit>
+		
+		
 		<latitude>-10</latitude>
+		<location>Brazil</location>
 		<longitude>-55</longitude>
 		<operatingSystem>Linux</operatingSystem>
 		<operatingSystemCode>LIN</operatingSystemCode>
-		<operatingSystemShortName>Linux</operatingSystemShortName>
 		<operatingSystemIcon>plugins/UserSettings/images/os/LIN.gif</operatingSystemIcon>
-		<browserFamily>webkit</browserFamily>
-		<browserFamilyDescription>WebKit (Safari, Chrome)</browserFamilyDescription>
-		<browserName>Epiphany 2.30</browserName>
-		<browserIcon>plugins/UserSettings/images/browsers/EP.gif</browserIcon>
-		<browserCode>EP</browserCode>
-		<browserVersion>2.30</browserVersion>
-		<screenType>unknown</screenType>
-		<resolution>unknown</resolution>
-		<screenTypeIcon>plugins/UserSettings/images/screens/unknown.gif</screenTypeIcon>
+		<operatingSystemShortName>Linux</operatingSystemShortName>
 		<plugins />
 		<pluginsIcons />
-		<visitLocalTime>20:21:28</visitLocalTime>
+		<provider>Unknown</provider>
+		<providerName>Unknown</providerName>
+		<providerUrl>http://piwik.org/faq/general/#faq_52</providerUrl>
+		<referrerKeyword />
+		<referrerKeywordPosition />
+		<referrerName />
+		<referrerSearchEngineIcon />
+		<referrerSearchEngineUrl />
+		<referrerType>direct</referrerType>
+		<referrerTypeName>Direct Entry</referrerTypeName>
+		<referrerUrl />
+		<region />
+		<regionCode />
+		<resolution>unknown</resolution>
+		<screenType>unknown</screenType>
+		<screenTypeIcon>plugins/UserSettings/images/screens/unknown.gif</screenTypeIcon>
+		<searches>0</searches>
+		
+		<siteCurrency>USD</siteCurrency>
+		<siteCurrencySymbol>$</siteCurrencySymbol>
+		<visitConverted>1</visitConverted>
+		<visitConvertedIcon>plugins/Morpheus/images/goal.png</visitConvertedIcon>
+		<visitCount>1</visitCount>
+		<visitDuration>0</visitDuration>
+		<visitDurationPretty>0s</visitDurationPretty>
+		<visitEcommerceStatus>none</visitEcommerceStatus>
+		<visitEcommerceStatusIcon />
+		<visitIp>177.71.128.21</visitIp>
 		<visitLocalHour>20</visitLocalHour>
-		<daysSinceLastVisit>0</daysSinceLastVisit>
+		<visitLocalTime>20:21:28</visitLocalTime>
+		
+		
+		<visitorType>new</visitorType>
+		<visitorTypeIcon />
 		
 		
 		
@@ -3356,10 +3356,6 @@
 		
 	</row>
 	<row>
-		<idSite>1</idSite>
-		<idVisit>13</idVisit>
-		<visitIp>177.71.128.21</visitIp>
-		
 		<actionDetails>
 			<row>
 				<type>goal</type>
@@ -3387,71 +3383,75 @@
 				<icon />
 			</row>
 		</actionDetails>
-		<goalConversions>1</goalConversions>
-		<siteCurrency>USD</siteCurrency>
-		<siteCurrencySymbol>$</siteCurrencySymbol>
-		
-		
-		
-		
-		<searches>0</searches>
 		<actions>1</actions>
-		<visitorType>new</visitorType>
-		<visitorTypeIcon />
-		<visitConverted>1</visitConverted>
-		<visitConvertedIcon>plugins/Morpheus/images/goal.png</visitConvertedIcon>
-		<visitCount>1</visitCount>
-		
-		<visitEcommerceStatus>none</visitEcommerceStatus>
-		<visitEcommerceStatusIcon />
-		<daysSinceFirstVisit>0</daysSinceFirstVisit>
-		<daysSinceLastEcommerceOrder>0</daysSinceLastEcommerceOrder>
-		<visitDuration>0</visitDuration>
-		<visitDurationPretty>0s</visitDurationPretty>
-		<customVariables>
-		</customVariables>
-		<deviceType>Desktop</deviceType>
-		<events>0</events>
-		<provider>Unknown</provider>
-		<providerName>Unknown</providerName>
-		<providerUrl>http://piwik.org/faq/general/#faq_52</providerUrl>
-		<referrerType>direct</referrerType>
-		<referrerTypeName>Direct Entry</referrerTypeName>
-		<referrerName />
-		<referrerKeyword />
-		<referrerKeywordPosition />
-		<referrerUrl />
-		<referrerSearchEngineUrl />
-		<referrerSearchEngineIcon />
+		<browserCode>IE</browserCode>
+		<browserFamily>ie</browserFamily>
+		<browserFamilyDescription>Trident (IE)</browserFamilyDescription>
+		<browserIcon>plugins/UserSettings/images/browsers/IE.gif</browserIcon>
+		<browserName>Internet Explorer 9.0</browserName>
+		<browserVersion>9.0</browserVersion>
+		<city />
 		<continent>South America</continent>
 		<continentCode>ams</continentCode>
 		<country>Brazil</country>
 		<countryCode>br</countryCode>
 		<countryFlag>plugins/UserCountry/images/flags/br.png</countryFlag>
-		<region />
-		<regionCode />
-		<city />
-		<location>Brazil</location>
+		<customVariables>
+		</customVariables>
+		<daysSinceFirstVisit>0</daysSinceFirstVisit>
+		<daysSinceLastEcommerceOrder>0</daysSinceLastEcommerceOrder>
+		<daysSinceLastVisit>0</daysSinceLastVisit>
+		<deviceType>Desktop</deviceType>
+		<events>0</events>
+		
+		<goalConversions>1</goalConversions>
+		<idSite>1</idSite>
+		<idVisit>13</idVisit>
+		
+		
 		<latitude>-10</latitude>
+		<location>Brazil</location>
 		<longitude>-55</longitude>
 		<operatingSystem>Windows 7</operatingSystem>
 		<operatingSystemCode>WI7</operatingSystemCode>
-		<operatingSystemShortName>Win 7</operatingSystemShortName>
 		<operatingSystemIcon>plugins/UserSettings/images/os/WI7.gif</operatingSystemIcon>
-		<browserFamily>ie</browserFamily>
-		<browserFamilyDescription>Trident (IE)</browserFamilyDescription>
-		<browserName>Internet Explorer 9.0</browserName>
-		<browserIcon>plugins/UserSettings/images/browsers/IE.gif</browserIcon>
-		<browserCode>IE</browserCode>
-		<browserVersion>9.0</browserVersion>
-		<screenType>unknown</screenType>
-		<resolution>unknown</resolution>
-		<screenTypeIcon>plugins/UserSettings/images/screens/unknown.gif</screenTypeIcon>
+		<operatingSystemShortName>Win 7</operatingSystemShortName>
 		<plugins />
 		<pluginsIcons />
-		<visitLocalTime>20:21:03</visitLocalTime>
+		<provider>Unknown</provider>
+		<providerName>Unknown</providerName>
+		<providerUrl>http://piwik.org/faq/general/#faq_52</providerUrl>
+		<referrerKeyword />
+		<referrerKeywordPosition />
+		<referrerName />
+		<referrerSearchEngineIcon />
+		<referrerSearchEngineUrl />
+		<referrerType>direct</referrerType>
+		<referrerTypeName>Direct Entry</referrerTypeName>
+		<referrerUrl />
+		<region />
+		<regionCode />
+		<resolution>unknown</resolution>
+		<screenType>unknown</screenType>
+		<screenTypeIcon>plugins/UserSettings/images/screens/unknown.gif</screenTypeIcon>
+		<searches>0</searches>
+		
+		<siteCurrency>USD</siteCurrency>
+		<siteCurrencySymbol>$</siteCurrencySymbol>
+		<visitConverted>1</visitConverted>
+		<visitConvertedIcon>plugins/Morpheus/images/goal.png</visitConvertedIcon>
+		<visitCount>1</visitCount>
+		<visitDuration>0</visitDuration>
+		<visitDurationPretty>0s</visitDurationPretty>
+		<visitEcommerceStatus>none</visitEcommerceStatus>
+		<visitEcommerceStatusIcon />
+		<visitIp>177.71.128.21</visitIp>
 		<visitLocalHour>20</visitLocalHour>
-		<daysSinceLastVisit>0</daysSinceLastVisit>
+		<visitLocalTime>20:21:03</visitLocalTime>
+		
+		
+		<visitorType>new</visitorType>
+		<visitorTypeIcon />
 		
 		
 		
@@ -3459,10 +3459,6 @@
 		
 	</row>
 	<row>
-		<idSite>1</idSite>
-		<idVisit>12</idVisit>
-		<visitIp>175.41.192.34</visitIp>
-		
 		<actionDetails>
 			<row>
 				<type>goal</type>
@@ -3490,71 +3486,75 @@
 				<icon />
 			</row>
 		</actionDetails>
-		<goalConversions>1</goalConversions>
-		<siteCurrency>USD</siteCurrency>
-		<siteCurrencySymbol>$</siteCurrencySymbol>
-		
-		
-		
-		
-		<searches>0</searches>
 		<actions>1</actions>
-		<visitorType>new</visitorType>
-		<visitorTypeIcon />
-		<visitConverted>1</visitConverted>
-		<visitConvertedIcon>plugins/Morpheus/images/goal.png</visitConvertedIcon>
-		<visitCount>1</visitCount>
-		
-		<visitEcommerceStatus>none</visitEcommerceStatus>
-		<visitEcommerceStatusIcon />
-		<daysSinceFirstVisit>0</daysSinceFirstVisit>
-		<daysSinceLastEcommerceOrder>0</daysSinceLastEcommerceOrder>
-		<visitDuration>0</visitDuration>
-		<visitDurationPretty>0s</visitDurationPretty>
-		<customVariables>
-		</customVariables>
-		<deviceType>Desktop</deviceType>
-		<events>0</events>
-		<provider>Unknown</provider>
-		<providerName>Unknown</providerName>
-		<providerUrl>http://piwik.org/faq/general/#faq_52</providerUrl>
-		<referrerType>direct</referrerType>
-		<referrerTypeName>Direct Entry</referrerTypeName>
-		<referrerName />
-		<referrerKeyword />
-		<referrerKeywordPosition />
-		<referrerUrl />
-		<referrerSearchEngineUrl />
-		<referrerSearchEngineIcon />
+		<browserCode>EP</browserCode>
+		<browserFamily>webkit</browserFamily>
+		<browserFamilyDescription>WebKit (Safari, Chrome)</browserFamilyDescription>
+		<browserIcon>plugins/UserSettings/images/browsers/EP.gif</browserIcon>
+		<browserName>Epiphany 2.30</browserName>
+		<browserVersion>2.30</browserVersion>
+		<city />
 		<continent>Asia</continent>
 		<continentCode>asi</continentCode>
 		<country>Japan</country>
 		<countryCode>jp</countryCode>
 		<countryFlag>plugins/UserCountry/images/flags/jp.png</countryFlag>
-		<region />
-		<regionCode />
-		<city />
-		<location>Japan</location>
+		<customVariables>
+		</customVariables>
+		<daysSinceFirstVisit>0</daysSinceFirstVisit>
+		<daysSinceLastEcommerceOrder>0</daysSinceLastEcommerceOrder>
+		<daysSinceLastVisit>0</daysSinceLastVisit>
+		<deviceType>Desktop</deviceType>
+		<events>0</events>
+		
+		<goalConversions>1</goalConversions>
+		<idSite>1</idSite>
+		<idVisit>12</idVisit>
+		
+		
 		<latitude>36</latitude>
+		<location>Japan</location>
 		<longitude>138</longitude>
 		<operatingSystem>Linux</operatingSystem>
 		<operatingSystemCode>LIN</operatingSystemCode>
-		<operatingSystemShortName>Linux</operatingSystemShortName>
 		<operatingSystemIcon>plugins/UserSettings/images/os/LIN.gif</operatingSystemIcon>
-		<browserFamily>webkit</browserFamily>
-		<browserFamilyDescription>WebKit (Safari, Chrome)</browserFamilyDescription>
-		<browserName>Epiphany 2.30</browserName>
-		<browserIcon>plugins/UserSettings/images/browsers/EP.gif</browserIcon>
-		<browserCode>EP</browserCode>
-		<browserVersion>2.30</browserVersion>
-		<screenType>unknown</screenType>
-		<resolution>unknown</resolution>
-		<screenTypeIcon>plugins/UserSettings/images/screens/unknown.gif</screenTypeIcon>
+		<operatingSystemShortName>Linux</operatingSystemShortName>
 		<plugins />
 		<pluginsIcons />
-		<visitLocalTime>20:01:17</visitLocalTime>
+		<provider>Unknown</provider>
+		<providerName>Unknown</providerName>
+		<providerUrl>http://piwik.org/faq/general/#faq_52</providerUrl>
+		<referrerKeyword />
+		<referrerKeywordPosition />
+		<referrerName />
+		<referrerSearchEngineIcon />
+		<referrerSearchEngineUrl />
+		<referrerType>direct</referrerType>
+		<referrerTypeName>Direct Entry</referrerTypeName>
+		<referrerUrl />
+		<region />
+		<regionCode />
+		<resolution>unknown</resolution>
+		<screenType>unknown</screenType>
+		<screenTypeIcon>plugins/UserSettings/images/screens/unknown.gif</screenTypeIcon>
+		<searches>0</searches>
+		
+		<siteCurrency>USD</siteCurrency>
+		<siteCurrencySymbol>$</siteCurrencySymbol>
+		<visitConverted>1</visitConverted>
+		<visitConvertedIcon>plugins/Morpheus/images/goal.png</visitConvertedIcon>
+		<visitCount>1</visitCount>
+		<visitDuration>0</visitDuration>
+		<visitDurationPretty>0s</visitDurationPretty>
+		<visitEcommerceStatus>none</visitEcommerceStatus>
+		<visitEcommerceStatusIcon />
+		<visitIp>175.41.192.34</visitIp>
 		<visitLocalHour>20</visitLocalHour>
-		<daysSinceLastVisit>0</daysSinceLastVisit>
+		<visitLocalTime>20:01:17</visitLocalTime>
+		
+		
+		<visitorType>new</visitorType>
+		<visitorTypeIcon />
 		
 		
 		
@@ -3562,10 +3562,6 @@
 		
 	</row>
 	<row>
-		<idSite>1</idSite>
-		<idVisit>11</idVisit>
-		<visitIp>175.41.192.34</visitIp>
-		
 		<actionDetails>
 			<row>
 				<type>goal</type>
@@ -3593,71 +3589,75 @@
 				<icon />
 			</row>
 		</actionDetails>
-		<goalConversions>1</goalConversions>
-		<siteCurrency>USD</siteCurrency>
-		<siteCurrencySymbol>$</siteCurrencySymbol>
-		
-		
-		
-		
-		<searches>0</searches>
 		<actions>1</actions>
-		<visitorType>new</visitorType>
-		<visitorTypeIcon />
-		<visitConverted>1</visitConverted>
-		<visitConvertedIcon>plugins/Morpheus/images/goal.png</visitConvertedIcon>
-		<visitCount>1</visitCount>
-		
-		<visitEcommerceStatus>none</visitEcommerceStatus>
-		<visitEcommerceStatusIcon />
-		<daysSinceFirstVisit>0</daysSinceFirstVisit>
-		<daysSinceLastEcommerceOrder>0</daysSinceLastEcommerceOrder>
-		<visitDuration>0</visitDuration>
-		<visitDurationPretty>0s</visitDurationPretty>
-		<customVariables>
-		</customVariables>
-		<deviceType>Desktop</deviceType>
-		<events>0</events>
-		<provider>Unknown</provider>
-		<providerName>Unknown</providerName>
-		<providerUrl>http://piwik.org/faq/general/#faq_52</providerUrl>
-		<referrerType>direct</referrerType>
-		<referrerTypeName>Direct Entry</referrerTypeName>
-		<referrerName />
-		<referrerKeyword />
-		<referrerKeywordPosition />
-		<referrerUrl />
-		<referrerSearchEngineUrl />
-		<referrerSearchEngineIcon />
+		<browserCode>IE</browserCode>
+		<browserFamily>ie</browserFamily>
+		<browserFamilyDescription>Trident (IE)</browserFamilyDescription>
+		<browserIcon>plugins/UserSettings/images/browsers/IE.gif</browserIcon>
+		<browserName>Internet Explorer 9.0</browserName>
+		<browserVersion>9.0</browserVersion>
+		<city />
 		<continent>Asia</continent>
 		<continentCode>asi</continentCode>
 		<country>Japan</country>
 		<countryCode>jp</countryCode>
 		<countryFlag>plugins/UserCountry/images/flags/jp.png</countryFlag>
-		<region />
-		<regionCode />
-		<city />
-		<location>Japan</location>
+		<customVariables>
+		</customVariables>
+		<daysSinceFirstVisit>0</daysSinceFirstVisit>
+		<daysSinceLastEcommerceOrder>0</daysSinceLastEcommerceOrder>
+		<daysSinceLastVisit>0</daysSinceLastVisit>
+		<deviceType>Desktop</deviceType>
+		<events>0</events>
+		
+		<goalConversions>1</goalConversions>
+		<idSite>1</idSite>
+		<idVisit>11</idVisit>
+		
+		
 		<latitude>36</latitude>
+		<location>Japan</location>
 		<longitude>138</longitude>
 		<operatingSystem>Windows 7</operatingSystem>
 		<operatingSystemCode>WI7</operatingSystemCode>
-		<operatingSystemShortName>Win 7</operatingSystemShortName>
 		<operatingSystemIcon>plugins/UserSettings/images/os/WI7.gif</operatingSystemIcon>
-		<browserFamily>ie</browserFamily>
-		<browserFamilyDescription>Trident (IE)</browserFamilyDescription>
-		<browserName>Internet Explorer 9.0</browserName>
-		<browserIcon>plugins/UserSettings/images/browsers/IE.gif</browserIcon>
-		<browserCode>IE</browserCode>
-		<browserVersion>9.0</browserVersion>
-		<screenType>unknown</screenType>
-		<resolution>unknown</resolution>
-		<screenTypeIcon>plugins/UserSettings/images/screens/unknown.gif</screenTypeIcon>
+		<operatingSystemShortName>Win 7</operatingSystemShortName>
 		<plugins />
 		<pluginsIcons />
-		<visitLocalTime>19:59:50</visitLocalTime>
+		<provider>Unknown</provider>
+		<providerName>Unknown</providerName>
+		<providerUrl>http://piwik.org/faq/general/#faq_52</providerUrl>
+		<referrerKeyword />
+		<referrerKeywordPosition />
+		<referrerName />
+		<referrerSearchEngineIcon />
+		<referrerSearchEngineUrl />
+		<referrerType>direct</referrerType>
+		<referrerTypeName>Direct Entry</referrerTypeName>
+		<referrerUrl />
+		<region />
+		<regionCode />
+		<resolution>unknown</resolution>
+		<screenType>unknown</screenType>
+		<screenTypeIcon>plugins/UserSettings/images/screens/unknown.gif</screenTypeIcon>
+		<searches>0</searches>
+		
+		<siteCurrency>USD</siteCurrency>
+		<siteCurrencySymbol>$</siteCurrencySymbol>
+		<visitConverted>1</visitConverted>
+		<visitConvertedIcon>plugins/Morpheus/images/goal.png</visitConvertedIcon>
+		<visitCount>1</visitCount>
+		<visitDuration>0</visitDuration>
+		<visitDurationPretty>0s</visitDurationPretty>
+		<visitEcommerceStatus>none</visitEcommerceStatus>
+		<visitEcommerceStatusIcon />
+		<visitIp>175.41.192.34</visitIp>
 		<visitLocalHour>19</visitLocalHour>
-		<daysSinceLastVisit>0</daysSinceLastVisit>
+		<visitLocalTime>19:59:50</visitLocalTime>
+		
+		
+		<visitorType>new</visitorType>
+		<visitorTypeIcon />
 		
 		
 		
@@ -3665,10 +3665,6 @@
 		
 	</row>
 	<row>
-		<idSite>1</idSite>
-		<idVisit>10</idVisit>
-		<visitIp>0.0.0.0</visitIp>
-		
 		<actionDetails>
 			<row>
 				<type>goal</type>
@@ -3696,71 +3692,75 @@
 				<icon />
 			</row>
 		</actionDetails>
-		<goalConversions>1</goalConversions>
-		<siteCurrency>USD</siteCurrency>
-		<siteCurrencySymbol>$</siteCurrencySymbol>
-		
-		
-		
-		
-		<searches>0</searches>
 		<actions>1</actions>
-		<visitorType>new</visitorType>
-		<visitorTypeIcon />
-		<visitConverted>1</visitConverted>
-		<visitConvertedIcon>plugins/Morpheus/images/goal.png</visitConvertedIcon>
-		<visitCount>1</visitCount>
-		
-		<visitEcommerceStatus>none</visitEcommerceStatus>
-		<visitEcommerceStatusIcon />
-		<daysSinceFirstVisit>0</daysSinceFirstVisit>
-		<daysSinceLastEcommerceOrder>0</daysSinceLastEcommerceOrder>
-		<visitDuration>0</visitDuration>
-		<visitDurationPretty>0s</visitDurationPretty>
-		<customVariables>
-		</customVariables>
-		<deviceType>Desktop</deviceType>
-		<events>0</events>
-		<provider>Unknown</provider>
-		<providerName>Unknown</providerName>
-		<providerUrl>http://piwik.org/faq/general/#faq_52</providerUrl>
-		<referrerType>direct</referrerType>
-		<referrerTypeName>Direct Entry</referrerTypeName>
-		<referrerName />
-		<referrerKeyword />
-		<referrerKeywordPosition />
-		<referrerUrl />
-		<referrerSearchEngineUrl />
-		<referrerSearchEngineIcon />
+		<browserCode>IE</browserCode>
+		<browserFamily>ie</browserFamily>
+		<browserFamilyDescription>Trident (IE)</browserFamilyDescription>
+		<browserIcon>plugins/UserSettings/images/browsers/IE.gif</browserIcon>
+		<browserName>Internet Explorer 9.0</browserName>
+		<browserVersion>9.0</browserVersion>
+		<city />
 		<continent>Unknown</continent>
 		<continentCode>unk</continentCode>
 		<country>Unknown</country>
 		<countryCode>xx</countryCode>
 		<countryFlag>plugins/UserCountry/images/flags/xx.png</countryFlag>
-		<region />
-		<regionCode />
-		<city />
-		<location>Unknown</location>
+		<customVariables>
+		</customVariables>
+		<daysSinceFirstVisit>0</daysSinceFirstVisit>
+		<daysSinceLastEcommerceOrder>0</daysSinceLastEcommerceOrder>
+		<daysSinceLastVisit>0</daysSinceLastVisit>
+		<deviceType>Desktop</deviceType>
+		<events>0</events>
+		
+		<goalConversions>1</goalConversions>
+		<idSite>1</idSite>
+		<idVisit>10</idVisit>
+		
+		
 		<latitude />
+		<location>Unknown</location>
 		<longitude />
 		<operatingSystem>Windows 7</operatingSystem>
 		<operatingSystemCode>WI7</operatingSystemCode>
-		<operatingSystemShortName>Win 7</operatingSystemShortName>
 		<operatingSystemIcon>plugins/UserSettings/images/os/WI7.gif</operatingSystemIcon>
-		<browserFamily>ie</browserFamily>
-		<browserFamilyDescription>Trident (IE)</browserFamilyDescription>
-		<browserName>Internet Explorer 9.0</browserName>
-		<browserIcon>plugins/UserSettings/images/browsers/IE.gif</browserIcon>
-		<browserCode>IE</browserCode>
-		<browserVersion>9.0</browserVersion>
-		<screenType>unknown</screenType>
-		<resolution>unknown</resolution>
-		<screenTypeIcon>plugins/UserSettings/images/screens/unknown.gif</screenTypeIcon>
+		<operatingSystemShortName>Win 7</operatingSystemShortName>
 		<plugins />
 		<pluginsIcons />
-		<visitLocalTime>18:03:40</visitLocalTime>
+		<provider>Unknown</provider>
+		<providerName>Unknown</providerName>
+		<providerUrl>http://piwik.org/faq/general/#faq_52</providerUrl>
+		<referrerKeyword />
+		<referrerKeywordPosition />
+		<referrerName />
+		<referrerSearchEngineIcon />
+		<referrerSearchEngineUrl />
+		<referrerType>direct</referrerType>
+		<referrerTypeName>Direct Entry</referrerTypeName>
+		<referrerUrl />
+		<region />
+		<regionCode />
+		<resolution>unknown</resolution>
+		<screenType>unknown</screenType>
+		<screenTypeIcon>plugins/UserSettings/images/screens/unknown.gif</screenTypeIcon>
+		<searches>0</searches>
+		
+		<siteCurrency>USD</siteCurrency>
+		<siteCurrencySymbol>$</siteCurrencySymbol>
+		<visitConverted>1</visitConverted>
+		<visitConvertedIcon>plugins/Morpheus/images/goal.png</visitConvertedIcon>
+		<visitCount>1</visitCount>
+		<visitDuration>0</visitDuration>
+		<visitDurationPretty>0s</visitDurationPretty>
+		<visitEcommerceStatus>none</visitEcommerceStatus>
+		<visitEcommerceStatusIcon />
+		<visitIp>0.0.0.0</visitIp>
 		<visitLocalHour>18</visitLocalHour>
-		<daysSinceLastVisit>0</daysSinceLastVisit>
+		<visitLocalTime>18:03:40</visitLocalTime>
+		
+		
+		<visitorType>new</visitorType>
+		<visitorTypeIcon />
 		
 		
 		
@@ -3768,10 +3768,6 @@
 		
 	</row>
 	<row>
-		<idSite>1</idSite>
-		<idVisit>9</idVisit>
-		<visitIp>0.0.0.0</visitIp>
-		
 		<actionDetails>
 			<row>
 				<type>goal</type>
@@ -3799,71 +3795,75 @@
 				<icon />
 			</row>
 		</actionDetails>
-		<goalConversions>1</goalConversions>
-		<siteCurrency>USD</siteCurrency>
-		<siteCurrencySymbol>$</siteCurrencySymbol>
-		
-		
-		
-		
-		<searches>0</searches>
 		<actions>1</actions>
-		<visitorType>new</visitorType>
-		<visitorTypeIcon />
-		<visitConverted>1</visitConverted>
-		<visitConvertedIcon>plugins/Morpheus/images/goal.png</visitConvertedIcon>
-		<visitCount>1</visitCount>
-		
-		<visitEcommerceStatus>none</visitEcommerceStatus>
-		<visitEcommerceStatusIcon />
-		<daysSinceFirstVisit>0</daysSinceFirstVisit>
-		<daysSinceLastEcommerceOrder>0</daysSinceLastEcommerceOrder>
-		<visitDuration>0</visitDuration>
-		<visitDurationPretty>0s</visitDurationPretty>
-		<customVariables>
-		</customVariables>
-		<deviceType>Desktop</deviceType>
-		<events>0</events>
-		<provider>Unknown</provider>
-		<providerName>Unknown</providerName>
-		<providerUrl>http://piwik.org/faq/general/#faq_52</providerUrl>
-		<referrerType>direct</referrerType>
-		<referrerTypeName>Direct Entry</referrerTypeName>
-		<referrerName />
-		<referrerKeyword />
-		<referrerKeywordPosition />
-		<referrerUrl />
-		<referrerSearchEngineUrl />
-		<referrerSearchEngineIcon />
+		<browserCode>CH</browserCode>
+		<browserFamily>webkit</browserFamily>
+		<browserFamilyDescription>WebKit (Safari, Chrome)</browserFamilyDescription>
+		<browserIcon>plugins/UserSettings/images/browsers/CH.gif</browserIcon>
+		<browserName>Chrome 19.0</browserName>
+		<browserVersion>19.0</browserVersion>
+		<city />
 		<continent>Unknown</continent>
 		<continentCode>unk</continentCode>
 		<country>Unknown</country>
 		<countryCode>xx</countryCode>
 		<countryFlag>plugins/UserCountry/images/flags/xx.png</countryFlag>
-		<region />
-		<regionCode />
-		<city />
-		<location>Unknown</location>
+		<customVariables>
+		</customVariables>
+		<daysSinceFirstVisit>0</daysSinceFirstVisit>
+		<daysSinceLastEcommerceOrder>0</daysSinceLastEcommerceOrder>
+		<daysSinceLastVisit>0</daysSinceLastVisit>
+		<deviceType>Desktop</deviceType>
+		<events>0</events>
+		
+		<goalConversions>1</goalConversions>
+		<idSite>1</idSite>
+		<idVisit>9</idVisit>
+		
+		
 		<latitude />
+		<location>Unknown</location>
 		<longitude />
 		<operatingSystem>Mac OS</operatingSystem>
 		<operatingSystemCode>MAC</operatingSystemCode>
-		<operatingSystemShortName>Mac OS</operatingSystemShortName>
 		<operatingSystemIcon>plugins/UserSettings/images/os/MAC.gif</operatingSystemIcon>
-		<browserFamily>webkit</browserFamily>
-		<browserFamilyDescription>WebKit (Safari, Chrome)</browserFamilyDescription>
-		<browserName>Chrome 19.0</browserName>
-		<browserIcon>plugins/UserSettings/images/browsers/CH.gif</browserIcon>
-		<browserCode>CH</browserCode>
-		<browserVersion>19.0</browserVersion>
-		<screenType>unknown</screenType>
-		<resolution>unknown</resolution>
-		<screenTypeIcon>plugins/UserSettings/images/screens/unknown.gif</screenTypeIcon>
+		<operatingSystemShortName>Mac OS</operatingSystemShortName>
 		<plugins />
 		<pluginsIcons />
-		<visitLocalTime>21:00:42</visitLocalTime>
+		<provider>Unknown</provider>
+		<providerName>Unknown</providerName>
+		<providerUrl>http://piwik.org/faq/general/#faq_52</providerUrl>
+		<referrerKeyword />
+		<referrerKeywordPosition />
+		<referrerName />
+		<referrerSearchEngineIcon />
+		<referrerSearchEngineUrl />
+		<referrerType>direct</referrerType>
+		<referrerTypeName>Direct Entry</referrerTypeName>
+		<referrerUrl />
+		<region />
+		<regionCode />
+		<resolution>unknown</resolution>
+		<screenType>unknown</screenType>
+		<screenTypeIcon>plugins/UserSettings/images/screens/unknown.gif</screenTypeIcon>
+		<searches>0</searches>
+		
+		<siteCurrency>USD</siteCurrency>
+		<siteCurrencySymbol>$</siteCurrencySymbol>
+		<visitConverted>1</visitConverted>
+		<visitConvertedIcon>plugins/Morpheus/images/goal.png</visitConvertedIcon>
+		<visitCount>1</visitCount>
+		<visitDuration>0</visitDuration>
+		<visitDurationPretty>0s</visitDurationPretty>
+		<visitEcommerceStatus>none</visitEcommerceStatus>
+		<visitEcommerceStatusIcon />
+		<visitIp>0.0.0.0</visitIp>
 		<visitLocalHour>21</visitLocalHour>
-		<daysSinceLastVisit>0</daysSinceLastVisit>
+		<visitLocalTime>21:00:42</visitLocalTime>
+		
+		
+		<visitorType>new</visitorType>
+		<visitorTypeIcon />
 		
 		
 		
@@ -3871,10 +3871,6 @@
 		
 	</row>
 	<row>
-		<idSite>1</idSite>
-		<idVisit>8</idVisit>
-		<visitIp>0.0.0.0</visitIp>
-		
 		<actionDetails>
 			<row>
 				<type>goal</type>
@@ -3902,71 +3898,75 @@
 				<icon />
 			</row>
 		</actionDetails>
-		<goalConversions>1</goalConversions>
-		<siteCurrency>USD</siteCurrency>
-		<siteCurrencySymbol>$</siteCurrencySymbol>
-		
-		
-		
-		
-		<searches>0</searches>
 		<actions>1</actions>
-		<visitorType>new</visitorType>
-		<visitorTypeIcon />
-		<visitConverted>1</visitConverted>
-		<visitConvertedIcon>plugins/Morpheus/images/goal.png</visitConvertedIcon>
-		<visitCount>1</visitCount>
-		
-		<visitEcommerceStatus>none</visitEcommerceStatus>
-		<visitEcommerceStatusIcon />
-		<daysSinceFirstVisit>0</daysSinceFirstVisit>
-		<daysSinceLastEcommerceOrder>0</daysSinceLastEcommerceOrder>
-		<visitDuration>0</visitDuration>
-		<visitDurationPretty>0s</visitDurationPretty>
-		<customVariables>
-		</customVariables>
-		<deviceType>Desktop</deviceType>
-		<events>0</events>
-		<provider>Unknown</provider>
-		<providerName>Unknown</providerName>
-		<providerUrl>http://piwik.org/faq/general/#faq_52</providerUrl>
-		<referrerType>direct</referrerType>
-		<referrerTypeName>Direct Entry</referrerTypeName>
-		<referrerName />
-		<referrerKeyword />
-		<referrerKeywordPosition />
-		<referrerUrl />
-		<referrerSearchEngineUrl />
-		<referrerSearchEngineIcon />
+		<browserCode>FF</browserCode>
+		<browserFamily>gecko</browserFamily>
+		<browserFamilyDescription>Gecko (Firefox)</browserFamilyDescription>
+		<browserIcon>plugins/UserSettings/images/browsers/FF.gif</browserIcon>
+		<browserName>Firefox 6.0</browserName>
+		<browserVersion>6.0</browserVersion>
+		<city />
 		<continent>Unknown</continent>
 		<continentCode>unk</continentCode>
 		<country>Unknown</country>
 		<countryCode>xx</countryCode>
 		<countryFlag>plugins/UserCountry/images/flags/xx.png</countryFlag>
-		<region />
-		<regionCode />
-		<city />
-		<location>Unknown</location>
+		<customVariables>
+		</customVariables>
+		<daysSinceFirstVisit>0</daysSinceFirstVisit>
+		<daysSinceLastEcommerceOrder>0</daysSinceLastEcommerceOrder>
+		<daysSinceLastVisit>0</daysSinceLastVisit>
+		<deviceType>Desktop</deviceType>
+		<events>0</events>
+		
+		<goalConversions>1</goalConversions>
+		<idSite>1</idSite>
+		<idVisit>8</idVisit>
+		
+		
 		<latitude />
+		<location>Unknown</location>
 		<longitude />
 		<operatingSystem>Linux</operatingSystem>
 		<operatingSystemCode>LIN</operatingSystemCode>
-		<operatingSystemShortName>Linux</operatingSystemShortName>
 		<operatingSystemIcon>plugins/UserSettings/images/os/LIN.gif</operatingSystemIcon>
-		<browserFamily>gecko</browserFamily>
-		<browserFamilyDescription>Gecko (Firefox)</browserFamilyDescription>
-		<browserName>Firefox 6.0</browserName>
-		<browserIcon>plugins/UserSettings/images/browsers/FF.gif</browserIcon>
-		<browserCode>FF</browserCode>
-		<browserVersion>6.0</browserVersion>
-		<screenType>unknown</screenType>
-		<resolution>unknown</resolution>
-		<screenTypeIcon>plugins/UserSettings/images/screens/unknown.gif</screenTypeIcon>
+		<operatingSystemShortName>Linux</operatingSystemShortName>
 		<plugins />
 		<pluginsIcons />
-		<visitLocalTime>20:56:45</visitLocalTime>
+		<provider>Unknown</provider>
+		<providerName>Unknown</providerName>
+		<providerUrl>http://piwik.org/faq/general/#faq_52</providerUrl>
+		<referrerKeyword />
+		<referrerKeywordPosition />
+		<referrerName />
+		<referrerSearchEngineIcon />
+		<referrerSearchEngineUrl />
+		<referrerType>direct</referrerType>
+		<referrerTypeName>Direct Entry</referrerTypeName>
+		<referrerUrl />
+		<region />
+		<regionCode />
+		<resolution>unknown</resolution>
+		<screenType>unknown</screenType>
+		<screenTypeIcon>plugins/UserSettings/images/screens/unknown.gif</screenTypeIcon>
+		<searches>0</searches>
+		
+		<siteCurrency>USD</siteCurrency>
+		<siteCurrencySymbol>$</siteCurrencySymbol>
+		<visitConverted>1</visitConverted>
+		<visitConvertedIcon>plugins/Morpheus/images/goal.png</visitConvertedIcon>
+		<visitCount>1</visitCount>
+		<visitDuration>0</visitDuration>
+		<visitDurationPretty>0s</visitDurationPretty>
+		<visitEcommerceStatus>none</visitEcommerceStatus>
+		<visitEcommerceStatusIcon />
+		<visitIp>0.0.0.0</visitIp>
 		<visitLocalHour>20</visitLocalHour>
-		<daysSinceLastVisit>0</daysSinceLastVisit>
+		<visitLocalTime>20:56:45</visitLocalTime>
+		
+		
+		<visitorType>new</visitorType>
+		<visitorTypeIcon />
 		
 		
 		
@@ -3974,10 +3974,6 @@
 		
 	</row>
 	<row>
-		<idSite>1</idSite>
-		<idVisit>7</idVisit>
-		<visitIp>72.44.32.10</visitIp>
-		
 		<actionDetails>
 			<row>
 				<type>goal</type>
@@ -4005,71 +4001,75 @@
 				<icon />
 			</row>
 		</actionDetails>
-		<goalConversions>1</goalConversions>
-		<siteCurrency>USD</siteCurrency>
-		<siteCurrencySymbol>$</siteCurrencySymbol>
-		
-		
-		
-		
-		<searches>0</searches>
 		<actions>1</actions>
-		<visitorType>new</visitorType>
-		<visitorTypeIcon />
-		<visitConverted>1</visitConverted>
-		<visitConvertedIcon>plugins/Morpheus/images/goal.png</visitConvertedIcon>
-		<visitCount>1</visitCount>
-		
-		<visitEcommerceStatus>none</visitEcommerceStatus>
-		<visitEcommerceStatusIcon />
-		<daysSinceFirstVisit>0</daysSinceFirstVisit>
-		<daysSinceLastEcommerceOrder>0</daysSinceLastEcommerceOrder>
-		<visitDuration>0</visitDuration>
-		<visitDurationPretty>0s</visitDurationPretty>
-		<customVariables>
-		</customVariables>
-		<deviceType>Desktop</deviceType>
-		<events>0</events>
-		<provider>Unknown</provider>
-		<providerName>Unknown</providerName>
-		<providerUrl>http://piwik.org/faq/general/#faq_52</providerUrl>
-		<referrerType>direct</referrerType>
-		<referrerTypeName>Direct Entry</referrerTypeName>
-		<referrerName />
-		<referrerKeyword />
-		<referrerKeywordPosition />
-		<referrerUrl />
-		<referrerSearchEngineUrl />
-		<referrerSearchEngineIcon />
+		<browserCode>CH</browserCode>
+		<browserFamily>webkit</browserFamily>
+		<browserFamilyDescription>WebKit (Safari, Chrome)</browserFamilyDescription>
+		<browserIcon>plugins/UserSettings/images/browsers/CH.gif</browserIcon>
+		<browserName>Chrome 19.0</browserName>
+		<browserVersion>19.0</browserVersion>
+		<city>Ashburn</city>
 		<continent>North America</continent>
 		<continentCode>amn</continentCode>
 		<country>United States</country>
 		<countryCode>us</countryCode>
 		<countryFlag>plugins/UserCountry/images/flags/us.png</countryFlag>
-		<region>Virginia</region>
-		<regionCode>VA</regionCode>
-		<city>Ashburn</city>
-		<location>Ashburn, Virginia, United States</location>
+		<customVariables>
+		</customVariables>
+		<daysSinceFirstVisit>0</daysSinceFirstVisit>
+		<daysSinceLastEcommerceOrder>0</daysSinceLastEcommerceOrder>
+		<daysSinceLastVisit>0</daysSinceLastVisit>
+		<deviceType>Desktop</deviceType>
+		<events>0</events>
+		
+		<goalConversions>1</goalConversions>
+		<idSite>1</idSite>
+		<idVisit>7</idVisit>
+		
+		
 		<latitude>39.043999</latitude>
+		<location>Ashburn, Virginia, United States</location>
 		<longitude>-77.487999</longitude>
 		<operatingSystem>Linux</operatingSystem>
 		<operatingSystemCode>LIN</operatingSystemCode>
-		<operatingSystemShortName>Linux</operatingSystemShortName>
 		<operatingSystemIcon>plugins/UserSettings/images/os/LIN.gif</operatingSystemIcon>
-		<browserFamily>webkit</browserFamily>
-		<browserFamilyDescription>WebKit (Safari, Chrome)</browserFamilyDescription>
-		<browserName>Chrome 19.0</browserName>
-		<browserIcon>plugins/UserSettings/images/browsers/CH.gif</browserIcon>
-		<browserCode>CH</browserCode>
-		<browserVersion>19.0</browserVersion>
-		<screenType>unknown</screenType>
-		<resolution>unknown</resolution>
-		<screenTypeIcon>plugins/UserSettings/images/screens/unknown.gif</screenTypeIcon>
+		<operatingSystemShortName>Linux</operatingSystemShortName>
 		<plugins />
 		<pluginsIcons />
-		<visitLocalTime>13:49:48</visitLocalTime>
+		<provider>Unknown</provider>
+		<providerName>Unknown</providerName>
+		<providerUrl>http://piwik.org/faq/general/#faq_52</providerUrl>
+		<referrerKeyword />
+		<referrerKeywordPosition />
+		<referrerName />
+		<referrerSearchEngineIcon />
+		<referrerSearchEngineUrl />
+		<referrerType>direct</referrerType>
+		<referrerTypeName>Direct Entry</referrerTypeName>
+		<referrerUrl />
+		<region>Virginia</region>
+		<regionCode>VA</regionCode>
+		<resolution>unknown</resolution>
+		<screenType>unknown</screenType>
+		<screenTypeIcon>plugins/UserSettings/images/screens/unknown.gif</screenTypeIcon>
+		<searches>0</searches>
+		
+		<siteCurrency>USD</siteCurrency>
+		<siteCurrencySymbol>$</siteCurrencySymbol>
+		<visitConverted>1</visitConverted>
+		<visitConvertedIcon>plugins/Morpheus/images/goal.png</visitConvertedIcon>
+		<visitCount>1</visitCount>
+		<visitDuration>0</visitDuration>
+		<visitDurationPretty>0s</visitDurationPretty>
+		<visitEcommerceStatus>none</visitEcommerceStatus>
+		<visitEcommerceStatusIcon />
+		<visitIp>72.44.32.10</visitIp>
 		<visitLocalHour>13</visitLocalHour>
-		<daysSinceLastVisit>0</daysSinceLastVisit>
+		<visitLocalTime>13:49:48</visitLocalTime>
+		
+		
+		<visitorType>new</visitorType>
+		<visitorTypeIcon />
 		
 		
 		
@@ -4077,10 +4077,6 @@
 		
 	</row>
 	<row>
-		<idSite>1</idSite>
-		<idVisit>6</idVisit>
-		<visitIp>72.44.32.10</visitIp>
-		
 		<actionDetails>
 			<row>
 				<type>goal</type>
@@ -4108,71 +4104,75 @@
 				<icon />
 			</row>
 		</actionDetails>
-		<goalConversions>1</goalConversions>
-		<siteCurrency>USD</siteCurrency>
-		<siteCurrencySymbol>$</siteCurrencySymbol>
-		
-		
-		
-		
-		<searches>0</searches>
 		<actions>1</actions>
-		<visitorType>new</visitorType>
-		<visitorTypeIcon />
-		<visitConverted>1</visitConverted>
-		<visitConvertedIcon>plugins/Morpheus/images/goal.png</visitConvertedIcon>
-		<visitCount>1</visitCount>
-		
-		<visitEcommerceStatus>none</visitEcommerceStatus>
-		<visitEcommerceStatusIcon />
-		<daysSinceFirstVisit>0</daysSinceFirstVisit>
-		<daysSinceLastEcommerceOrder>0</daysSinceLastEcommerceOrder>
-		<visitDuration>0</visitDuration>
-		<visitDurationPretty>0s</visitDurationPretty>
-		<customVariables>
-		</customVariables>
-		<deviceType>Desktop</deviceType>
-		<events>0</events>
-		<provider>Unknown</provider>
-		<providerName>Unknown</providerName>
-		<providerUrl>http://piwik.org/faq/general/#faq_52</providerUrl>
-		<referrerType>direct</referrerType>
-		<referrerTypeName>Direct Entry</referrerTypeName>
-		<referrerName />
-		<referrerKeyword />
-		<referrerKeywordPosition />
-		<referrerUrl />
-		<referrerSearchEngineUrl />
-		<referrerSearchEngineIcon />
+		<browserCode>EP</browserCode>
+		<browserFamily>webkit</browserFamily>
+		<browserFamilyDescription>WebKit (Safari, Chrome)</browserFamilyDescription>
+		<browserIcon>plugins/UserSettings/images/browsers/EP.gif</browserIcon>
+		<browserName>Epiphany 2.30</browserName>
+		<browserVersion>2.30</browserVersion>
+		<city>Ashburn</city>
 		<continent>North America</continent>
 		<continentCode>amn</continentCode>
 		<country>United States</country>
 		<countryCode>us</countryCode>
 		<countryFlag>plugins/UserCountry/images/flags/us.png</countryFlag>
-		<region>Virginia</region>
-		<regionCode>VA</regionCode>
-		<city>Ashburn</city>
-		<location>Ashburn, Virginia, United States</location>
+		<customVariables>
+		</customVariables>
+		<daysSinceFirstVisit>0</daysSinceFirstVisit>
+		<daysSinceLastEcommerceOrder>0</daysSinceLastEcommerceOrder>
+		<daysSinceLastVisit>0</daysSinceLastVisit>
+		<deviceType>Desktop</deviceType>
+		<events>0</events>
+		
+		<goalConversions>1</goalConversions>
+		<idSite>1</idSite>
+		<idVisit>6</idVisit>
+		
+		
 		<latitude>39.043999</latitude>
+		<location>Ashburn, Virginia, United States</location>
 		<longitude>-77.487999</longitude>
 		<operatingSystem>Linux</operatingSystem>
 		<operatingSystemCode>LIN</operatingSystemCode>
-		<operatingSystemShortName>Linux</operatingSystemShortName>
 		<operatingSystemIcon>plugins/UserSettings/images/os/LIN.gif</operatingSystemIcon>
-		<browserFamily>webkit</browserFamily>
-		<browserFamilyDescription>WebKit (Safari, Chrome)</browserFamilyDescription>
-		<browserName>Epiphany 2.30</browserName>
-		<browserIcon>plugins/UserSettings/images/browsers/EP.gif</browserIcon>
-		<browserCode>EP</browserCode>
-		<browserVersion>2.30</browserVersion>
-		<screenType>unknown</screenType>
-		<resolution>unknown</resolution>
-		<screenTypeIcon>plugins/UserSettings/images/screens/unknown.gif</screenTypeIcon>
+		<operatingSystemShortName>Linux</operatingSystemShortName>
 		<plugins />
 		<pluginsIcons />
-		<visitLocalTime>13:48:20</visitLocalTime>
+		<provider>Unknown</provider>
+		<providerName>Unknown</providerName>
+		<providerUrl>http://piwik.org/faq/general/#faq_52</providerUrl>
+		<referrerKeyword />
+		<referrerKeywordPosition />
+		<referrerName />
+		<referrerSearchEngineIcon />
+		<referrerSearchEngineUrl />
+		<referrerType>direct</referrerType>
+		<referrerTypeName>Direct Entry</referrerTypeName>
+		<referrerUrl />
+		<region>Virginia</region>
+		<regionCode>VA</regionCode>
+		<resolution>unknown</resolution>
+		<screenType>unknown</screenType>
+		<screenTypeIcon>plugins/UserSettings/images/screens/unknown.gif</screenTypeIcon>
+		<searches>0</searches>
+		
+		<siteCurrency>USD</siteCurrency>
+		<siteCurrencySymbol>$</siteCurrencySymbol>
+		<visitConverted>1</visitConverted>
+		<visitConvertedIcon>plugins/Morpheus/images/goal.png</visitConvertedIcon>
+		<visitCount>1</visitCount>
+		<visitDuration>0</visitDuration>
+		<visitDurationPretty>0s</visitDurationPretty>
+		<visitEcommerceStatus>none</visitEcommerceStatus>
+		<visitEcommerceStatusIcon />
+		<visitIp>72.44.32.10</visitIp>
 		<visitLocalHour>13</visitLocalHour>
-		<daysSinceLastVisit>0</daysSinceLastVisit>
+		<visitLocalTime>13:48:20</visitLocalTime>
+		
+		
+		<visitorType>new</visitorType>
+		<visitorTypeIcon />
 		
 		
 		
@@ -4180,10 +4180,6 @@
 		
 	</row>
 	<row>
-		<idSite>1</idSite>
-		<idVisit>5</idVisit>
-		<visitIp>72.44.32.10</visitIp>
-		
 		<actionDetails>
 			<row>
 				<type>goal</type>
@@ -4211,71 +4207,75 @@
 				<icon />
 			</row>
 		</actionDetails>
-		<goalConversions>1</goalConversions>
-		<siteCurrency>USD</siteCurrency>
-		<siteCurrencySymbol>$</siteCurrencySymbol>
-		
-		
-		
-		
-		<searches>0</searches>
 		<actions>1</actions>
-		<visitorType>new</visitorType>
-		<visitorTypeIcon />
-		<visitConverted>1</visitConverted>
-		<visitConvertedIcon>plugins/Morpheus/images/goal.png</visitConvertedIcon>
-		<visitCount>1</visitCount>
-		
-		<visitEcommerceStatus>none</visitEcommerceStatus>
-		<visitEcommerceStatusIcon />
-		<daysSinceFirstVisit>0</daysSinceFirstVisit>
-		<daysSinceLastEcommerceOrder>0</daysSinceLastEcommerceOrder>
-		<visitDuration>0</visitDuration>
-		<visitDurationPretty>0s</visitDurationPretty>
-		<customVariables>
-		</customVariables>
-		<deviceType>Desktop</deviceType>
-		<events>0</events>
-		<provider>Unknown</provider>
-		<providerName>Unknown</providerName>
-		<providerUrl>http://piwik.org/faq/general/#faq_52</providerUrl>
-		<referrerType>direct</referrerType>
-		<referrerTypeName>Direct Entry</referrerTypeName>
-		<referrerName />
-		<referrerKeyword />
-		<referrerKeywordPosition />
-		<referrerUrl />
-		<referrerSearchEngineUrl />
-		<referrerSearchEngineIcon />
+		<browserCode>IE</browserCode>
+		<browserFamily>ie</browserFamily>
+		<browserFamilyDescription>Trident (IE)</browserFamilyDescription>
+		<browserIcon>plugins/UserSettings/images/browsers/IE.gif</browserIcon>
+		<browserName>Internet Explorer 9.0</browserName>
+		<browserVersion>9.0</browserVersion>
+		<city>Ashburn</city>
 		<continent>North America</continent>
 		<continentCode>amn</continentCode>
 		<country>United States</country>
 		<countryCode>us</countryCode>
 		<countryFlag>plugins/UserCountry/images/flags/us.png</countryFlag>
-		<region>Virginia</region>
-		<regionCode>VA</regionCode>
-		<city>Ashburn</city>
-		<location>Ashburn, Virginia, United States</location>
+		<customVariables>
+		</customVariables>
+		<daysSinceFirstVisit>0</daysSinceFirstVisit>
+		<daysSinceLastEcommerceOrder>0</daysSinceLastEcommerceOrder>
+		<daysSinceLastVisit>0</daysSinceLastVisit>
+		<deviceType>Desktop</deviceType>
+		<events>0</events>
+		
+		<goalConversions>1</goalConversions>
+		<idSite>1</idSite>
+		<idVisit>5</idVisit>
+		
+		
 		<latitude>39.043999</latitude>
+		<location>Ashburn, Virginia, United States</location>
 		<longitude>-77.487999</longitude>
 		<operatingSystem>Windows 7</operatingSystem>
 		<operatingSystemCode>WI7</operatingSystemCode>
-		<operatingSystemShortName>Win 7</operatingSystemShortName>
 		<operatingSystemIcon>plugins/UserSettings/images/os/WI7.gif</operatingSystemIcon>
-		<browserFamily>ie</browserFamily>
-		<browserFamilyDescription>Trident (IE)</browserFamilyDescription>
-		<browserName>Internet Explorer 9.0</browserName>
-		<browserIcon>plugins/UserSettings/images/browsers/IE.gif</browserIcon>
-		<browserCode>IE</browserCode>
-		<browserVersion>9.0</browserVersion>
-		<screenType>unknown</screenType>
-		<resolution>unknown</resolution>
-		<screenTypeIcon>plugins/UserSettings/images/screens/unknown.gif</screenTypeIcon>
+		<operatingSystemShortName>Win 7</operatingSystemShortName>
 		<plugins />
 		<pluginsIcons />
-		<visitLocalTime>13:48:07</visitLocalTime>
+		<provider>Unknown</provider>
+		<providerName>Unknown</providerName>
+		<providerUrl>http://piwik.org/faq/general/#faq_52</providerUrl>
+		<referrerKeyword />
+		<referrerKeywordPosition />
+		<referrerName />
+		<referrerSearchEngineIcon />
+		<referrerSearchEngineUrl />
+		<referrerType>direct</referrerType>
+		<referrerTypeName>Direct Entry</referrerTypeName>
+		<referrerUrl />
+		<region>Virginia</region>
+		<regionCode>VA</regionCode>
+		<resolution>unknown</resolution>
+		<screenType>unknown</screenType>
+		<screenTypeIcon>plugins/UserSettings/images/screens/unknown.gif</screenTypeIcon>
+		<searches>0</searches>
+		
+		<siteCurrency>USD</siteCurrency>
+		<siteCurrencySymbol>$</siteCurrencySymbol>
+		<visitConverted>1</visitConverted>
+		<visitConvertedIcon>plugins/Morpheus/images/goal.png</visitConvertedIcon>
+		<visitCount>1</visitCount>
+		<visitDuration>0</visitDuration>
+		<visitDurationPretty>0s</visitDurationPretty>
+		<visitEcommerceStatus>none</visitEcommerceStatus>
+		<visitEcommerceStatusIcon />
+		<visitIp>72.44.32.10</visitIp>
 		<visitLocalHour>13</visitLocalHour>
-		<daysSinceLastVisit>0</daysSinceLastVisit>
+		<visitLocalTime>13:48:07</visitLocalTime>
+		
+		
+		<visitorType>new</visitorType>
+		<visitorTypeIcon />
 		
 		
 		
@@ -4283,10 +4283,6 @@
 		
 	</row>
 	<row>
-		<idSite>1</idSite>
-		<idVisit>4</idVisit>
-		<visitIp>175.41.192.40</visitIp>
-		
 		<actionDetails>
 			<row>
 				<type>goal</type>
@@ -4314,71 +4310,75 @@
 				<icon />
 			</row>
 		</actionDetails>
-		<goalConversions>1</goalConversions>
-		<siteCurrency>USD</siteCurrency>
-		<siteCurrencySymbol>$</siteCurrencySymbol>
-		
-		
-		
-		
-		<searches>0</searches>
 		<actions>1</actions>
-		<visitorType>new</visitorType>
-		<visitorTypeIcon />
-		<visitConverted>1</visitConverted>
-		<visitConvertedIcon>plugins/Morpheus/images/goal.png</visitConvertedIcon>
-		<visitCount>1</visitCount>
-		
-		<visitEcommerceStatus>none</visitEcommerceStatus>
-		<visitEcommerceStatusIcon />
-		<daysSinceFirstVisit>0</daysSinceFirstVisit>
-		<daysSinceLastEcommerceOrder>0</daysSinceLastEcommerceOrder>
-		<visitDuration>0</visitDuration>
-		<visitDurationPretty>0s</visitDurationPretty>
-		<customVariables>
-		</customVariables>
-		<deviceType>Desktop</deviceType>
-		<events>0</events>
-		<provider>Unknown</provider>
-		<providerName>Unknown</providerName>
-		<providerUrl>http://piwik.org/faq/general/#faq_52</providerUrl>
-		<referrerType>direct</referrerType>
-		<referrerTypeName>Direct Entry</referrerTypeName>
-		<referrerName />
-		<referrerKeyword />
-		<referrerKeywordPosition />
-		<referrerUrl />
-		<referrerSearchEngineUrl />
-		<referrerSearchEngineIcon />
+		<browserCode>FF</browserCode>
+		<browserFamily>gecko</browserFamily>
+		<browserFamilyDescription>Gecko (Firefox)</browserFamilyDescription>
+		<browserIcon>plugins/UserSettings/images/browsers/FF.gif</browserIcon>
+		<browserName>Firefox 6.0</browserName>
+		<browserVersion>6.0</browserVersion>
+		<city />
 		<continent>Asia</continent>
 		<continentCode>asi</continentCode>
 		<country>Japan</country>
 		<countryCode>jp</countryCode>
 		<countryFlag>plugins/UserCountry/images/flags/jp.png</countryFlag>
-		<region />
-		<regionCode />
-		<city />
-		<location>Japan</location>
+		<customVariables>
+		</customVariables>
+		<daysSinceFirstVisit>0</daysSinceFirstVisit>
+		<daysSinceLastEcommerceOrder>0</daysSinceLastEcommerceOrder>
+		<daysSinceLastVisit>0</daysSinceLastVisit>
+		<deviceType>Desktop</deviceType>
+		<events>0</events>
+		
+		<goalConversions>1</goalConversions>
+		<idSite>1</idSite>
+		<idVisit>4</idVisit>
+		
+		
 		<latitude>36</latitude>
+		<location>Japan</location>
 		<longitude>138</longitude>
 		<operatingSystem>Linux</operatingSystem>
 		<operatingSystemCode>LIN</operatingSystemCode>
-		<operatingSystemShortName>Linux</operatingSystemShortName>
 		<operatingSystemIcon>plugins/UserSettings/images/os/LIN.gif</operatingSystemIcon>
-		<browserFamily>gecko</browserFamily>
-		<browserFamilyDescription>Gecko (Firefox)</browserFamilyDescription>
-		<browserName>Firefox 6.0</browserName>
-		<browserIcon>plugins/UserSettings/images/browsers/FF.gif</browserIcon>
-		<browserCode>FF</browserCode>
-		<browserVersion>6.0</browserVersion>
-		<screenType>unknown</screenType>
-		<resolution>unknown</resolution>
-		<screenTypeIcon>plugins/UserSettings/images/screens/unknown.gif</screenTypeIcon>
+		<operatingSystemShortName>Linux</operatingSystemShortName>
 		<plugins />
 		<pluginsIcons />
-		<visitLocalTime>08:12:03</visitLocalTime>
+		<provider>Unknown</provider>
+		<providerName>Unknown</providerName>
+		<providerUrl>http://piwik.org/faq/general/#faq_52</providerUrl>
+		<referrerKeyword />
+		<referrerKeywordPosition />
+		<referrerName />
+		<referrerSearchEngineIcon />
+		<referrerSearchEngineUrl />
+		<referrerType>direct</referrerType>
+		<referrerTypeName>Direct Entry</referrerTypeName>
+		<referrerUrl />
+		<region />
+		<regionCode />
+		<resolution>unknown</resolution>
+		<screenType>unknown</screenType>
+		<screenTypeIcon>plugins/UserSettings/images/screens/unknown.gif</screenTypeIcon>
+		<searches>0</searches>
+		
+		<siteCurrency>USD</siteCurrency>
+		<siteCurrencySymbol>$</siteCurrencySymbol>
+		<visitConverted>1</visitConverted>
+		<visitConvertedIcon>plugins/Morpheus/images/goal.png</visitConvertedIcon>
+		<visitCount>1</visitCount>
+		<visitDuration>0</visitDuration>
+		<visitDurationPretty>0s</visitDurationPretty>
+		<visitEcommerceStatus>none</visitEcommerceStatus>
+		<visitEcommerceStatusIcon />
+		<visitIp>175.41.192.40</visitIp>
 		<visitLocalHour>8</visitLocalHour>
-		<daysSinceLastVisit>0</daysSinceLastVisit>
+		<visitLocalTime>08:12:03</visitLocalTime>
+		
+		
+		<visitorType>new</visitorType>
+		<visitorTypeIcon />
 		
 		
 		
@@ -4386,10 +4386,6 @@
 		
 	</row>
 	<row>
-		<idSite>1</idSite>
-		<idVisit>3</idVisit>
-		<visitIp>175.41.192.40</visitIp>
-		
 		<actionDetails>
 			<row>
 				<type>goal</type>
@@ -4417,71 +4413,75 @@
 				<icon />
 			</row>
 		</actionDetails>
-		<goalConversions>1</goalConversions>
-		<siteCurrency>USD</siteCurrency>
-		<siteCurrencySymbol>$</siteCurrencySymbol>
-		
-		
-		
-		
-		<searches>0</searches>
 		<actions>1</actions>
-		<visitorType>new</visitorType>
-		<visitorTypeIcon />
-		<visitConverted>1</visitConverted>
-		<visitConvertedIcon>plugins/Morpheus/images/goal.png</visitConvertedIcon>
-		<visitCount>1</visitCount>
-		
-		<visitEcommerceStatus>none</visitEcommerceStatus>
-		<visitEcommerceStatusIcon />
-		<daysSinceFirstVisit>0</daysSinceFirstVisit>
-		<daysSinceLastEcommerceOrder>0</daysSinceLastEcommerceOrder>
-		<visitDuration>0</visitDuration>
-		<visitDurationPretty>0s</visitDurationPretty>
-		<customVariables>
-		</customVariables>
-		<deviceType>Desktop</deviceType>
-		<events>0</events>
-		<provider>Unknown</provider>
-		<providerName>Unknown</providerName>
-		<providerUrl>http://piwik.org/faq/general/#faq_52</providerUrl>
-		<referrerType>direct</referrerType>
-		<referrerTypeName>Direct Entry</referrerTypeName>
-		<referrerName />
-		<referrerKeyword />
-		<referrerKeywordPosition />
-		<referrerUrl />
-		<referrerSearchEngineUrl />
-		<referrerSearchEngineIcon />
+		<browserCode>EP</browserCode>
+		<browserFamily>webkit</browserFamily>
+		<browserFamilyDescription>WebKit (Safari, Chrome)</browserFamilyDescription>
+		<browserIcon>plugins/UserSettings/images/browsers/EP.gif</browserIcon>
+		<browserName>Epiphany 2.30</browserName>
+		<browserVersion>2.30</browserVersion>
+		<city />
 		<continent>Asia</continent>
 		<continentCode>asi</continentCode>
 		<country>Japan</country>
 		<countryCode>jp</countryCode>
 		<countryFlag>plugins/UserCountry/images/flags/jp.png</countryFlag>
-		<region />
-		<regionCode />
-		<city />
-		<location>Japan</location>
+		<customVariables>
+		</customVariables>
+		<daysSinceFirstVisit>0</daysSinceFirstVisit>
+		<daysSinceLastEcommerceOrder>0</daysSinceLastEcommerceOrder>
+		<daysSinceLastVisit>0</daysSinceLastVisit>
+		<deviceType>Desktop</deviceType>
+		<events>0</events>
+		
+		<goalConversions>1</goalConversions>
+		<idSite>1</idSite>
+		<idVisit>3</idVisit>
+		
+		
 		<latitude>36</latitude>
+		<location>Japan</location>
 		<longitude>138</longitude>
 		<operatingSystem>Linux</operatingSystem>
 		<operatingSystemCode>LIN</operatingSystemCode>
-		<operatingSystemShortName>Linux</operatingSystemShortName>
 		<operatingSystemIcon>plugins/UserSettings/images/os/LIN.gif</operatingSystemIcon>
-		<browserFamily>webkit</browserFamily>
-		<browserFamilyDescription>WebKit (Safari, Chrome)</browserFamilyDescription>
-		<browserName>Epiphany 2.30</browserName>
-		<browserIcon>plugins/UserSettings/images/browsers/EP.gif</browserIcon>
-		<browserCode>EP</browserCode>
-		<browserVersion>2.30</browserVersion>
-		<screenType>unknown</screenType>
-		<resolution>unknown</resolution>
-		<screenTypeIcon>plugins/UserSettings/images/screens/unknown.gif</screenTypeIcon>
+		<operatingSystemShortName>Linux</operatingSystemShortName>
 		<plugins />
 		<pluginsIcons />
-		<visitLocalTime>08:11:56</visitLocalTime>
+		<provider>Unknown</provider>
+		<providerName>Unknown</providerName>
+		<providerUrl>http://piwik.org/faq/general/#faq_52</providerUrl>
+		<referrerKeyword />
+		<referrerKeywordPosition />
+		<referrerName />
+		<referrerSearchEngineIcon />
+		<referrerSearchEngineUrl />
+		<referrerType>direct</referrerType>
+		<referrerTypeName>Direct Entry</referrerTypeName>
+		<referrerUrl />
+		<region />
+		<regionCode />
+		<resolution>unknown</resolution>
+		<screenType>unknown</screenType>
+		<screenTypeIcon>plugins/UserSettings/images/screens/unknown.gif</screenTypeIcon>
+		<searches>0</searches>
+		
+		<siteCurrency>USD</siteCurrency>
+		<siteCurrencySymbol>$</siteCurrencySymbol>
+		<visitConverted>1</visitConverted>
+		<visitConvertedIcon>plugins/Morpheus/images/goal.png</visitConvertedIcon>
+		<visitCount>1</visitCount>
+		<visitDuration>0</visitDuration>
+		<visitDurationPretty>0s</visitDurationPretty>
+		<visitEcommerceStatus>none</visitEcommerceStatus>
+		<visitEcommerceStatusIcon />
+		<visitIp>175.41.192.40</visitIp>
 		<visitLocalHour>8</visitLocalHour>
-		<daysSinceLastVisit>0</daysSinceLastVisit>
+		<visitLocalTime>08:11:56</visitLocalTime>
+		
+		
+		<visitorType>new</visitorType>
+		<visitorTypeIcon />
 		
 		
 		
@@ -4489,10 +4489,6 @@
 		
 	</row>
 	<row>
-		<idSite>1</idSite>
-		<idVisit>2</idVisit>
-		<visitIp>175.41.192.40</visitIp>
-		
 		<actionDetails>
 			<row>
 				<type>goal</type>
@@ -4520,71 +4516,75 @@
 				<icon />
 			</row>
 		</actionDetails>
-		<goalConversions>1</goalConversions>
-		<siteCurrency>USD</siteCurrency>
-		<siteCurrencySymbol>$</siteCurrencySymbol>
-		
-		
-		
-		
-		<searches>0</searches>
 		<actions>1</actions>
-		<visitorType>new</visitorType>
-		<visitorTypeIcon />
-		<visitConverted>1</visitConverted>
-		<visitConvertedIcon>plugins/Morpheus/images/goal.png</visitConvertedIcon>
-		<visitCount>1</visitCount>
-		
-		<visitEcommerceStatus>none</visitEcommerceStatus>
-		<visitEcommerceStatusIcon />
-		<daysSinceFirstVisit>0</daysSinceFirstVisit>
-		<daysSinceLastEcommerceOrder>0</daysSinceLastEcommerceOrder>
-		<visitDuration>0</visitDuration>
-		<visitDurationPretty>0s</visitDurationPretty>
-		<customVariables>
-		</customVariables>
-		<deviceType>Smartphone</deviceType>
-		<events>0</events>
-		<provider>Unknown</provider>
-		<providerName>Unknown</providerName>
-		<providerUrl>http://piwik.org/faq/general/#faq_52</providerUrl>
-		<referrerType>direct</referrerType>
-		<referrerTypeName>Direct Entry</referrerTypeName>
-		<referrerName />
-		<referrerKeyword />
-		<referrerKeywordPosition />
-		<referrerUrl />
-		<referrerSearchEngineUrl />
-		<referrerSearchEngineIcon />
+		<browserCode>AN</browserCode>
+		<browserFamily>unknown</browserFamily>
+		<browserFamilyDescription>Unknown</browserFamilyDescription>
+		<browserIcon>plugins/UserSettings/images/browsers/AN.gif</browserIcon>
+		<browserName>Android Browser </browserName>
+		<browserVersion />
+		<city />
 		<continent>Asia</continent>
 		<continentCode>asi</continentCode>
 		<country>Japan</country>
 		<countryCode>jp</countryCode>
 		<countryFlag>plugins/UserCountry/images/flags/jp.png</countryFlag>
-		<region />
-		<regionCode />
-		<city />
-		<location>Japan</location>
+		<customVariables>
+		</customVariables>
+		<daysSinceFirstVisit>0</daysSinceFirstVisit>
+		<daysSinceLastEcommerceOrder>0</daysSinceLastEcommerceOrder>
+		<daysSinceLastVisit>0</daysSinceLastVisit>
+		<deviceType>Smartphone</deviceType>
+		<events>0</events>
+		
+		<goalConversions>1</goalConversions>
+		<idSite>1</idSite>
+		<idVisit>2</idVisit>
+		
+		
 		<latitude>36</latitude>
+		<location>Japan</location>
 		<longitude>138</longitude>
 		<operatingSystem>Android</operatingSystem>
 		<operatingSystemCode>AND</operatingSystemCode>
-		<operatingSystemShortName>Android</operatingSystemShortName>
 		<operatingSystemIcon>plugins/UserSettings/images/os/AND.gif</operatingSystemIcon>
-		<browserFamily>unknown</browserFamily>
-		<browserFamilyDescription>Unknown</browserFamilyDescription>
-		<browserName>Android Browser </browserName>
-		<browserIcon>plugins/UserSettings/images/browsers/AN.gif</browserIcon>
-		<browserCode>AN</browserCode>
-		<browserVersion />
-		<screenType>unknown</screenType>
-		<resolution>unknown</resolution>
-		<screenTypeIcon>plugins/UserSettings/images/screens/unknown.gif</screenTypeIcon>
+		<operatingSystemShortName>Android</operatingSystemShortName>
 		<plugins />
 		<pluginsIcons />
-		<visitLocalTime>08:11:30</visitLocalTime>
+		<provider>Unknown</provider>
+		<providerName>Unknown</providerName>
+		<providerUrl>http://piwik.org/faq/general/#faq_52</providerUrl>
+		<referrerKeyword />
+		<referrerKeywordPosition />
+		<referrerName />
+		<referrerSearchEngineIcon />
+		<referrerSearchEngineUrl />
+		<referrerType>direct</referrerType>
+		<referrerTypeName>Direct Entry</referrerTypeName>
+		<referrerUrl />
+		<region />
+		<regionCode />
+		<resolution>unknown</resolution>
+		<screenType>unknown</screenType>
+		<screenTypeIcon>plugins/UserSettings/images/screens/unknown.gif</screenTypeIcon>
+		<searches>0</searches>
+		
+		<siteCurrency>USD</siteCurrency>
+		<siteCurrencySymbol>$</siteCurrencySymbol>
+		<visitConverted>1</visitConverted>
+		<visitConvertedIcon>plugins/Morpheus/images/goal.png</visitConvertedIcon>
+		<visitCount>1</visitCount>
+		<visitDuration>0</visitDuration>
+		<visitDurationPretty>0s</visitDurationPretty>
+		<visitEcommerceStatus>none</visitEcommerceStatus>
+		<visitEcommerceStatusIcon />
+		<visitIp>175.41.192.40</visitIp>
 		<visitLocalHour>8</visitLocalHour>
-		<daysSinceLastVisit>0</daysSinceLastVisit>
+		<visitLocalTime>08:11:30</visitLocalTime>
+		
+		
+		<visitorType>new</visitorType>
+		<visitorTypeIcon />
 		
 		
 		
@@ -4592,10 +4592,6 @@
 		
 	</row>
 	<row>
-		<idSite>1</idSite>
-		<idVisit>1</idVisit>
-		<visitIp>175.41.192.40</visitIp>
-		
 		<actionDetails>
 			<row>
 				<type>goal</type>
@@ -4623,71 +4619,75 @@
 				<icon />
 			</row>
 		</actionDetails>
-		<goalConversions>1</goalConversions>
-		<siteCurrency>USD</siteCurrency>
-		<siteCurrencySymbol>$</siteCurrencySymbol>
-		
-		
-		
-		
-		<searches>0</searches>
 		<actions>1</actions>
-		<visitorType>new</visitorType>
-		<visitorTypeIcon />
-		<visitConverted>1</visitConverted>
-		<visitConvertedIcon>plugins/Morpheus/images/goal.png</visitConvertedIcon>
-		<visitCount>1</visitCount>
-		
-		<visitEcommerceStatus>none</visitEcommerceStatus>
-		<visitEcommerceStatusIcon />
-		<daysSinceFirstVisit>0</daysSinceFirstVisit>
-		<daysSinceLastEcommerceOrder>0</daysSinceLastEcommerceOrder>
-		<visitDuration>0</visitDuration>
-		<visitDurationPretty>0s</visitDurationPretty>
-		<customVariables>
-		</customVariables>
-		<deviceType>Desktop</deviceType>
-		<events>0</events>
-		<provider>Unknown</provider>
-		<providerName>Unknown</providerName>
-		<providerUrl>http://piwik.org/faq/general/#faq_52</providerUrl>
-		<referrerType>direct</referrerType>
-		<referrerTypeName>Direct Entry</referrerTypeName>
-		<referrerName />
-		<referrerKeyword />
-		<referrerKeywordPosition />
-		<referrerUrl />
-		<referrerSearchEngineUrl />
-		<referrerSearchEngineIcon />
+		<browserCode>RM</browserCode>
+		<browserFamily>unknown</browserFamily>
+		<browserFamilyDescription>Unknown</browserFamilyDescription>
+		<browserIcon>plugins/UserSettings/images/browsers/UNK.gif</browserIcon>
+		<browserName>RockMelt 0.9</browserName>
+		<browserVersion>0.9</browserVersion>
+		<city />
 		<continent>Asia</continent>
 		<continentCode>asi</continentCode>
 		<country>Japan</country>
 		<countryCode>jp</countryCode>
 		<countryFlag>plugins/UserCountry/images/flags/jp.png</countryFlag>
-		<region />
-		<regionCode />
-		<city />
-		<location>Japan</location>
+		<customVariables>
+		</customVariables>
+		<daysSinceFirstVisit>0</daysSinceFirstVisit>
+		<daysSinceLastEcommerceOrder>0</daysSinceLastEcommerceOrder>
+		<daysSinceLastVisit>0</daysSinceLastVisit>
+		<deviceType>Desktop</deviceType>
+		<events>0</events>
+		
+		<goalConversions>1</goalConversions>
+		<idSite>1</idSite>
+		<idVisit>1</idVisit>
+		
+		
 		<latitude>36</latitude>
+		<location>Japan</location>
 		<longitude>138</longitude>
 		<operatingSystem>Mac OS</operatingSystem>
 		<operatingSystemCode>MAC</operatingSystemCode>
-		<operatingSystemShortName>Mac OS</operatingSystemShortName>
 		<operatingSystemIcon>plugins/UserSettings/images/os/MAC.gif</operatingSystemIcon>
-		<browserFamily>unknown</browserFamily>
-		<browserFamilyDescription>Unknown</browserFamilyDescription>
-		<browserName>RockMelt 0.9</browserName>
-		<browserIcon>plugins/UserSettings/images/browsers/UNK.gif</browserIcon>
-		<browserCode>RM</browserCode>
-		<browserVersion>0.9</browserVersion>
-		<screenType>unknown</screenType>
-		<resolution>unknown</resolution>
-		<screenTypeIcon>plugins/UserSettings/images/screens/unknown.gif</screenTypeIcon>
+		<operatingSystemShortName>Mac OS</operatingSystemShortName>
 		<plugins />
 		<pluginsIcons />
-		<visitLocalTime>08:10:38</visitLocalTime>
+		<provider>Unknown</provider>
+		<providerName>Unknown</providerName>
+		<providerUrl>http://piwik.org/faq/general/#faq_52</providerUrl>
+		<referrerKeyword />
+		<referrerKeywordPosition />
+		<referrerName />
+		<referrerSearchEngineIcon />
+		<referrerSearchEngineUrl />
+		<referrerType>direct</referrerType>
+		<referrerTypeName>Direct Entry</referrerTypeName>
+		<referrerUrl />
+		<region />
+		<regionCode />
+		<resolution>unknown</resolution>
+		<screenType>unknown</screenType>
+		<screenTypeIcon>plugins/UserSettings/images/screens/unknown.gif</screenTypeIcon>
+		<searches>0</searches>
+		
+		<siteCurrency>USD</siteCurrency>
+		<siteCurrencySymbol>$</siteCurrencySymbol>
+		<visitConverted>1</visitConverted>
+		<visitConvertedIcon>plugins/Morpheus/images/goal.png</visitConvertedIcon>
+		<visitCount>1</visitCount>
+		<visitDuration>0</visitDuration>
+		<visitDurationPretty>0s</visitDurationPretty>
+		<visitEcommerceStatus>none</visitEcommerceStatus>
+		<visitEcommerceStatusIcon />
+		<visitIp>175.41.192.40</visitIp>
 		<visitLocalHour>8</visitLocalHour>
-		<daysSinceLastVisit>0</daysSinceLastVisit>
+		<visitLocalTime>08:10:38</visitLocalTime>
+		
+		
+		<visitorType>new</visitorType>
+		<visitorTypeIcon />
 		
 		
 		

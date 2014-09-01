@@ -18,6 +18,8 @@ use Exception;
  */
 class TestRequestResponse
 {
+    const PRINT_TO_SCREEN_BYTE_LIMIT = 40960; // 40 KB
+
     private $processedResponseText;
 
     private $params;
@@ -72,6 +74,12 @@ class TestRequestResponse
         $actualText = $actual->getResponseText();
 
         if ($expected->requestUrl['format'] == 'xml') {
+            if (strlen($expectedText) > self::PRINT_TO_SCREEN_BYTE_LIMIT
+                || strlen($actualText) > self::PRINT_TO_SCREEN_BYTE_LIMIT
+            ) {
+                Asserts::assertEquals(strlen($expectedText), strlen($actualText), $message);
+            }
+
             Asserts::assertXmlStringEqualsXmlString($expectedText, $actualText, $message);
         } else {
             Asserts::assertEquals(strlen($expectedText), strlen($actualText), $message);
