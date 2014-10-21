@@ -72,7 +72,8 @@ class TrackerTest extends IntegrationTestCase
         $this->assertActionEquals('but < "super', $conversionItems[1]['idaction_name']);
         $this->assertActionEquals('scary"', $conversionItems[1]['idaction_category']);
 
-        echo "TRAVIS DEFAULT ENCODING: ".ini_get('default_charset')."\n";
+        echo "TRAVIS CHECK 1: ".print_r(json_decode("{\"key\":\"&#x1D306;\"}"), true)."\n";
+        echo "TRAVIS CHECK 2: ".print_r(Common::unsanitizeInputValues(array('key' => '&#x1D306;')), true)."\n";
 
         $this->assertActionEquals('\'Foo ©', $conversionItems[2]['idaction_sku']);
         $this->assertActionEquals('bar ' . html_entity_decode('&#x1D306;', ENT_COMPAT, $charset = 'utf-8'), $conversionItems[2]['idaction_name']);
