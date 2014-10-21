@@ -51,7 +51,8 @@ class TrackerTest extends IntegrationTestCase
     {
         // item sku, item name, item category, item price, item quantity
         $ecItems = array(array('&quot;scarysku', 'superscarymovie&quot;', 'scary &amp; movies', 12.99, 1),
-                         array('&gt; scary', 'but &lt; &quot;super', 'scary&quot;', 14, 15));
+                         array('&gt; scary', 'but &lt; &quot;super', 'scary&quot;', 14, 15),
+                         array("&#x27;Foo &#xA9;", " bar &#x1D306;", " baz &#x2603; qux", 16, 17));
 
         $urlToTest = "?idsite=1&idgoal=0&rec=1&url=" . urlencode('http://quellehorreur.com/movies') . "&ec_items="
                    . urlencode(json_encode($ecItems)) . '&ec_id=myspecial-id-1234&revenue=16.99&ec_st=12.99&ec_tx=0&ec_sh=3';
@@ -62,7 +63,7 @@ class TrackerTest extends IntegrationTestCase
         $this->assertEquals(1, $this->getCountOfConversions());
 
         $conversionItems = Db::fetchAll("SELECT * FROM " . Common::prefixTable('log_conversion_item'));
-        $this->assertEquals(2, count($conversionItems));
+        $this->assertEquals(3, count($conversionItems));
 
         $this->assertActionEquals('&quot;scarysku', $conversionItems[0]['idaction_sku']);
         $this->assertActionEquals('superscarymovie&quot;', $conversionItems[0]['idaction_name']);
@@ -71,6 +72,10 @@ class TrackerTest extends IntegrationTestCase
         $this->assertActionEquals('&gt; scary', $conversionItems[1]['idaction_sku']);
         $this->assertActionEquals('but &lt; &quot;super', $conversionItems[1]['idaction_name']);
         $this->assertActionEquals('scary&quot;', $conversionItems[1]['idaction_category']);
+
+        $this->assertActionEquals('&#039;Foo ©', $conversionItems[2]['idaction_sku']);
+        $this->assertActionEquals('bar ' . html_entity_decode('&#x1D306;', null, $charset = 'utf-8'), $conversionItems[2]['idaction_name']);
+        $this->assertActionEquals('baz ☃ qux', $conversionItems[2]['idaction_category']);
     }
 
     public function test_trackingEcommerceOrder_DoesNotFail_WhenEmptyEcommerceItemsParamUsed()
