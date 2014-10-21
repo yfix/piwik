@@ -47,6 +47,9 @@ class TrackerTest extends IntegrationTestCase
         $this->issueBulkTrackingRequest($token_auth, $expectTrackingToSucceed = true);
     }
 
+    /**
+     * @group Only
+     */
     public function test_trackingEcommerceOrder_WithHtmlEscapedText_InsertsCorrectLogs()
     {
         // item sku, item name, item category, item price, item quantity
@@ -72,42 +75,9 @@ class TrackerTest extends IntegrationTestCase
         $this->assertActionEquals('but < "super', $conversionItems[1]['idaction_name']);
         $this->assertActionEquals('scary"', $conversionItems[1]['idaction_category']);
 
-        $check1 = Common::sanitizeInputValues(array('key' => '&#x1D306;'));
-        echo "TRAVIS CHECK 1: ".print_r($check1, true)."\n";
-        echo "TRAVIS CHECK 2: ".print_r(Common::unsanitizeInputValues($check1), true)."\n";
-        echo "TRAVIS CHECK 3: ".Common::sanitizeInputValue('&#x1D306;')."\n";
-        echo "TRAVIS CHECK 4: ".Common::unsanitizeInputValue(Common::sanitizeInputValue('&#x1D306;'))."\n";
-        $this->travisSanitizeRunThrough();
-
         $this->assertActionEquals('\'Foo ©', $conversionItems[2]['idaction_sku']);
         $this->assertActionEquals('bar ' . html_entity_decode('&#x1D306;', ENT_COMPAT, $charset = 'utf-8'), $conversionItems[2]['idaction_name']);
         $this->assertActionEquals('baz ☃ qux', $conversionItems[2]['idaction_category']);
-    }
-
-    private function travisSanitizeRunThrough()
-    {
-        $value = '&#x1D306;';
-
-        $value = html_entity_decode($value, Common::HTML_ENCODING_QUOTE_STYLE, 'UTF-8');
-
-        echo "step 1: $value\n";
-
-        $value = Common::sanitizeNullBytes($value);
-
-        echo "step 2: $value\n";
-        // escape
-        $tmp = @htmlspecialchars($value, Common::HTML_ENCODING_QUOTE_STYLE, 'UTF-8');
-        echo "step 3: $tmp\n";
-
-        // note: php 5.2.5 and above, htmlspecialchars is destructive if input is not UTF-8
-        if ($value != '' && $tmp == '') {
-            // convert and escape
-            $value = utf8_encode($value);
-            echo "step 4: $value\n";
-            $tmp = htmlspecialchars($value, Common::HTML_ENCODING_QUOTE_STYLE, 'UTF-8');
-            echo "step 5: $tmp\n";
-            return $tmp;
-        }
     }
 
     public function test_trackingEcommerceOrder_WithAmpersandAndQuotes_InsertsCorrectLogs()

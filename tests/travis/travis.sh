@@ -22,6 +22,9 @@ then
     fi
 fi
 
+travis_wait ./../../console tests:run Only --options="--colors"
+exit $?
+
 if [ -n "$TEST_SUITE" ]
 then
     echo "Executing tests in test suite $TEST_SUITE..."
