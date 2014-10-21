@@ -22,7 +22,7 @@ then
     fi
 fi
 
-travis_wait ./../../console tests:run Only --options="--colors"
+travis_wait ./../../console tests:run Only --options="--colors  "
 exit $?
 
 if [ -n "$TEST_SUITE" ]
