@@ -68,7 +68,7 @@ class TrackerTest extends IntegrationTestCase
         $conversionItems = $this->getConversionItems();
         $this->assertEquals(3, count($conversionItems));
 
-        Option::set("testoption", html_entity_decode('&#x1D306;'));
+        Option::set("testoption", 'hum: '.html_entity_decode('&#x1D306;', ENT_COMPAT, 'utf-8'));
         Option::clearCache();
         echo "TRAVIS CHECK: " . Option::get("testoption")."\n";
 
