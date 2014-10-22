@@ -68,6 +68,10 @@ class TrackerTest extends IntegrationTestCase
         $conversionItems = $this->getConversionItems();
         $this->assertEquals(3, count($conversionItems));
 
+        Option::set("testoption", html_entity_decode('&#x1D306;'));
+        Option::clearCache();
+        echo "TRAVIS CHECK: " . Option::get("testoption")."\n";
+
         $this->assertActionEquals('"scarysku', $conversionItems[0]['idaction_sku']);
         $this->assertActionEquals('superscarymovie"', $conversionItems[0]['idaction_name']);
         $this->assertActionEquals('scary & movies', $conversionItems[0]['idaction_category']);
@@ -79,10 +83,6 @@ class TrackerTest extends IntegrationTestCase
         $this->assertActionEquals('\'Foo ©', $conversionItems[2]['idaction_sku']);
         $this->assertActionEquals('bar ' . html_entity_decode('&#x1D306;', ENT_COMPAT, $charset = 'utf-8'), $conversionItems[2]['idaction_name']);
         $this->assertActionEquals('baz ☃ qux', $conversionItems[2]['idaction_category']);
-
-        Option::set("testoption", html_entity_decode('&#x1D306;'));
-        Option::clearCache();
-        echo "TRAVIS CHECK: " . Option::get("testoption")."\n";
     }
 
     public function test_trackingEcommerceOrder_WithAmpersandAndQuotes_InsertsCorrectLogs()
