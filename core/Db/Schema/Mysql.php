@@ -225,7 +225,7 @@ class Mysql implements SchemaInterface
                                 autoload TINYINT NOT NULL DEFAULT '1',
                                   PRIMARY KEY ( option_name ),
                                   INDEX autoload( autoload )
-                                ) ENGINE=$engine DEFAULT CHARSET=utf8mb4
+                                ) ENGINE=$engine DEFAULT CHARSET=utf8
             ",
 
             'session'       => "CREATE TABLE {$prefixTables}session (

@@ -10,7 +10,7 @@ dbname = piwik_tests
 adapter = PDO\MYSQL
 ; no table prefix for tests on travis
 tables_prefix =
-charset = utf8
+;charset = utf8
 
 [database_tests]
 host = localhost

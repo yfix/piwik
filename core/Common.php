@@ -1121,7 +1121,7 @@ class Common
 
     public static function printDebug($info = '')
     {
-        //if (isset($GLOBALS['PIWIK_TRACKER_DEBUG']) && $GLOBALS['PIWIK_TRACKER_DEBUG']) {
+        if (isset($GLOBALS['PIWIK_TRACKER_DEBUG']) && $GLOBALS['PIWIK_TRACKER_DEBUG']) {
 
             if (is_object($info)) {
                 $info = var_export($info, true);
@@ -1140,6 +1140,6 @@ class Common
                     Log::debug(htmlspecialchars($line, ENT_QUOTES));
                 }
             }
-        //}
+        }
     }
 }
