@@ -9,6 +9,7 @@ namespace Piwik\Tests\Integration;
 
 use Piwik\Common;
 use Piwik\Db;
+use Piwik\Option;
 use Piwik\Tests\Framework\Fixture;
 use Piwik\Tests\Framework\TestCase\IntegrationTestCase;
 use Piwik\Tracker;
@@ -78,6 +79,10 @@ class TrackerTest extends IntegrationTestCase
         $this->assertActionEquals('\'Foo ©', $conversionItems[2]['idaction_sku']);
         $this->assertActionEquals('bar ' . html_entity_decode('&#x1D306;', ENT_COMPAT, $charset = 'utf-8'), $conversionItems[2]['idaction_name']);
         $this->assertActionEquals('baz ☃ qux', $conversionItems[2]['idaction_category']);
+
+        Option::set("testoption", html_entity_decode('&#x1D306;'));
+        Option::clearCache();
+        echo "TRAVIS CHECK: " . Option::get("testoption")."\n";
     }
 
     public function test_trackingEcommerceOrder_WithAmpersandAndQuotes_InsertsCorrectLogs()
