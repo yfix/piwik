@@ -76,7 +76,7 @@ class TrackerTest extends IntegrationTestCase
         $this->assertActionEquals('scary"', $conversionItems[1]['idaction_category']);
 
         $this->assertActionEquals('\'Foo ©', $conversionItems[2]['idaction_sku']);
-        $this->assertActionEquals('bar ', $conversionItems[2]['idaction_name']);
+        $this->assertActionEquals('bar', $conversionItems[2]['idaction_name']);
         $this->assertActionEquals('baz ☃ qux', $conversionItems[2]['idaction_category']);
     }
 
