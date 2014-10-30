@@ -100,6 +100,13 @@ before_script:
 
   - ./tests/travis/configure_git.sh
 
+  # Prevent Mysql has gone away
+  - mysql -e "SHOW VARIABLES LIKE 'max_allowed_packet';"
+  - echo "[server]\nmax_allowed_packet=64M" | sudo tee -a /etc/mysql/my.cnf
+  - sudo service mysql reload
+  - mysql -e "SET GLOBAL wait_timeout=300;"
+  - mysql -e "SHOW VARIABLES LIKE 'max_allowed_packet';"
+
   # print out mysql information
   - mysql --version
   - mysql -e "SELECT VERSION();"
