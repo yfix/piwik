@@ -51,7 +51,11 @@ class CliMulti {
      * If multi cli is not supported (eg windows) it will initiate an HTTP request instead (not async).
      *
      * @param string[]  $piwikUrls   An array of urls, for instance:
-     *                               array('http://www.example.com/piwik?module=API...')
+     *
+     *                               `array('http://www.example.com/piwik?module=API...')`
+     *
+     *                               **Make sure query parameter values are properly encoded in the URLs.**
+     *
      * @return array The response of each URL in the same order as the URLs. The array can contain null values in case
      *               there was a problem with a request, for instance if the process died unexpected.
      */
@@ -145,6 +149,14 @@ class CliMulti {
 
             if ($process->isRunning()) {
                 return false;
+            }
+
+            $pid = $process->getPid();
+            foreach ($this->outputs as $output) {
+                if ($output->getOutputId() === $pid && $output->isAbnormal()) {
+                    $process->finishProcess();
+                    return true;
+                }
             }
 
             if ($process->hasFinished()) {

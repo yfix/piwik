@@ -5,6 +5,7 @@ use Piwik\Config;
 use Piwik\Piwik;
 use Piwik\Option;
 use Piwik\Plugin\Manager as PluginManager;
+use Piwik\DbHelper;
 
 require_once PIWIK_INCLUDE_PATH . "/core/Config.php";
 
@@ -217,6 +218,16 @@ class Piwik_TestingEnvironment
                 // pass
             }
         });
+        Piwik::addAction('Platform.initialized', function () use ($testingEnvironment) {
+            static $archivingTablesDeleted = false;
+
+            if ($testingEnvironment->deleteArchiveTables
+                && !$archivingTablesDeleted
+            ) {
+                $archivingTablesDeleted = true;
+                DbHelper::deleteArchiveTables();
+            }
+        });
 
         $testingEnvironment->logVariables();
         $testingEnvironment->executeSetupTestEnvHook();
@@ -238,7 +249,7 @@ class Piwik_TestingEnvironment
                 'contents' => $outputContent
             );
 
-            file_put_contents($outputFile, Common::json_encode($outputContents));
+            file_put_contents($outputFile, json_encode($outputContents));
         });
     }
 

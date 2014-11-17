@@ -39,6 +39,13 @@ type = InnoDB
 schema = Mysql
 
 [tests]
+; needed in order to run tests.
+; if Piwik is available at http://localhost/dev/piwik/ replace @REQUEST_URI@ with /dev/piwik/
+; note: the REQUEST_URI should not contain "plugins" or "tests" in the PATH
+http_host   = localhost
+remote_addr = "127.0.0.1"
+request_uri = "@REQUEST_URI@"
+
 ; access key and secret as listed in AWS -> IAM -> Users
 aws_accesskey = ""
 aws_secret = ""
@@ -58,7 +65,7 @@ log_writers[] = screen
 ; log level, everything logged w/ this level or one of greater severity
 ; will be logged. everything else will be ignored. possible values are:
 ; NONE, ERROR, WARN, INFO, DEBUG, VERBOSE
-log_level = WARN
+log_level = ERROR
 
 ; if set to 1, only requests done in CLI mode (eg. the ./console core:archive cron run) will be logged
 ; NOTE: log_only_when_debug_parameter will also be checked for
@@ -320,6 +327,11 @@ feedback_email_address = "feedback@piwik.org"
 ; using to set reply_to in reports e-mail to login of report creator
 scheduled_reports_replyto_is_user_email_and_alias = 0
 
+; scheduled reports truncate limit
+; the report will be rendered with the first 23 rows and will aggregate other rows in a summary row
+; 23 rows table fits in one portrait page
+scheduled_reports_truncate = 23
+
 ; during archiving, Piwik will limit the number of results recorded, for performance reasons
 ; maximum number of rows for any of the Referrers tables (keywords, search engines, campaigns, etc.)
 datatable_archiving_maximum_rows_referrers = 1000
@@ -559,13 +571,13 @@ ignore_visits_cookie_name = piwik_ignore
 ; Comma separated list of variable names that will be read to define a Campaign name, for example CPC campaign
 ; Example: If a visitor first visits 'index.php?piwik_campaign=Adwords-CPC' then it will be counted as a campaign referrer named 'Adwords-CPC'
 ; Includes by default the GA style campaign parameters
-campaign_var_name = "pk_campaign,piwik_campaign,utm_campaign,utm_source,utm_medium"
+campaign_var_name = "pk_cpn,pk_campaign,piwik_campaign,utm_campaign,utm_source,utm_medium"
 
 ; Comma separated list of variable names that will be read to track a Campaign Keyword
 ; Example: If a visitor first visits 'index.php?piwik_campaign=Adwords-CPC&piwik_kwd=My killer keyword' ;
 ; then it will be counted as a campaign referrer named 'Adwords-CPC' with the keyword 'My killer keyword'
 ; Includes by default the GA style campaign keyword parameter utm_term
-campaign_keyword_var_name = "pk_kwd,piwik_kwd,pk_keyword,utm_term"
+campaign_keyword_var_name = "pk_kwd,pk_keyword,piwik_kwd,utm_term"
 
 ; maximum length of a Page Title or a Page URL recorded in the log_action.name table
 page_maximum_length = 1024;

@@ -10,6 +10,7 @@ namespace Piwik\Plugins\ScheduledReports;
 
 use Exception;
 use Piwik\Common;
+use Piwik\Config;
 use Piwik\Date;
 use Piwik\Db;
 use Piwik\Log;
@@ -51,8 +52,6 @@ class API extends \Piwik\Plugin\API
     const OUTPUT_SAVE_ON_DISK = 2;
     const OUTPUT_INLINE = 3;
     const OUTPUT_RETURN = 4;
-
-    const REPORT_TRUNCATE = 23;
 
     // static cache storing reports
     public static $cache = array();
@@ -237,10 +236,10 @@ class API extends \Piwik\Plugin\API
 
         foreach ($reports as &$report) {
             // decode report parameters
-            $report['parameters'] = Common::json_decode($report['parameters'], true);
+            $report['parameters'] = json_decode($report['parameters'], true);
 
             // decode report list
-            $report['reports'] = Common::json_decode($report['reports'], true);
+            $report['reports'] = json_decode($report['reports'], true);
         }
 
         // static cache
@@ -295,7 +294,7 @@ class API extends \Piwik\Plugin\API
         }
 
         // override and/or validate report parameters
-        $report['parameters'] = Common::json_decode(
+        $report['parameters'] = json_decode(
             self::validateReportParameters($reportType, empty($parameters) ? $report['parameters'] : $parameters),
             true
         );
@@ -314,7 +313,7 @@ class API extends \Piwik\Plugin\API
         // the report will be rendered with the first 23 rows and will aggregate other rows in a summary row
         // 23 rows table fits in one portrait page
         $initialFilterTruncate = Common::getRequestVar('filter_truncate', false);
-        $_GET['filter_truncate'] = self::REPORT_TRUNCATE;
+        $_GET['filter_truncate'] = Config::getInstance()->General['scheduled_reports_truncate'];
 
         $prettyDate = null;
         $processedReports = array();
@@ -625,7 +624,7 @@ class API extends \Piwik\Plugin\API
          */
         Piwik::postEvent(self::VALIDATE_PARAMETERS_EVENT, array(&$parameters, $reportType));
 
-        return Common::json_encode($parameters);
+        return json_encode($parameters);
     }
 
     private static function validateAndTruncateDescription(&$description)
@@ -654,7 +653,7 @@ class API extends \Piwik\Plugin\API
             }
         }
 
-        return Common::json_encode($requestedReports);
+        return json_encode($requestedReports);
     }
 
     private static function validateCommonReportAttributes($period, $hour, &$description, &$idSegment, $reportType, $reportFormat)
